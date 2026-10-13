@@ -18,8 +18,12 @@ export function RoadmapView() {
   const p = roadmapProgress(done);
 
   useEffect(() => {
-    const id = decodeURIComponent(window.location.hash.slice(1));
-    if (id) document.getElementById(id)?.scrollIntoView({ block: "start" });
+    // Deferred: after a client navigation the URL (and its hash) is written once this view has mounted.
+    const timer = setTimeout(() => {
+      const id = decodeURIComponent(window.location.hash.slice(1));
+      if (id) document.getElementById(id)?.scrollIntoView({ block: "start" });
+    });
+    return () => clearTimeout(timer);
   }, []);
 
   return (

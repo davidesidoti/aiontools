@@ -91,6 +91,12 @@ export function GuideContentView() {
     if (hash) document.getElementById(hash)?.scrollIntoView({ block: "start" });
   }, [hash]);
 
+  // A client navigation (router.push) writes the URL after this view mounts and fires no hashchange: re-read it once.
+  useEffect(() => {
+    const id = setTimeout(() => window.dispatchEvent(new HashChangeEvent("hashchange")));
+    return () => clearTimeout(id);
+  }, []);
+
   return (
     <div className="space-y-4">
       <div className="space-y-3 rounded-xl border border-border bg-card p-4">

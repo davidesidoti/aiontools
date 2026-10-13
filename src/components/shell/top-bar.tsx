@@ -2,6 +2,7 @@
 import { ResetCountdown } from "./reset-countdown";
 import { LocaleSwitch } from "./locale-switch";
 import { SyncStatus } from "@/components/sync/sync-status";
+import { CommandPalette } from "@/components/command-palette";
 import { Link } from "@/i18n/navigation";
 
 export function TopBar() {
@@ -13,6 +14,7 @@ export function TopBar() {
         <ResetCountdown period="week" />
       </div>
       <div className="ml-auto flex items-center gap-3">
+        <CommandPalette />
         <SyncStatus />
         <LocaleSwitch />
       </div>

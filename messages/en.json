@@ -253,5 +253,17 @@
       "tools": "Tools",
       "none": "No creators listed yet."
     }
+  },
+  "palette": {
+    "open": "Search (Ctrl+K)",
+    "title": "Search",
+    "description": "Jump to a page, an activity or a roadmap step.",
+    "placeholder": "Search pages and activities…",
+    "empty": "No results.",
+    "groups": {
+      "pages": "Pages",
+      "activities": "Activities",
+      "roadmap": "Roadmap"
+    }
   }
 }
