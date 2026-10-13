@@ -1,6 +1,7 @@
 // src/components/shell/top-bar.tsx
 import { ResetCountdown } from "./reset-countdown";
 import { LocaleSwitch } from "./locale-switch";
+import { SyncStatus } from "@/components/sync/sync-status";
 import { Link } from "@/i18n/navigation";
 
 export function TopBar() {
@@ -11,7 +12,8 @@ export function TopBar() {
         <ResetCountdown period="day" />
         <ResetCountdown period="week" />
       </div>
-      <div className="ml-auto flex items-center gap-1">
+      <div className="ml-auto flex items-center gap-3">
+        <SyncStatus />
         <LocaleSwitch />
       </div>
     </header>

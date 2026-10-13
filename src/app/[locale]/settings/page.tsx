@@ -5,6 +5,7 @@ import { RegionSelect } from "@/components/settings/region-select";
 import { CharactersEditor } from "@/components/settings/characters-editor";
 import { AppearanceSettings } from "@/components/settings/appearance-settings";
 import { DataTransfer } from "@/components/settings/data-transfer";
+import { SyncSettings } from "@/components/sync/sync-settings";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -16,6 +17,7 @@ export default async function SettingsPage({ params }: { params: Promise<{ local
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("settings");
+  const ts = await getTranslations("sync");
   const section = (title: string, body: React.ReactNode) => (
     <Card>
       <CardHeader><CardTitle className="font-display">{title}</CardTitle></CardHeader>
@@ -26,6 +28,7 @@ export default async function SettingsPage({ params }: { params: Promise<{ local
     <div className="mx-auto max-w-3xl space-y-6">
       <h1 className="font-display text-3xl font-bold">{t("title")}</h1>
       {section(t("characters.title"), <CharactersEditor />)}
+      {section(ts("title"), <SyncSettings />)}
       {section(t("region.title"), <RegionSelect />)}
       {section(t("appearance.title"), <AppearanceSettings />)}
       {section(t("data.title"), <DataTransfer />)}
