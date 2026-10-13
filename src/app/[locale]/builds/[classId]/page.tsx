@@ -44,7 +44,7 @@ export default async function BuildPage({ params }: { params: Promise<{ locale: 
 
   return (
     <div className="mx-auto max-w-5xl space-y-4">
-      <header className="sticky top-14 z-20 -mx-4 space-y-2 border-b border-border bg-background/95 px-4 py-3 backdrop-blur md:top-16 md:-mx-8 md:px-8">
+      <header className="sticky top-16 z-20 -mx-4 space-y-2 border-b border-border bg-background/95 px-4 py-3 backdrop-blur md:-mx-8 md:px-8">
         <Link href="/builds" className="inline-flex min-h-11 items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground">
           <ArrowLeft className="size-4" aria-hidden />
           {t("back")}

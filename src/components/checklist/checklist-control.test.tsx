@@ -21,7 +21,7 @@ describe("ChecklistControl — pips (max ≤ 7)", () => {
     renderControl();
     expect(screen.getByRole("group", { name: "Duty Missions, Aria: 2 of 5" })).toBeInTheDocument();
     expect(screen.getAllByRole("button")).toHaveLength(5);
-    expect(screen.getByRole("button", { name: "Duty Missions, Aria: set to 2" })).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByRole("button", { name: "Duty Missions, Aria: remove one" })).toHaveAttribute("aria-pressed", "true");
     expect(screen.getByRole("button", { name: "Duty Missions, Aria: set to 3" })).toHaveAttribute("aria-pressed", "false");
   });
   it("clicking pip n sets n; clicking the last lit pip sets n-1", async () => {
@@ -29,13 +29,13 @@ describe("ChecklistControl — pips (max ≤ 7)", () => {
     const onChange = renderControl();
     await user.click(screen.getByRole("button", { name: "Duty Missions, Aria: set to 4" }));
     expect(onChange).toHaveBeenLastCalledWith(4);
-    await user.click(screen.getByRole("button", { name: "Duty Missions, Aria: set to 2" }));
+    await user.click(screen.getByRole("button", { name: "Duty Missions, Aria: remove one" }));
     expect(onChange).toHaveBeenLastCalledWith(1);
   });
   it("max 1 is a single pip that toggles", async () => {
     const user = userEvent.setup();
     const onChange = renderControl({ max: 1, count: 1 });
-    await user.click(screen.getByRole("button", { name: "Duty Missions, Aria: set to 1" }));
+    await user.click(screen.getByRole("button", { name: "Duty Missions, Aria: remove one" }));
     expect(onChange).toHaveBeenLastCalledWith(0);
   });
 });

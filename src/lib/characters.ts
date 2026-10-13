@@ -35,3 +35,16 @@ export function updateCharacter(data: UserData, id: string, patch: { name?: stri
     ),
   };
 }
+
+// Undo for removeCharacter: re-inserts the character and its progress from `before` into the *current* data,
+// so edits made since the removal (other ticks, other removals, a sync pull) survive.
+export function restoreCharacter(data: UserData, before: UserData, id: string): UserData {
+  const index = before.characters.findIndex((c) => c.id === id);
+  if (index < 0 || data.characters.some((c) => c.id === id) || data.characters.length >= MAX_CHARACTERS) return data;
+  const restored = { ...before.characters[index], isMain: !data.characters.some((c) => c.isMain) };
+  const characters = [...data.characters];
+  characters.splice(Math.min(index, characters.length), 0, restored);
+  const saved = before.checklist.progress[id];
+  const progress = saved ? { ...data.checklist.progress, [id]: saved } : data.checklist.progress;
+  return { ...data, characters, checklist: { ...data.checklist, progress } };
+}

@@ -1,6 +1,6 @@
 // src/components/command-palette.tsx
 "use client";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Search } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
@@ -19,6 +19,7 @@ export function CommandPalette() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
   const items = useMemo(() => buildSearchIndex(locale, { nav: (k) => tNav(k), guide: (k) => tGuide(k) }), [locale, tNav, tGuide]);
 
   useEffect(() => {
@@ -32,6 +33,18 @@ export function CommandPalette() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, []);
+
+  // While open, a printable key pressed outside the input moves focus there first, so the character lands in the search.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      const input = inputRef.current;
+      if (!input || e.ctrlKey || e.metaKey || e.altKey || e.key.length !== 1 || document.activeElement === input) return;
+      input.focus();
+    };
+    window.addEventListener("keydown", onKey, true);
+    return () => window.removeEventListener("keydown", onKey, true);
+  }, [open]);
 
   const go = (href: string) => {
     setOpen(false);
@@ -56,13 +69,13 @@ export function CommandPalette() {
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen} title={t("title")} description={t("description")}>
         <Command>
-        <CommandInput placeholder={t("placeholder")} value={query} onValueChange={setQuery} />
+        <CommandInput ref={inputRef} placeholder={t("placeholder")} value={query} onValueChange={setQuery} />
         <CommandList>
           <CommandEmpty>{t("empty")}</CommandEmpty>
           {GROUPS.map((g) => (
             <CommandGroup key={g} heading={t(`groups.${g}`)}>
               {items.filter((i) => i.group === g).map((i) => (
-                <CommandItem key={i.id} value={`${i.label} ${i.keywords} ${i.id}`} onSelect={() => go(i.href)}>
+                <CommandItem key={i.id} value={i.value} onSelect={() => go(i.href)}>
                   {i.label}
                 </CommandItem>
               ))}

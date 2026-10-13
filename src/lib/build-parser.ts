@@ -63,7 +63,7 @@ function parseSkill(raw: string): BuildSkill {
   return { name, ...(ranked && { rank: Number(ranked[1]) }), ...(detail && { detail }) };
 }
 
-const parseTargets = (raw: string) => split(raw.replace(/^Target the follow(?:ing)?:\s*/i, ""), /\(\d+\)/);
+const parseTargets = (raw: string) => split(raw.replace(/^Target the follow(?:ing)?:\s*/i, ""), /\(\d+\)/).map((n) => SKILL_ALIASES[n] ?? n);
 
 function parseBoardLine(raw: string) {
   const m = raw.match(/^Line\s*\(([^)]+)\)\s*:\s*(.*)$/i);
@@ -104,7 +104,7 @@ export function parseClassTab(c: Cells) {
       if (url) {
         // The label is column A of the row; when the URL sits inside that same cell, drop it from the label.
         const source = k.startsWith("A") ? text.replace(url, "") : get(c, `A${row}`);
-        links.push({ label: source.replace(/:\s*$/, "").trim() || url, url });
+        links.push({ label: source.replace(/:\s*$/, "").trim() || new URL(url).hostname.replace(/^www\./, ""), url });
       }
       else if (!k.startsWith("A") || !cells.some((x) => /https?:\/\//.test(get(c, x)))) {
         // Skip headings, labels left without a link ("…:") and one-word image captions.

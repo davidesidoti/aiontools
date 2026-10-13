@@ -13,7 +13,7 @@ export function StoreHydrator() {
   useEffect(() => {
     const store = useUserStore.getState();
     if (!store.hydrated) store.hydrate();
-    if (useUserStore.getState().corrupted) toast.error(t("corrupted"));
+    if (useUserStore.getState().corrupted) toast.error(t("corrupted"), { id: "corrupted" });
     const id = setInterval(() => useUserStore.getState().tickResets(), 60_000);
     return () => clearInterval(id);
   }, [t]);

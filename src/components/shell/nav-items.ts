@@ -13,3 +13,9 @@ export const NAV_ITEMS = [
 export function isNavActive(pathname: string, href: string): boolean {
   return href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
 }
+
+// "page" only on the exact page; a parent section gets "true" (WAI-ARIA), so screen readers don't announce two current pages.
+export function navAriaCurrent(pathname: string, href: string): "page" | "true" | undefined {
+  if (pathname === href) return "page";
+  return isNavActive(pathname, href) ? "true" : undefined;
+}

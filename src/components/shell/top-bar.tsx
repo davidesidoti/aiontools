@@ -7,7 +7,7 @@ import { Link } from "@/i18n/navigation";
 
 export function TopBar() {
   return (
-    <header className="sticky top-0 z-30 flex items-center gap-4 border-b border-border bg-background/90 px-4 py-2 backdrop-blur md:px-8">
+    <header className="sticky top-0 z-30 flex items-center gap-4 border-b border-border bg-background/90 px-4 h-16 backdrop-blur md:px-8">
       <Link href="/" className="font-display text-lg font-bold text-primary md:hidden">AionTools</Link>
       {/* Phones show resets on Home and in the checklist; the top bar keeps only logo and actions so it fits 375px. */}
       <div className="hidden items-center gap-4 sm:flex">

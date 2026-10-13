@@ -3,7 +3,7 @@
     { "classId": "ranger",
       "guides": [
         { "label": { "en": "Written guide (Google Docs)", "it": "Guida scritta (Google Docs)" }, "url": "https://docs.google.com/document/d/1GwcOMFMMJj9eHrsYp-OVtddBxfQhNOjAzmV1eOkmiAk/edit?usp=sharing" },
-        { "label": { "en": "Daevanion board planner", "it": "Planner del Daevanion board" }, "url": "https://ranger.tgustafsson.se/" }
+        { "label": { "en": "Daevanion board planner", "it": "Planner del Daevanion board" }, "url": "https://ranger.tgustafsson.se/#board=zikel-44" }
       ],
       "creators": [
         { "name": "j0eitv", "url": "https://www.twitch.tv/j0eitv" },
@@ -11,7 +11,7 @@
         { "name": "johnpal", "url": "https://www.twitch.tv/johnpal" }
       ] },
     { "classId": "gladiator",
-      "guides": [{ "label": { "en": "Written guide (Google Docs)", "it": "Guida scritta (Google Docs)" }, "url": "https://docs.google.com/document/d/15J0xIIlOGvp0NSGui7NK0MJpbgZTjXuZKAahHnkr2G4/edit?tab=t.refyxxrthj80" }],
+      "guides": [{ "label": { "en": "Written guide (Google Docs)", "it": "Guida scritta (Google Docs)" }, "url": "https://docs.google.com/document/d/15J0xIIlOGvp0NSGui7NK0MJpbgZTjXuZKAahHnkr2G4/edit?tab=t.refyxxrthj80#heading=h.yd411wdum1y0" }],
       "creators": [{ "name": "kanonxo", "url": "https://www.twitch.tv/kanonxo" }] },
     { "classId": "sorcerer",
       "guides": [
@@ -34,7 +34,7 @@
     { "classId": "assassin",
       "guides": [
         { "label": { "en": "Web guide", "it": "Guida web" }, "url": "https://aion2-assassin-guide.onrender.com/kd-fate" },
-        { "label": { "en": "Daevanion board planner", "it": "Planner del Daevanion board" }, "url": "https://assassin.tgustafsson.se/" }
+        { "label": { "en": "Daevanion board planner", "it": "Planner del Daevanion board" }, "url": "https://assassin.tgustafsson.se/#skills=start" }
       ],
       "creators": [
         { "name": "wolves", "url": "https://www.twitch.tv/wolves" },

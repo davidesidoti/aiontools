@@ -3,13 +3,14 @@
 import { useState } from "react";
 import { Crown, Trash2 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useUserStore } from "@/store/user-store";
-import { addCharacter, removeCharacter, setMain, updateCharacter, MAX_CHARACTERS } from "@/lib/characters";
+import { addCharacter, removeCharacter, restoreCharacter, setMain, updateCharacter, MAX_CHARACTERS } from "@/lib/characters";
 import { CLASSES, DEFAULT_CLASS_ID } from "@/lib/classes";
 
 function ClassSelect({ id, value, onChange }: { id: string; value: string; onChange(v: string): void }) {
@@ -55,7 +56,11 @@ export function CharactersEditor() {
                 {t("makeMain")}
               </Button>
             )}
-            <Button variant="ghost" size="icon" className="min-h-11 min-w-11" aria-label={t("remove", { name: c.name })} onClick={() => update((d) => removeCharacter(d, c.id))}>
+            <Button variant="ghost" size="icon" className="min-h-11 min-w-11" aria-label={t("remove", { name: c.name })} onClick={() => {
+                const before = useUserStore.getState().data;
+                update((d) => removeCharacter(d, c.id));
+                toast(t("removed", { name: c.name }), { action: { label: t("undo"), onClick: () => update((d) => restoreCharacter(d, before, c.id)) } });
+              }}>
               <Trash2 className="size-4" aria-hidden />
             </Button>
           </li>

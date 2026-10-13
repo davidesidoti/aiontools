@@ -2,7 +2,7 @@
 "use client";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { NAV_ITEMS, isNavActive } from "./nav-items";
+import { NAV_ITEMS, isNavActive, navAriaCurrent } from "./nav-items";
 import { cn } from "@/lib/utils";
 
 export function BottomNav() {
@@ -14,11 +14,11 @@ export function BottomNav() {
         <Link
           key={key}
           href={href}
-          aria-current={isNavActive(pathname, href) ? "page" : undefined}
+          aria-current={navAriaCurrent(pathname, href)}
           className={cn("flex min-h-14 flex-col items-center justify-center gap-1 text-[11px] text-muted-foreground", isNavActive(pathname, href) && "text-primary")}
         >
           <Icon className="size-5" aria-hidden />
-          {t(key)}
+          {t.has(`short.${key}`) ? t(`short.${key}`) : t(key)}
         </Link>
       ))}
     </nav>

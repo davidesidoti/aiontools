@@ -11,6 +11,7 @@ import { OnboardingDialog } from "@/components/onboarding-dialog";
 import { SyncBoot } from "@/components/sync/sync-boot";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { ACCENT_BOOT } from "@/lib/accent-boot";
 import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -33,6 +34,9 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   return (
     // Dark-only app: the .dark class is permanent.
     <html lang={locale} className={`dark ${inter.variable} ${cinzel.variable}`} data-accent="elyos" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: ACCENT_BOOT }} />
+      </head>
       <body className="bg-background font-sans text-foreground antialiased">
         <NextIntlClientProvider>
           <TooltipProvider>

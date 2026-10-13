@@ -4,6 +4,7 @@
     "description": "Aion 2 tools: daily and weekly checklist, builds, crafting and guides."
   },
   "nav": {
+    "short": { "settings": "Settings" },
     "label": "Main navigation",
     "home": "Home",
     "checklist": "Checklist",
@@ -74,6 +75,8 @@
       "makeMain": "Make main",
       "add": "Add character",
       "remove": "Remove {name}",
+      "removed": "{name} removed",
+      "undo": "Undo",
       "limit": "Up to 1 main and 8 alts.",
       "empty": "No characters yet."
     },
@@ -142,7 +145,7 @@
       "calculator": "Calculator",
       "tips": "Crafting tips"
     },
-    "baseCrafts": "{count} crafts needed at 100% success",
+    "baseCrafts": "{count, plural, one {# craft needed} other {# crafts needed}} at 100% success",
     "material": "Material",
     "qty": "Qty",
     "unitPrice": "Unit price",
@@ -258,7 +261,7 @@
   "palette": {
     "open": "Search (Ctrl+K)",
     "title": "Search",
-    "description": "Jump to a page, an activity or a roadmap step.",
+    "description": "Jump to a page, an activity or a roadmap section.",
     "placeholder": "Search pages and activities…",
     "empty": "No results.",
     "groups": {
