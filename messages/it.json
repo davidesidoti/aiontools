@@ -4,6 +4,7 @@
     "description": "Strumenti per Aion 2: checklist giornaliera e settimanale, build, crafting e guide."
   },
   "nav": {
+    "short": { "settings": "Opzioni" },
     "label": "Navigazione principale",
     "home": "Home",
     "checklist": "Checklist",
