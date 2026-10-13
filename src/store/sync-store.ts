@@ -31,6 +31,9 @@ let pushTimer: ReturnType<typeof setTimeout> | undefined;
 let retryTimer: ReturnType<typeof setTimeout> | undefined;
 let retries = 0;
 let started = false;
+// One request at a time: a push requested meanwhile is queued, a pull is skipped (the running request settles state).
+let busy = false;
+let pushQueued = false;
 
 function persist(code: string | null, base: string | null) {
   try {
@@ -49,6 +52,12 @@ function readPersisted(): { code: string; base: string | null } | null {
   } catch {
     return null;
   }
+}
+
+function flushQueuedPush() {
+  if (!pushQueued) return;
+  pushQueued = false;
+  void useSyncStore.getState().push();
 }
 
 function schedulePush() {
@@ -78,6 +87,14 @@ export const useSyncStore = create<SyncState>()((set, get) => {
     }
   };
 
+  const adopt = async (code: string) => {
+    busy = true;
+    const r = await fetchRemote(code).finally(() => (busy = false));
+    if (get().code !== code) return;
+    if (r.ok) applyRemote(r.value);
+    else fail(r.error);
+  };
+
   // Three-way compare of local and remote against base.
   const reconcile = (remote: UserData) => {
     const local = useUserStore.getState().data;
@@ -103,7 +120,9 @@ export const useSyncStore = create<SyncState>()((set, get) => {
       const saved = readPersisted();
       if (saved) {
         set({ code: saved.code, base: saved.base, status: "pending" });
-        void get().pull();
+        // Local data was unreadable and fell back to defaults: recover from the cloud, never push the blanks.
+        if (useUserStore.getState().corrupted) void adopt(saved.code);
+        else void get().pull();
       }
       document.addEventListener("visibilitychange", () => {
         if (document.visibilityState === "visible") void get().pull();
@@ -145,6 +164,7 @@ export const useSyncStore = create<SyncState>()((set, get) => {
     },
 
     disconnect() {
+      pushQueued = false;
       clearTimeout(pushTimer);
       clearTimeout(retryTimer);
       retries = 0;
@@ -162,26 +182,34 @@ export const useSyncStore = create<SyncState>()((set, get) => {
 
     async pull() {
       const { code, conflict } = get();
-      if (!code || conflict) return;
-      const r = await fetchRemote(code);
-      if (!r.ok) return fail(r.error);
-      reconcile(r.value);
+      if (!code || conflict || busy) return;
+      busy = true;
+      const r = await fetchRemote(code).finally(() => (busy = false));
+      if (get().code !== code) return;
+      if (!r.ok) fail(r.error);
+      else reconcile(r.value);
+      flushQueuedPush();
     },
 
     async push() {
       clearTimeout(pushTimer);
+      if (busy) {
+        pushQueued = true;
+        return;
+      }
       const { code, base, conflict } = get();
       if (!code || conflict) return;
       const sent = useUserStore.getState().data;
       set({ status: "pending" });
-      const r = await pushRemote(code, sent, base ?? sent.updatedAt);
+      busy = true;
+      const r = await pushRemote(code, sent, base ?? sent.updatedAt).finally(() => (busy = false));
+      if (get().code !== code) return;
       if (r.ok) {
         settle(sent.updatedAt);
-        if (useUserStore.getState().data.updatedAt !== sent.updatedAt) schedulePush();
-        return;
-      }
-      if (r.error === "conflict") return reconcile(r.remote);
-      fail(r.error);
+        if (useUserStore.getState().data.updatedAt !== sent.updatedAt) pushQueued = true;
+      } else if (r.error === "conflict") reconcile(r.remote);
+      else fail(r.error);
+      flushQueuedPush();
     },
 
     async resolveConflict(choice) {

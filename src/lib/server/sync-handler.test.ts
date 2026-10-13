@@ -1,6 +1,6 @@
 // src/lib/server/sync-handler.test.ts
 // @vitest-environment node
-import { describe, it, expect, beforeEach } from "vitest";
+import { describe, it, expect, beforeEach, vi } from "vitest";
 import { handleSync, type SyncDeps } from "./sync-handler";
 import { createMemoryStore, allowAll } from "./sync-store";
 import { createDefaultUserData } from "@/lib/user-data";
@@ -12,7 +12,7 @@ let codes: string[];
 
 beforeEach(() => {
   codes = [CODE, "wolf-amber-river-0002"];
-  deps = { store: createMemoryStore(), limiter: allowAll, generateCode: () => codes.shift()! };
+  deps = { store: createMemoryStore(), limiter: allowAll, createLimiter: allowAll, generateCode: () => codes.shift()! };
 });
 
 const req = (method: string, opts: { code?: string; body?: unknown; raw?: string } = {}) =>
@@ -91,5 +91,36 @@ describe("handleSync", () => {
 
   it("other methods are 405", async () => {
     expect((await handleSync(req("PATCH", { code: CODE }), deps)).status).toBe(405);
+  });
+
+  it("a PUT whose base differs from the stored copy is a conflict even if the stored copy is older", async () => {
+    await handleSync(req("POST", { body: { data } }), deps);
+    const v2 = { ...data, updatedAt: "2026-10-14T11:00:00.000Z" };
+    await handleSync(req("PUT", { code: CODE, body: { data: v2, baseUpdatedAt: data.updatedAt } }), deps);
+    // Another device resolves a conflict with "keep this device": its copy is older than v2.
+    const kept = { ...data, updatedAt: "2026-10-14T10:30:00.000Z" };
+    expect((await handleSync(req("PUT", { code: CODE, body: { data: kept, baseUpdatedAt: v2.updatedAt } }), deps)).status).toBe(200);
+    // A device still on base v2 must not silently overwrite the kept copy.
+    const stale = { ...data, updatedAt: "2026-10-14T12:00:00.000Z" };
+    const res = await handleSync(req("PUT", { code: CODE, body: { data: stale, baseUpdatedAt: v2.updatedAt } }), deps);
+    expect(res.status).toBe(409);
+    expect(await res.json()).toEqual({ data: kept });
+  });
+
+  it("a storage failure answers 503 without echoing or logging the error", async () => {
+    const log = vi.spyOn(console, "error");
+    deps.store = { ...deps.store, get: async () => { throw new Error(`command was: ["get","sync:${CODE}"]`); } };
+    const res = await handleSync(req("GET", { code: CODE }), deps);
+    expect(res.status).toBe(503);
+    const body = await res.text();
+    expect(body).toBe(JSON.stringify({ error: "unavailable" }));
+    expect(log).not.toHaveBeenCalled();
+    log.mockRestore();
+  });
+
+  it("creating codes has its own, stricter limit", async () => {
+    deps.createLimiter = { limit: async () => false };
+    expect((await handleSync(req("POST", { body: { data } }), deps)).status).toBe(429);
+    expect((await handleSync(req("GET", { code: CODE }), deps)).status).toBe(404);
   });
 });

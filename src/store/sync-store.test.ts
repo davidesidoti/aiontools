@@ -13,7 +13,7 @@ let server: SyncStore;
 
 const routeFetch = () =>
   vi.stubGlobal("fetch", (input: string, init?: RequestInit) =>
-    handleSync(new Request(new URL(input, "http://localhost"), init), { store: server, limiter: allowAll, generateCode: generateSyncCode }),
+    handleSync(new Request(new URL(input, "http://localhost"), init), { store: server, limiter: allowAll, createLimiter: allowAll, generateCode: generateSyncCode }),
   );
 
 beforeEach(() => {
@@ -159,5 +159,60 @@ describe("sync engine", () => {
     expect(await server.get(code)).toBeNull();
     expect(s()).toMatchObject({ code: null, status: "off" });
     expect(localStorage.getItem("aiontools:sync")).toBeNull();
+  });
+
+  // Holds the response of the first PUT until release() is called; the server has already applied it.
+  function holdFirstPut() {
+    let release!: () => void;
+    const gate = new Promise<void>((r) => (release = r));
+    let puts = 0;
+    vi.stubGlobal("fetch", async (input: string, init?: RequestInit) => {
+      const res = await handleSync(new Request(new URL(input, "http://localhost"), init), {
+        store: server, limiter: allowAll, createLimiter: allowAll, generateCode: generateSyncCode,
+      });
+      if (init?.method === "PUT" && puts++ === 0) await gate;
+      return res;
+    });
+    return () => release();
+  }
+
+  it("an edit during a slow push is pushed after it, without a false conflict", async () => {
+    await s().createCode();
+    const code = s().code!;
+    const release = holdFirstPut();
+    edit(addAria, "2026-10-14T10:05:00.000Z");
+    await vi.advanceTimersByTimeAsync(2_100); // push 1 applied on the server, its response is slow
+    edit(addKael, "2026-10-14T10:06:00.000Z");
+    await vi.advanceTimersByTimeAsync(2_100); // push 2 must not race push 1
+    release();
+    await vi.advanceTimersByTimeAsync(2_100);
+    expect(s().conflict).toBeNull();
+    expect((await remote(code)).characters.map((c) => c.name)).toEqual(["Aria", "Kael"]);
+    expect(s().status).toBe("synced");
+  });
+
+  it("a response that arrives after disconnect is ignored", async () => {
+    await s().createCode();
+    const release = holdFirstPut();
+    edit(addAria, "2026-10-14T10:05:00.000Z");
+    await vi.advanceTimersByTimeAsync(2_100);
+    s().disconnect();
+    release();
+    await vi.advanceTimersByTimeAsync(0);
+    expect(s()).toMatchObject({ code: null, base: null, status: "off" });
+  });
+
+  it("after a corrupt local load, start adopts the cloud copy instead of pushing blank data", async () => {
+    edit(addAria, "2026-10-14T10:01:00.000Z");
+    await s().createCode();
+    const code = s().code!;
+    // Simulate a reload where local storage was unreadable: the sync key survived, user data fell back to defaults.
+    useSyncStore.setState({ code: null, base: null, status: "off" });
+    vi.setSystemTime(new Date("2026-10-14T10:10:00.000Z"));
+    useUserStore.setState({ data: createDefaultUserData(new Date()), corrupted: true });
+    s().start();
+    await vi.advanceTimersByTimeAsync(0);
+    expect((await remote(code)).characters[0].name).toBe("Aria");
+    expect(local().characters[0].name).toBe("Aria");
   });
 });

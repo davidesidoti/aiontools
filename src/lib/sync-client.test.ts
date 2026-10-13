@@ -3,7 +3,7 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
 import { createRemote, fetchRemote, pushRemote, deleteRemote } from "./sync-client";
 import { handleSync } from "./server/sync-handler";
-import { createMemoryStore } from "./server/sync-store";
+import { createMemoryStore, allowAll } from "./server/sync-store";
 import { createDefaultUserData } from "./user-data";
 
 const CODE = "wolf-amber-river-0001";
@@ -12,7 +12,7 @@ let limited: boolean;
 
 beforeEach(() => {
   limited = false;
-  const deps = { store: createMemoryStore(), limiter: { limit: async () => !limited }, generateCode: () => CODE };
+  const deps = { store: createMemoryStore(), limiter: { limit: async () => !limited }, createLimiter: allowAll, generateCode: () => CODE };
   vi.stubGlobal("fetch", (input: string, init?: RequestInit) => handleSync(new Request(new URL(input, "http://localhost"), init), deps));
 });
 afterEach(() => vi.unstubAllGlobals());
