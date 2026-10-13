@@ -9,7 +9,8 @@
     "checklist": "Checklist",
     "settings": "Impostazioni",
     "crafting": "Crafting",
-    "guides": "Guide"
+    "guides": "Guide",
+    "builds": "Build"
   },
   "reset": {
     "daily": "Reset giornaliero",
@@ -263,7 +264,54 @@
     "groups": {
       "pages": "Pagine",
       "activities": "Attività",
-      "roadmap": "Roadmap"
+      "roadmap": "Roadmap",
+      "classes": "Classi"
     }
+  },
+  "builds": {
+    "title": "Build",
+    "intro": "Build consigliate per ogni classe, dal foglio di Castform.",
+    "back": "Tutte le classi",
+    "nav": {
+      "skills": "Skill",
+      "stigmas": "Stigma e passive",
+      "arcana": "Arcana e statistiche",
+      "boards": "Daevanion",
+      "soulbind": "Soul binding",
+      "gear": "Equip e altro",
+      "media": "Screenshot",
+      "links": "Link"
+    },
+    "skills": "Priorità delle skill",
+    "skillsHint": "(20) significa: da prioritizzare mentre sali di livello. I numeri dopo il trattino sono le specializzazioni consigliate.",
+    "passives": "Priorità delle passive",
+    "stigmas": "Priorità delle stigma",
+    "stigmaAlternatives": "Alternative",
+    "arcana": "Set di Arcana",
+    "godStats": "God stat sulle Arcana",
+    "equipEffects": "Equip effect da cercare",
+    "equipEffectsHint": "Esempi: le opzioni non saranno sempre identiche.",
+    "boards": "Priorità del Daevanion board",
+    "board": "Board {name}",
+    "line": "Linea {lines}",
+    "soulbind": "Priorità del soul binding",
+    "wings": "Ali",
+    "wingsMeta": "Meta da equipaggiare",
+    "wingsLeveling": "Migliori da potenziare",
+    "enhancing": "Priorità di potenziamento",
+    "titles": "Titoli",
+    "titlesOffensive": "Offensivi",
+    "titlesDefensive": "Difensivi",
+    "titlesSpecial": "Speciali",
+    "theostones": "Theostone",
+    "manastones": "Priorità delle statistiche delle Manastone",
+    "pantheon": "Pantheon",
+    "colossus": "Colossus",
+    "statues": "Statue",
+    "paintings": "Dipinti",
+    "media": "Screenshot",
+    "notes": "Note",
+    "links": "Link",
+    "openImage": "Apri lo screenshot {n} a dimensione intera"
   }
 }

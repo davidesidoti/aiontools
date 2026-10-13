@@ -1,0 +1,611 @@
+{
+  "id": "sorcerer",
+  "name": "Sorcerer",
+  "skills": [
+    {
+      "name": "Flame Arrow",
+      "detail": "(20) - (3/4/5)"
+    },
+    {
+      "name": "Ice Chain",
+      "detail": "(12) - (2/3)"
+    },
+    {
+      "name": "Firestorm",
+      "detail": "(20) - (2/4/5)"
+    },
+    {
+      "name": "Bittercold Wind",
+      "detail": "(20) - (1/2/4)"
+    },
+    {
+      "name": "Blaze",
+      "detail": "(20) - (1/3/5)"
+    },
+    {
+      "name": "Flame Scattershot",
+      "detail": "N/A"
+    },
+    {
+      "name": "Frost",
+      "detail": "(12) - (1/2)"
+    },
+    {
+      "name": "Winter's Shackles",
+      "detail": "(16) - (3/5)"
+    },
+    {
+      "name": "Frost Burst",
+      "detail": "(12) - (1/4)"
+    },
+    {
+      "name": "Wish of Concentration",
+      "detail": "(20) - (2/4/5)"
+    },
+    {
+      "name": "Hellfire",
+      "detail": "(20) - (1/3/5)"
+    },
+    {
+      "name": "Defiance",
+      "detail": "(16) - (2/3)"
+    }
+  ],
+  "passives": [
+    {
+      "name": "Robe of Flame",
+      "rank": 1
+    },
+    {
+      "name": "Fire Mark",
+      "rank": 2
+    }
+  ],
+  "stigmas": [
+    {
+      "name": "Element Enhancement",
+      "rank": 1
+    },
+    {
+      "name": "Fire Wall",
+      "rank": 2
+    },
+    {
+      "name": "Delayed Explosion",
+      "rank": 3
+    },
+    {
+      "name": "Cold Storm",
+      "rank": 4
+    },
+    {
+      "name": "Steel Barrier"
+    },
+    {
+      "name": "Glacial Smite"
+    }
+  ],
+  "arcana": [
+    {
+      "set": "Chalice (Vigor)",
+      "stat": "Time"
+    },
+    {
+      "set": "Parchement (Vigor)",
+      "stat": "Life / Destiny"
+    },
+    {
+      "set": "Compass (Magic)",
+      "stat": "Death / Freedom"
+    },
+    {
+      "set": "Bell (Magic)",
+      "stat": "Destruction"
+    },
+    {
+      "set": "Mirror (Magic)",
+      "stat": "Illusion / Wisdom"
+    },
+    {
+      "set": "Scales",
+      "stat": "Destruction"
+    },
+    {
+      "set": "Key",
+      "stat": "Attack"
+    },
+    {
+      "set": "Hourglass",
+      "stat": "Defense"
+    },
+    {
+      "set": "Dice",
+      "stat": "Accuracy"
+    },
+    {
+      "set": "Lantern",
+      "stat": "Evasion"
+    }
+  ],
+  "equipEffects": [
+    [
+      "Wish of Concentration",
+      "Hellfire",
+      "Flame Arrow",
+      "Robe of Flame"
+    ],
+    [
+      "Wish of Concentration",
+      "Hellfire",
+      "Blaze",
+      "Firestorm"
+    ],
+    [
+      "Bitter Cold Wind",
+      "Winter Shackles"
+    ],
+    [
+      "Fire Mark"
+    ],
+    [
+      "Robe of Flame"
+    ],
+    [
+      "Flame Arrow",
+      "Firestorm",
+      "Robe of Flame",
+      "Fire Mark"
+    ],
+    [
+      "Boss Damage",
+      "Critical Damage"
+    ],
+    [
+      "Max Attack",
+      "Boss Attack",
+      "Critical Attack"
+    ],
+    [
+      "Double Chance"
+    ],
+    [
+      "Endurance"
+    ]
+  ],
+  "boards": [
+    {
+      "name": "Cogni",
+      "lines": [
+        {
+          "lines": "1 & 5",
+          "priority": [
+            "Max Attack",
+            "Attack Bonus"
+          ]
+        },
+        {
+          "lines": "2 & 8",
+          "priority": [
+            "HP Increase %"
+          ]
+        },
+        {
+          "lines": "3,6,9",
+          "priority": [
+            "Crit, Accuracy",
+            "Power Shard if cap is not reached"
+          ]
+        },
+        {
+          "lines": "4",
+          "priority": [
+            "Critical Damage Boost",
+            "Damage Boost"
+          ]
+        },
+        {
+          "lines": "7",
+          "priority": [
+            "DMG Tolerance, PVE DMG Tolerance",
+            "Endurance"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Natura",
+      "lines": [
+        {
+          "lines": "1 & 5",
+          "priority": [
+            "Max Attack",
+            "Attack Bonus"
+          ]
+        },
+        {
+          "lines": "2 & 8",
+          "priority": [
+            "HP Increase %"
+          ]
+        },
+        {
+          "lines": "3,6,9",
+          "priority": [
+            "Crit, Accuracy",
+            "Power Shard if cap is not reached"
+          ]
+        },
+        {
+          "lines": "4 & 7",
+          "priority": [
+            "Multi Hit / Perfect Chance"
+          ]
+        },
+        {
+          "lines": "7",
+          "priority": [
+            "DMG Tolerance, PVE DMG Tolerance",
+            "Endurance"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Special",
+      "lines": [
+        {
+          "lines": "1 & 5",
+          "priority": [
+            "Max Attack",
+            "Attack Bonus"
+          ]
+        },
+        {
+          "lines": "2 & 8",
+          "priority": [
+            "HP Increase %"
+          ]
+        },
+        {
+          "lines": "3,6,9",
+          "priority": [
+            "Crit, Accuracy",
+            "Power Shard if cap is not reached"
+          ]
+        },
+        {
+          "lines": "4",
+          "priority": [
+            "Double Chance"
+          ]
+        },
+        {
+          "lines": "7",
+          "priority": [
+            "Damage Tolerance",
+            "Endurance"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fera",
+      "lines": [
+        {
+          "lines": "1 & 5",
+          "priority": [
+            "Max Attack",
+            "Attack Bonus"
+          ]
+        },
+        {
+          "lines": "2 & 8",
+          "priority": [
+            "HP Increase %"
+          ]
+        },
+        {
+          "lines": "3,6,9",
+          "priority": [
+            "Crit, Accuracy",
+            "Power Shard if cap is not reached"
+          ]
+        },
+        {
+          "lines": "4",
+          "priority": [
+            "Weapon Damage Boost",
+            "Damage Boost"
+          ]
+        },
+        {
+          "lines": "7",
+          "priority": [
+            "DMG Tolerance, PVE DMG Tolerance",
+            "Endurance"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Varian",
+      "lines": [
+        {
+          "lines": "1 & 5",
+          "priority": [
+            "Max Attack",
+            "Attack Bonus"
+          ]
+        },
+        {
+          "lines": "2 & 8",
+          "priority": [
+            "HP Increase %"
+          ]
+        },
+        {
+          "lines": "3,6,9",
+          "priority": [
+            "Crit, Accuracy",
+            "Power Shard if cap is not reached"
+          ]
+        },
+        {
+          "lines": "4",
+          "priority": [
+            "Front/Back Damage Boost"
+          ]
+        },
+        {
+          "lines": "7",
+          "priority": [
+            "DMG Tolerance, PVE DMG Tolerance",
+            "Endurance"
+          ]
+        }
+      ]
+    }
+  ],
+  "wings": {
+    "meta": "Talisra Wings (91.5%) / Erroded Wings (5%) /  Brawler Wings (2.5%)",
+    "leveling": "Azure Flash Wings / Awaken Pride Wings / Blue Wave Wings / Brawler Wings / Dramata Nest Wings / Eroded Wings / Forest Spirit Wings / Illusory Echo Wings / Nightmare Wings / Salvation Wings / Talisra / Ultimate Daeva Wings"
+  },
+  "enhancing": [
+    "Double Chance Bonuses",
+    "Weapon DMG Boost",
+    "Regular DMG Boost",
+    "Attack",
+    "Accuracy Bonus and Critical Hit"
+  ],
+  "titles": {
+    "offensive": [
+      "Playing God",
+      "Unbound Genus",
+      "Guardian of Verteron"
+    ],
+    "defensive": [
+      "Saint of Verteron",
+      "Rule All Creation",
+      "Dominator of All Dimensions"
+    ],
+    "special": [
+      "Empty Closet",
+      "Through Hell and Back"
+    ]
+  },
+  "theostones": "Poison and beast performing best early on but later on it's irrelevant all of them perform similarly",
+  "manastones": [
+    "Weapon Damage Boost ≈ Critical Damage Boost",
+    "Damage Boost",
+    "Attack"
+  ],
+  "pantheon": {
+    "colossus": "Priority on Zikel / Kromede then in S2 Kaisinel",
+    "statues": "Priority on Freedom, Death and Space",
+    "paintings": "Priority on Illusion and Wisdom then Life"
+  },
+  "soulbind": [
+    {
+      "group": "Weaponary",
+      "slots": [
+        {
+          "slot": "Weapon",
+          "priority": [
+            "Weapon Damage Boost",
+            "Combat Speed",
+            "Might",
+            "Precision",
+            "Damage Boost",
+            "Multi Hit Chance",
+            "Atk"
+          ]
+        },
+        {
+          "slot": "Guard",
+          "priority": [
+            "Weapon Damage Boost",
+            "Combat Speed",
+            "Damage Boost",
+            "Might",
+            "Precision",
+            "Multi Hit Chance",
+            "Atk"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Armor",
+      "slots": [
+        {
+          "slot": "Helmet",
+          "priority": [
+            "Incoming Heal",
+            "Robe of Flame",
+            "Fire Mark",
+            "Double Chance",
+            "Attack increase",
+            "Crit",
+            "Attack"
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "priority": [
+            "Crit Damage Boost",
+            "Robe of Flame",
+            "Fire Mark",
+            "Accuracy",
+            "Crit",
+            "Attack",
+            "Defense Increase"
+          ]
+        },
+        {
+          "slot": "Chest",
+          "priority": [
+            "Damage Boost",
+            "Robe of Flame",
+            "Fire Mark",
+            "Crit",
+            "Accuracy",
+            "Attack",
+            "Defense Increase"
+          ]
+        },
+        {
+          "slot": "Legs",
+          "priority": [
+            "Damage Tolerance",
+            "Robe of Flame",
+            "Fire Mark",
+            "Perfect Increase",
+            "Attack increase",
+            "Crit",
+            "Attack"
+          ]
+        },
+        {
+          "slot": "Gloves/Boots",
+          "priority": [
+            "Speed",
+            "Robe of Flame",
+            "Fire Mark",
+            "Perfect Chance",
+            "Crit",
+            "Attack",
+            "Defense increase"
+          ]
+        },
+        {
+          "slot": "Cape",
+          "priority": [
+            "Robe of Flame",
+            "Fire Mark",
+            "Smite",
+            "Double Chance",
+            "Attack increase",
+            "Crit",
+            "Attack"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Passive Accessories",
+      "slots": [
+        {
+          "slot": "Earring & Necklace",
+          "priority": [
+            "Robe of Flame",
+            "Might",
+            "Precision",
+            "Fire Mark",
+            "Accuracy",
+            "Crit",
+            "Attack",
+            "N/A"
+          ]
+        },
+        {
+          "slot": "Rings",
+          "priority": [
+            "Wish of Concentration",
+            "Hellfire",
+            "Might",
+            "Precision",
+            "Bittercold Wind",
+            "Blaze",
+            "Flame Arrow",
+            "Firestorm"
+          ]
+        },
+        {
+          "slot": "Bracelets",
+          "priority": [
+            "Wisdom",
+            "Destruction",
+            "Time",
+            "Illusion",
+            "Death",
+            "Justice",
+            "Life",
+            "Space",
+            "Freedom",
+            "Destiny"
+          ]
+        },
+        {
+          "slot": "Brooches",
+          "priority": [
+            "Might",
+            "Precision",
+            "Accuracy",
+            "Crit",
+            "Constitution"
+          ]
+        },
+        {
+          "slot": "Seals",
+          "priority": [
+            "Attack",
+            "Boss Attack",
+            "Max Attack",
+            "Crit Attack",
+            "PvE Attack",
+            "Power Shard Damage Bonus"
+          ]
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "IF you need daevanion boards for classes, try to find some here",
+      "url": "https://questlog.gg/aion-2/en/skill-builder"
+    },
+    {
+      "label": "Sorcerer in-depth Guide",
+      "url": "https://docs.google.com/document/d/1XVciQ8mC7bHo7bAApRk7hLwmT61MxVWTm2III6rUzsM/edit?tab=t.3up96tckgsd3"
+    },
+    {
+      "label": "Aion 2 bible",
+      "url": "https://docs.google.com/document/d/11u4wLCG1WfL-xSka2Aze0rI9vYRa7mq3N3Gp1bt0AWY/edit?tab=t.0"
+    },
+    {
+      "label": "Credits to",
+      "url": "https://docs.google.com/document/d/1XVciQ8mC7bHo7bAApRk7hLwmT61MxVWTm2III6rUzsM/edit?tab=t.nsvmsb4t86n"
+    }
+  ],
+  "notes": [
+    "Elemental Enhancement (Buff) > Delayed Explosion (Debuff for Hellfire + Glacial Smite) > Hellfire > Fire Wall > Cold Storm > Glacial Smite > Bitterwind Cold > Wish of Concentration (CD reset + buff) > Bitterwind Cold > Blaze > Firestorm > Winter Shackles (Buff, you can also use this on opener instead) > Delayed Explosion > Hellfire",
+    "Blaze + Firestorm (RMB) + LMB on downtime, send everything else whenever they’re up",
+    "In-game Macro: RMB (right click)"
+  ],
+  "screenshots": [
+    "/builds/sorcerer/shot-1.png",
+    "/builds/sorcerer/shot-2.png",
+    "/builds/sorcerer/shot-3.png",
+    "/builds/sorcerer/shot-4.png"
+  ]
+}

@@ -1,0 +1,610 @@
+{
+  "id": "cleric",
+  "name": "Cleric",
+  "skills": [
+    {
+      "name": "Earth's Retribution",
+      "detail": "(12) - (2/4)"
+    },
+    {
+      "name": "Judgment Thunder",
+      "detail": "(20) - (1/2/5)"
+    },
+    {
+      "name": "Debilitating Mark",
+      "detail": "(12) - (2/4)"
+    },
+    {
+      "name": "Divine Aura",
+      "detail": "(20) - (3/4/5)"
+    },
+    {
+      "name": "Chain of Torment",
+      "detail": "(12) - (2/4)"
+    },
+    {
+      "name": "Lightning Strike Scattershot",
+      "detail": "N/A"
+    },
+    {
+      "name": "Light of Regeneration",
+      "detail": "(16) - (4/5)"
+    },
+    {
+      "name": "Condemnation",
+      "detail": "(20) - (2/4/5)"
+    },
+    {
+      "name": "Healing Light",
+      "detail": "(20) - (1/4/5)"
+    },
+    {
+      "name": "Radiant Recovery",
+      "detail": "(20) - (2/3/5)"
+    },
+    {
+      "name": "Bolt",
+      "detail": "(20) - (3/4/5)"
+    },
+    {
+      "name": "Defiance",
+      "detail": "(16) - (3/5)"
+    }
+  ],
+  "passives": [
+    {
+      "name": "Empyrean Lord's Grace",
+      "rank": 1
+    },
+    {
+      "name": "Earth's Grace",
+      "rank": 2
+    },
+    {
+      "name": "Healing Enhancement",
+      "rank": 3
+    },
+    {
+      "name": "Warm Benediction",
+      "rank": 4
+    }
+  ],
+  "stigmas": [
+    {
+      "name": "Light of Protection",
+      "rank": 1
+    },
+    {
+      "name": "Earth Punishment",
+      "rank": 2
+    },
+    {
+      "name": "Absolution",
+      "rank": 3
+    },
+    {
+      "name": "Summon Resurrection",
+      "rank": 4
+    }
+  ],
+  "arcana": [
+    {
+      "set": "Chalice (Vigor)",
+      "stat": "Time"
+    },
+    {
+      "set": "Parchement (Vigor)",
+      "stat": "Life / Destiny"
+    },
+    {
+      "set": "Compass (Magic)",
+      "stat": "Death / Freedom"
+    },
+    {
+      "set": "Bell (Magic)",
+      "stat": "Destruction"
+    },
+    {
+      "set": "Mirror (Magic)",
+      "stat": "Illusion / Wisdom"
+    },
+    {
+      "set": "Scales",
+      "stat": "Destruction"
+    },
+    {
+      "set": "Key",
+      "stat": "Attack"
+    },
+    {
+      "set": "Hourglass",
+      "stat": "Defense"
+    },
+    {
+      "set": "Dice",
+      "stat": "Accuracy"
+    },
+    {
+      "set": "Lantern",
+      "stat": "Evasion"
+    }
+  ],
+  "equipEffects": [
+    [
+      "Condemnation",
+      "Bolt",
+      "Empyrean Lord's Grace",
+      "Earth's Grace"
+    ],
+    [
+      "Condemnation",
+      "Bolt",
+      "Radiant Recovery"
+    ],
+    [
+      "Divine Aura",
+      "Judgment Thunder"
+    ],
+    [
+      "Empyrean Lord's Grace"
+    ],
+    [
+      "Earth's Grace"
+    ],
+    [
+      "Empyrean Lord's Grace",
+      "Earth's Grace",
+      "Judgment Thunder"
+    ],
+    [
+      "Boss Damage",
+      "Critical Damage"
+    ],
+    [
+      "Max Attack",
+      "Boss Attack",
+      "Critical Attack"
+    ],
+    [
+      "Double Chance"
+    ],
+    [
+      "Endurance"
+    ]
+  ],
+  "boards": [
+    {
+      "name": "Cogni",
+      "lines": [
+        {
+          "lines": "1 & 5",
+          "priority": [
+            "Max Attack",
+            "Attack Bonus"
+          ]
+        },
+        {
+          "lines": "2 & 8",
+          "priority": [
+            "HP Increase %"
+          ]
+        },
+        {
+          "lines": "3,6,9",
+          "priority": [
+            "Crit, Accuracy",
+            "Power Shard if cap is not reached"
+          ]
+        },
+        {
+          "lines": "4",
+          "priority": [
+            "Critical Damage Boost",
+            "Damage Boost"
+          ]
+        },
+        {
+          "lines": "7",
+          "priority": [
+            "DMG Tolerance, PVE DMG Tolerance",
+            "Endurance"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Natura",
+      "lines": [
+        {
+          "lines": "1 & 5",
+          "priority": [
+            "Max Attack",
+            "Attack Bonus"
+          ]
+        },
+        {
+          "lines": "2 & 8",
+          "priority": [
+            "HP Increase %"
+          ]
+        },
+        {
+          "lines": "3,6,9",
+          "priority": [
+            "Crit, Accuracy",
+            "Power Shard if cap is not reached"
+          ]
+        },
+        {
+          "lines": "4 & 7",
+          "priority": [
+            "Multi Hit / Perfect Chance"
+          ]
+        },
+        {
+          "lines": "7",
+          "priority": [
+            "DMG Tolerance, PVE DMG Tolerance",
+            "Endurance"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Special",
+      "lines": [
+        {
+          "lines": "1 & 5",
+          "priority": [
+            "Max Attack",
+            "Attack Bonus"
+          ]
+        },
+        {
+          "lines": "2 & 8",
+          "priority": [
+            "HP Increase %"
+          ]
+        },
+        {
+          "lines": "3,6,9",
+          "priority": [
+            "Crit, Accuracy",
+            "Power Shard if cap is not reached"
+          ]
+        },
+        {
+          "lines": "4",
+          "priority": [
+            "Double Chance"
+          ]
+        },
+        {
+          "lines": "7",
+          "priority": [
+            "Damage Tolerance",
+            "Endurance"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fera",
+      "lines": [
+        {
+          "lines": "1 & 5",
+          "priority": [
+            "Max Attack",
+            "Attack Bonus"
+          ]
+        },
+        {
+          "lines": "2 & 8",
+          "priority": [
+            "HP Increase %"
+          ]
+        },
+        {
+          "lines": "3,6,9",
+          "priority": [
+            "Crit, Accuracy",
+            "Power Shard if cap is not reached"
+          ]
+        },
+        {
+          "lines": "4",
+          "priority": [
+            "Weapon Damage Boost",
+            "Damage Boost"
+          ]
+        },
+        {
+          "lines": "7",
+          "priority": [
+            "DMG Tolerance, PVE DMG Tolerance",
+            "Endurance"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Varian",
+      "lines": [
+        {
+          "lines": "1 & 5",
+          "priority": [
+            "Max Attack",
+            "Attack Bonus"
+          ]
+        },
+        {
+          "lines": "2 & 8",
+          "priority": [
+            "HP Increase %"
+          ]
+        },
+        {
+          "lines": "3,6,9",
+          "priority": [
+            "Crit, Accuracy",
+            "Power Shard if cap is not reached"
+          ]
+        },
+        {
+          "lines": "4",
+          "priority": [
+            "Front/Back Damage Boost"
+          ]
+        },
+        {
+          "lines": "7",
+          "priority": [
+            "DMG Tolerance, PVE DMG Tolerance",
+            "Endurance"
+          ]
+        }
+      ]
+    }
+  ],
+  "wings": {
+    "meta": "Eroded Wings (45%) / Talisra Wings (35%) /  Illusory Echo Wings (9%)",
+    "leveling": "Azure Flash Wings / Awaken Pride Wings / Blue Wave Wings / Brawler Wings / Dramata Nest Wings / Eroded Wings / Forest Spirit Wings / Illusory Echo Wings / Nightmare Wings / Salvation Wings / Talisra / Ultimate Daeva Wings"
+  },
+  "enhancing": [
+    "Double Chance Bonuses",
+    "Weapon DMG Boost",
+    "Regular DMG Boost",
+    "Attack",
+    "Accuracy Bonus and Critical Hit"
+  ],
+  "titles": {
+    "offensive": [
+      "Playing God",
+      "Unbound Genus",
+      "Guardian of Verteron"
+    ],
+    "defensive": [
+      "Saint of Verteron",
+      "Rule All Creation",
+      "Dominator of All Dimensions"
+    ],
+    "special": [
+      "Empty Closet",
+      "Through Hell and Back"
+    ]
+  },
+  "theostones": "Poison and beast performing best early on but later on it's irrelevant all of them perform similarly",
+  "manastones": [
+    "Weapon Damage Boost ≈ Critical Damage Boost",
+    "Damage Boost",
+    "Attack"
+  ],
+  "pantheon": {
+    "colossus": "Priority on Zikel / Kromede then in S2 Kaisinel",
+    "statues": "Priority on Freedom, Death and Space",
+    "paintings": "Priority on Illusion and Wisdom then Life"
+  },
+  "soulbind": [
+    {
+      "group": "Weaponary",
+      "slots": [
+        {
+          "slot": "Weapon",
+          "priority": [
+            "Weapon Damage Boost",
+            "Combat Speed",
+            "Might",
+            "Precision",
+            "Damage Boost",
+            "Multi Hit Chance",
+            "Atk"
+          ]
+        },
+        {
+          "slot": "Guard",
+          "priority": [
+            "Weapon Damage Boost",
+            "Combat Speed",
+            "Damage Boost",
+            "Might",
+            "Precision",
+            "Multi Hit Chance",
+            "Atk"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Armor",
+      "slots": [
+        {
+          "slot": "Helmet",
+          "priority": [
+            "Incoming Heal",
+            "Empyrean Lord's Grace",
+            "Earth's Grace",
+            "Double Chance",
+            "Attack increase",
+            "Crit",
+            "Attack"
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "priority": [
+            "Crit Damage Boost",
+            "Empyrean Lord's Grace",
+            "Earth's Grace",
+            "Accuracy",
+            "Crit",
+            "Attack",
+            "Defense Increase"
+          ]
+        },
+        {
+          "slot": "Chest",
+          "priority": [
+            "Damage Boost",
+            "Empyrean Lord's Grace",
+            "Earth's Grace",
+            "Crit",
+            "Accuracy",
+            "Attack",
+            "Defense Increase"
+          ]
+        },
+        {
+          "slot": "Legs",
+          "priority": [
+            "Damage Tolerance",
+            "Empyrean Lord's Grace",
+            "Earth's Grace",
+            "Perfect Increase",
+            "ATK increase",
+            "Crit",
+            "Atk"
+          ]
+        },
+        {
+          "slot": "Gloves/Boots",
+          "priority": [
+            "Speed",
+            "Empyrean Lord's Grace",
+            "Earth's Grace",
+            "Perfect Chance",
+            "Crit",
+            "Attack",
+            "Defense increase"
+          ]
+        },
+        {
+          "slot": "Cape",
+          "priority": [
+            "Empyrean Lord's Grace",
+            "Earth's Grace",
+            "Smite",
+            "Double Chance",
+            "Attack increase",
+            "Crit",
+            "Attack"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Passive Accessories",
+      "slots": [
+        {
+          "slot": "Earring & Necklace",
+          "priority": [
+            "Empyrean Lord's Grace",
+            "Earth's Grace",
+            "Might",
+            "Precision",
+            "Healing Enhancement",
+            "Accuracy",
+            "Crit",
+            "Attack"
+          ]
+        },
+        {
+          "slot": "Rings",
+          "priority": [
+            "Condemnation",
+            "Bolt",
+            "Radiant Recovery",
+            "Might",
+            "Precision",
+            "Divine Aura",
+            "Judgment Thunder",
+            "Healing Light",
+            "Attack"
+          ]
+        },
+        {
+          "slot": "Bracelets",
+          "priority": [
+            "Wisdom",
+            "Destruction",
+            "Time",
+            "Illusion",
+            "Death",
+            "Justice",
+            "Life",
+            "Space",
+            "Freedom",
+            "Destiny"
+          ]
+        },
+        {
+          "slot": "Brooches",
+          "priority": [
+            "Might",
+            "Precision",
+            "Accuracy",
+            "Crit",
+            "Constitution"
+          ]
+        },
+        {
+          "slot": "Seals",
+          "priority": [
+            "Attack",
+            "Boss Attack",
+            "Max Attack",
+            "Crit Attack",
+            "PvE Attack",
+            "Power Shard Damage Bonus"
+          ]
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "Cleric guy (twitch/youtube)",
+      "url": "https://www.twitch.tv/youmadsin"
+    },
+    {
+      "label": "Aion 2 bible",
+      "url": "https://docs.google.com/document/d/11u4wLCG1WfL-xSka2Aze0rI9vYRa7mq3N3Gp1bt0AWY/edit?tab=t.0"
+    },
+    {
+      "label": "IF you need daevanion boards for classes, try to find some here",
+      "url": "https://questlog.gg/aion-2/en/skill-builder"
+    }
+  ],
+  "notes": [
+    "Defensive Skill Layout Example(Recommended with pugs it's painful rn specially for horn den and transcendence, can swap light of protection for Prayer of Amplification or Res when playing with a Chanter so ideally have a 2nd preset you can swap to. Resurrection can be annoying when 1 person dies and then another one dies after you just used the Rez. Yustiel's power during certain mechs can be really strong and prevent people from dying",
+    "Hold Down The Macro / Charge your (3) Bolt / Use Heals when needed",
+    "Early on you have to weave in LMB because you won't be able to sustain your mana holding down the macro.",
+    "Recommended to run your Light of Regeneration on your macro since its a 30sec cd and it lasts 30 for 30 seconds when starting out and getting used to what all of your skills do then swap it out of it.",
+    "Credits to the guidemaker linked above"
+  ],
+  "screenshots": [
+    "/builds/cleric/shot-1.png",
+    "/builds/cleric/shot-2.png",
+    "/builds/cleric/shot-3.png",
+    "/builds/cleric/shot-4.png"
+  ]
+}

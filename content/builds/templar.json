@@ -1,0 +1,582 @@
+{
+  "id": "templar",
+  "name": "Templar",
+  "skills": [
+    {
+      "name": "Vicious Strike",
+      "detail": "(20) - (3/4/5)"
+    },
+    {
+      "name": "Pummel",
+      "detail": "(20) - (3/4/5)"
+    },
+    {
+      "name": "Poach",
+      "detail": "(12) - (1/4)"
+    },
+    {
+      "name": "Shield Smite",
+      "detail": "(12) - (3/4)"
+    },
+    {
+      "name": "Judgment",
+      "detail": "(20) - (3/4/5)"
+    },
+    {
+      "name": "Flash Rampage",
+      "detail": "N/A"
+    },
+    {
+      "name": "Debilitating Smash",
+      "detail": "(12) - (2/4)"
+    },
+    {
+      "name": "Warding Strike",
+      "detail": "(16) - (1/5)"
+    },
+    {
+      "name": "Shield Rush",
+      "detail": "(12) - (2/4)"
+    },
+    {
+      "name": "Annihilate",
+      "detail": "(12) - (3/4)"
+    },
+    {
+      "name": "Punishment",
+      "detail": "(20) - (3/4/5)"
+    },
+    {
+      "name": "Defiance",
+      "detail": "(16) - (3/5)"
+    }
+  ],
+  "passives": [
+    {
+      "name": "Fury",
+      "rank": 1
+    },
+    {
+      "name": "Impact Hit",
+      "rank": 2
+    },
+    {
+      "name": "Insulting Roar",
+      "rank": 3
+    }
+  ],
+  "stigmas": [
+    {
+      "name": "Taunt",
+      "rank": 1,
+      "detail": "(IMPORTANTTTTT)"
+    },
+    {
+      "name": "Noble Armor",
+      "rank": 2
+    },
+    {
+      "name": "Shield of Protection",
+      "rank": 3
+    },
+    {
+      "name": "Doom Shield",
+      "rank": 4
+    },
+    {
+      "name": "Battlefield Banner"
+    },
+    {
+      "name": "Executing Blade"
+    }
+  ],
+  "arcana": [
+    {
+      "set": "Chalice (Vigor)",
+      "stat": "Time"
+    },
+    {
+      "set": "Parchement (Vigor)",
+      "stat": "Life / Destiny"
+    },
+    {
+      "set": "Compass (Magic)",
+      "stat": "Death / Freedom"
+    },
+    {
+      "set": "Bell (Magic)",
+      "stat": "Destruction"
+    },
+    {
+      "set": "Mirror (Magic)",
+      "stat": "Illusion / Wisdom"
+    },
+    {
+      "set": "Scales",
+      "stat": "Destruction"
+    },
+    {
+      "set": "Key",
+      "stat": "Attack"
+    },
+    {
+      "set": "Hourglass",
+      "stat": "Defense"
+    },
+    {
+      "set": "Dice",
+      "stat": "Accuracy"
+    },
+    {
+      "set": "Lantern",
+      "stat": "Evasion"
+    }
+  ],
+  "equipEffects": [
+    [
+      "Boss Damage",
+      "Critical Damage"
+    ],
+    [
+      "Max Attack",
+      "Boss Attack",
+      "Critical Attack"
+    ],
+    [
+      "Double Chance"
+    ],
+    [
+      "Endurance"
+    ]
+  ],
+  "boards": [
+    {
+      "name": "Cogni",
+      "lines": [
+        {
+          "lines": "1 & 5",
+          "priority": [
+            "Max Attack",
+            "Attack Bonus"
+          ]
+        },
+        {
+          "lines": "2 & 8",
+          "priority": [
+            "HP Increase %"
+          ]
+        },
+        {
+          "lines": "3,6,9",
+          "priority": [
+            "Crit, Accuracy",
+            "Power Shard if cap is not reached"
+          ]
+        },
+        {
+          "lines": "4",
+          "priority": [
+            "Critical Damage Boost",
+            "Damage Boost"
+          ]
+        },
+        {
+          "lines": "7",
+          "priority": [
+            "DMG Tolerance, PVE DMG Tolerance",
+            "Endurance"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Natura",
+      "lines": [
+        {
+          "lines": "1 & 5",
+          "priority": [
+            "Max Attack",
+            "Attack Bonus"
+          ]
+        },
+        {
+          "lines": "2 & 8",
+          "priority": [
+            "HP Increase %"
+          ]
+        },
+        {
+          "lines": "3,6,9",
+          "priority": [
+            "Crit, Accuracy",
+            "Power Shard if cap is not reached"
+          ]
+        },
+        {
+          "lines": "4 & 7",
+          "priority": [
+            "Multi Hit / Perfect Chance"
+          ]
+        },
+        {
+          "lines": "7",
+          "priority": [
+            "DMG Tolerance, PVE DMG Tolerance",
+            "Endurance"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Special",
+      "lines": [
+        {
+          "lines": "1 & 5",
+          "priority": [
+            "Max Attack",
+            "Attack Bonus"
+          ]
+        },
+        {
+          "lines": "2 & 8",
+          "priority": [
+            "HP Increase %"
+          ]
+        },
+        {
+          "lines": "3,6,9",
+          "priority": [
+            "Crit, Accuracy",
+            "Power Shard if cap is not reached"
+          ]
+        },
+        {
+          "lines": "4",
+          "priority": [
+            "Double Chance"
+          ]
+        },
+        {
+          "lines": "7",
+          "priority": [
+            "Damage Tolerance",
+            "Endurance"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fera",
+      "lines": [
+        {
+          "lines": "1 & 5",
+          "priority": [
+            "Max Attack",
+            "Attack Bonus"
+          ]
+        },
+        {
+          "lines": "2 & 8",
+          "priority": [
+            "HP Increase %"
+          ]
+        },
+        {
+          "lines": "3,6,9",
+          "priority": [
+            "Crit, Accuracy",
+            "Power Shard if cap is not reached"
+          ]
+        },
+        {
+          "lines": "4",
+          "priority": [
+            "Weapon Damage Boost",
+            "Damage Boost"
+          ]
+        },
+        {
+          "lines": "7",
+          "priority": [
+            "DMG Tolerance, PVE DMG Tolerance",
+            "Endurance"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Varian",
+      "lines": [
+        {
+          "lines": "1 & 5",
+          "priority": [
+            "Max Attack",
+            "Attack Bonus"
+          ]
+        },
+        {
+          "lines": "2 & 8",
+          "priority": [
+            "HP Increase %"
+          ]
+        },
+        {
+          "lines": "3,6,9",
+          "priority": [
+            "Crit, Accuracy",
+            "Power Shard if cap is not reached"
+          ]
+        },
+        {
+          "lines": "4",
+          "priority": [
+            "Front/Back Damage Boost"
+          ]
+        },
+        {
+          "lines": "7",
+          "priority": [
+            "DMG Tolerance, PVE DMG Tolerance",
+            "Endurance"
+          ]
+        }
+      ]
+    }
+  ],
+  "wings": {
+    "meta": "Erroded Wings (77%) / Talisra Wings (18.5%) /  Brawler Wings (3.5%)",
+    "leveling": "Azure Flash Wings / Awaken Pride Wings / Blue Wave Wings / Brawler Wings / Dramata Nest Wings / Eroded Wings / Forest Spirit Wings / Illusory Echo Wings / Nightmare Wings / Salvation Wings / Talisra / Ultimate Daeva Wings"
+  },
+  "enhancing": [
+    "Double Chance Bonuses",
+    "Weapon DMG Boost",
+    "Regular DMG Boost",
+    "Attack",
+    "Accuracy Bonus and Critical Hit"
+  ],
+  "titles": {
+    "offensive": [
+      "Playing God",
+      "Unbound Genus",
+      "Guardian of Verteron"
+    ],
+    "defensive": [
+      "Saint of Verteron",
+      "Rule All Creation",
+      "Dominator of All Dimensions"
+    ],
+    "special": [
+      "Empty Closet",
+      "Through Hell and Back"
+    ]
+  },
+  "theostones": "Poison and beast performing best early on but later on it's irrelevant all of them perform similarly",
+  "manastones": [
+    "Front Damage Boost",
+    "Weapon Damage Boost ≈ Critical Damage Boost",
+    "Damage Boost",
+    "Attack"
+  ],
+  "pantheon": {
+    "colossus": "Priority on Zikel / Kromede then in S2 Kaisinel",
+    "statues": "Priority on Freedom, Death and Space",
+    "paintings": "Priority on Illusion and Wisdom then Life"
+  },
+  "soulbind": [
+    {
+      "group": "Weaponary",
+      "slots": [
+        {
+          "slot": "Weapon",
+          "priority": [
+            "Weapon Damage Boost",
+            "Combat Speed",
+            "Might",
+            "Precision",
+            "Damage Boost",
+            "Multi Hit Chance",
+            "Atk"
+          ]
+        },
+        {
+          "slot": "Guard",
+          "priority": [
+            "Weapon Damage Boost",
+            "Combat Speed",
+            "Damage Boost",
+            "Might",
+            "Precision",
+            "Multi Hit Chance",
+            "Atk"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Armor",
+      "slots": [
+        {
+          "slot": "Helmet",
+          "priority": [
+            "Incoming Heal",
+            "Fury",
+            "Impact Hit",
+            "Double Chance",
+            "Attack increase",
+            "Crit",
+            "Attack"
+          ]
+        },
+        {
+          "slot": "Shoulders",
+          "priority": [
+            "Crit Damage Boost",
+            "Fury",
+            "Impact Hit",
+            "Accuracy",
+            "Crit",
+            "Attack",
+            "Defense Increase"
+          ]
+        },
+        {
+          "slot": "Chest",
+          "priority": [
+            "Damage Boost",
+            "Fury",
+            "Impact Hit",
+            "Crit",
+            "Accuracy",
+            "Attack",
+            "Defense Increase"
+          ]
+        },
+        {
+          "slot": "Legs",
+          "priority": [
+            "Damage Tolerance",
+            "Fury",
+            "Impact Hit",
+            "Perfect Increase",
+            "Attack increase",
+            "Crit",
+            "Attack"
+          ]
+        },
+        {
+          "slot": "Gloves/Boots",
+          "priority": [
+            "Speed",
+            "Fury",
+            "Impact Hit",
+            "Perfect Chance",
+            "Crit",
+            "Attack",
+            "Defense increase"
+          ]
+        },
+        {
+          "slot": "Cape",
+          "priority": [
+            "Fury",
+            "Impact Hit",
+            "Smite",
+            "Double Chance",
+            "Attack increase",
+            "Crit",
+            "Attack"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Passive Accessories",
+      "slots": [
+        {
+          "slot": "Earring & Necklace",
+          "priority": [
+            "Fury",
+            "Impact Hit",
+            "Insulting Roar",
+            "Might",
+            "Precision",
+            "Accuracy",
+            "Crit",
+            "Attack",
+            "N/A"
+          ]
+        },
+        {
+          "slot": "Rings",
+          "priority": [
+            "Vicious Strike",
+            "Punishment",
+            "Judgment",
+            "Might",
+            "Precision",
+            "Pummel",
+            "Warding Strike",
+            "Attack"
+          ]
+        },
+        {
+          "slot": "Bracelets",
+          "priority": [
+            "Wisdom",
+            "Destruction",
+            "Time",
+            "Illusion",
+            "Death",
+            "Justice",
+            "Life",
+            "Space",
+            "Freedom",
+            "Destiny"
+          ]
+        },
+        {
+          "slot": "Brooches",
+          "priority": [
+            "Might",
+            "Precision",
+            "Accuracy",
+            "Crit",
+            "Constitution"
+          ]
+        },
+        {
+          "slot": "Seals",
+          "priority": [
+            "Attack",
+            "Boss Attack",
+            "Max Attack",
+            "Crit Attack",
+            "PvE Attack",
+            "Power Shard Damage Bonus"
+          ]
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "IF you need daevanion boards for classes, try to find some here",
+      "url": "https://questlog.gg/aion-2/en/skill-builder"
+    },
+    {
+      "label": "Aion 2 bible",
+      "url": "https://docs.google.com/document/d/11u4wLCG1WfL-xSka2Aze0rI9vYRa7mq3N3Gp1bt0AWY/edit?tab=t.0"
+    }
+  ],
+  "notes": [
+    "Manually press your Judgement buff and noble aura off-cd",
+    "Option 1: Hold down 2 buttons. LMB (Left click) + In-Macro Key of your choice (RMB Recommended)",
+    "Credits to the guidemaker linked above"
+  ],
+  "screenshots": [
+    "/builds/templar/shot-1.png",
+    "/builds/templar/shot-2.png",
+    "/builds/templar/shot-3.png",
+    "/builds/templar/shot-4.png"
+  ]
+}

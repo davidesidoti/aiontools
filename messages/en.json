@@ -9,7 +9,8 @@
     "checklist": "Checklist",
     "settings": "Settings",
     "crafting": "Crafting",
-    "guides": "Guides"
+    "guides": "Guides",
+    "builds": "Builds"
   },
   "reset": {
     "daily": "Daily reset",
@@ -263,7 +264,54 @@
     "groups": {
       "pages": "Pages",
       "activities": "Activities",
-      "roadmap": "Roadmap"
+      "roadmap": "Roadmap",
+      "classes": "Classes"
     }
+  },
+  "builds": {
+    "title": "Builds",
+    "intro": "Recommended builds for every class, from Castform's spreadsheet.",
+    "back": "All classes",
+    "nav": {
+      "skills": "Skills",
+      "stigmas": "Stigmas & passives",
+      "arcana": "Arcana & stats",
+      "boards": "Daevanion",
+      "soulbind": "Soul binding",
+      "gear": "Gear & more",
+      "media": "Screenshots",
+      "links": "Links"
+    },
+    "skills": "Skill priority",
+    "skillsHint": "(20) means: prioritize while leveling. The numbers after the dash are the recommended specializations.",
+    "passives": "Passive priority",
+    "stigmas": "Stigma priority",
+    "stigmaAlternatives": "Alternatives",
+    "arcana": "Arcana sets",
+    "godStats": "God stats on the arcana",
+    "equipEffects": "Equip effects to target",
+    "equipEffectsHint": "Examples: the options won't always be exactly the same.",
+    "boards": "Daevanion board priorities",
+    "board": "{name} board",
+    "line": "Line {lines}",
+    "soulbind": "Soul binding priorities",
+    "wings": "Wings",
+    "wingsMeta": "Meta equipped",
+    "wingsLeveling": "Best to level up",
+    "enhancing": "Enhancing priority",
+    "titles": "Titles",
+    "titlesOffensive": "Offensive",
+    "titlesDefensive": "Defensive",
+    "titlesSpecial": "Special",
+    "theostones": "Theostones",
+    "manastones": "Manastone stat priority",
+    "pantheon": "Pantheon",
+    "colossus": "Colossus",
+    "statues": "Statues",
+    "paintings": "Paintings",
+    "media": "Screenshots",
+    "notes": "Notes",
+    "links": "Links",
+    "openImage": "Open screenshot {n} full size"
   }
 }
