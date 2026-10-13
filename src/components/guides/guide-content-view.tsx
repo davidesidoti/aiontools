@@ -10,11 +10,17 @@ import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
 const ALL: GuideFilter = { section: "all", mode: "all", scope: "all", q: "" };
+// Every hashchange is a new "jump", even to the same hash, so a jump can reopen an entry the user closed.
+let jumps = 0;
 const subscribeHash = (cb: () => void) => {
-  window.addEventListener("hashchange", cb);
-  return () => window.removeEventListener("hashchange", cb);
+  const onJump = () => {
+    jumps++;
+    cb();
+  };
+  window.addEventListener("hashchange", onJump);
+  return () => window.removeEventListener("hashchange", onJump);
 };
-const readHash = () => decodeURIComponent(window.location.hash.slice(1));
+const readJump = () => `${jumps}:${decodeURIComponent(window.location.hash.slice(1))}`;
 
 function Chips<T extends string>(props: { label: string; options: readonly T[]; value: T; onChange(v: T): void; text(v: T): string }) {
   return (
@@ -82,14 +88,22 @@ export function GuideContentView() {
   const t = useTranslations("guides.content");
   const locale = useLocale();
   const [filter, setFilter] = useState<GuideFilter>(ALL);
-  const [toggled, setToggled] = useState<Record<string, boolean>>({});
-  const hash = useSyncExternalStore(subscribeHash, readHash, () => "");
+  // User open/close choices, tagged with the jump they were made in.
+  const [toggled, setToggled] = useState<Record<string, { open: boolean; jump: string }>>({});
+  const jump = useSyncExternalStore(subscribeHash, readJump, () => "0:");
+  const hash = jump.slice(jump.indexOf(":") + 1);
+  const isOpen = (id: string) => {
+    const choice = toggled[id];
+    // The jump target opens unless the user toggled it after this jump.
+    if (id === hash) return choice?.jump === jump ? choice.open : true;
+    return choice?.open ?? false;
+  };
   const entries = useMemo(() => filterGuide(CONTENT_GUIDE, filter, locale), [filter, locale]);
   const set = (patch: Partial<GuideFilter>) => setFilter((f) => ({ ...f, ...patch }));
 
   useEffect(() => {
     if (hash) document.getElementById(hash)?.scrollIntoView({ block: "start" });
-  }, [hash]);
+  }, [hash, jump]);
 
   // A client navigation (router.push) writes the URL after this view mounts and fires no hashchange: re-read it once.
   useEffect(() => {
@@ -113,7 +127,7 @@ export function GuideContentView() {
       ) : (
         <div className="space-y-2">
           {entries.map((e) => (
-            <Entry key={e.id} e={e} open={toggled[e.id] ?? e.id === hash} onToggle={(open) => setToggled((s) => (s[e.id] === open ? s : { ...s, [e.id]: open }))} />
+            <Entry key={e.id} e={e} open={isOpen(e.id)} onToggle={(open) => setToggled((s) => (s[e.id]?.open === open && s[e.id]?.jump === jump ? s : { ...s, [e.id]: { open, jump } }))} />
           ))}
         </div>
       )}

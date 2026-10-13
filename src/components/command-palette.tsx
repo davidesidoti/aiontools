@@ -38,9 +38,12 @@ export function CommandPalette() {
     setQuery("");
     const [path, hash] = href.split("#");
     // Same page: change only the hash so the page opens the entry without a navigation.
-    // eslint-disable-next-line @next/next/no-location-assign-relative-destination -- hash-only, no navigation
-    if (hash && path === pathname) window.location.assign(`#${hash}`);
-    else router.push(href);
+    if (hash && path === pathname) {
+      // Same hash again: no hashchange would fire, so announce the jump ourselves.
+      if (window.location.hash === `#${hash}`) window.dispatchEvent(new HashChangeEvent("hashchange"));
+      // eslint-disable-next-line @next/next/no-location-assign-relative-destination -- hash-only, no navigation
+      else window.location.assign(`#${hash}`);
+    } else router.push(href);
   };
 
   return (
