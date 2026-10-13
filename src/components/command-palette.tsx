@@ -18,12 +18,14 @@ export function CommandPalette() {
   const router = useRouter();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [query, setQuery] = useState("");
   const items = useMemo(() => buildSearchIndex(locale, { nav: (k) => tNav(k), guide: (k) => tGuide(k) }), [locale, tNav, tGuide]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
         e.preventDefault();
+        setQuery("");
         setOpen((o) => !o);
       }
     };
@@ -33,6 +35,7 @@ export function CommandPalette() {
 
   const go = (href: string) => {
     setOpen(false);
+    setQuery("");
     const [path, hash] = href.split("#");
     // Same page: change only the hash so the page opens the entry without a navigation.
     // eslint-disable-next-line @next/next/no-location-assign-relative-destination -- hash-only, no navigation
@@ -42,12 +45,15 @@ export function CommandPalette() {
 
   return (
     <>
-      <Button variant="ghost" size="icon" className="min-h-11 min-w-11" aria-label={t("open")} onClick={() => setOpen(true)}>
+      <Button variant="ghost" size="icon" className="min-h-11 min-w-11" aria-label={t("open")} onClick={() => {
+          setQuery("");
+          setOpen(true);
+        }}>
         <Search className="size-4" aria-hidden />
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen} title={t("title")} description={t("description")}>
         <Command>
-        <CommandInput placeholder={t("placeholder")} />
+        <CommandInput placeholder={t("placeholder")} value={query} onValueChange={setQuery} />
         <CommandList>
           <CommandEmpty>{t("empty")}</CommandEmpty>
           {GROUPS.map((g) => (

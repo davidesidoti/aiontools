@@ -1,6 +1,6 @@
 # AionTools
 
-Aion 2 tools — daily/weekly checklist (main + 8 alts, automatic resets), with builds, crafting and guides coming next. IT/EN, no login.
+Aion 2 tools: a daily/weekly checklist for a main and 8 alts with automatic resets, a crafting cost calculator, guides (content guide, roadmap with progress, tips, Chanter vs Cleric, class guides) and Ctrl+K search. IT/EN, no login, optional sync between devices.
 
 ## Develop
 
@@ -12,6 +12,8 @@ Aion 2 tools — daily/weekly checklist (main + 8 alts, automatic resets), with 
 ## Content
 
 `content/activities.json` is hand-curated from the community sheets. Reset rules are in `src/lib/regions.ts`.
+
+Guide and crafting content lives in `content/` as JSON with English and Italian text side by side (`{ "en": …, "it": … }`). Images come from the community spreadsheets via `node scripts/import-guide-images.mts`.
 
 ## Sync
 
