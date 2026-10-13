@@ -173,5 +173,83 @@
       "misc": "Other crafting info",
       "compare": "Crafted vs Expedition"
     }
+  },
+  "guides": {
+    "title": "Guides",
+    "intro": "Community guides for Aion 2, from the spreadsheets by Castform and others.",
+    "back": "All guides",
+    "pages": {
+      "content": "Content guide",
+      "roadmap": "Roadmap",
+      "tips": "Tips and settings",
+      "buffs": "Chanter vs Cleric",
+      "links": "Class guides and creators"
+    },
+    "descriptions": {
+      "content": "Every daily, weekly and recharge activity: rewards, requirements and strategy.",
+      "roadmap": "What to do from level 45 to 2,000 gear score, with your progress.",
+      "tips": "The most useful tips and in-game settings.",
+      "buffs": "How the buffs of the two support classes compare.",
+      "links": "In-depth guides and content creators for each class."
+    },
+    "content": {
+      "search": "Search activities",
+      "filters": {
+        "section": "Section",
+        "mode": "Mode",
+        "scope": "Character"
+      },
+      "sections": {
+        "all": "All",
+        "daily": "Daily",
+        "weekly": "Weekly",
+        "recharge": "Recharge",
+        "misc": "Misc"
+      },
+      "modes": {
+        "all": "All",
+        "pve": "PvE",
+        "pvp": "PvP"
+      },
+      "scopes": {
+        "all": "All",
+        "main": "Main",
+        "alt": "Alt"
+      },
+      "mainOnly": "Main only",
+      "count": "Count",
+      "rewards": "Rewards",
+      "requirements": "Requirements",
+      "where": "Where",
+      "strategy": "Strategy",
+      "notes": "Notes",
+      "results": "{count, plural, one {# activity} other {# activities}}",
+      "empty": "No activities match these filters."
+    },
+    "roadmap": {
+      "progress": "{done} of {total} steps done",
+      "systems": "Systems to work on",
+      "targets": "Enhancement targets",
+      "note": "Note",
+      "warning": "Important",
+      "open": "Open link"
+    },
+    "tips": {
+      "settings": "Recommended settings",
+      "more": "More settings"
+    },
+    "buffs": {
+      "chanter": "Chanter",
+      "cleric": "Cleric",
+      "differences": "Main differences",
+      "pairs": "Buffs side by side",
+      "comp": "Party composition"
+    },
+    "links": {
+      "guides": "Guides",
+      "creators": "Content creators",
+      "tools": "Tools",
+      "none": "No creators listed yet."
+    }
   }
 }

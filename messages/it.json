@@ -173,5 +173,83 @@
       "misc": "Altre info sul crafting",
       "compare": "Craftato vs Expedition"
     }
+  },
+  "guides": {
+    "title": "Guide",
+    "intro": "Guide della community per Aion 2, dai fogli di Castform e altri.",
+    "back": "Tutte le guide",
+    "pages": {
+      "content": "Guida ai contenuti",
+      "roadmap": "Roadmap",
+      "tips": "Consigli e impostazioni",
+      "buffs": "Chanter vs Cleric",
+      "links": "Guide di classe e creator"
+    },
+    "descriptions": {
+      "content": "Tutte le attività giornaliere, settimanali e a ricarica: ricompense, requisiti e strategia.",
+      "roadmap": "Cosa fare dal livello 45 a 2.000 di gear score, con i tuoi progressi.",
+      "tips": "I consigli più utili e le impostazioni di gioco.",
+      "buffs": "Il confronto tra i buff delle due classi di supporto.",
+      "links": "Guide approfondite e content creator per ogni classe."
+    },
+    "content": {
+      "search": "Cerca attività",
+      "filters": {
+        "section": "Sezione",
+        "mode": "Modalità",
+        "scope": "Personaggio"
+      },
+      "sections": {
+        "all": "Tutte",
+        "daily": "Giornaliere",
+        "weekly": "Settimanali",
+        "recharge": "Ricariche",
+        "misc": "Varie"
+      },
+      "modes": {
+        "all": "Tutte",
+        "pve": "PvE",
+        "pvp": "PvP"
+      },
+      "scopes": {
+        "all": "Tutti",
+        "main": "Main",
+        "alt": "Alt"
+      },
+      "mainOnly": "Solo main",
+      "count": "Quantità",
+      "rewards": "Ricompense",
+      "requirements": "Requisiti",
+      "where": "Dove",
+      "strategy": "Strategia",
+      "notes": "Note",
+      "results": "{count, plural, one {# attività} other {# attività}}",
+      "empty": "Nessuna attività corrisponde a questi filtri."
+    },
+    "roadmap": {
+      "progress": "{done} di {total} passi completati",
+      "systems": "Sistemi su cui lavorare",
+      "targets": "Obiettivi di potenziamento",
+      "note": "Nota",
+      "warning": "Importante",
+      "open": "Apri link"
+    },
+    "tips": {
+      "settings": "Impostazioni consigliate",
+      "more": "Altre impostazioni"
+    },
+    "buffs": {
+      "chanter": "Chanter",
+      "cleric": "Cleric",
+      "differences": "Differenze principali",
+      "pairs": "Buff a confronto",
+      "comp": "Composizione del party"
+    },
+    "links": {
+      "guides": "Guide",
+      "creators": "Content creator",
+      "tools": "Strumenti",
+      "none": "Ancora nessun creator in elenco."
+    }
   }
 }
