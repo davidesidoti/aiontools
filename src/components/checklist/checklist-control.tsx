@@ -19,7 +19,8 @@ export function ChecklistControl({ activity, character, count, max, onChange }: 
           <button
             key={n}
             type="button"
-            aria-label={t("setTo", { activity, character, count: n })}
+            // The last lit pip removes one; label it by what a click does.
+            aria-label={n === count ? t("decrement", { activity, character }) : t("setTo", { activity, character, count: n })}
             aria-pressed={n <= count}
             onClick={() => onChange(count === n ? n - 1 : n)}
             // 28×44 hit area: seven pips must fit a 280px card.

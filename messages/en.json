@@ -74,6 +74,8 @@
       "makeMain": "Make main",
       "add": "Add character",
       "remove": "Remove {name}",
+      "removed": "{name} removed",
+      "undo": "Undo",
       "limit": "Up to 1 main and 8 alts.",
       "empty": "No characters yet."
     },

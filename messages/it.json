@@ -74,6 +74,8 @@
       "makeMain": "Imposta come main",
       "add": "Aggiungi personaggio",
       "remove": "Rimuovi {name}",
+      "removed": "{name} rimosso",
+      "undo": "Annulla",
       "limit": "Massimo 1 main e 8 alt.",
       "empty": "Nessun personaggio."
     },
