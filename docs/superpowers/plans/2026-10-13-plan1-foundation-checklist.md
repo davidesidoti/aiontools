@@ -23,7 +23,6 @@ This is plan 1 of 4. The others are: plan 2, sync (API, Upstash, conflict UI); p
 | Activities are produced by the import script | `content/activities.json` is hand-curated | The sheet's count strings are free text (`0-3x/War`, `20x/Week (Main) 4x/Week Alt`) and need a human's judgment. Plan 4 adds the Content Guide import, which supplies the text fields. |
 | `Activity` has the full set of fields | Plan 1 uses a subset: `id`, `name`, `section`, `scope`, `limit` (`limit` gains `altMax`), and `note` | Plan 4 extends the schema. |
 | `@date-fns/tz` for reset math | Pure arithmetic with fixed UTC offsets | Global is UTC, KR is UTC+9 and TW is UTC+8, and none of them observe DST. |
-| `settings` holds `region`, `theme` and `accent` | Plan 1 adds `onboarded: boolean` | The first-visit onboarding needs a flag. |
 | Ctrl+K command palette | Moved to plan 4 | In plan 1 it would only search two pages. |
 
 ## Global Constraints
@@ -44,8 +43,8 @@ This is plan 1 of 4. The others are: plan 2, sync (API, Upstash, conflict UI); p
 - localStorage key: `aiontools:user-data`. A corrupt value is copied to `aiontools-backup-{epochMs}` before the app falls back to defaults.
 - An imported JSON file must be at most 65,536 characters and is validated against `UserDataSchema`.
 - `updatedAt` is bumped only by user edits, never by automatic resets. Plan 2's sync depends on this.
-- Accessibility: every control is reachable by keyboard and has an accessible name. Counters use the label `"{activity}, {character}: {count} of {max}"`. Touch targets are at least 44 px (`min-h-11 min-w-11`).
-- Colors and theme: dark is the default. Backgrounds are ink-blue and the primary is gold. With `data-accent="asmodian"` the primary becomes violet.
+- Accessibility: every control is reachable by keyboard and has an accessible name. Each checklist control is a group labelled `"{activity}, {character}: {count} of {max}"`. Touch targets are at least 44 px tall (`min-h-11`); checklist pips are 28×44 px so that seven fit on a card.
+- Colors: dark only, with no light theme and no theme toggle. Backgrounds are ink-blue and the primary is gold. With `data-accent="asmodian"` the primary becomes violet.
 - Git: if `git config user.name` is empty, commit with `git -c user.name="Davide Sidoti" -c user.email="sidotidavide@gmail.com" commit ...`. Never change the global config. Every commit message ends with `Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>`.
 - Links styled as buttons: always use `<Link className={buttonVariants({ variant, size })}>` with `buttonVariants` imported from `@/components/ui/button`. Never use `<Button asChild>`, because newer shadcn versions built on Base UI drop `asChild`. The same applies to Radix-specific data attributes: if the installed shadcn primitives are Base UI, map `data-[state=closed]` to the equivalent attribute.
 - Docs: Next.js and next-intl move fast. If a command or API in this plan errors, check the installed version's docs and adapt the call without changing its behavior. Next.js docs are in `node_modules/next/dist/docs/` when present, otherwise at nextjs.org/docs. next-intl docs are at next-intl.dev.
@@ -56,7 +55,7 @@ These are the failure modes most likely to hurt a real user. Each line names the
 
 1. **The app is opened weeks after the last visit, or exactly at the reset instant.** Daily and weekly counters reset exactly once, and a reset at `07:00:00.000` counts as already happened. Tests: Task 2 (boundary equality) and Task 5 (`applyResets` across 3 weeks, and calling it twice is idempotent).
 2. **localStorage is corrupt, from an older schema, or unavailable** (for example in a private window). The app still loads and keeps a backup of the raw value. Tests: Task 4 (`parseStored` with garbage or a bad version), Task 6 (backup written; a throwing localStorage does not crash), and Task 12 (E2E with corrupt storage).
-3. **A main-only activity on an alt.** It cannot be ticked, and it renders as disabled. When the main changes, a stored count above the new maximum is clamped on display. Tests: Task 5 (`setCount` on an alt returns the same object; `getCount` clamps) and Task 9 (the cell renders as disabled).
+3. **A main-only activity on an alt.** It cannot be ticked, and it is left out of the alt's card. When the main changes, a stored count above the new maximum is clamped on display. Tests: Task 5 (`setCount` on an alt returns the same object; `getCount` clamps) and Task 9 (the alt card does not render it).
 4. **The main character is removed.** The next character becomes main and the removed character's progress is deleted. A character list with no main is never stored. Test: Task 5.
 5. **The user imports an invalid, oversized, or foreign JSON file.** It is rejected with a message and the existing data is untouched. Test: Task 4 (`parseImported`: oversized, wrong shape, invalid JSON).
 
@@ -80,9 +79,9 @@ src/hooks/use-now.ts                     ticking Date (null until mounted)
 src/i18n/routing.ts, navigation.ts, request.ts
 src/proxy.ts (Next ≥16) or src/middleware.ts (Next ≤15)
 src/app/[locale]/layout.tsx, page.tsx, checklist/page.tsx, settings/page.tsx
-src/components/store-hydrator.tsx        hydrate, reset ticker, theme applier, corrupt toast
-src/components/shell/*                   app-shell, sidebar, bottom-nav, top-bar, nav-items, locale-switch, theme-toggle, reset-countdown, footer
-src/components/checklist/*               checklist-view, checklist-cell, progress-ring
+src/components/store-hydrator.tsx        hydrate, reset ticker, accent applier, corrupt toast
+src/components/shell/*                   app-shell, sidebar, bottom-nav, top-bar, nav-items, locale-switch, reset-countdown, footer
+src/components/checklist/*               checklist-view, character-card, checklist-control, progress-ring
 src/components/settings/*                region-select, characters-editor, appearance-settings, data-transfer
 src/components/onboarding-dialog.tsx
 src/components/home/home-dashboard.tsx
@@ -131,7 +130,7 @@ pnpm add -D vitest @vitejs/plugin-react vite-tsconfig-paths jsdom @testing-libra
 
 ```bash
 pnpm dlx shadcn@latest init -d
-pnpm dlx shadcn@latest add button card checkbox input label select tabs dialog sonner tooltip collapsible badge
+pnpm dlx shadcn@latest add button card input label select dialog sonner tooltip badge
 ```
 
 `-d` picks the defaults. The resulting `components.json` has to point at `src/components/ui` and `src/lib/utils.ts`.
@@ -603,7 +602,7 @@ describe("createDefaultUserData", () => {
     expect(UserDataSchema.safeParse(d).success).toBe(true);
     expect(d.checklist.lastDaily).toBe("2026-10-14T07:00:00.000Z");
     expect(d.checklist.lastWeekly).toBe("2026-10-14T07:00:00.000Z");
-    expect(d.settings).toEqual({ region: "global", theme: "dark", accent: "elyos", onboarded: false });
+    expect(d.settings).toEqual({ region: "global", accent: "elyos", onboarded: false });
   });
 });
 
@@ -647,7 +646,7 @@ describe("setSettings", () => {
   it("merges a patch", () => {
     const d = setSettings(createDefaultUserData(now), { region: "kr" });
     expect(d.settings.region).toBe("kr");
-    expect(d.settings.theme).toBe("dark");
+    expect(d.settings.accent).toBe("elyos");
   });
 });
 ```
@@ -681,7 +680,6 @@ export const UserDataSchema = z
     updatedAt: z.iso.datetime(),
     settings: z.object({
       region: z.enum(REGION_IDS),
-      theme: z.enum(["dark", "light"]),
       accent: z.enum(["elyos", "asmodian"]),
       onboarded: z.boolean(),
     }),
@@ -708,7 +706,7 @@ export function createDefaultUserData(now: Date): UserData {
   return {
     version: USER_DATA_VERSION,
     updatedAt: now.toISOString(),
-    settings: { region: "global", theme: "dark", accent: "elyos", onboarded: false },
+    settings: { region: "global", accent: "elyos", onboarded: false },
     characters: [],
     checklist: {
       progress: {},
@@ -1270,7 +1268,6 @@ Expected: FAIL, because the message files do not exist yet.
   "meta": { "title": "AionTools", "description": "Aion 2 tools: daily and weekly checklist, builds, crafting and guides." },
   "nav": { "label": "Main navigation", "home": "Home", "checklist": "Checklist", "settings": "Settings" },
   "reset": { "daily": "Daily reset", "weekly": "Weekly reset", "units": { "d": "d", "h": "h", "m": "m" } },
-  "theme": { "toggle": "Toggle light/dark theme" },
   "locale": { "label": "Language", "en": "English", "it": "Italiano" },
   "footer": { "credits": "Data from community spreadsheets by Castform and others. Fan-made, not affiliated with NCSoft." },
   "home": {
@@ -1283,10 +1280,11 @@ Expected: FAIL, because the message files do not exist yet.
   "checklist": {
     "title": "Checklist",
     "sections": { "daily": "Daily", "weekly": "Weekly", "recharge": "Recharge" },
-    "activity": "Activity",
-    "notApplicable": "Not available for alts",
     "cellLabel": "{activity}, {character}: {count} of {max}",
-    "decrement": "Remove one from {activity}",
+    "setTo": "{activity}, {character}: set to {count}",
+    "increment": "{activity}, {character}: add one",
+    "decrement": "{activity}, {character}: remove one",
+    "done": "Done",
     "resetsIn": "Resets in {time}",
     "noCharacters": "Add a character to start tracking.",
     "goToSettings": "Open settings",
@@ -1308,7 +1306,7 @@ Expected: FAIL, because the message files do not exist yet.
       "limit": "Up to 1 main and 8 alts.",
       "empty": "No characters yet."
     },
-    "appearance": { "title": "Appearance", "theme": "Theme", "dark": "Dark", "light": "Light", "accent": "Accent", "elyos": "Elyos", "asmodian": "Asmodian" },
+    "appearance": { "title": "Appearance", "accent": "Accent", "elyos": "Elyos", "asmodian": "Asmodian" },
     "data": {
       "title": "Your data",
       "hint": "Your progress is saved in this browser. Export a backup or move it to another browser.",
@@ -1337,7 +1335,6 @@ Expected: FAIL, because the message files do not exist yet.
   "meta": { "title": "AionTools", "description": "Strumenti per Aion 2: checklist giornaliera e settimanale, build, crafting e guide." },
   "nav": { "label": "Navigazione principale", "home": "Home", "checklist": "Checklist", "settings": "Impostazioni" },
   "reset": { "daily": "Reset giornaliero", "weekly": "Reset settimanale", "units": { "d": "g", "h": "h", "m": "m" } },
-  "theme": { "toggle": "Cambia tema chiaro/scuro" },
   "locale": { "label": "Lingua", "en": "English", "it": "Italiano" },
   "footer": { "credits": "Dati dai fogli della community di Castform e altri. Progetto fan-made, non affiliato a NCSoft." },
   "home": {
@@ -1350,10 +1347,11 @@ Expected: FAIL, because the message files do not exist yet.
   "checklist": {
     "title": "Checklist",
     "sections": { "daily": "Giornaliere", "weekly": "Settimanali", "recharge": "Ricariche" },
-    "activity": "Attività",
-    "notApplicable": "Non disponibile per gli alt",
     "cellLabel": "{activity}, {character}: {count} di {max}",
-    "decrement": "Togli uno da {activity}",
+    "setTo": "{activity}, {character}: imposta a {count}",
+    "increment": "{activity}, {character}: aggiungi uno",
+    "decrement": "{activity}, {character}: togli uno",
+    "done": "Completato",
     "resetsIn": "Reset tra {time}",
     "noCharacters": "Aggiungi un personaggio per iniziare.",
     "goToSettings": "Apri impostazioni",
@@ -1375,7 +1373,7 @@ Expected: FAIL, because the message files do not exist yet.
       "limit": "Massimo 1 main e 8 alt.",
       "empty": "Nessun personaggio."
     },
-    "appearance": { "title": "Aspetto", "theme": "Tema", "dark": "Scuro", "light": "Chiaro", "accent": "Accento", "elyos": "Elyos", "asmodian": "Asmodian" },
+    "appearance": { "title": "Aspetto", "accent": "Accento", "elyos": "Elyos", "asmodian": "Asmodian" },
     "data": {
       "title": "I tuoi dati",
       "hint": "I progressi sono salvati in questo browser. Esporta un backup o spostali su un altro browser.",
@@ -1479,12 +1477,12 @@ Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
   - `src/lib/format.ts` and its test `src/lib/format.test.ts`
   - `src/hooks/use-now.ts`
   - `src/components/store-hydrator.tsx`
-  - in `src/components/shell/`: `nav-items.ts`, `app-shell.tsx`, `sidebar.tsx`, `bottom-nav.tsx`, `top-bar.tsx`, `locale-switch.tsx`, `theme-toggle.tsx`, `reset-countdown.tsx`, `footer.tsx`
+  - in `src/components/shell/`: `nav-items.ts`, `app-shell.tsx`, `sidebar.tsx`, `bottom-nav.tsx`, `top-bar.tsx`, `locale-switch.tsx`, `reset-countdown.tsx`, `footer.tsx`
   - `src/app/[locale]/layout.tsx` and `src/app/[locale]/page.tsx` (a placeholder until Task 11)
 - Modify: `src/app/globals.css`
 
 **Interfaces:**
-- Consumes: `useUserStore`, `setSettings`, `nextResetAt`, `routing` and the `@/i18n/navigation` exports
+- Consumes: `useUserStore`, `nextResetAt`, `routing` and the `@/i18n/navigation` exports
 - Produces:
   - `formatCountdown(ms: number, units: { d: string; h: string; m: string }): string`
   - `useNow(intervalMs?: number): Date | null`
@@ -1555,29 +1553,7 @@ Expected: PASS.
 
 Keep everything shadcn generated. Make three changes.
 
-**(a)** In the `:root { ... }` block, replace the values of these variables with the light theme:
-
-```css
-  --background: oklch(0.98 0.005 85);
-  --foreground: oklch(0.2 0.03 265);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.03 265);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0.03 265);
-  --primary: oklch(0.75 0.14 80);
-  --primary-foreground: oklch(0.18 0.03 265);
-  --secondary: oklch(0.94 0.01 265);
-  --secondary-foreground: oklch(0.2 0.03 265);
-  --muted: oklch(0.94 0.01 265);
-  --muted-foreground: oklch(0.45 0.02 265);
-  --accent: oklch(0.94 0.02 85);
-  --accent-foreground: oklch(0.2 0.03 265);
-  --border: oklch(0.88 0.01 265);
-  --input: oklch(0.88 0.01 265);
-  --ring: oklch(0.75 0.14 80);
-```
-
-**(b)** In the `.dark { ... }` block, replace the same variables with the dark theme:
+**(a)** Dark is the only theme. In both the `:root { ... }` and `.dark { ... }` blocks, set these variables to the same values:
 
 ```css
   --background: oklch(0.17 0.03 265);
@@ -1598,6 +1574,8 @@ Keep everything shadcn generated. Make three changes.
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.8 0.13 85);
 ```
+
+**(b)** The `<html>` element always carries `class="dark"`, so components that use the `dark:` variant still render correctly.
 
 **(c)** Append the accent override and the font tokens at the end of the file:
 
@@ -1657,7 +1635,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
   return (
-    // Dark is the default; StoreHydrator switches to the stored preference after mount.
+    // Dark-only app: the .dark class is permanent.
     <html lang={locale} className={`dark ${inter.variable} ${cinzel.variable}`} data-accent="elyos" suppressHydrationWarning>
       <body className="bg-background font-sans text-foreground antialiased">
         <NextIntlClientProvider>
@@ -1684,9 +1662,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 }
 ```
 
-If `src/components/ui/sonner.tsx` imports `next-themes`, replace its `useTheme()` usage with `const theme = "system"`. This app does not use next-themes, and the Toaster follows the `.dark` class through CSS variables.
+If `src/components/ui/sonner.tsx` imports `next-themes`, replace its `useTheme()` usage with `const theme = "dark"`. This app does not use next-themes, and the Toaster follows the `.dark` class through CSS variables.
 
-- [ ] **Step 5: Create the store hydrator, which handles reset ticks, the theme and the corrupt-data toast**
+- [ ] **Step 5: Create the store hydrator, which handles reset ticks, the accent and the corrupt-data toast**
 
 ```tsx
 // src/components/store-hydrator.tsx
@@ -1698,7 +1676,6 @@ import { useUserStore } from "@/store/user-store";
 
 export function StoreHydrator() {
   const t = useTranslations("settings.data");
-  const theme = useUserStore((s) => s.data.settings.theme);
   const accent = useUserStore((s) => s.data.settings.accent);
   const hydrated = useUserStore((s) => s.hydrated);
 
@@ -1712,9 +1689,8 @@ export function StoreHydrator() {
 
   useEffect(() => {
     if (!hydrated) return;
-    document.documentElement.classList.toggle("dark", theme === "dark");
     document.documentElement.dataset.accent = accent;
-  }, [hydrated, theme, accent]);
+  }, [hydrated, accent]);
 
   return null;
 }
@@ -1850,37 +1826,9 @@ export function LocaleSwitch() {
 ```
 
 ```tsx
-// src/components/shell/theme-toggle.tsx
-"use client";
-import { Moon, Sun } from "lucide-react";
-import { useTranslations } from "next-intl";
-import { Button } from "@/components/ui/button";
-import { useUserStore } from "@/store/user-store";
-import { setSettings } from "@/lib/user-data";
-
-export function ThemeToggle() {
-  const t = useTranslations("theme");
-  const theme = useUserStore((s) => s.data.settings.theme);
-  const update = useUserStore((s) => s.update);
-  return (
-    <Button
-      variant="ghost"
-      size="icon"
-      className="min-h-11 min-w-11"
-      aria-label={t("toggle")}
-      onClick={() => update((d) => setSettings(d, { theme: theme === "dark" ? "light" : "dark" }))}
-    >
-      {theme === "dark" ? <Sun className="size-4" aria-hidden /> : <Moon className="size-4" aria-hidden />}
-    </Button>
-  );
-}
-```
-
-```tsx
 // src/components/shell/top-bar.tsx
 import { ResetCountdown } from "./reset-countdown";
 import { LocaleSwitch } from "./locale-switch";
-import { ThemeToggle } from "./theme-toggle";
 import { Link } from "@/i18n/navigation";
 
 export function TopBar() {
@@ -1893,7 +1841,6 @@ export function TopBar() {
       </div>
       <div className="ml-auto flex items-center gap-1">
         <LocaleSwitch />
-        <ThemeToggle />
       </div>
     </header>
   );
@@ -1942,7 +1889,6 @@ Then run `pnpm dev`, open http://localhost:3000, and check all of the following:
 - The dark background and the gold logo appear.
 - Both countdowns tick.
 - Switching to IT changes the URL to `/it` and shows the Italian labels.
-- The theme toggle switches to light.
 - At a 375 px width the bottom nav is visible and the sidebar is hidden.
 
 - [ ] **Step 8: Commit**
@@ -1956,68 +1902,88 @@ Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
 
 ---
 
-### Task 9: Checklist page
+### Task 9: Checklist page (character cards)
+
+The layout is variant D from the style mockups. There is one card per character, and desktop and mobile use the same layout.
 
 **Files:**
-- Create: `src/components/checklist/checklist-cell.tsx`, `src/components/checklist/progress-ring.tsx`, `src/components/checklist/checklist-view.tsx`, `src/app/[locale]/checklist/page.tsx`
-- Test: `src/components/checklist/checklist-cell.test.tsx`
+- Create:
+  - `src/components/checklist/checklist-control.tsx`
+  - `src/components/checklist/progress-ring.tsx`
+  - `src/components/checklist/character-card.tsx`
+  - `src/components/checklist/checklist-view.tsx`
+  - `src/app/[locale]/checklist/page.tsx`
+- Test:
+  - `src/components/checklist/checklist-control.test.tsx`
+  - `src/components/checklist/character-card.test.tsx`
 
 **Interfaces:**
-- Consumes: `ACTIVITIES`, `SECTIONS`, `maxFor`, `resetPeriod`, `localize`, `getCount`, `setCount`, `progressFor`, `useUserStore` and `useResetCountdown`
+- Consumes: `ACTIVITIES`, `SECTIONS`, `maxFor`, `localize`, `getCount`, `setCount`, `progressFor`, `useUserStore` and `useResetCountdown`
 - Produces:
-  - `<ChecklistCell activity: string; character: string; count: number; max: number; onChange(count: number): void />`
+  - `PIP_LIMIT = 7`
+  - `<ChecklistControl activity: string; character: string; count: number; max: number; onChange(count: number): void />`. `max` is always at least 1, because the card filters out activities that don't apply.
   - `<ProgressRing value: number (0..1); label: string; size?: number />`
+  - `<CharacterCard characterId: string />`
   - `<ChecklistView />`
 
-- [ ] **Step 1: Write the failing cell test**
+- [ ] **Step 1: Write the failing control test**
 
 ```tsx
-// src/components/checklist/checklist-cell.test.tsx
+// src/components/checklist/checklist-control.test.tsx
 import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { NextIntlClientProvider } from "next-intl";
 import messages from "../../../messages/en.json";
-import { ChecklistCell } from "./checklist-cell";
+import { ChecklistControl } from "./checklist-control";
 
-const renderCell = (props: Partial<React.ComponentProps<typeof ChecklistCell>> = {}) => {
+const renderControl = (props: Partial<React.ComponentProps<typeof ChecklistControl>> = {}) => {
   const onChange = vi.fn();
   render(
     <NextIntlClientProvider locale="en" messages={messages}>
-      <ChecklistCell activity="Daily Dungeon" character="Aria" count={2} max={14} onChange={onChange} {...props} />
+      <ChecklistControl activity="Duty Missions" character="Aria" count={2} max={5} onChange={onChange} {...props} />
     </NextIntlClientProvider>,
   );
   return onChange;
 };
 
-describe("ChecklistCell", () => {
-  it("counter: click increments, shift-click and minus decrement", async () => {
-    const user = userEvent.setup(); // one instance so the held Shift carries over to the click
-    const onChange = renderCell();
-    const btn = screen.getByRole("button", { name: "Daily Dungeon, Aria: 2 of 14" });
-    expect(btn).toHaveTextContent("2/14");
-    await user.click(btn);
-    expect(onChange).toHaveBeenLastCalledWith(3);
-    await user.keyboard("{Shift>}");
-    await user.click(btn);
-    await user.keyboard("{/Shift}");
-    expect(onChange).toHaveBeenLastCalledWith(1);
-    onChange.mockClear();
-    await user.click(screen.getByRole("button", { name: "Remove one from Daily Dungeon" }));
-    expect(onChange).toHaveBeenLastCalledWith(1);
+describe("ChecklistControl — pips (max ≤ 7)", () => {
+  it("renders one pip per use inside a labelled group", () => {
+    renderControl();
+    expect(screen.getByRole("group", { name: "Duty Missions, Aria: 2 of 5" })).toBeInTheDocument();
+    expect(screen.getAllByRole("button")).toHaveLength(5);
+    expect(screen.getByRole("button", { name: "Duty Missions, Aria: set to 2" })).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByRole("button", { name: "Duty Missions, Aria: set to 3" })).toHaveAttribute("aria-pressed", "false");
   });
-
-  it("max 1 renders a checkbox", async () => {
+  it("clicking pip n sets n; clicking the last lit pip sets n-1", async () => {
     const user = userEvent.setup();
-    const onChange = renderCell({ max: 1, count: 0 });
-    await user.click(screen.getByRole("checkbox", { name: "Daily Dungeon, Aria: 0 of 1" }));
+    const onChange = renderControl();
+    await user.click(screen.getByRole("button", { name: "Duty Missions, Aria: set to 4" }));
+    expect(onChange).toHaveBeenLastCalledWith(4);
+    await user.click(screen.getByRole("button", { name: "Duty Missions, Aria: set to 2" }));
     expect(onChange).toHaveBeenLastCalledWith(1);
   });
+  it("max 1 is a single pip that toggles", async () => {
+    const user = userEvent.setup();
+    const onChange = renderControl({ max: 1, count: 1 });
+    await user.click(screen.getByRole("button", { name: "Duty Missions, Aria: set to 1" }));
+    expect(onChange).toHaveBeenLastCalledWith(0);
+  });
+});
 
-  it("max 0 renders disabled n/a", () => {
-    renderCell({ max: 0, count: 0 });
-    expect(screen.queryByRole("button")).toBeNull();
-    expect(screen.getByLabelText("Not available for alts")).toBeInTheDocument();
+describe("ChecklistControl — bar (max > 7)", () => {
+  it("shows n/max with − and + buttons", async () => {
+    const user = userEvent.setup();
+    const onChange = renderControl({ activity: "Daily Dungeon", max: 14, count: 2 });
+    expect(screen.getByRole("group", { name: "Daily Dungeon, Aria: 2 of 14" })).toHaveTextContent("2/14");
+    await user.click(screen.getByRole("button", { name: "Daily Dungeon, Aria: add one" }));
+    expect(onChange).toHaveBeenLastCalledWith(3);
+    await user.click(screen.getByRole("button", { name: "Daily Dungeon, Aria: remove one" }));
+    expect(onChange).toHaveBeenLastCalledWith(1);
+  });
+  it("disables − at 0 and + at max", () => {
+    renderControl({ activity: "Daily Dungeon", max: 14, count: 0 });
+    expect(screen.getByRole("button", { name: "Daily Dungeon, Aria: remove one" })).toBeDisabled();
   });
 });
 ```
@@ -2025,53 +1991,64 @@ describe("ChecklistCell", () => {
 Run: `pnpm test src/components/checklist`
 Expected: FAIL, because the module cannot be found.
 
-- [ ] **Step 2: Implement the cell and the progress ring**
+- [ ] **Step 2: Implement the control and the progress ring**
 
 ```tsx
-// src/components/checklist/checklist-cell.tsx
+// src/components/checklist/checklist-control.tsx
 "use client";
-import { Minus } from "lucide-react";
+import { Minus, Plus } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { Checkbox } from "@/components/ui/checkbox";
 import { cn } from "@/lib/utils";
+
+export const PIP_LIMIT = 7;
 
 type Props = { activity: string; character: string; count: number; max: number; onChange(count: number): void };
 
-export function ChecklistCell({ activity, character, count, max, onChange }: Props) {
+export function ChecklistControl({ activity, character, count, max, onChange }: Props) {
   const t = useTranslations("checklist");
-  if (max === 0) {
-    return <span aria-label={t("notApplicable")} title={t("notApplicable")} className="block text-center text-muted-foreground/40">—</span>;
-  }
   const label = t("cellLabel", { activity, character, count, max });
-  if (max === 1) {
+
+  if (max <= PIP_LIMIT) {
     return (
-      <div className="flex min-h-11 items-center justify-center">
-        <Checkbox aria-label={label} checked={count >= 1} onCheckedChange={(v) => onChange(v === true ? 1 : 0)} className="size-5" />
+      <div role="group" aria-label={label} className="flex shrink-0">
+        {Array.from({ length: max }, (_, i) => i + 1).map((n) => (
+          <button
+            key={n}
+            type="button"
+            aria-label={t("setTo", { activity, character, count: n })}
+            aria-pressed={n <= count}
+            onClick={() => onChange(count === n ? n - 1 : n)}
+            // 28×44 hit area: seven pips must fit a 280px card.
+            className="group/pip flex h-11 w-7 items-center justify-center"
+          >
+            <span
+              className={cn(
+                "size-3.5 rotate-45 rounded-[3px] border-[1.5px] transition-colors",
+                n <= count ? "border-primary bg-primary" : "border-muted-foreground/55 group-hover/pip:border-primary",
+              )}
+            />
+          </button>
+        ))}
       </div>
     );
   }
+
   const done = count >= max;
   return (
-    <div className="flex items-center justify-center gap-1">
-      <button
-        type="button"
-        aria-label={t("decrement", { activity })}
-        disabled={count === 0}
-        onClick={() => onChange(count - 1)}
-        className="flex size-8 items-center justify-center rounded text-muted-foreground hover:bg-accent disabled:opacity-30"
-      >
-        <Minus className="size-3" aria-hidden />
+    <div role="group" aria-label={label} className="flex shrink-0 items-center gap-1">
+      <button type="button" aria-label={t("decrement", { activity, character })} disabled={count === 0} onClick={() => onChange(count - 1)}
+        className="flex size-11 items-center justify-center rounded-md text-muted-foreground hover:bg-accent hover:text-foreground disabled:opacity-30">
+        <Minus className="size-3.5" aria-hidden />
       </button>
-      <button
-        type="button"
-        aria-label={label}
-        onClick={(e) => onChange(e.shiftKey ? count - 1 : count + 1)}
-        className={cn(
-          "min-h-11 min-w-16 rounded-md border px-2 font-mono text-sm tabular-nums transition-colors",
-          done ? "border-primary bg-primary/15 text-primary" : "border-border hover:border-primary/60",
-        )}
-      >
+      <span className="h-1.5 w-16 overflow-hidden rounded-full bg-muted" aria-hidden>
+        <span className="block h-full bg-primary transition-[width] duration-300" style={{ width: `${(count / max) * 100}%` }} />
+      </span>
+      <span className={cn("min-w-11 text-center font-mono text-xs tabular-nums", done ? "text-primary" : "text-muted-foreground")}>
         {count}/{max}
+      </span>
+      <button type="button" aria-label={t("increment", { activity, character })} disabled={done} onClick={() => onChange(count + 1)}
+        className="flex size-11 items-center justify-center rounded-md text-muted-foreground hover:bg-accent hover:text-foreground disabled:opacity-30">
+        <Plus className="size-3.5" aria-hidden />
       </button>
     </div>
   );
@@ -2085,7 +2062,7 @@ export function ProgressRing({ value, label, size = 36 }: { value: number; label
   const c = 2 * Math.PI * r;
   const v = Math.min(1, Math.max(0, value));
   return (
-    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} role="img" aria-label={label} className="-rotate-90">
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} role="img" aria-label={label} className="shrink-0 -rotate-90">
       <circle cx={size / 2} cy={size / 2} r={r} fill="none" strokeWidth="3" className="stroke-muted" />
       <circle
         cx={size / 2}
@@ -2103,30 +2080,72 @@ export function ProgressRing({ value, label, size = 36 }: { value: number; label
 }
 ```
 
-Run: `pnpm test src/components/checklist`
+Run: `pnpm test src/components/checklist/checklist-control.test.tsx`
 Expected: PASS.
 
-- [ ] **Step 3: Implement the checklist view**
+- [ ] **Step 3: Write the failing card test**
 
-On desktop it renders a matrix; on mobile it renders tabs.
+The card must hide activities that don't apply to the character.
 
 ```tsx
-// src/components/checklist/checklist-view.tsx
+// src/components/checklist/character-card.test.tsx
+import { describe, it, expect, beforeEach } from "vitest";
+import { render, screen } from "@testing-library/react";
+import { NextIntlClientProvider } from "next-intl";
+import messages from "../../../messages/en.json";
+import { CharacterCard } from "./character-card";
+import { useUserStore } from "@/store/user-store";
+import { createDefaultUserData } from "@/lib/user-data";
+import { addCharacter } from "@/lib/characters";
+import { TooltipProvider } from "@/components/ui/tooltip";
+
+beforeEach(() => {
+  let d = createDefaultUserData(new Date("2026-10-14T10:00:00.000Z"));
+  d = addCharacter(d, { name: "Aria", classId: "chanter" }, "m");
+  d = addCharacter(d, { name: "Kael", classId: "cleric" }, "x");
+  useUserStore.setState({ data: d, hydrated: true, corrupted: false });
+});
+
+const renderCard = (id: string) =>
+  render(
+    <NextIntlClientProvider locale="en" messages={messages}>
+      <TooltipProvider><CharacterCard characterId={id} /></TooltipProvider>
+    </NextIntlClientProvider>,
+  );
+
+describe("CharacterCard", () => {
+  it("main sees main-only activities", () => {
+    renderCard("m");
+    expect(screen.getByText("Duty Missions")).toBeInTheDocument();
+  });
+  it("alt does not see main-only activities", () => {
+    renderCard("x");
+    expect(screen.queryByText("Duty Missions")).toBeNull();
+    expect(screen.getByText("Nightmare")).toBeInTheDocument();
+  });
+});
+```
+
+Run: `pnpm test src/components/checklist/character-card.test.tsx`
+Expected: FAIL, because the module cannot be found.
+
+- [ ] **Step 4: Implement the card and the view**
+
+```tsx
+// src/components/checklist/character-card.tsx
 "use client";
-import { ChevronDown } from "lucide-react";
+import { Check } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { useUserStore } from "@/store/user-store";
 import { ACTIVITIES, SECTIONS, maxFor, localize, type Activity, type Section } from "@/lib/activities";
 import { getCount, setCount, progressFor } from "@/lib/checklist";
+import { className } from "@/lib/classes";
 import { useResetCountdown } from "@/components/shell/reset-countdown";
-import { ChecklistCell } from "./checklist-cell";
+import { ChecklistControl } from "./checklist-control";
 import { ProgressRing } from "./progress-ring";
-import { Link } from "@/i18n/navigation";
-import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { cn } from "@/lib/utils";
 
 function ActivityName({ a }: { a: Activity }) {
   const t = useTranslations("checklist");
@@ -2134,121 +2153,113 @@ function ActivityName({ a }: { a: Activity }) {
   const lines = [
     a.note && localize(a.note, locale),
     "cap" in a.limit && (a.limit.capSub ? t("capSub", { cap: a.limit.cap, capSub: a.limit.capSub }) : t("cap", { cap: a.limit.cap })),
-  ].filter(Boolean);
-  if (!lines.length) return <span>{a.name}</span>;
+  ].filter(Boolean) as string[];
+  if (!lines.length) return <span className="truncate">{a.name}</span>;
   return (
     <Tooltip>
-      <TooltipTrigger className="cursor-help text-left underline decoration-dotted underline-offset-4">{a.name}</TooltipTrigger>
-      <TooltipContent className="max-w-xs">{lines.map((l) => <p key={l as string}>{l}</p>)}</TooltipContent>
+      <TooltipTrigger className="cursor-help truncate text-left underline decoration-dotted underline-offset-4">{a.name}</TooltipTrigger>
+      <TooltipContent className="max-w-xs">{lines.map((l) => <p key={l}>{l}</p>)}</TooltipContent>
     </Tooltip>
   );
 }
 
-function SectionHeader({ section }: { section: Section }) {
+function SectionHeading({ section }: { section: Section }) {
   const t = useTranslations("checklist");
   const time = useResetCountdown(section === "weekly" ? "week" : "day");
   return (
-    <CollapsibleTrigger className="group flex w-full min-h-11 items-center gap-3 text-left">
-      <ChevronDown className="size-4 transition-transform group-data-[state=closed]:-rotate-90" aria-hidden />
-      <h2 className="font-display text-lg font-semibold">{t(`sections.${section}`)}</h2>
-      <span className="ml-auto text-xs text-muted-foreground">{time && t("resetsIn", { time })}</span>
-    </CollapsibleTrigger>
+    <h4 className="mt-4 mb-1 flex items-baseline text-[11px] font-medium uppercase tracking-widest text-muted-foreground">
+      {t(`sections.${section}`)}
+      <span className="ml-auto text-xs normal-case tracking-normal">{time && t("resetsIn", { time })}</span>
+    </h4>
   );
 }
 
-export function ChecklistView() {
+export function CharacterCard({ characterId }: { characterId: string }) {
   const t = useTranslations("checklist");
   const tHome = useTranslations("home");
-  const { data, hydrated, update } = useUserStore();
+  const data = useUserStore((s) => s.data);
+  const update = useUserStore((s) => s.update);
+  const c = data.characters.find((x) => x.id === characterId);
+  if (!c) return null;
+  const overall = progressFor(data, c.id, ACTIVITIES, SECTIONS);
 
-  if (!hydrated) return <div className="h-64 animate-pulse rounded-lg bg-card" />;
-  if (!data.characters.length) {
+  return (
+    <article className="rounded-xl border border-border bg-card px-4 py-3.5">
+      <header className="flex items-center gap-2.5 border-b border-border pb-2.5">
+        <h3 className="font-display text-lg font-semibold">{c.name}</h3>
+        <span className="text-xs text-muted-foreground">{className(c.classId)}</span>
+        {c.isMain && <Badge>{tHome("main")}</Badge>}
+        <span className="ml-auto">
+          <ProgressRing value={overall.total ? overall.done / overall.total : 0} label={t("progressLabel", overall)} size={34} />
+        </span>
+      </header>
+      {SECTIONS.map((section) => {
+        const rows = ACTIVITIES.filter((a) => a.section === section && maxFor(a, c.isMain) > 0);
+        if (!rows.length) return null;
+        return (
+          <section key={section}>
+            <SectionHeading section={section} />
+            <ul>
+              {rows.map((a) => {
+                const max = maxFor(a, c.isMain);
+                const count = getCount(data, c.id, a);
+                const done = count >= max;
+                return (
+                  <li key={a.id} className={cn("flex items-center justify-between gap-2 border-t border-border/70 transition-opacity", done && "opacity-45")}>
+                    <span className="flex min-w-0 items-center gap-1.5 text-sm">
+                      <ActivityName a={a} />
+                      {done && <Check className="size-3.5 shrink-0 text-primary" aria-label={t("done")} />}
+                    </span>
+                    <ChecklistControl activity={a.name} character={c.name} count={count} max={max} onChange={(n) => update((d) => setCount(d, c.id, a, n))} />
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        );
+      })}
+    </article>
+  );
+}
+```
+
+```tsx
+// src/components/checklist/checklist-view.tsx
+"use client";
+import { useTranslations } from "next-intl";
+import { useUserStore } from "@/store/user-store";
+import { CharacterCard } from "./character-card";
+import { Link } from "@/i18n/navigation";
+import { buttonVariants } from "@/components/ui/button";
+
+export function ChecklistView() {
+  const t = useTranslations("checklist");
+  const hydrated = useUserStore((s) => s.hydrated);
+  const ids = useUserStore((s) => s.data.characters.map((c) => c.id).join(","));
+
+  if (!hydrated) return <div className="h-64 animate-pulse rounded-xl bg-card" />;
+  if (!ids) {
     return (
-      <div className="rounded-lg border border-dashed border-border p-8 text-center">
+      <div className="rounded-xl border border-dashed border-border p-8 text-center">
         <p className="mb-4 text-muted-foreground">{t("noCharacters")}</p>
         <Link href="/settings" className={buttonVariants()}>{t("goToSettings")}</Link>
       </div>
     );
   }
-
-  const bySection = (s: Section) => ACTIVITIES.filter((a) => a.section === s);
-  const change = (charId: string, a: Activity) => (count: number) => update((d) => setCount(d, charId, a, count));
-
   return (
-    <>
-      {/* Desktop: matrix */}
-      <div className="hidden space-y-6 md:block">
-        {SECTIONS.map((section) => (
-          <Collapsible key={section} defaultOpen className="rounded-lg border border-border bg-card p-4">
-            <SectionHeader section={section} />
-            <CollapsibleContent className="mt-3 overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="text-muted-foreground">
-                    <th scope="col" className="py-2 text-left font-normal">{t("activity")}</th>
-                    {data.characters.map((c) => {
-                      const p = progressFor(data, c.id, ACTIVITIES, [section]);
-                      return (
-                        <th key={c.id} scope="col" className="px-2 py-2 font-normal">
-                          <div className="flex flex-col items-center gap-1">
-                            <ProgressRing value={p.total ? p.done / p.total : 0} label={t("progressLabel", p)} size={28} />
-                            <span className="text-foreground">{c.name}</span>
-                            {c.isMain && <Badge variant="secondary">{tHome("main")}</Badge>}
-                          </div>
-                        </th>
-                      );
-                    })}
-                  </tr>
-                </thead>
-                <tbody>
-                  {bySection(section).map((a) => (
-                    <tr key={a.id} className="border-t border-border/60">
-                      <th scope="row" className="py-1 pr-4 text-left font-normal"><ActivityName a={a} /></th>
-                      {data.characters.map((c) => (
-                        <td key={c.id} className="px-2 py-1">
-                          <ChecklistCell activity={a.name} character={c.name} count={getCount(data, c.id, a)} max={maxFor(a, c.isMain)} onChange={change(c.id, a)} />
-                        </td>
-                      ))}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </CollapsibleContent>
-          </Collapsible>
-        ))}
-      </div>
-
-      {/* Mobile: one tab per character */}
-      <Tabs defaultValue={data.characters[0].id} className="md:hidden">
-        <TabsList className="w-full overflow-x-auto">
-          {data.characters.map((c) => <TabsTrigger key={c.id} value={c.id} className="min-h-11">{c.name}</TabsTrigger>)}
-        </TabsList>
-        {data.characters.map((c) => (
-          <TabsContent key={c.id} value={c.id} className="space-y-4">
-            {SECTIONS.map((section) => (
-              <Collapsible key={section} defaultOpen className="rounded-lg border border-border bg-card p-3">
-                <SectionHeader section={section} />
-                <CollapsibleContent>
-                  <ul className="mt-2 divide-y divide-border/60">
-                    {bySection(section).map((a) => (
-                      <li key={a.id} className="flex items-center justify-between gap-2 py-1">
-                        <ActivityName a={a} />
-                        <ChecklistCell activity={a.name} character={c.name} count={getCount(data, c.id, a)} max={maxFor(a, c.isMain)} onChange={change(c.id, a)} />
-                      </li>
-                    ))}
-                  </ul>
-                </CollapsibleContent>
-              </Collapsible>
-            ))}
-          </TabsContent>
-        ))}
-      </Tabs>
-    </>
+    <div className="grid items-start gap-4 [grid-template-columns:repeat(auto-fill,minmax(280px,1fr))]">
+      {ids.split(",").map((id) => <CharacterCard key={id} characterId={id} />)}
+    </div>
   );
 }
 ```
 
-- [ ] **Step 4: Create the page**
+`ids` is joined into a string so that Zustand's equality check doesn't re-render on every new array.
+
+Run: `pnpm test src/components/checklist`
+Expected: all tests pass.
+
+- [ ] **Step 5: Create the page**
 
 ```tsx
 // src/app/[locale]/checklist/page.tsx
@@ -2274,28 +2285,31 @@ export default async function ChecklistPage({ params }: { params: Promise<{ loca
 }
 ```
 
-- [ ] **Step 5: Verify**
+- [ ] **Step 6: Verify**
 
 Run: `pnpm lint && pnpm typecheck && pnpm test && pnpm build`
 Expected: every command exits 0.
 
-Then use `pnpm dev`. Add a character temporarily from the browser console:
+Then start `pnpm dev`. Add two characters temporarily from the browser console:
 
 ```js
 localStorage.setItem('aiontools:user-data', JSON.stringify({ ...JSON.parse(localStorage.getItem('aiontools:user-data')), characters: [{ id: 'm', name: 'Main', classId: 'chanter', isMain: true }, { id: 'a', name: 'Alt', classId: 'cleric', isMain: false }] }))
 ```
 
-Reload `/en/checklist` and check that:
-- The matrix renders.
-- Main-only cells show "—" for the alt.
-- Counters increment, shift-click decrements, and progress rings move.
-- At 375 px wide the page switches to tabs.
+Reload `/en/checklist` and check all of the following:
+- There are two cards.
+- The alt card has no Duty Missions, Daily Dungeon or Command Missions rows.
+- Clicking a pip sets the count to that pip, and clicking the last lit pip removes one.
+- Daily Dungeon shows a bar with − and +.
+- A completed row dims and shows ✓.
+- At 375 px wide the cards stack into a single column.
+- The Asmodian accent recolors the pips and the rings.
 
-- [ ] **Step 6: Commit**
+- [ ] **Step 7: Commit**
 
 ```bash
 git add -A
-git commit -m "feat: add checklist page with matrix and mobile views
+git commit -m "feat: add checklist page with per-character cards
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
 ```
@@ -2446,27 +2460,24 @@ export function CharactersEditor() {
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { useUserStore } from "@/store/user-store";
-import { setSettings, type UserData } from "@/lib/user-data";
+import { setSettings } from "@/lib/user-data";
 
-type S = UserData["settings"];
+const ACCENTS = ["elyos", "asmodian"] as const;
 
 export function AppearanceSettings() {
   const t = useTranslations("settings.appearance");
-  const settings = useUserStore((s) => s.data.settings);
+  const accent = useUserStore((s) => s.data.settings.accent);
   const update = useUserStore((s) => s.update);
-  const group = <K extends "theme" | "accent">(key: K, options: S[K][]) => (
-    <div role="group" aria-label={t(key)} className="flex gap-2">
-      {options.map((o) => (
-        <Button key={o} variant={settings[key] === o ? "default" : "outline"} aria-pressed={settings[key] === o} className="min-h-11" onClick={() => update((d) => setSettings(d, { [key]: o }))}>
-          {t(o)}
-        </Button>
-      ))}
-    </div>
-  );
   return (
-    <div className="space-y-4">
-      <div className="space-y-2"><p className="text-sm font-medium">{t("theme")}</p>{group("theme", ["dark", "light"])}</div>
-      <div className="space-y-2"><p className="text-sm font-medium">{t("accent")}</p>{group("accent", ["elyos", "asmodian"])}</div>
+    <div className="space-y-2">
+      <p className="text-sm font-medium">{t("accent")}</p>
+      <div role="group" aria-label={t("accent")} className="flex gap-2">
+        {ACCENTS.map((a) => (
+          <Button key={a} variant={accent === a ? "default" : "outline"} aria-pressed={accent === a} className="min-h-11" onClick={() => update((d) => setSettings(d, { accent: a }))}>
+            {t(a)}
+          </Button>
+        ))}
+      </div>
     </div>
   );
 }
@@ -2805,11 +2816,11 @@ test("onboarding → tick checklist → state survives reload", async ({ page })
   await expect(dialog).toBeHidden();
 
   await page.goto("/en/checklist");
-  await page.getByRole("button", { name: "Duty Missions, Aria: 0 of 5" }).click();
-  await expect(page.getByRole("button", { name: "Duty Missions, Aria: 1 of 5" })).toBeVisible();
+  await page.getByRole("button", { name: "Duty Missions, Aria: set to 1" }).click();
+  await expect(page.getByRole("group", { name: "Duty Missions, Aria: 1 of 5" })).toBeVisible();
 
   await page.reload();
-  await expect(page.getByRole("button", { name: "Duty Missions, Aria: 1 of 5" })).toBeVisible();
+  await expect(page.getByRole("group", { name: "Duty Missions, Aria: 1 of 5" })).toBeVisible();
 });
 
 test("corrupt saved data is backed up and the app still loads", async ({ page }) => {

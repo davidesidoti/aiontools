@@ -76,7 +76,7 @@ Every route sits under `/[locale]`, where `locale` is `it` or `en`.
 | `/guides/tips` | Tips and settings, with screenshots |
 | `/guides/buffs` | Chanter vs Cleric |
 | `/guides/links` | Class guide and creator links |
-| `/settings` | Region, characters, sync code, export/import of a JSON file, theme, faction accent |
+| `/settings` | Region, characters, sync code, export/import of a JSON file, faction accent |
 
 ### Layers
 
@@ -166,7 +166,7 @@ The state is versioned, with migrations.
 UserData {
   version: 1
   updatedAt: string                               // ISO
-  settings: { region: "global"|"kr"|"tw"; theme: "dark"|"light"; accent: "elyos"|"asmodian" }
+  settings: { region: "global"|"kr"|"tw"; accent: "elyos"|"asmodian"; onboarded: boolean }
   characters: { id: string; name: string; classId: string; isMain: boolean }[]   // 1 main + up to 8 alts
   checklist: { progress: Record<charId, Record<activityId, number>>; lastDaily: string; lastWeekly: string }
   crafting: { prices: Record<materialId, number>; rates: Record<tierId, number>; tax?: number }  // overrides only
@@ -245,7 +245,7 @@ All endpoints take the code in a header, `x-sync-code`, and never in the URL or 
 
 ### Visual style
 
-- **Theme.** Dark by default, with a light toggle. Backgrounds are deep ink-blue with **gold** accents. An optional faction accent can be set: Elyos gold or Asmodian violet, through a CSS variable.
+- **Theme.** Dark only; there is no light theme and no theme toggle (decided 2026-10-13). Backgrounds are deep ink-blue with **gold** accents. An optional faction accent can be set: Elyos gold or Asmodian violet, through a CSS variable.
 - **Type.** Headings use a restrained fantasy display font (for example Cinzel). Body text uses Inter.
 - **Detail.** Cards have thin borders and a subtle glow on hover. Motion is short and respects `prefers-reduced-motion`.
 
@@ -258,14 +258,17 @@ All endpoints take the code in a header, `x-sync-code`, and never in the URL or 
 
 ### Checklist
 
-- On desktop the checklist is a matrix with activities as rows and characters as columns. On mobile it shows one tab per character.
-- The cell control depends on `max`:
-  - `max = 1`: a checkbox.
-  - `max > 1`: a counter shown as `3/14`. Click adds 1. Shift-click or the "−" button subtracts 1.
-  - Main-only activities show a disabled cell in the alt columns.
-- Each section (Daily, Weekly, Recharge) is collapsible and has its own reset countdown.
-- Each character has a progress ring.
-- Hovering an activity shows a tooltip with its rewards and location.
+This layout was chosen on 2026-10-13 from four interactive mockups: variant D, "character cards".
+
+- There is one card per character, laid out as a responsive grid (`minmax(280px, 1fr)`). It is the same layout on desktop and mobile; on mobile the cards stack into one column. There is no matrix and there are no tabs.
+- **Card header.** Name, class, a Main badge for the main character, and a progress ring covering all sections.
+- **Card sections.** Inside each card: Daily, Weekly and Recharge, each with a small uppercase heading and its own reset countdown.
+- **Hidden rows.** Activities that don't apply to the character (main-only activities on an alt) are left out of that card.
+- **Activity control.** It depends on the activity's maximum for that character:
+  - `max ≤ 7`: a row of diamond pips. Clicking pip *n* sets the count to *n*. Clicking the last lit pip sets it to *n − 1*.
+  - `max > 7`: a thin progress bar with `n/max`, plus "−" and "+" buttons.
+- **Completed rows.** A finished row dims and shows ✓.
+- **Activity tooltips.** Hovering an activity name shows a tooltip with its notes and stockpile cap.
 
 ### Builds
 
