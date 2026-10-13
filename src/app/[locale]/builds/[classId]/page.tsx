@@ -6,7 +6,8 @@ import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { BUILD_IDS, BUILDS, buildText, classIcon } from "@/lib/builds";
 import { SkillChip } from "@/components/builds/skill-chip";
-import { BuildSection, Priority } from "@/components/builds/build-section";
+import { BuildGroup, BuildSection, Priority } from "@/components/builds/build-section";
+import { GEAR_META } from "@/lib/gear";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) => BUILD_IDS.map((classId) => ({ locale, classId })));
@@ -17,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return { title: BUILDS[classId]?.name ?? "Build" };
 }
 
-const SECTIONS = ["skills", "stigmas", "arcana", "boards", "soulbind", "gear", "media", "links"] as const;
+const SECTIONS = ["skills", "stigmas", "arcana", "boards", "soulbind", "endgame", "wings", "enhancing", "titles", "stones", "pantheon", "media", "links"] as const;
 
 export default async function BuildPage({ params }: { params: Promise<{ locale: string; classId: string }> }) {
   const { locale, classId } = await params;
@@ -26,6 +27,7 @@ export default async function BuildPage({ params }: { params: Promise<{ locale: 
   setRequestLocale(locale);
   const t = await getTranslations("builds");
   const T = (s: string) => buildText(s, locale);
+  const hint = (g: keyof typeof GEAR_META.groups) => GEAR_META.groups[g][locale === "it" ? "it" : "en"];
   const chips = (list: typeof b.skills) => (
     <div className="flex flex-wrap gap-2">{list.map((s) => <SkillChip key={`${s.rank}-${s.name}`} classId={classId} {...s} />)}</div>
   );
@@ -134,20 +136,40 @@ export default async function BuildPage({ params }: { params: Promise<{ locale: 
         ))}
       </BuildSection>
 
-      <BuildSection id="gear" title={t("nav.gear")}>
-        {dl([
-          [t("wingsMeta"), b.wings.meta],
-          [t("wingsLeveling"), b.wings.leveling],
-          [t("enhancing"), <Priority key="e" items={b.enhancing} />],
-          [t("titlesOffensive"), <Priority key="o" items={b.titles.offensive} />],
-          [t("titlesDefensive"), b.titles.defensive.join(" / ")],
-          [t("titlesSpecial"), <Priority key="s" items={b.titles.special} />],
-          [t("theostones"), T(b.theostones)],
-          [t("manastones"), <Priority key="m" items={b.manastones} />],
-          [t("colossus"), T(b.pantheon.colossus)],
-          [t("statues"), T(b.pantheon.statues)],
-          [t("paintings"), T(b.pantheon.paintings)],
-        ])}
+      <BuildSection id="gear" title={t("gearTitle")}>
+        <BuildGroup id="endgame" title={t("groups.endgame")} hint={hint("endgame")}>
+          {/* Task 5 fills this group */}
+          <span />
+        </BuildGroup>
+        <BuildGroup id="wings" title={t("groups.wings")} hint={hint("wings")}>
+          {dl([
+            [t("wingsMeta"), b.wings.meta],
+            [t("wingsLeveling"), b.wings.leveling],
+          ])}
+        </BuildGroup>
+        <BuildGroup id="enhancing" title={t("groups.enhancing")} hint={hint("enhancing")}>
+          <Priority items={b.enhancing} />
+        </BuildGroup>
+        <BuildGroup id="titles" title={t("groups.titles")} hint={hint("titles")}>
+          {dl([
+            [t("titlesOffensive"), <Priority key="o" items={b.titles.offensive} />],
+            [t("titlesDefensive"), <Priority key="d" items={b.titles.defensive} />],
+            [t("titlesSpecial"), <Priority key="s" items={b.titles.special} />],
+          ])}
+        </BuildGroup>
+        <BuildGroup id="stones" title={t("groups.stones")} hint={hint("stones")}>
+          {dl([
+            [t("theostones"), T(b.theostones)],
+            [t("manastones"), <Priority key="m" items={b.manastones} />],
+          ])}
+        </BuildGroup>
+        <BuildGroup id="pantheon" title={t("groups.pantheon")} hint={hint("pantheon")}>
+          {dl([
+            [t("colossus"), T(b.pantheon.colossus)],
+            [t("statues"), T(b.pantheon.statues)],
+            [t("paintings"), T(b.pantheon.paintings)],
+          ])}
+        </BuildGroup>
       </BuildSection>
 
       {(b.screenshots.length > 0 || b.notes.length > 0) && (
