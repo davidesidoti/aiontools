@@ -15,6 +15,8 @@ type UserStore = {
   hydrate(now?: Date): void;
   update(fn: (d: UserData) => UserData): void;
   tickResets(now?: Date): void;
+  // Data that came from sync: adopt it as-is (plus any due resets) without counting it as a user edit.
+  replaceData(data: UserData): void;
 };
 
 function read(key: string): string | null {
@@ -57,6 +59,9 @@ export const useUserStore = create<UserStore>()((set, get) => ({
     const prev = get().data;
     const next = applyResets(prev, now, ACTIVITIES);
     if (next !== prev) set({ data: next });
+  },
+  replaceData(data) {
+    set({ data: applyResets(data, new Date(), ACTIVITIES), persistPaused: false });
   },
 }));
 

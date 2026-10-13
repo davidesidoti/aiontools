@@ -94,4 +94,12 @@ describe("useUserStore", () => {
     useUserStore.getState().update((d) => addCharacter(d, { name: "A", classId: "chanter" }, "a"));
     expect(JSON.parse(localStorage.getItem(STORAGE_KEY)!).characters[0].name).toBe("A");
   });
+
+  it("replaceData swaps the data without bumping updatedAt", () => {
+    useUserStore.getState().hydrate(now);
+    const incoming = addCharacter(createDefaultUserData(new Date("2026-10-14T09:00:00.000Z")), { name: "Z", classId: "chanter" }, "z");
+    useUserStore.getState().replaceData(incoming);
+    expect(useUserStore.getState().data.updatedAt).toBe(incoming.updatedAt);
+    expect(JSON.parse(localStorage.getItem(STORAGE_KEY)!).characters[0].name).toBe("Z");
+  });
 });
