@@ -55,7 +55,7 @@ describe("applyResets", () => {
     expect(r.updatedAt).toBe(d.updatedAt);
   });
   it("after 3 weeks away resets both once and is idempotent", () => {
-    let d = setCount(withChars(), "m", a("battlefield"), 2);
+    const d = setCount(withChars(), "m", a("battlefield"), 2);
     const later = new Date("2026-11-04T12:00:00.000Z");
     const r1 = applyResets(d, later, ACTIVITIES);
     expect(getCount(r1, "m", a("battlefield"))).toBe(0);
@@ -66,7 +66,7 @@ describe("applyResets", () => {
 
 describe("progressFor", () => {
   it("sums only applicable activities", () => {
-    let d = setCount(withChars(), "x", a("nightmare"), 1);
+    const d = setCount(withChars(), "x", a("nightmare"), 1);
     const p = progressFor(d, "x", ACTIVITIES, ["recharge"]);
     // alt: nightmare(2) + transcendence(1) + conquest(1); shugo & dimensional are main-only
     expect(p).toEqual({ done: 1, total: 4 });
