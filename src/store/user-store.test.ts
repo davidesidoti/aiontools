@@ -10,7 +10,7 @@ const now = new Date("2026-10-14T10:00:00.000Z");
 
 beforeEach(() => {
   localStorage.clear();
-  useUserStore.setState({ data: createDefaultUserData(now), hydrated: false, corrupted: false });
+  useUserStore.setState({ data: createDefaultUserData(now), hydrated: false, corrupted: false, persistPaused: false });
   vi.restoreAllMocks();
 });
 
@@ -80,5 +80,26 @@ describe("useUserStore", () => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(other));
     window.dispatchEvent(new StorageEvent("storage", { key: STORAGE_KEY }));
     expect(useUserStore.getState().data.characters.map((c) => c.name)).toEqual(["FromOtherTab"]);
+  });
+
+  it("keeps the corrupt raw value when the backup cannot be written", () => {
+    localStorage.setItem(STORAGE_KEY, "{bad");
+    const original = Storage.prototype.setItem;
+    vi.spyOn(Storage.prototype, "setItem").mockImplementation(function (this: Storage, k: string, v: string) {
+      if (k.startsWith("aiontools-backup-")) throw new Error("QuotaExceededError");
+      return original.call(this, k, v);
+    });
+    useUserStore.getState().hydrate(now);
+    expect(localStorage.getItem(STORAGE_KEY)).toBe("{bad");
+    useUserStore.getState().update((d) => addCharacter(d, { name: "A", classId: "chanter" }, "a"));
+    expect(JSON.parse(localStorage.getItem(STORAGE_KEY)!).characters[0].name).toBe("A");
+  });
+
+  it("replaceData swaps the data without bumping updatedAt", () => {
+    useUserStore.getState().hydrate(now);
+    const incoming = addCharacter(createDefaultUserData(new Date("2026-10-14T09:00:00.000Z")), { name: "Z", classId: "chanter" }, "z");
+    useUserStore.getState().replaceData(incoming);
+    expect(useUserStore.getState().data.updatedAt).toBe(incoming.updatedAt);
+    expect(JSON.parse(localStorage.getItem(STORAGE_KEY)!).characters[0].name).toBe("Z");
   });
 });

@@ -1,9 +1,31 @@
 {
-  "meta": { "title": "AionTools", "description": "Aion 2 tools: daily and weekly checklist, builds, crafting and guides." },
-  "nav": { "label": "Main navigation", "home": "Home", "checklist": "Checklist", "settings": "Settings" },
-  "reset": { "daily": "Daily reset", "weekly": "Weekly reset", "units": { "d": "d", "h": "h", "m": "m" } },
-  "locale": { "label": "Language", "en": "English", "it": "Italiano" },
-  "footer": { "credits": "Data from community spreadsheets by Castform and others. Fan-made, not affiliated with NCSoft." },
+  "meta": {
+    "title": "AionTools",
+    "description": "Aion 2 tools: daily and weekly checklist, builds, crafting and guides."
+  },
+  "nav": {
+    "label": "Main navigation",
+    "home": "Home",
+    "checklist": "Checklist",
+    "settings": "Settings"
+  },
+  "reset": {
+    "daily": "Daily reset",
+    "weekly": "Weekly reset",
+    "units": {
+      "d": "d",
+      "h": "h",
+      "m": "m"
+    }
+  },
+  "locale": {
+    "label": "Language",
+    "en": "English",
+    "it": "Italiano"
+  },
+  "footer": {
+    "credits": "Data from community spreadsheets by Castform and others. Fan-made, not affiliated with NCSoft."
+  },
   "home": {
     "title": "Today",
     "noCharacters": "No characters yet.",
@@ -13,7 +35,11 @@
   },
   "checklist": {
     "title": "Checklist",
-    "sections": { "daily": "Daily", "weekly": "Weekly", "recharge": "Recharge" },
+    "sections": {
+      "daily": "Daily",
+      "weekly": "Weekly",
+      "recharge": "Recharge"
+    },
     "cellLabel": "{activity}, {character}: {count} of {max}",
     "setTo": "{activity}, {character}: set to {count}",
     "increment": "{activity}, {character}: add one",
@@ -28,7 +54,13 @@
   },
   "settings": {
     "title": "Settings",
-    "region": { "title": "Server region", "label": "Region", "global": "Global (EU/NA)", "kr": "Korea", "tw": "Taiwan" },
+    "region": {
+      "title": "Server region",
+      "label": "Region",
+      "global": "Global (EU/NA)",
+      "kr": "Korea",
+      "tw": "Taiwan"
+    },
     "characters": {
       "title": "Characters",
       "name": "Name",
@@ -40,7 +72,12 @@
       "limit": "Up to 1 main and 8 alts.",
       "empty": "No characters yet."
     },
-    "appearance": { "title": "Appearance", "accent": "Accent", "elyos": "Elyos", "asmodian": "Asmodian" },
+    "appearance": {
+      "title": "Appearance",
+      "accent": "Accent",
+      "elyos": "Elyos",
+      "asmodian": "Asmodian"
+    },
     "data": {
       "title": "Your data",
       "hint": "Your progress is saved in this browser. Export a backup or move it to another browser.",
@@ -58,5 +95,39 @@
     "next": "Next",
     "skip": "Skip",
     "done": "Done"
+  },
+  "sync": {
+    "title": "Sync between devices",
+    "hint": "Use the same progress on another device with a sync code. Anyone with the code can see and change your data, so keep it to yourself.",
+    "create": "Create sync code",
+    "codeLabel": "Sync code",
+    "connect": "Connect",
+    "connectHint": "Connecting replaces this browser's data with the cloud copy.",
+    "yourCode": "Your sync code",
+    "copy": "Copy",
+    "copied": "Code copied",
+    "disconnect": "Disconnect this device",
+    "delete": "Delete cloud data",
+    "deleteConfirm": "Click again to delete",
+    "status": {
+      "off": "Sync off",
+      "synced": "Synced",
+      "pending": "Saving…",
+      "offline": "Offline",
+      "error": "Sync error"
+    },
+    "errors": {
+      "invalidCode": "That code doesn't look right. Check it and try again.",
+      "notFound": "No cloud data for this code. It may have expired or been deleted.",
+      "rateLimited": "Too many requests. Try again in a minute.",
+      "network": "You're offline. Changes are saved in this browser and will sync later.",
+      "server": "The sync server isn't responding. Changes are saved in this browser."
+    },
+    "conflict": {
+      "title": "Newer data on another device",
+      "body": "This code was updated from another device since this one last synced. Choose which copy to keep.",
+      "useCloud": "Use cloud copy",
+      "overwrite": "Keep this device"
+    }
   }
 }

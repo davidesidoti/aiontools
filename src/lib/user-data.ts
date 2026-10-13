@@ -1,13 +1,13 @@
 // src/lib/user-data.ts
 import { z } from "zod";
-import { REGION_IDS } from "./regions";
-import { lastResetAt } from "./reset";
+import { REGION_IDS, type RegionId } from "./regions";
+import { lastResetAt, type ResetPeriod } from "./reset";
 
 export const USER_DATA_VERSION = 1;
 export const MAX_IMPORT_CHARS = 65_536;
 
 const CharacterSchema = z.object({
-  id: z.string().min(1).max(64),
+  id: z.string().regex(/^[\w-]{1,64}$/),
   name: z.string().trim().min(1).max(32),
   classId: z.string().min(1).max(32),
   isMain: z.boolean(),
@@ -37,6 +37,9 @@ export const UserDataSchema = z
   })
   .refine((d) => d.characters.length === 0 || d.characters.filter((c) => c.isMain).length === 1, {
     message: "exactly one main character required",
+  })
+  .refine((d) => new Set(d.characters.map((c) => c.id)).size === d.characters.length, {
+    message: "character ids must be unique",
   });
 
 export type UserData = z.infer<typeof UserDataSchema>;
@@ -89,4 +92,16 @@ export function parseImported(text: string): UserData | null {
 
 export function setSettings(data: UserData, patch: Partial<UserData["settings"]>): UserData {
   return { ...data, settings: { ...data.settings, ...patch } };
+}
+
+// Progress already made counts as the current window of the new region, so switching never wipes it.
+export function setRegion(data: UserData, region: RegionId, now: Date): UserData {
+  if (region === data.settings.region) return data;
+  const keep = (current: string, period: ResetPeriod) =>
+    new Date(Math.max(new Date(current).getTime(), lastResetAt(now, region, period).getTime())).toISOString();
+  return {
+    ...data,
+    settings: { ...data.settings, region },
+    checklist: { ...data.checklist, lastDaily: keep(data.checklist.lastDaily, "day"), lastWeekly: keep(data.checklist.lastWeekly, "week") },
+  };
 }

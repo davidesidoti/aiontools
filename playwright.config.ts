@@ -10,5 +10,6 @@ export default defineConfig({
     url: "http://localhost:3000/en",
     reuseExistingServer: !process.env.CI,
     timeout: 180_000,
+    env: { SYNC_MEMORY_STORE: "1" },
   },
 });

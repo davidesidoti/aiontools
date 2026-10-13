@@ -1,9 +1,31 @@
 {
-  "meta": { "title": "AionTools", "description": "Strumenti per Aion 2: checklist giornaliera e settimanale, build, crafting e guide." },
-  "nav": { "label": "Navigazione principale", "home": "Home", "checklist": "Checklist", "settings": "Impostazioni" },
-  "reset": { "daily": "Reset giornaliero", "weekly": "Reset settimanale", "units": { "d": "g", "h": "h", "m": "m" } },
-  "locale": { "label": "Lingua", "en": "English", "it": "Italiano" },
-  "footer": { "credits": "Dati dai fogli della community di Castform e altri. Progetto fan-made, non affiliato a NCSoft." },
+  "meta": {
+    "title": "AionTools",
+    "description": "Strumenti per Aion 2: checklist giornaliera e settimanale, build, crafting e guide."
+  },
+  "nav": {
+    "label": "Navigazione principale",
+    "home": "Home",
+    "checklist": "Checklist",
+    "settings": "Impostazioni"
+  },
+  "reset": {
+    "daily": "Reset giornaliero",
+    "weekly": "Reset settimanale",
+    "units": {
+      "d": "g",
+      "h": "h",
+      "m": "m"
+    }
+  },
+  "locale": {
+    "label": "Lingua",
+    "en": "English",
+    "it": "Italiano"
+  },
+  "footer": {
+    "credits": "Dati dai fogli della community di Castform e altri. Progetto fan-made, non affiliato a NCSoft."
+  },
   "home": {
     "title": "Oggi",
     "noCharacters": "Nessun personaggio.",
@@ -13,7 +35,11 @@
   },
   "checklist": {
     "title": "Checklist",
-    "sections": { "daily": "Giornaliere", "weekly": "Settimanali", "recharge": "Ricariche" },
+    "sections": {
+      "daily": "Giornaliere",
+      "weekly": "Settimanali",
+      "recharge": "Ricariche"
+    },
     "cellLabel": "{activity}, {character}: {count} di {max}",
     "setTo": "{activity}, {character}: imposta a {count}",
     "increment": "{activity}, {character}: aggiungi uno",
@@ -28,7 +54,13 @@
   },
   "settings": {
     "title": "Impostazioni",
-    "region": { "title": "Regione server", "label": "Regione", "global": "Global (EU/NA)", "kr": "Corea", "tw": "Taiwan" },
+    "region": {
+      "title": "Regione server",
+      "label": "Regione",
+      "global": "Global (EU/NA)",
+      "kr": "Corea",
+      "tw": "Taiwan"
+    },
     "characters": {
       "title": "Personaggi",
       "name": "Nome",
@@ -40,7 +72,12 @@
       "limit": "Massimo 1 main e 8 alt.",
       "empty": "Nessun personaggio."
     },
-    "appearance": { "title": "Aspetto", "accent": "Accento", "elyos": "Elyos", "asmodian": "Asmodian" },
+    "appearance": {
+      "title": "Aspetto",
+      "accent": "Accento",
+      "elyos": "Elyos",
+      "asmodian": "Asmodian"
+    },
     "data": {
       "title": "I tuoi dati",
       "hint": "I progressi sono salvati in questo browser. Esporta un backup o spostali su un altro browser.",
@@ -58,5 +95,39 @@
     "next": "Avanti",
     "skip": "Salta",
     "done": "Fatto"
+  },
+  "sync": {
+    "title": "Sincronizza tra dispositivi",
+    "hint": "Usa gli stessi progressi su un altro dispositivo con un codice sync. Chi conosce il codice può vedere e modificare i tuoi dati: tienilo per te.",
+    "create": "Crea codice sync",
+    "codeLabel": "Codice sync",
+    "connect": "Collega",
+    "connectHint": "Collegando, i dati di questo browser vengono sostituiti dalla copia cloud.",
+    "yourCode": "Il tuo codice sync",
+    "copy": "Copia",
+    "copied": "Codice copiato",
+    "disconnect": "Scollega questo dispositivo",
+    "delete": "Elimina dati cloud",
+    "deleteConfirm": "Clicca di nuovo per eliminare",
+    "status": {
+      "off": "Sync disattivato",
+      "synced": "Sincronizzato",
+      "pending": "Salvataggio…",
+      "offline": "Offline",
+      "error": "Errore sync"
+    },
+    "errors": {
+      "invalidCode": "Il codice non sembra corretto. Controllalo e riprova.",
+      "notFound": "Nessun dato cloud per questo codice. Potrebbe essere scaduto o eliminato.",
+      "rateLimited": "Troppe richieste. Riprova tra un minuto.",
+      "network": "Sei offline. Le modifiche sono salvate in questo browser e verranno sincronizzate dopo.",
+      "server": "Il server di sync non risponde. Le modifiche sono salvate in questo browser."
+    },
+    "conflict": {
+      "title": "Dati più recenti su un altro dispositivo",
+      "body": "Questo codice è stato aggiornato da un altro dispositivo dall'ultima sincronizzazione. Scegli quale copia tenere.",
+      "useCloud": "Usa copia cloud",
+      "overwrite": "Tieni questo dispositivo"
+    }
   }
 }

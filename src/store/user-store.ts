@@ -10,9 +10,13 @@ type UserStore = {
   data: UserData;
   hydrated: boolean;
   corrupted: boolean;
+  // True when corrupt data could not be backed up: keep it on disk until the user makes an edit.
+  persistPaused: boolean;
   hydrate(now?: Date): void;
   update(fn: (d: UserData) => UserData): void;
   tickResets(now?: Date): void;
+  // Data that came from sync: adopt it as-is (plus any due resets) without counting it as a user edit.
+  replaceData(data: UserData): void;
 };
 
 function read(key: string): string | null {
@@ -23,11 +27,13 @@ function read(key: string): string | null {
   }
 }
 
-function write(key: string, value: string) {
+function write(key: string, value: string): boolean {
   try {
     localStorage.setItem(key, value);
+    return true;
   } catch {
     // Storage unavailable or full: keep working in memory.
+    return false;
   }
 }
 
@@ -35,28 +41,32 @@ export const useUserStore = create<UserStore>()((set, get) => ({
   data: createDefaultUserData(new Date()),
   hydrated: false,
   corrupted: false,
+  persistPaused: false,
   hydrate(now = new Date()) {
     const raw = read(STORAGE_KEY);
     const { data, corrupted } = parseStored(raw, now);
-    if (corrupted && raw !== null) write(`aiontools-backup-${now.getTime()}`, raw);
-    set({ data: applyResets(data, now, ACTIVITIES), hydrated: true, corrupted });
+    const backedUp = !(corrupted && raw !== null) || write(`aiontools-backup-${now.getTime()}`, raw);
+    set({ data: applyResets(data, now, ACTIVITIES), hydrated: true, corrupted, persistPaused: !backedUp });
   },
   update(fn) {
     // Apply any reset that passed since the last tick, so the edit lands in the current window.
     get().tickResets();
     const prev = get().data;
     const next = fn(prev);
-    if (next !== prev) set({ data: { ...next, updatedAt: new Date().toISOString() } });
+    if (next !== prev) set({ data: { ...next, updatedAt: new Date().toISOString() }, persistPaused: false });
   },
   tickResets(now = new Date()) {
     const prev = get().data;
     const next = applyResets(prev, now, ACTIVITIES);
     if (next !== prev) set({ data: next });
   },
+  replaceData(data) {
+    set({ data: applyResets(data, new Date(), ACTIVITIES), persistPaused: false });
+  },
 }));
 
 useUserStore.subscribe((state, prev) => {
-  if (state.hydrated && state.data !== prev.data) write(STORAGE_KEY, JSON.stringify(state.data));
+  if (state.hydrated && !state.persistPaused && state.data !== prev.data) write(STORAGE_KEY, JSON.stringify(state.data));
 });
 
 // Another tab saved: reload so this tab's stale state never overwrites it.
