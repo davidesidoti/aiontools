@@ -7,7 +7,9 @@
     "label": "Main navigation",
     "home": "Home",
     "checklist": "Checklist",
-    "settings": "Settings"
+    "settings": "Settings",
+    "crafting": "Crafting",
+    "guides": "Guides"
   },
   "reset": {
     "daily": "Daily reset",
@@ -128,6 +130,48 @@
       "body": "This code was updated from another device since this one last synced. Choose which copy to keep.",
       "useCloud": "Use cloud copy",
       "overwrite": "Keep this device"
+    }
+  },
+  "crafting": {
+    "title": "Crafting",
+    "intro": "Estimate the kina needed to craft one True Dragon Lord item. Your prices and success rates are saved in this browser.",
+    "tabs": {
+      "calculator": "Calculator",
+      "tips": "Crafting tips"
+    },
+    "baseCrafts": "{count} crafts needed at 100% success",
+    "material": "Material",
+    "qty": "Qty",
+    "unitPrice": "Unit price",
+    "costPerCraft": "Cost / craft",
+    "expectedTotal": "Expected total",
+    "successRate": "Success rate",
+    "expectedCrafts": "Expected crafts",
+    "tierTotal": "Tier total",
+    "summary": "Cost estimate",
+    "subtotal": "Materials subtotal",
+    "tax": "Marketplace tax",
+    "taxAmount": "Tax amount",
+    "total": "Total kina",
+    "reset": "Reset to defaults",
+    "resetDone": "Defaults restored",
+    "priceLabel": "Unit price of {material}",
+    "rateLabel": "Success rate for {tier}",
+    "taxLabel": "Marketplace tax rate",
+    "tips": {
+      "base": "Base crafting",
+      "baseTier": "Craft",
+      "baseItem": "With a 25% combo",
+      "baseNeeded": "Needed for True Dragon Lord (avg.)",
+      "transfer": "Transfer crafting",
+      "transferItem": "Item",
+      "transferResult": "Becomes",
+      "upgradeOnly": "Upgrade only",
+      "carryOver": "What carries over when transfer crafting?",
+      "carries": "Carries over",
+      "lost": "Lost",
+      "misc": "Other crafting info",
+      "compare": "Crafted vs Expedition"
     }
   }
 }

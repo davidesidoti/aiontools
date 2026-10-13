@@ -7,7 +7,9 @@
     "label": "Navigazione principale",
     "home": "Home",
     "checklist": "Checklist",
-    "settings": "Impostazioni"
+    "settings": "Impostazioni",
+    "crafting": "Crafting",
+    "guides": "Guide"
   },
   "reset": {
     "daily": "Reset giornaliero",
@@ -128,6 +130,48 @@
       "body": "Questo codice è stato aggiornato da un altro dispositivo dall'ultima sincronizzazione. Scegli quale copia tenere.",
       "useCloud": "Usa copia cloud",
       "overwrite": "Tieni questo dispositivo"
+    }
+  },
+  "crafting": {
+    "title": "Crafting",
+    "intro": "Stima i kina necessari per craftare un oggetto True Dragon Lord. Prezzi e probabilità di successo vengono salvati in questo browser.",
+    "tabs": {
+      "calculator": "Calcolatore",
+      "tips": "Consigli di crafting"
+    },
+    "baseCrafts": "{count} craft necessari con successo al 100%",
+    "material": "Materiale",
+    "qty": "Q.tà",
+    "unitPrice": "Prezzo unitario",
+    "costPerCraft": "Costo / craft",
+    "expectedTotal": "Totale previsto",
+    "successRate": "Probabilità di successo",
+    "expectedCrafts": "Craft previsti",
+    "tierTotal": "Totale del tier",
+    "summary": "Stima dei costi",
+    "subtotal": "Subtotale materiali",
+    "tax": "Tassa del mercato",
+    "taxAmount": "Importo della tassa",
+    "total": "Totale kina",
+    "reset": "Ripristina i valori predefiniti",
+    "resetDone": "Valori predefiniti ripristinati",
+    "priceLabel": "Prezzo unitario di {material}",
+    "rateLabel": "Probabilità di successo per {tier}",
+    "taxLabel": "Percentuale della tassa del mercato",
+    "tips": {
+      "base": "Crafting base",
+      "baseTier": "Craft",
+      "baseItem": "Con combo al 25%",
+      "baseNeeded": "Necessari per True Dragon Lord (media)",
+      "transfer": "Transfer crafting",
+      "transferItem": "Oggetto",
+      "transferResult": "Diventa",
+      "upgradeOnly": "Solo potenziamento",
+      "carryOver": "Cosa si mantiene con il transfer crafting?",
+      "carries": "Si mantiene",
+      "lost": "Si perde",
+      "misc": "Altre info sul crafting",
+      "compare": "Craftato vs Expedition"
     }
   }
 }
