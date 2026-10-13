@@ -7,6 +7,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { AppShell } from "@/components/shell/app-shell";
 import { StoreHydrator } from "@/components/store-hydrator";
+import { OnboardingDialog } from "@/components/onboarding-dialog";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import "../globals.css";
@@ -35,6 +36,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
         <NextIntlClientProvider>
           <TooltipProvider>
             <StoreHydrator />
+            <OnboardingDialog />
             <AppShell>{children}</AppShell>
             <Toaster />
           </TooltipProvider>
