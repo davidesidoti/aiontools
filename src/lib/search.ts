@@ -1,14 +1,16 @@
 // src/lib/search.ts
 import { CONTENT_GUIDE, GUIDE_PAGES, ROADMAP } from "./guides";
 import { localize } from "./activities";
+import { CLASSES } from "./classes";
 
-export type SearchItem = { id: string; group: "pages" | "activities" | "roadmap"; label: string; href: string; keywords: string };
+export type SearchItem = { id: string; group: "pages" | "classes" | "activities" | "roadmap"; label: string; href: string; keywords: string };
 
 export function buildSearchIndex(locale: string, labels: { nav(key: string): string; guide(key: string): string }): SearchItem[] {
   const page = (id: string, href: string, label: string): SearchItem => ({ id: `page:${id}`, group: "pages", label, href, keywords: "" });
   const pages = [
     page("home", "/", labels.nav("home")),
     page("checklist", "/checklist", labels.nav("checklist")),
+    page("builds", "/builds", labels.nav("builds")),
     page("crafting", "/crafting", labels.nav("crafting")),
     page("guides", "/guides", labels.nav("guides")),
     ...GUIDE_PAGES.map((p) => page(`guides-${p}`, `/guides/${p}`, labels.guide(p))),
@@ -28,5 +30,6 @@ export function buildSearchIndex(locale: string, labels: { nav(key: string): str
     href: `/guides/roadmap#${p.id}`,
     keywords: "",
   }));
-  return [...pages, ...activities, ...roadmap];
+  const classes = CLASSES.map((c): SearchItem => ({ id: `class:${c.id}`, group: "classes", label: c.name, href: `/builds/${c.id}`, keywords: "build" }));
+  return [...pages, ...classes, ...activities, ...roadmap];
 }

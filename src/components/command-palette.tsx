@@ -8,7 +8,7 @@ import { buildSearchIndex, type SearchItem } from "@/lib/search";
 import { Button } from "@/components/ui/button";
 import { Command, CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
 
-const GROUPS: SearchItem["group"][] = ["pages", "activities", "roadmap"];
+const GROUPS: SearchItem["group"][] = ["pages", "classes", "activities", "roadmap"];
 
 export function CommandPalette() {
   const t = useTranslations("palette");
