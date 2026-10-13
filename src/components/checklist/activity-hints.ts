@@ -9,8 +9,8 @@ export function activityHints(a: Activity, locale: string, t: HintT): string[] {
   const lines: (string | false | undefined)[] = [
     "cap" in a.limit && (a.limit.capSub ? t("capSub", { cap: a.limit.cap, capSub: a.limit.capSub }) : t("cap", { cap: a.limit.cap })),
     a.note && localize(a.note, locale),
-    g && t("rewards", { value: g.rewards }),
-    g && t("where", { value: g.where }),
+    g && t("rewards", { value: localize(g.rewards, locale) }),
+    g && t("where", { value: localize(g.where, locale) }),
   ];
   return lines.filter((x): x is string => Boolean(x));
 }

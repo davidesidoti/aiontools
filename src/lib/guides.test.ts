@@ -35,6 +35,15 @@ describe("content guide data", () => {
   });
 });
 
+describe("content guide translations", () => {
+  it("translates rewards and location too", () => {
+    const di = GUIDE_BY_ID.get("dimensional-invasion")!;
+    expect(di.where.it).toMatch(/minimappa/);
+    expect(GUIDE_BY_ID.get("command-missions")!.rewards.it).toMatch(/Duty Missions/);
+    expect(GUIDE_BY_ID.get("command-missions")!.rewards.it).not.toBe(GUIDE_BY_ID.get("command-missions")!.rewards.en);
+  });
+});
+
 describe("filterGuide", () => {
   it("filters by section", () => {
     const r = ids(filterGuide(CONTENT_GUIDE, { ...ALL, section: "recharge" }, "en"));

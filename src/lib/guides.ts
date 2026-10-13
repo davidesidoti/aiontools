@@ -27,9 +27,9 @@ const GuideEntrySchema = z.object({
   scope: z.enum(["main", "alt", "both"]),
   modes: z.array(z.enum(["pve", "pvp"])),
   count: FullTextSchema,
-  rewards: z.string(),
+  rewards: FullTextSchema,
   requirements: FullTextSchema,
-  where: z.string(),
+  where: FullTextSchema,
   strategy: FullTextSchema,
   notes: FullTextSchema.optional(),
   icon: Asset.optional(),
@@ -52,8 +52,8 @@ export function filterGuide(entries: GuideEntry[], f: GuideFilter, locale: strin
     if (f.mode !== "all" && !e.modes.includes(f.mode)) return false;
     if (f.scope !== "all" && e.scope !== f.scope && e.scope !== "both") return false;
     if (!q) return true;
-    const texts = [e.type, e.count, e.requirements, e.strategy, e.notes].flatMap((x) => (x ? [localize(x, locale)] : []));
-    return [e.name, e.rewards, e.where, ...texts].some((s) => s.toLowerCase().includes(q));
+    const texts = [e.type, e.count, e.rewards, e.where, e.requirements, e.strategy, e.notes].flatMap((x) => (x ? [localize(x, locale)] : []));
+    return [e.name, ...texts].some((s) => s.toLowerCase().includes(q));
   });
 }
 

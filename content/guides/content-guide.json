@@ -3,9 +3,9 @@
     "id": "duty-missions", "name": "Duty Missions", "section": "daily",
     "type": { "en": "Solo quests", "it": "Missioni in solo" }, "scope": "main", "modes": ["pve"],
     "count": { "en": "5 per day", "it": "5 al giorno" },
-    "rewards": "Keys > Entry Tickets > Unique Items/Mats > Soul Crystals > Odyle Energy > Misc",
+    "rewards": { "en": "Keys > Entry Tickets > Unique Items/Mats > Soul Crystals > Odyle Energy > Misc", "it": "Keys > Entry Tickets > oggetti/materiali Unique > Soul Crystals > Odyle Energy > varie" },
     "requirements": { "en": "Level 45", "it": "Livello 45" },
-    "where": "Escape>Journal>Duty",
+    "where": { "en": "Escape>Journal>Duty", "it": "Escape>Journal>Duty" },
     "strategy": {
       "en": "You randomly get some of 5 possible rewards. Prioritize them in the order listed under Rewards: the chance is 100% for the leftmost item and gets progressively lower to the right. Re-rolling quests with currency is worth it, but each re-roll costs more.",
       "it": "Ricevi a caso alcune tra 5 ricompense possibili. Dai priorità secondo l'ordine indicato nelle Ricompense: la probabilità è del 100% per la prima a sinistra e cala man mano che vai verso destra. Vale la pena fare re-roll delle missioni con la valuta, ma ogni re-roll costa di più."
@@ -19,9 +19,9 @@
     "id": "ascension-trial", "name": "Ascension Trial", "section": "weekly",
     "type": { "en": "Solo instance", "it": "Istanza in solo" }, "scope": "both", "modes": ["pve"],
     "count": { "en": "3 per week", "it": "3 a settimana" },
-    "rewards": "Achievement rewards (see notes), Manastones, Soulstones, Pets, Enhance Stones",
+    "rewards": { "en": "Achievement rewards (see notes), Manastones, Soulstones, Pets, Enhance Stones", "it": "Ricompense achievement (vedi note), Manastone, Soulstone, Pet, Enhance Stone" },
     "requirements": { "en": "Level 45 and gear score", "it": "Livello 45 e gear score" },
-    "where": "Escape>Ascension Trial",
+    "where": { "en": "Escape>Ascension Trial", "it": "Escape>Ascension Trial" },
     "strategy": {
       "en": "Kill the monsters on the way to the boss and the yellow crystals when they spawn. Clear quickly for a better score. Always do the highest difficulty you can manage, so waiting until later in the week is ideal.",
       "it": "Uccidi i mostri lungo la strada verso il boss e i cristalli gialli quando compaiono. Completa in fretta per un punteggio migliore. Fai sempre la difficoltà più alta che riesci a gestire, quindi conviene aspettare la fine della settimana."
@@ -35,9 +35,9 @@
     "id": "daily-dungeon", "name": "Daily Dungeon", "section": "weekly",
     "type": { "en": "Solo instance", "it": "Istanza in solo" }, "scope": "main", "modes": ["pve"],
     "count": { "en": "14 per week", "it": "14 a settimana" },
-    "rewards": "Enhancement Stones",
+    "rewards": { "en": "Enhancement Stones", "it": "Enhancement Stone" },
     "requirements": { "en": "Level 30", "it": "Livello 30" },
-    "where": "Escape>Daily Dungeon",
+    "where": { "en": "Escape>Daily Dungeon", "it": "Escape>Daily Dungeon" },
     "strategy": {
       "en": "Kill as many monsters as possible within the 1.5-minute time limit: more kills, more rewards. Melee characters should prioritize increasing enemy movement speed, and anything that boosts damage or speed is good for every class.",
       "it": "Uccidi più mostri possibile nel limite di 1,5 minuti: più uccisioni, più ricompense. I personaggi melee dovrebbero dare priorità all'aumento della velocità di movimento dei nemici, e tutto ciò che aumenta danno o velocità va bene per ogni classe."
@@ -51,9 +51,9 @@
     "id": "battlefield", "name": "Battlefield", "section": "weekly",
     "type": { "en": "Group", "it": "Gruppo" }, "scope": "both", "modes": ["pvp"],
     "count": { "en": "3 per week (victories)", "it": "3 a settimana (vittorie)" },
-    "rewards": "Abyss Points, Medals",
+    "rewards": { "en": "Abyss Points, Medals", "it": "Abyss Points, Medal" },
     "requirements": { "en": "Level 45", "it": "Livello 45" },
-    "where": "Escape>Battlefield",
+    "where": { "en": "Escape>Battlefield", "it": "Escape>Battlefield" },
     "strategy": {
       "en": "Team PvP. Just win three times for full rewards.",
       "it": "PvP a squadre. Basta vincere tre volte per avere tutte le ricompense."
@@ -67,9 +67,9 @@
     "id": "substance-morph", "name": "Substance Morph", "section": "weekly",
     "type": { "en": "Purchase", "it": "Acquisto" }, "scope": "both", "modes": [],
     "count": { "en": "20 per week (main), 4 per week (alts)", "it": "20 a settimana (main), 4 a settimana (alt)" },
-    "rewards": "Odyle Energy, Misc",
+    "rewards": { "en": "Odyle Energy, Misc", "it": "Odyle Energy, varie" },
     "requirements": { "en": "Various Odyle and other materials", "it": "Odyle e altri materiali vari" },
-    "where": "Escape>Substance Morph",
+    "where": { "en": "Escape>Substance Morph", "it": "Escape>Substance Morph" },
     "strategy": {
       "en": "Max these out every week.",
       "it": "Completali al massimo ogni settimana."
@@ -83,9 +83,9 @@
     "id": "subscriber-shop", "name": "Subscriber Shop", "section": "weekly",
     "type": { "en": "Purchase", "it": "Acquisto" }, "scope": "both", "modes": [],
     "count": { "en": "Shop resets weekly", "it": "Il negozio si resetta ogni settimana" },
-    "rewards": "Odyle Energy, Misc",
+    "rewards": { "en": "Odyle Energy, Misc", "it": "Odyle Energy, varie" },
     "requirements": { "en": "Kina", "it": "Kina" },
-    "where": "Escape>Shop>Wind Breeze>Special",
+    "where": { "en": "Escape>Shop>Wind Breeze>Special", "it": "Escape>Shop>Wind Breeze>Special" },
     "strategy": {
       "en": "Buy anything useful.",
       "it": "Compra tutto ciò che ti è utile."
@@ -99,9 +99,9 @@
     "id": "command-missions", "name": "Command Missions", "section": "weekly",
     "type": { "en": "Purchase / solo quests", "it": "Acquisto / missioni in solo" }, "scope": "main", "modes": ["pve"],
     "count": { "en": "12 per week", "it": "12 a settimana" },
-    "rewards": "Same as Duty Missions",
+    "rewards": { "en": "Same as Duty Missions", "it": "Le stesse delle Duty Missions" },
     "requirements": { "en": "Kina", "it": "Kina" },
-    "where": "Command Merchant in Main City",
+    "where": { "en": "Command Merchant in Main City", "it": "Command Merchant nella città principale" },
     "strategy": {
       "en": "Works like Duty Missions. You can buy the scrolls and use them any time. Re-roll until the rewards are ideal.",
       "it": "Funziona come le Duty Missions. Puoi comprare le pergamene e usarle quando vuoi. Fai re-roll finché le ricompense non sono quelle ideali."
@@ -115,9 +115,9 @@
     "id": "abyss-command-missions", "name": "Abyss Command Missions", "section": "weekly",
     "type": { "en": "Purchase / solo quests", "it": "Acquisto / missioni in solo" }, "scope": "main", "modes": ["pve", "pvp"],
     "count": { "en": "20 per week", "it": "20 a settimana" },
-    "rewards": "Same as Duty Missions",
+    "rewards": { "en": "Same as Duty Missions", "it": "Le stesse delle Duty Missions" },
     "requirements": { "en": "1,000 gear score and Kina", "it": "1.000 di gear score e Kina" },
-    "where": "Command Merchant in Abyss",
+    "where": { "en": "Command Merchant in Abyss", "it": "Command Merchant nell'Abyss" },
     "strategy": {
       "en": "Works like Duty Missions. You can buy the scrolls and use them any time. Re-roll until the rewards are ideal. Farming with a group is faster and safer, since it's a PvP area.",
       "it": "Funziona come le Duty Missions. Puoi comprare le pergamene e usarle quando vuoi. Fai re-roll finché le ricompense non sono quelle ideali. Farmare in gruppo è più veloce e più sicuro, visto che è una zona PvP."
@@ -131,9 +131,9 @@
     "id": "abyss-corridor", "name": "Abyss Corridor", "section": "weekly",
     "type": { "en": "Solo", "it": "Solo" }, "scope": "both", "modes": ["pve", "pvp"],
     "count": { "en": "0–3 per war (7 hours per week in the Abyss, where they are)", "it": "0–3 per guerra (7 ore a settimana nell'Abyss, dove si trovano)" },
-    "rewards": "Kina, Abyss Points",
+    "rewards": { "en": "Kina, Abyss Points", "it": "Kina, Abyss Points" },
     "requirements": { "en": "Your faction must win Abyss events to unlock access to this PvE content.", "it": "La tua fazione deve vincere gli eventi dell'Abyss per sbloccare l'accesso a questo contenuto PvE." },
-    "where": "Abyss Map>Captured Artifact",
+    "where": { "en": "Abyss Map>Captured Artifact", "it": "Abyss Map>Captured Artifact" },
     "strategy": {
       "en": "PvP to take Artifacts. Once an Artifact is taken you can enter. Kill as many monsters as possible: more kills, more rewards.",
       "it": "Fai PvP per conquistare gli Artifact. Una volta conquistato un Artifact puoi entrare. Uccidi più mostri possibile: più uccisioni, più ricompense."
@@ -147,9 +147,9 @@
     "id": "odyle-energy", "name": "Odyle Energy", "section": "recharge",
     "type": { "en": "Group", "it": "Gruppo" }, "scope": "both", "modes": ["pve"],
     "count": { "en": "120 per day (cap 560, or 840 for subscribers)", "it": "120 al giorno (massimo 560, o 840 per gli abbonati)" },
-    "rewards": "Opens Dungeon Reward Cubes",
+    "rewards": { "en": "Opens Dungeon Reward Cubes", "it": "Apre i Dungeon Reward Cube" },
     "requirements": { "en": "Level 22", "it": "Livello 22" },
-    "where": "Escape>Expedition>Top of the screen",
+    "where": { "en": "Escape>Expedition>Top of the screen", "it": "Escape>Expedition>in alto sullo schermo" },
     "strategy": {
       "en": "Used for various group dungeon content. Level alts to 22 as soon as possible so they start generating this resource over time. Make sure the alt has access to the Expedition tab before leaving it idle: reaching level 22 doesn't start it automatically.",
       "it": "Serve per vari contenuti dungeon di gruppo. Porta gli alt al livello 22 il prima possibile, così iniziano a generare questa risorsa nel tempo. Assicurati che l'alt abbia accesso alla scheda Expedition prima di lasciarlo fermo: arrivare al livello 22 non la attiva da solo."
@@ -163,9 +163,9 @@
     "id": "shugo-festival-reward-key", "name": "Shugo Festival Reward Key", "section": "recharge",
     "type": { "en": "Solo vs others / free-for-all", "it": "Solo contro altri / tutti contro tutti" }, "scope": "main", "modes": ["pve", "pvp"],
     "count": { "en": "3 per day (cap 12, or 21 for subscribers). Starts at the top of the hour.", "it": "3 al giorno (massimo 12, o 21 per gli abbonati). Inizia allo scoccare dell'ora." },
-    "rewards": "Instant rewards: Unique Items/Mats. Shop: Stigma Shards > Daevanion Crystals > Wings > Artwork",
+    "rewards": { "en": "Instant rewards: Unique Items/Mats. Shop: Stigma Shards > Daevanion Crystals > Wings > Artwork", "it": "Ricompense immediate: oggetti/materiali Unique. Negozio: Stigma Shard > Daevanion Crystal > Wings > Artwork" },
     "requirements": { "en": "Level 13", "it": "Livello 13" },
-    "where": "Escape>Shugo Festival (pops up near the mini-map)",
+    "where": { "en": "Escape>Shugo Festival (pops up near the mini-map)", "it": "Escape>Shugo Festival (compare vicino alla minimappa)" },
     "strategy": {
       "en": "Various mini-games. Your placement decides how many reward keys you can use, so pick one you're good at. Spreading keys across several rewards seems better than stacking them on one.",
       "it": "Vari mini-giochi. Il piazzamento decide quante chiavi ricompensa puoi usare, quindi scegline uno in cui vai forte. Distribuire le chiavi su più ricompense sembra meglio che concentrarle su una sola."
@@ -179,9 +179,9 @@
     "id": "nightmare", "name": "Nightmare", "section": "recharge",
     "type": { "en": "Solo", "it": "Solo" }, "scope": "both", "modes": ["pve"],
     "count": { "en": "2 per day (cap 14)", "it": "2 al giorno (massimo 14)" },
-    "rewards": "Phantasmal Fragments, Pantheon Statue",
+    "rewards": { "en": "Phantasmal Fragments, Pantheon Statue", "it": "Phantasmal Fragment, Pantheon Statue" },
     "requirements": { "en": "Level 45", "it": "Livello 45" },
-    "where": "Escape>Nightmare",
+    "where": { "en": "Escape>Nightmare", "it": "Escape>Nightmare" },
     "strategy": {
       "en": "Kill the boss on the highest difficulty you can. Buy in this order: Stigma Shards > Wisdom Stones > Daevanion Crystals.",
       "it": "Uccidi il boss alla difficoltà più alta che riesci. Compra in quest'ordine: Stigma Shard > Wisdom Stone > Daevanion Crystal."
@@ -195,9 +195,9 @@
     "id": "dimensional-invasion", "name": "Dimensional Invasion", "section": "recharge",
     "type": { "en": "Solo", "it": "Solo" }, "scope": "main", "modes": ["pve"],
     "count": { "en": "1 per day (cap 7). Starts at the bottom of the hour.", "it": "1 al giorno (massimo 7). Inizia alla mezz'ora." },
-    "rewards": "3 reward selections",
+    "rewards": { "en": "3 reward selections", "it": "3 scelte di ricompensa" },
     "requirements": { "en": "None listed", "it": "Nessuno indicato" },
-    "where": "Pops up near the mini-map, like Shugo Festival",
+    "where": { "en": "Pops up near the mini-map, like Shugo Festival", "it": "Compare vicino alla minimappa, come lo Shugo Festival" },
     "strategy": {
       "en": "Kill waves of enemies, then a boss. There's a leaderboard, but it doesn't seem to affect the rewards.",
       "it": "Uccidi ondate di nemici e poi un boss. C'è una classifica, ma non sembra influire sulle ricompense."
@@ -211,9 +211,9 @@
     "id": "transcendence", "name": "Transcendence", "section": "recharge",
     "type": { "en": "Group", "it": "Gruppo" }, "scope": "both", "modes": ["pve"],
     "count": { "en": "40/80 Odyle Energy per run", "it": "40/80 di Odyle Energy per run" },
-    "rewards": "Arcana Cards > Mana/Soul Stones",
+    "rewards": { "en": "Arcana Cards > Mana/Soul Stones", "it": "Carte Arcana > Mana/Soul Stone" },
     "requirements": { "en": "1,600+ gear score", "it": "Gear score 1.600+" },
-    "where": "Escape>Transcendence",
+    "where": { "en": "Escape>Transcendence", "it": "Escape>Transcendence" },
     "strategy": {
       "en": "Kill everything on the way to the boss. It competes with Conquest for Odyle, so use it to target Arcana cards and fill slots when you can, especially once your gear is in good shape.",
       "it": "Uccidi tutto lungo la strada verso il boss. Compete con Conquest per l'Odyle, quindi usalo per puntare alle carte Arcana e riempire gli slot quando puoi, soprattutto quando il tuo equip è già messo bene."
@@ -227,9 +227,9 @@
     "id": "expedition", "name": "Expedition", "section": "recharge",
     "type": { "en": "Group", "it": "Gruppo" }, "scope": "both", "modes": ["pve"],
     "count": { "en": "40/80 Odyle Energy per run", "it": "40/80 di Odyle Energy per run" },
-    "rewards": "Unique Gear > Unique Mats > Misc",
+    "rewards": { "en": "Unique Gear > Unique Mats > Misc", "it": "Equip Unique > materiali Unique > varie" },
     "requirements": { "en": "700+ gear score", "it": "Gear score 700+" },
-    "where": "Escape>Expedition>Conquest",
+    "where": { "en": "Escape>Expedition>Conquest", "it": "Escape>Expedition>Conquest" },
     "strategy": {
       "en": "Various group dungeon mechanics and bosses. You can revive as often as needed on the first bosses, but on the final boss you need Resurrection Spiritstones unless a Cleric revives you. Alternatively your team can coordinate a full wipe. Use the teleporters on the map if you lose your team.",
       "it": "Varie meccaniche e boss da dungeon di gruppo. Sui primi boss puoi resuscitare tutte le volte che serve, ma sull'ultimo ti servono le Resurrection Spiritstone, a meno che un Cleric non ti resusciti. In alternativa il team può coordinare un wipe completo. Usa i teletrasporti sulla mappa se perdi il team."
@@ -243,9 +243,9 @@
     "id": "field-bosses", "name": "Field Bosses", "section": "misc",
     "type": { "en": "Solo or group", "it": "Solo o gruppo" }, "scope": "both", "modes": ["pve"],
     "count": { "en": "Respawns listed in the Field Boss tab", "it": "Respawn indicati nella scheda Field Boss" },
-    "rewards": "Unique Items, Pantheon Paintings",
+    "rewards": { "en": "Unique Items, Pantheon Paintings", "it": "Oggetti Unique, Pantheon Painting" },
     "requirements": { "en": "None", "it": "Nessuno" },
-    "where": "Map>Exploration>Field Boss",
+    "where": { "en": "Map>Exploration>Field Boss", "it": "Map>Exploration>Field Boss" },
     "strategy": {
       "en": "Damage the boss; finding a party is ideal. Boss trains happen when servers first come up, so watch chat for Force Recruitment. Trains usually start at Eternal Gartua and then make the rounds of the other bosses.",
       "it": "Fai danno al boss; l'ideale è trovare un party. I boss train partono quando i server tornano online, quindi tieni d'occhio la chat per il Force Recruitment. Di solito i train partono da Eternal Gartua e poi fanno il giro degli altri boss."
@@ -259,9 +259,9 @@
     "id": "supply-requests", "name": "Supply Requests", "section": "misc",
     "type": { "en": "Purchase", "it": "Acquisto" }, "scope": "both", "modes": [],
     "count": { "en": "Daily, weekly and other", "it": "Giornaliere, settimanali e altre" },
-    "rewards": "Abyss Points, Enhancement Stones",
+    "rewards": { "en": "Abyss Points, Enhancement Stones", "it": "Abyss Points, Enhancement Stone" },
     "requirements": { "en": "Items and materials", "it": "Oggetti e materiali" },
-    "where": "Escape>Supply Request",
+    "where": { "en": "Escape>Supply Request", "it": "Escape>Supply Request" },
     "strategy": {
       "en": "Complete what you reasonably can. Don't stress about it, and use it to make money by selling what's in rotation.",
       "it": "Completa quello che puoi, entro limiti ragionevoli. Non stressarti e sfruttalo per guadagnare vendendo quello che è in rotazione."
@@ -275,9 +275,9 @@
     "id": "msq", "name": "MSQ", "section": "misc",
     "type": { "en": "Solo", "it": "Solo" }, "scope": "both", "modes": ["pve"],
     "count": { "en": "One time", "it": "Una volta" },
-    "rewards": "Various rewards and experience",
+    "rewards": { "en": "Various rewards and experience", "it": "Ricompense varie ed esperienza" },
     "requirements": { "en": "None", "it": "Nessuno" },
-    "where": "Escape>Journal",
+    "where": { "en": "Escape>Journal", "it": "Escape>Journal" },
     "strategy": {
       "en": "Power through it and only do the side content needed to progress or that's on your way. Doing side quests and map completion along the way is fine too, since you'll want them done as soon as possible anyway.",
       "it": "Vai dritto e fai solo i contenuti secondari necessari per proseguire o che trovi lungo la strada. Va bene anche fare missioni secondarie e completamento mappa nel frattempo, tanto vorrai farli il prima possibile."
@@ -287,9 +287,9 @@
     "id": "side-quests", "name": "Side Quests", "section": "misc",
     "type": { "en": "Solo", "it": "Solo" }, "scope": "both", "modes": ["pve"],
     "count": { "en": "One time", "it": "Una volta" },
-    "rewards": "Various rewards and experience",
+    "rewards": { "en": "Various rewards and experience", "it": "Ricompense varie ed esperienza" },
     "requirements": { "en": "None", "it": "Nessuno" },
-    "where": "Escape>Journal>Regional",
+    "where": { "en": "Escape>Journal>Regional", "it": "Escape>Journal>Regional" },
     "strategy": {
       "en": "Do all of them eventually, but focus on the ones that give early accessories. They also matter for Clash Runes, which give a good chunk of gear score. Never upgrade a Rune further until a third one is equal to your lowest: that way you always keep 2 at the highest level you can get, because a failed upgrade destroys them.",
       "it": "Prima o poi falle tutte, ma concentrati su quelle che danno accessori presto. Servono anche per le Clash Rune, che danno una bella fetta di gear score. Non potenziare mai una Rune oltre finché una terza non è pari alla più bassa: così ne tieni sempre 2 al livello più alto possibile, perché un potenziamento fallito le distrugge."
@@ -303,9 +303,9 @@
     "id": "sealed-dungeons", "name": "Sealed Dungeons", "section": "misc",
     "type": { "en": "Solo", "it": "Solo" }, "scope": "both", "modes": ["pve"],
     "count": { "en": "One time", "it": "Una volta" },
-    "rewards": "Skill Points, Daevanion Crystals",
+    "rewards": { "en": "Skill Points, Daevanion Crystals", "it": "Skill Points, Daevanion Crystal" },
     "requirements": { "en": "None", "it": "Nessuno" },
-    "where": "All around the map",
+    "where": { "en": "All around the map", "it": "Sparsi per tutta la mappa" },
     "strategy": {
       "en": "Various types, but mostly you kill the enemy at the end or interact with objects. You can run past most enemies and save a lot of time.",
       "it": "Ce ne sono di vari tipi, ma di solito devi uccidere il nemico finale o interagire con degli oggetti. Puoi superare di corsa la maggior parte dei nemici e risparmiare molto tempo."
@@ -319,9 +319,9 @@
     "id": "sealed-dungeons-enemy-continent", "name": "Sealed Dungeons (Enemy Continent)", "section": "misc",
     "type": { "en": "Solo", "it": "Solo" }, "scope": "both", "modes": ["pve", "pvp"],
     "count": { "en": "One time", "it": "Una volta" },
-    "rewards": "Daevanion Crystals",
+    "rewards": { "en": "Daevanion Crystals", "it": "Daevanion Crystal" },
     "requirements": { "en": "None", "it": "Nessuno" },
-    "where": "Spacetime Rift>All around the enemy map",
+    "where": { "en": "Spacetime Rift>All around the enemy map", "it": "Spacetime Rift>sparsi per tutta la mappa nemica" },
     "strategy": {
       "en": "Various types, but mostly you kill the enemy at the end or interact with objects. You can run past most enemies and save a lot of time.",
       "it": "Ce ne sono di vari tipi, ma di solito devi uccidere il nemico finale o interagire con degli oggetti. Puoi superare di corsa la maggior parte dei nemici e risparmiare molto tempo."
@@ -335,9 +335,9 @@
     "id": "feathers", "name": "Feathers", "section": "misc",
     "type": { "en": "Solo", "it": "Solo" }, "scope": "both", "modes": [],
     "count": { "en": "One time", "it": "Una volta" },
-    "rewards": "Permanent Stats, Amulet Enhancement Scrolls, Cube Keys, Books",
+    "rewards": { "en": "Permanent Stats, Amulet Enhancement Scrolls, Cube Keys, Books", "it": "Statistiche permanenti, Amulet Enhancement Scroll, Cube Key, libri" },
     "requirements": { "en": "None", "it": "Nessuno" },
-    "where": "On the ground or in the air: white feathers on the map",
+    "where": { "en": "On the ground or in the air: white feathers on the map", "it": "A terra o in aria: piume bianche sulla mappa" },
     "strategy": {
       "en": "Bring them to the Monolith in the main city. The Monolith only goes up to level 30; after that, leftover feathers can be used in Substance Morph for Power Shards. You can mostly ignore feathers once the Monolith is level 30, but their sound is easy to confuse with Hidden Cubes, so removing them helps. On alts, sync at the Monolith instead of gathering feathers again.",
       "it": "Portale al Monolith nella città principale. Il Monolith arriva al massimo al livello 30; dopo, le piume in più si usano in Substance Morph per le Power Shard. Una volta portato il Monolith al livello 30 puoi quasi ignorarle, ma il loro suono si confonde facilmente con quello degli Hidden Cube, quindi conviene toglierle. Sugli alt fai la sincronizzazione al Monolith invece di raccogliere di nuovo le piume."
@@ -351,9 +351,9 @@
     "id": "abyss-feathers", "name": "Abyss Feathers", "section": "misc",
     "type": { "en": "Solo", "it": "Solo" }, "scope": "both", "modes": ["pve", "pvp"],
     "count": { "en": "One time", "it": "Una volta" },
-    "rewards": "Permanent PvP Stats, Daevanion Crystals, PvP Title",
+    "rewards": { "en": "Permanent PvP Stats, Daevanion Crystals, PvP Title", "it": "Statistiche PvP permanenti, Daevanion Crystal, titolo PvP" },
     "requirements": { "en": "None", "it": "Nessuno" },
-    "where": "On the ground or in the air: white feathers on the map",
+    "where": { "en": "On the ground or in the air: white feathers on the map", "it": "A terra o in aria: piume bianche sulla mappa" },
     "strategy": {
       "en": "Bring them to the Monolith in the main city. The Monolith only goes up to level 30; after that, leftover feathers can be used in Substance Morph for Power Shards. You can mostly ignore feathers once the Monolith is level 30, but their sound is easy to confuse with Hidden Cubes, so removing them helps. On alts, sync at the Monolith instead of gathering feathers again.",
       "it": "Portale al Monolith nella città principale. Il Monolith arriva al massimo al livello 30; dopo, le piume in più si usano in Substance Morph per le Power Shard. Una volta portato il Monolith al livello 30 puoi quasi ignorarle, ma il loro suono si confonde facilmente con quello degli Hidden Cube, quindi conviene toglierle. Sugli alt fai la sincronizzazione al Monolith invece di raccogliere di nuovo le piume."
@@ -367,9 +367,9 @@
     "id": "achievements", "name": "Achievements", "section": "misc",
     "type": { "en": "Solo or group", "it": "Solo o gruppo" }, "scope": "both", "modes": ["pve", "pvp"],
     "count": { "en": "One time", "it": "Una volta" },
-    "rewards": "Various rewards",
+    "rewards": { "en": "Various rewards", "it": "Ricompense varie" },
     "requirements": { "en": "None", "it": "Nessuno" },
-    "where": "Escape>Achievements",
+    "where": { "en": "Escape>Achievements", "it": "Escape>Achievements" },
     "strategy": {
       "en": "Collect free loot as you achieve things. You can spam crafts on alts for expensive Refining Stones and other achievement rewards.",
       "it": "Raccogli bottino gratuito man mano che completi obiettivi. Puoi craftare in massa sugli alt per ottenere costosi Refining Stone e altre ricompense achievement."

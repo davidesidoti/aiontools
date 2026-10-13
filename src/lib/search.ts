@@ -19,7 +19,7 @@ export function buildSearchIndex(locale: string, labels: { nav(key: string): str
     group: "activities",
     label: e.name,
     href: `/guides/content#${e.id}`,
-    keywords: `${localize(e.type, locale)} ${e.where}`,
+    keywords: `${localize(e.type, locale)} ${localize(e.where, locale)}`,
   }));
   const roadmap = ROADMAP.phases.map((p): SearchItem => ({
     id: `roadmap:${p.id}`,

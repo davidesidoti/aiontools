@@ -69,8 +69,8 @@ function Entry({ e, open, onToggle }: { e: GuideEntry; open: boolean; onToggle(o
       </summary>
       <dl className="grid gap-3 border-t border-border px-4 py-3 text-sm sm:grid-cols-2">
         <Field label={t("requirements")}>{L(e.requirements)}</Field>
-        <Field label={t("where")}>{e.where}</Field>
-        <Field label={t("rewards")} wide>{e.rewards}</Field>
+        <Field label={t("where")}>{L(e.where)}</Field>
+        <Field label={t("rewards")} wide>{L(e.rewards)}</Field>
         <Field label={t("strategy")} wide>{L(e.strategy)}</Field>
         {e.notes && <Field label={t("notes")} wide>{L(e.notes)}</Field>}
       </dl>
