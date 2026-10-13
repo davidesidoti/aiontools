@@ -34,9 +34,15 @@ describe("parseGameWithPage", () => {
       <p class="classes-hero__meta">10 characters (top by combat power)</p>
       <section id="equipment"><div class="bs-slot"><h3>Belt</h3><table><tbody>
       ${[55, 32, 14].map((n) => `<tr><td><span class="classes-skill"><img src="x.webp"/><span>Noble Belt<small>g</small></span></span></td><td>65</td><td>${n}%</td><td>+5</td></tr>`).join("")}
-      </tbody></table></div></section></body></html>`;
+      </tbody></table></div></section>
+      <table><thead><tr><th>Title</th></tr></thead><tbody></tbody></table>
+      <table><thead><tr><th>Wing</th></tr></thead><tbody></tbody></table></body></html>`;
     const doc = new DOMParser().parseFromString(html, "text/html");
     expect(parseGameWithPage(doc, "x").usage.slots.belt).toEqual([expect.objectContaining({ name: "Noble Belt", share: 100 })]);
+  });
+  it("throws when the titles or wings table is missing", () => {
+    const html = readFileSync("tests/fixtures/gamewith/ranger-nae.html", "utf8").replace("<th>Wing</th>", "<th>Wings!</th>");
+    expect(() => parseGameWithPage(new DOMParser().parseFromString(html, "text/html"), "x")).toThrow(/Wing/);
   });
   it("reads wings", () => {
     expect(usage.wings.length).toBeGreaterThan(0);

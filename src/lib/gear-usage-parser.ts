@@ -68,8 +68,7 @@ function table(doc: Document, header: string): HTMLTableElement | undefined {
   return [...doc.querySelectorAll("table")].find((t) => t.querySelector("thead th")?.textContent?.trim() === header);
 }
 
-function simpleRows(t: HTMLTableElement | undefined, url: string): UsageEntry[] {
-  if (!t) return [];
+function simpleRows(t: HTMLTableElement, url: string): UsageEntry[] {
   return combine([...t.querySelectorAll("tbody tr")].map((tr) => {
     const td = tr.querySelectorAll("td");
     return clean({
@@ -105,7 +104,10 @@ export function parseGameWithPage(doc: Document, url: string): { dataDate: strin
   if (Object.keys(slots).length === 0) throw new Error(`${url}: no gear slots found`);
   if (Object.values(slots).some((list) => list.some((e) => !e.name))) throw new Error(`${url}: item without a name`);
 
-  return { dataDate, usage: { sample, sourceUrls: [url], slots, titles: simpleRows(table(doc, "Title"), url), wings: simpleRows(table(doc, "Wing"), url) } };
+  const titles = table(doc, "Title");
+  const wings = table(doc, "Wing");
+  if (!titles || !wings) throw new Error(`${url}: ${titles ? "Wing" : "Title"} table not found`);
+  return { dataDate, usage: { sample, sourceUrls: [url], slots, titles: simpleRows(titles, url), wings: simpleRows(wings, url) } };
 }
 
 function mergeList(lists: UsageEntry[][], samples: number[], total: number, limit: number): UsageEntry[] {

@@ -47,6 +47,10 @@ export function gearUsageFor(classId: string): RegionGear {
 
 export const normGear = (name: string) => name.toLowerCase().replace(/[^a-z0-9' ]/g, " ").replace(/\s+/g, " ").trim();
 
+// Every matching entry counts (Elyos "Wise" and Asmodian "Ebony" variants), capped at 100.
 export function findMatch(entries: UsageEntry[] | undefined, match: string[]): UsageEntry | undefined {
-  return entries?.find((e) => match.some((m) => normGear(e.name).includes(m)));
+  const hits = entries?.filter((e) => match.some((m) => normGear(e.name).includes(m))) ?? [];
+  if (hits.length === 0) return undefined;
+  const share = Math.min(100, Math.round(hits.reduce((sum, e) => sum + e.share, 0) * 10) / 10);
+  return { ...hits[0], share };
 }

@@ -33,4 +33,14 @@ describe("findMatch", () => {
     expect(findMatch(entries, ["abyssal bracelet"])).toBeUndefined();
     expect(findMatch(undefined, ["dragon lord"])).toBeUndefined();
   });
+  it("doesn't take a lower Dragon Lord line (Yinglong, Genesis) for the Season 1 item", () => {
+    const ring = GEAR_META.slots.find((x) => x.slot === "ring")!.match;
+    expect(findMatch([{ name: "Yinglong Dragon Lord Ring", share: 19 }, { name: "Splendent Yinglong Dragon Lord Ring", share: 12 }], ring)).toBeUndefined();
+  });
+  it("adds up the Elyos and Asmodian variants, capped at 100", () => {
+    const ring = GEAR_META.slots.find((x) => x.slot === "ring")!.match;
+    const hit = findMatch([{ name: "Splendent Wise Dragon Lord Ring", share: 30 }, { name: "Splendent Ebony Dragon Lord Ring", share: 25 }], ring);
+    expect(hit).toEqual(expect.objectContaining({ name: "Splendent Wise Dragon Lord Ring", share: 55 }));
+    expect(findMatch([{ name: "A x", share: 70 }, { name: "A y", share: 40 }], ["a "])?.share).toBe(100);
+  });
 });
