@@ -2,7 +2,7 @@
 "use client";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { NAV_ITEMS } from "./nav-items";
+import { NAV_ITEMS, isNavActive } from "./nav-items";
 import { cn } from "@/lib/utils";
 
 export function Sidebar() {
@@ -16,10 +16,10 @@ export function Sidebar() {
           <Link
             key={key}
             href={href}
-            aria-current={pathname === href ? "page" : undefined}
+            aria-current={isNavActive(pathname, href) ? "page" : undefined}
             className={cn(
               "flex min-h-11 items-center gap-3 rounded-md px-3 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground",
-              pathname === href && "bg-accent text-foreground",
+              isNavActive(pathname, href) && "bg-accent text-foreground",
             )}
           >
             <Icon className="size-4" aria-hidden />

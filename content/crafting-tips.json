@@ -1,0 +1,37 @@
+{
+  "base": [
+    { "tier": { "en": "Base item", "it": "Oggetto base" }, "item": "Splendent", "needed": 64 },
+    { "tier": { "en": "Expert's", "it": "Expert's" }, "item": "Expert's Splendent", "needed": 16 },
+    { "tier": { "en": "Artisan's", "it": "Artisan's" }, "item": "Artisan's Splendent", "needed": 4 },
+    { "tier": { "en": "True Dragon Lord", "it": "True Dragon Lord" }, "item": "Splendent True Dragon Lord" }
+  ],
+  "transfer": [
+    { "item": "Splendent True Dragon Lord", "result": null },
+    { "item": "White Dragon Lord", "result": "Splendent White Dragon Lord" },
+    { "item": "Splendent White Dragon Lord", "result": null },
+    { "item": "Wise Dragon Lord", "result": "Splendent Wise Dragon Lord" },
+    { "item": "Splendent Wise Dragon Lord", "result": null }
+  ],
+  "carryOver": [
+    { "label": { "en": "Enhancement level (+12, etc.)", "it": "Livello di potenziamento (+12, ecc.)" }, "carries": true },
+    { "label": { "en": "Additional amp levels", "it": "Livelli di amp aggiuntivi" }, "carries": true },
+    { "label": { "en": "Soul Binding stat lines", "it": "Linee di statistiche del Soul Binding" }, "carries": true },
+    { "label": { "en": "Soul Binding upgraded values", "it": "Valori potenziati del Soul Binding" }, "carries": true },
+    { "label": { "en": "Philosopher's stat", "it": "Statistica Philosopher's" }, "carries": false },
+    { "label": { "en": "Manastones / Soulstones", "it": "Manastone / Soulstone" }, "carries": false },
+    { "label": { "en": "Theostones", "it": "Theostone" }, "carries": false },
+    { "label": { "en": "Potential stats", "it": "Statistiche potenziali" }, "carries": false }
+  ],
+  "misc": [
+    { "en": "Reaching level 50 in Decoration takes 450 crafts.", "it": "Per arrivare al livello 50 in Decoration servono 450 craft." },
+    { "en": "Artisan's Refining Stones come from the level 50 achievement of each crafting category, on every character.", "it": "Gli Artisan's Refining Stone si ottengono dall'achievement di livello 50 di ogni categoria di crafting, su ogni personaggio." },
+    { "en": "You can craft while AFK or sleeping.", "it": "Puoi craftare anche in AFK o mentre dormi." },
+    { "en": "The best gathering setup for Essence Extraction is Proficient Handling 10, Delicate Touch 9 and Lady Luck 6. Max out the specific material you're hunting and Odyle, since both are used in crafting.", "it": "Il setup migliore per la raccolta in Essence Extraction è Proficient Handling 10, Delicate Touch 9 e Lady Luck 6. Massimizza il materiale specifico che stai cercando e l'Odyle, perché servono entrambi per il crafting." },
+    { "en": "Crafting individual materials is more efficient than crafting in bulk.", "it": "Craftare i materiali uno alla volta è più efficiente che craftarli in blocco." },
+    { "en": "Crafted gear is BiS: it has 5 Soul Bind stat lines versus 4 on Expedition gear.", "it": "L'equip craftato è BiS: ha 5 linee di statistiche Soul Bind contro le 4 dell'equip da Expedition." }
+  ],
+  "images": [
+    { "src": "/guides/crafting/crafted.png", "label": { "en": "Crafted", "it": "Craftato" } },
+    { "src": "/guides/crafting/expedition.png", "label": { "en": "Expedition", "it": "Expedition" } }
+  ]
+}

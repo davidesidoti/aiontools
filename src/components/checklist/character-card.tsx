@@ -3,11 +3,12 @@
 import { Check } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { useUserStore } from "@/store/user-store";
-import { ACTIVITIES, SECTIONS, maxFor, localize, type Activity, type Section } from "@/lib/activities";
+import { ACTIVITIES, SECTIONS, maxFor, type Activity, type Section } from "@/lib/activities";
 import { getCount, setCount, progressFor } from "@/lib/checklist";
 import { className } from "@/lib/classes";
 import { useResetCountdown } from "@/components/shell/reset-countdown";
 import { ChecklistControl } from "./checklist-control";
+import { activityHints } from "./activity-hints";
 import { ProgressRing } from "./progress-ring";
 import { Badge } from "@/components/ui/badge";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
@@ -16,10 +17,7 @@ import { cn } from "@/lib/utils";
 function ActivityName({ a }: { a: Activity }) {
   const t = useTranslations("checklist");
   const locale = useLocale();
-  const lines = [
-    a.note && localize(a.note, locale),
-    "cap" in a.limit && (a.limit.capSub ? t("capSub", { cap: a.limit.cap, capSub: a.limit.capSub }) : t("cap", { cap: a.limit.cap })),
-  ].filter(Boolean) as string[];
+  const lines = activityHints(a, locale, (key, values) => t(key, values));
   if (!lines.length) return <span className="truncate">{a.name}</span>;
   return (
     <Tooltip>

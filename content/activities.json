@@ -1,6 +1,6 @@
 [
   { "id": "duty-missions", "name": "Duty Missions", "section": "daily", "scope": "main", "limit": { "max": 5, "period": "day" } },
-  { "id": "supply-requests-daily", "name": "Supply Requests (Daily)", "section": "daily", "scope": "both", "limit": { "max": 1, "period": "day" } },
+  { "id": "supply-requests-daily", "guide": "supply-requests", "name": "Supply Requests (Daily)", "section": "daily", "scope": "both", "limit": { "max": 1, "period": "day" } },
 
   { "id": "ascension-trial", "name": "Ascension Trial", "section": "weekly", "scope": "both", "limit": { "max": 3, "period": "week" },
     "note": { "en": "Score 4,000 for the achievement rewards. Higher difficulty later in the week.", "it": "Fai 4.000 punti per le ricompense achievement. Difficoltà più alta verso fine settimana." } },
@@ -15,9 +15,9 @@
   { "id": "abyss-command-missions", "name": "Abyss Command Missions", "section": "weekly", "scope": "main", "limit": { "max": 20, "period": "week" } },
   { "id": "abyss-corridor", "name": "Abyss Corridor", "section": "weekly", "scope": "both", "limit": { "max": 3, "period": "week" },
     "note": { "en": "0–3 per Abyss war, only if your faction wins the Abyss events.", "it": "0–3 per guerra dell'Abisso, solo se la tua fazione vince gli eventi dell'Abisso." } },
-  { "id": "supply-requests-weekly", "name": "Supply Requests (Weekly)", "section": "weekly", "scope": "both", "limit": { "max": 1, "period": "week" } },
+  { "id": "supply-requests-weekly", "guide": "supply-requests", "name": "Supply Requests (Weekly)", "section": "weekly", "scope": "both", "limit": { "max": 1, "period": "week" } },
 
-  { "id": "shugo-festival-key", "name": "Shugo Festival Reward Key", "section": "recharge", "scope": "main", "limit": { "perDay": 3, "cap": 12, "capSub": 21 } },
+  { "id": "shugo-festival-key", "guide": "shugo-festival-reward-key", "name": "Shugo Festival Reward Key", "section": "recharge", "scope": "main", "limit": { "perDay": 3, "cap": 12, "capSub": 21 } },
   { "id": "nightmare", "name": "Nightmare", "section": "recharge", "scope": "both", "limit": { "perDay": 2, "cap": 14 } },
   { "id": "dimensional-invasion", "name": "Dimensional Invasion", "section": "recharge", "scope": "main", "limit": { "perDay": 1, "cap": 7 } },
   { "id": "transcendence", "name": "Transcendence", "section": "recharge", "scope": "both", "limit": { "max": 1, "period": "day" },

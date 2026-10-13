@@ -1,0 +1,27 @@
+{
+  "tax": 0.1,
+  "tiers": [
+    { "id": "common", "name": { "en": "Common", "it": "Comune" }, "crafts": 64, "defaultRate": 0.931, "materials": [
+      { "id": "common-material", "name": "Common Material", "qty": 1, "defaultPrice": 1799 },
+      { "id": "common-refining-stone", "name": "Refining Stone", "qty": 3, "defaultPrice": 1153 },
+      { "id": "common-odyle", "name": "Odyle", "qty": 1, "defaultPrice": 2777 }
+    ] },
+    { "id": "green", "name": { "en": "Green", "it": "Verde" }, "crafts": 16, "defaultRate": 0.946, "materials": [
+      { "id": "green-experts-refining-stone", "name": "Expert's Refining Stone", "qty": 3, "defaultPrice": 66888 },
+      { "id": "green-fine-material", "name": "Fine Material", "qty": 3, "defaultPrice": 698 },
+      { "id": "green-fine-odyle", "name": "Fine Odyle", "qty": 2, "defaultPrice": 2538 }
+    ] },
+    { "id": "blue", "name": { "en": "Blue", "it": "Blu" }, "crafts": 4, "defaultRate": 0.968, "materials": [
+      { "id": "blue-artisans-refining-stone", "name": "Artisan's Refining Stone", "qty": 3, "defaultPrice": 533333 },
+      { "id": "blue-pure-material", "name": "Pure Material", "qty": 4, "defaultPrice": 34444 },
+      { "id": "blue-pure-odyle", "name": "Pure Odyle", "qty": 2, "defaultPrice": 55555 }
+    ] },
+    { "id": "gold", "name": { "en": "Gold", "it": "Oro" }, "crafts": 1, "defaultRate": 0.94, "materials": [
+      { "id": "gold-artisans-ultimate-refining-stone", "name": "Artisan's Ultimate Refining Stone", "qty": 2, "defaultPrice": 222222 },
+      { "id": "gold-fine-material", "name": "Fine Material", "qty": 11, "defaultPrice": 45000 },
+      { "id": "gold-unique-material", "name": "Unique Material", "qty": 5, "defaultPrice": 2500000 },
+      { "id": "gold-radiant-material", "name": "Radiant Material", "qty": 5, "defaultPrice": 220000 },
+      { "id": "gold-radiant-odyle", "name": "Radiant Odyle", "qty": 2, "defaultPrice": 250000 }
+    ] }
+  ]
+}
