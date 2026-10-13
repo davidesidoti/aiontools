@@ -52,7 +52,9 @@
     "goToSettings": "Open settings",
     "cap": "Stockpile cap: {cap}",
     "capSub": "Stockpile cap: {cap} ({capSub} with subscription)",
-    "progressLabel": "{done} of {total}"
+    "progressLabel": "{done} of {total}",
+    "rewards": "Rewards: {value}",
+    "where": "Where: {value}"
   },
   "settings": {
     "title": "Settings",

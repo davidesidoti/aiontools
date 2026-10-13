@@ -52,7 +52,9 @@
     "goToSettings": "Apri impostazioni",
     "cap": "Accumulo massimo: {cap}",
     "capSub": "Accumulo massimo: {cap} ({capSub} con abbonamento)",
-    "progressLabel": "{done} di {total}"
+    "progressLabel": "{done} di {total}",
+    "rewards": "Ricompense: {value}",
+    "where": "Dove: {value}"
   },
   "settings": {
     "title": "Impostazioni",
