@@ -57,3 +57,21 @@ describe("setSettings", () => {
     expect(d.settings.accent).toBe("elyos");
   });
 });
+
+describe("character ids", () => {
+  it("rejects duplicate character ids", () => {
+    const d = createDefaultUserData(now);
+    d.characters = [
+      { id: "a", name: "A", classId: "chanter", isMain: true },
+      { id: "a", name: "B", classId: "cleric", isMain: false },
+    ];
+    expect(parseImported(JSON.stringify(d))).toBeNull();
+  });
+  it("rejects ids with commas or spaces", () => {
+    const d = createDefaultUserData(now);
+    d.characters = [{ id: "a,b", name: "A", classId: "chanter", isMain: true }];
+    expect(parseImported(JSON.stringify(d))).toBeNull();
+    d.characters = [{ id: "a b", name: "A", classId: "chanter", isMain: true }];
+    expect(parseImported(JSON.stringify(d))).toBeNull();
+  });
+});

@@ -2,7 +2,8 @@
 import { describe, it, expect } from "vitest";
 import { applyResets, getCount, setCount, progressFor } from "./checklist";
 import { addCharacter } from "./characters";
-import { createDefaultUserData, type UserData } from "./user-data";
+import { createDefaultUserData, setRegion, setSettings, type UserData } from "./user-data";
+import { lastResetAt } from "./reset";
 import { ACTIVITIES } from "./activities";
 
 const a = (id: string) => ACTIVITIES.find((x) => x.id === id)!;
@@ -70,5 +71,25 @@ describe("progressFor", () => {
     const p = progressFor(d, "x", ACTIVITIES, ["recharge"]);
     // alt: nightmare(2) + transcendence(1) + conquest(1); shugo & dimensional are main-only
     expect(p).toEqual({ done: 1, total: 4 });
+  });
+});
+
+describe("setRegion", () => {
+  it("keeps progress made in the current window when switching region", () => {
+    const at = new Date("2026-10-14T12:00:00.000Z"); // Wed: KR reset was 2026-10-13T20:00Z, global reset 2026-10-14T07:00Z
+    let d = setSettings(createDefaultUserData(at), { region: "kr" });
+    d = { ...d, checklist: { ...d.checklist, lastDaily: lastResetAt(at, "kr", "day").toISOString(), lastWeekly: lastResetAt(at, "kr", "week").toISOString() } };
+    d = addCharacter(d, { name: "A", classId: "chanter" }, "a");
+    d = setCount(d, "a", a("nightmare"), 2);
+    d = setCount(d, "a", a("battlefield"), 1);
+    const g = setRegion(d, "global", at);
+    expect(g.settings.region).toBe("global");
+    expect(getCount(applyResets(g, at, ACTIVITIES), "a", a("nightmare"))).toBe(2);
+    expect(getCount(applyResets(g, at, ACTIVITIES), "a", a("battlefield"))).toBe(1);
+    expect(getCount(applyResets(g, new Date("2026-10-15T07:00:00.000Z"), ACTIVITIES), "a", a("nightmare"))).toBe(0);
+  });
+  it("is a no-op for the same region", () => {
+    const d = createDefaultUserData(t0);
+    expect(setRegion(d, "global", t0)).toBe(d);
   });
 });
