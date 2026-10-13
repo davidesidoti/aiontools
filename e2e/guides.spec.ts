@@ -2,6 +2,14 @@
 import { test, expect, type Page } from "@playwright/test";
 
 // The shortcut listener attaches after hydration: retry until the palette is actually open.
+// Then fill the query (not keystrokes, which can land before the input is focused) and wait for the match.
+async function jumpTo(page: Page, query: string) {
+  await openPalette(page);
+  const input = page.getByPlaceholder("Search pages and activities…");
+  await input.fill(query);
+  await expect(page.getByRole("option", { name: query, exact: true })).toHaveAttribute("aria-selected", "true");
+  await input.press("Enter");
+}
 async function openPalette(page: Page) {
   await expect(async () => {
     await page.keyboard.press("Control+k");
@@ -45,14 +53,10 @@ test("roadmap steps persist", async ({ page }) => {
 
 test("Ctrl+K jumps to an activity", async ({ page }) => {
   await page.goto("/en");
-  await openPalette(page);
-  await page.keyboard.type("Nightmare");
-  await page.keyboard.press("Enter");
+  await jumpTo(page, "Nightmare");
   await expect(page).toHaveURL(/\/en\/guides\/content#nightmare$/);
   await expect(page.locator("details#nightmare")).toHaveAttribute("open", "");
   // Same-page jump: opens another entry without a navigation.
-  await openPalette(page);
-  await page.keyboard.type("Duty Missions");
-  await page.keyboard.press("Enter");
+  await jumpTo(page, "Duty Missions");
   await expect(page.locator("details#duty-missions")).toHaveAttribute("open", "");
 });
