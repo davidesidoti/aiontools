@@ -33,6 +33,19 @@ describe("content guide data", () => {
     expect(LINKS.classes.length).toBeGreaterThanOrEqual(7);
     expect(ROADMAP.phases.length).toBeGreaterThanOrEqual(5);
   });
+  it("keeps the full shared URLs of class guide links", () => {
+    const urls = LINKS.classes.flatMap((c) => c.guides.map((g) => g.url));
+    expect(urls).toContain("https://ranger.tgustafsson.se/#board=zikel-44");
+    expect(urls).toContain("https://assassin.tgustafsson.se/#skills=start");
+    expect(urls.some((u) => u.endsWith("edit?tab=t.refyxxrthj80#heading=h.yd411wdum1y0"))).toBe(true);
+  });
+  it("gives Feathers a PvE mode so the PvE filter keeps it", () => {
+    expect(GUIDE_BY_ID.get("feathers")!.modes).toEqual(["pve"]);
+  });
+  it("uses the sheet's wording, not invented references", () => {
+    expect(TIPS.tips.find((t) => t.id === "tip-3")!.text.en).not.toMatch(/this guide/i);
+    expect(GUIDE_BY_ID.get("nightmare")!.strategy.en).not.toMatch(/Buy in this order/);
+  });
 });
 
 describe("content guide translations", () => {

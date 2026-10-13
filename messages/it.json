@@ -142,7 +142,7 @@
       "calculator": "Calcolatore",
       "tips": "Consigli di crafting"
     },
-    "baseCrafts": "{count} craft necessari con successo al 100%",
+    "baseCrafts": "{count, plural, one {# craft necessario} other {# craft necessari}} con successo al 100%",
     "material": "Materiale",
     "qty": "Q.tà",
     "unitPrice": "Prezzo unitario",

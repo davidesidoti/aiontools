@@ -183,8 +183,8 @@
     "requirements": { "en": "Level 45", "it": "Livello 45" },
     "where": { "en": "Escape>Nightmare", "it": "Escape>Nightmare" },
     "strategy": {
-      "en": "Kill the boss on the highest difficulty you can. Buy in this order: Stigma Shards > Wisdom Stones > Daevanion Crystals.",
-      "it": "Uccidi il boss alla difficoltà più alta che riesci. Compra in quest'ordine: Stigma Shard > Wisdom Stone > Daevanion Crystal."
+      "en": "Kill the boss on the highest difficulty you can. Stigma Shards > Wisdom Stones > Daevanion Crystals.",
+      "it": "Uccidi il boss alla difficoltà più alta che riesci. Stigma Shard > Wisdom Stone > Daevanion Crystal."
     },
     "notes": {
       "en": "Zikel's Apparition is a purchase priority (it may need to be bought after killing the boss). Always do the highest difficulty to also get all the lower rewards.",
@@ -333,7 +333,7 @@
   },
   {
     "id": "feathers", "name": "Feathers", "section": "misc",
-    "type": { "en": "Solo", "it": "Solo" }, "scope": "both", "modes": [],
+    "type": { "en": "Solo", "it": "Solo" }, "scope": "both", "modes": ["pve"],
     "count": { "en": "One time", "it": "Una volta" },
     "rewards": { "en": "Permanent Stats, Amulet Enhancement Scrolls, Cube Keys, Books", "it": "Statistiche permanenti, Amulet Enhancement Scroll, Cube Key, libri" },
     "requirements": { "en": "None", "it": "Nessuno" },
