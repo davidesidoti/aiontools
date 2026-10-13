@@ -1,0 +1,2934 @@
+{
+  "region": "global",
+  "fetchedAt": "2026-10-07",
+  "classes": {
+    "chanter": {
+      "sample": 1785,
+      "sourceUrls": [
+        "https://gamewith.ai/aion2/en/build-stats/nae/chanter",
+        "https://gamewith.ai/aion2/en/build-stats/eu/chanter"
+      ],
+      "slots": {
+        "weapon": [
+          {
+            "name": "Spiritforged Staff",
+            "icon": "/gear/icon_wp_st_0078_t05.webp",
+            "share": 86.8,
+            "enhance": 10
+          },
+          {
+            "name": "Aulamus Staff",
+            "icon": "/gear/icon_wp_st_0028_t05.webp",
+            "share": 7.2,
+            "enhance": 10
+          },
+          {
+            "name": "Rupture Rod",
+            "icon": "/gear/icon_wp_st_0031_t06.webp",
+            "share": 3.3,
+            "enhance": 10
+          }
+        ],
+        "guard": [
+          {
+            "name": "Spiritforged Guard",
+            "icon": "/gear/icon_weapon_guarder_l_001.webp",
+            "share": 78.5,
+            "enhance": 8
+          },
+          {
+            "name": "Vakron Guard",
+            "icon": "/gear/icon_weapon_guarder_u_003.webp",
+            "share": 8,
+            "enhance": 10
+          },
+          {
+            "name": "Bakarma Guard",
+            "icon": "/gear/icon_weapon_guarder_l_011.webp",
+            "share": 5.5,
+            "enhance": 10
+          }
+        ],
+        "helmet": [
+          {
+            "name": "Liberator Helm",
+            "icon": "/gear/icon_gm_0019_t04_helmet.webp",
+            "share": 24.6,
+            "enhance": 0
+          },
+          {
+            "name": "Pilgrim Helm",
+            "icon": "/gear/icon_gm_0019_t04_helmet.webp",
+            "share": 23.3,
+            "enhance": 0
+          },
+          {
+            "name": "Vakron Helm",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_helmet.webp",
+            "share": 20.9,
+            "enhance": 10
+          }
+        ],
+        "shoulder": [
+          {
+            "name": "Liberator Pauldrons",
+            "icon": "/gear/icon_gm_0019_t04_shoulder.webp",
+            "share": 24.6,
+            "enhance": 0
+          },
+          {
+            "name": "Pilgrim Pauldrons",
+            "icon": "/gear/icon_gm_0019_t04_shoulder.webp",
+            "share": 24.5,
+            "enhance": 0
+          },
+          {
+            "name": "Vakron Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_shoulder.webp",
+            "share": 18.7,
+            "enhance": 10
+          }
+        ],
+        "torso": [
+          {
+            "name": "Bakarma Breastplate",
+            "icon": "/gear/icon_gm_0059_t05_torso.webp",
+            "share": 36.8,
+            "enhance": 5
+          },
+          {
+            "name": "Vakron Breastplate",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_torso.webp",
+            "share": 22.2,
+            "enhance": 10
+          },
+          {
+            "name": "Liberator Breastplate",
+            "icon": "/gear/icon_gm_0019_t04_torso.webp",
+            "share": 10.1,
+            "enhance": 0
+          }
+        ],
+        "gloves": [
+          {
+            "name": "Vakron Gloves",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_gloves.webp",
+            "share": 21.7,
+            "enhance": 10
+          },
+          {
+            "name": "Anguish Gloves",
+            "icon": "/gear/icon_gm_0032_t05_gloves.webp",
+            "share": 17.7,
+            "enhance": 0
+          },
+          {
+            "name": "Liberator Gloves",
+            "icon": "/gear/icon_gm_0019_t04_gloves.webp",
+            "share": 12.6,
+            "enhance": 0
+          }
+        ],
+        "pants": [
+          {
+            "name": "Vakron Greaves",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_pants.webp",
+            "share": 21.9,
+            "enhance": 10
+          },
+          {
+            "name": "Bakarma Greaves",
+            "icon": "/gear/icon_gm_0059_t05_pants.webp",
+            "share": 14,
+            "enhance": 5
+          },
+          {
+            "name": "Anguish Greaves",
+            "icon": "/gear/icon_gm_0032_t05_pants.webp",
+            "share": 13.7,
+            "enhance": 0
+          }
+        ],
+        "boots": [
+          {
+            "name": "Vakron Boots",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_boots.webp",
+            "share": 20.9,
+            "enhance": 10
+          },
+          {
+            "name": "Anguish Boots",
+            "icon": "/gear/icon_gm_0032_t05_boots.webp",
+            "share": 15,
+            "enhance": 0
+          },
+          {
+            "name": "Liberator Boots",
+            "icon": "/gear/icon_gm_0019_t04_boots.webp",
+            "share": 14.3,
+            "enhance": 0
+          }
+        ],
+        "cape": [
+          {
+            "name": "Vakron Cloak",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_cape.webp",
+            "share": 21.5,
+            "enhance": 10
+          },
+          {
+            "name": "Liberator Cloak",
+            "icon": "/gear/icon_gm_0019_t04_cape.webp",
+            "share": 18.9,
+            "enhance": 0
+          },
+          {
+            "name": "Pilgrim Cloak",
+            "icon": "/gear/icon_gm_0019_t04_cape.webp",
+            "share": 17.5,
+            "enhance": 0
+          }
+        ],
+        "earring": [
+          {
+            "name": "Liberator Earrings",
+            "icon": "/gear/icon_acc_er_0071.webp",
+            "share": 33.7,
+            "enhance": 2
+          },
+          {
+            "name": "Pilgrim Earrings",
+            "icon": "/gear/icon_acc_er_0071.webp",
+            "share": 33,
+            "enhance": 3
+          },
+          {
+            "name": "Aulamus Earrings",
+            "icon": "/gear/icon_acc_er_0072.webp",
+            "share": 13.2,
+            "enhance": 10
+          }
+        ],
+        "necklace": [
+          {
+            "name": "Pilgrim Necklace",
+            "icon": "/gear/icon_acc_nl_0071.webp",
+            "share": 34,
+            "enhance": 3
+          },
+          {
+            "name": "Liberator Necklace",
+            "icon": "/gear/icon_acc_nl_0071.webp",
+            "share": 27.2,
+            "enhance": 3
+          },
+          {
+            "name": "Aulamus Necklace",
+            "icon": "/gear/icon_acc_nl_0072.webp",
+            "share": 16.7,
+            "enhance": 10
+          }
+        ],
+        "ring": [
+          {
+            "name": "Pilgrim Ring",
+            "icon": "/gear/icon_acc_ring_0071.webp",
+            "share": 31.5,
+            "enhance": 3
+          },
+          {
+            "name": "Liberator Ring",
+            "icon": "/gear/icon_acc_ring_0071.webp",
+            "share": 27.4,
+            "enhance": 3
+          },
+          {
+            "name": "Aulamus Ring",
+            "icon": "/gear/icon_acc_ring_0072.webp",
+            "share": 14.2,
+            "enhance": 10
+          }
+        ],
+        "bracelet": [
+          {
+            "name": "Ascension Bracelet",
+            "icon": "/gear/icon_acc_bracelet_r_027.webp",
+            "share": 45,
+            "enhance": 8
+          },
+          {
+            "name": "Liberator Bracelet",
+            "icon": "/gear/icon_acc_bracelet_0071.webp",
+            "share": 25,
+            "enhance": 3
+          },
+          {
+            "name": "Pilgrim Bracelet",
+            "icon": "/gear/icon_acc_bracelet_0071.webp",
+            "share": 19.7,
+            "enhance": 5
+          }
+        ],
+        "belt": [
+          {
+            "name": "Noble Belt",
+            "icon": "/gear/icon_acc_belt_c_022.webp",
+            "share": 100,
+            "enhance": 0
+          }
+        ],
+        "amulet": [
+          {
+            "name": "Revelation Amulet",
+            "icon": "/gear/icon_item_craft_conversion_crystal_l_lv5_01.webp",
+            "share": 99.3,
+            "enhance": 0
+          },
+          {
+            "name": "Fierce Battle Amulet",
+            "icon": "/gear/icon_equip_eb_emblemd_mi_abyssshop_l_u_001.webp",
+            "share": 1,
+            "enhance": 0
+          }
+        ],
+        "rune": [
+          {
+            "name": "Clash Rune",
+            "icon": "/gear/icon_acc_rune_r_002.webp",
+            "share": 100,
+            "enhance": 2
+          }
+        ]
+      },
+      "titles": [
+        {
+          "name": "Through Hell and Back",
+          "share": 15.5
+        },
+        {
+          "name": "Saint of Altgard",
+          "share": 13.7
+        },
+        {
+          "name": "Saint of Verteron",
+          "share": 12.7
+        },
+        {
+          "name": "Guardian of Altgard",
+          "share": 9.3
+        },
+        {
+          "name": "Guardian of Verteron",
+          "share": 7
+        },
+        {
+          "name": "Encountering Kaisinel's Core",
+          "share": 5.7
+        },
+        {
+          "name": "Encountering Zikel's Core",
+          "share": 5.3
+        },
+        {
+          "name": "Failed Entrepreneur",
+          "share": 4
+        },
+        {
+          "name": "Celebrity",
+          "share": 2
+        }
+      ],
+      "wings": [
+        {
+          "name": "Ultimate Daeva Wings",
+          "icon": "/gear/icon_wingb_001.webp",
+          "share": 75.7
+        },
+        {
+          "name": "Superior Daeva Wings",
+          "icon": "/gear/icon_wingb_007c.webp",
+          "share": 10.3
+        },
+        {
+          "name": "Lesser Daeva Wings",
+          "icon": "/gear/icon_wingb_006a.webp",
+          "share": 3.5
+        },
+        {
+          "name": "Forest Spirit Wings",
+          "icon": "/gear/icon_winga_010.webp",
+          "share": 3.3
+        },
+        {
+          "name": "Radiant Love Wings",
+          "icon": "/gear/icon_wingd_003.webp",
+          "share": 1.3
+        }
+      ]
+    },
+    "ranger": {
+      "sample": 1785,
+      "sourceUrls": [
+        "https://gamewith.ai/aion2/en/build-stats/nae/ranger",
+        "https://gamewith.ai/aion2/en/build-stats/eu/ranger"
+      ],
+      "slots": {
+        "weapon": [
+          {
+            "name": "Spiritforged Bow",
+            "icon": "/gear/icon_wp_bw_0078_t05.webp",
+            "share": 84.7,
+            "enhance": 10
+          },
+          {
+            "name": "Aulamus Bow",
+            "icon": "/gear/icon_wp_bw_0028_t05.webp",
+            "share": 8.7,
+            "enhance": 10
+          },
+          {
+            "name": "Rupture Longbow",
+            "icon": "/gear/icon_wp_bw_0031_t06.webp",
+            "share": 2,
+            "enhance": 10
+          }
+        ],
+        "guard": [
+          {
+            "name": "Spiritforged Guard",
+            "icon": "/gear/icon_weapon_guarder_l_001.webp",
+            "share": 76.8,
+            "enhance": 10
+          },
+          {
+            "name": "Vakron Guard",
+            "icon": "/gear/icon_weapon_guarder_u_003.webp",
+            "share": 8.7,
+            "enhance": 10
+          },
+          {
+            "name": "Pilgrim Guard",
+            "icon": "/gear/icon_weapon_guarder_c_028.webp",
+            "share": 5.3,
+            "enhance": 0
+          }
+        ],
+        "helmet": [
+          {
+            "name": "Pilgrim Helm",
+            "icon": "/gear/icon_gm_0019_t04_helmet.webp",
+            "share": 24.1,
+            "enhance": 0
+          },
+          {
+            "name": "Liberator Helm",
+            "icon": "/gear/icon_gm_0019_t04_helmet.webp",
+            "share": 23.3,
+            "enhance": 0
+          },
+          {
+            "name": "Vakron Helm",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_helmet.webp",
+            "share": 21.2,
+            "enhance": 10
+          }
+        ],
+        "shoulder": [
+          {
+            "name": "Pilgrim Pauldrons",
+            "icon": "/gear/icon_gm_0019_t04_shoulder.webp",
+            "share": 24.3,
+            "enhance": 0
+          },
+          {
+            "name": "Liberator Pauldrons",
+            "icon": "/gear/icon_gm_0019_t04_shoulder.webp",
+            "share": 23.8,
+            "enhance": 0
+          },
+          {
+            "name": "Vakron Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_shoulder.webp",
+            "share": 20.7,
+            "enhance": 10
+          }
+        ],
+        "torso": [
+          {
+            "name": "Bakarma Breastplate",
+            "icon": "/gear/icon_gm_0059_t05_torso.webp",
+            "share": 37.3,
+            "enhance": 5
+          },
+          {
+            "name": "Vakron Breastplate",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_torso.webp",
+            "share": 22.7,
+            "enhance": 10
+          },
+          {
+            "name": "Liberator Breastplate",
+            "icon": "/gear/icon_gm_0019_t04_torso.webp",
+            "share": 9.3,
+            "enhance": 0
+          }
+        ],
+        "gloves": [
+          {
+            "name": "Vakron Gloves",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_gloves.webp",
+            "share": 23.7,
+            "enhance": 10
+          },
+          {
+            "name": "Anguish Gloves",
+            "icon": "/gear/icon_gm_0032_t05_gloves.webp",
+            "share": 16,
+            "enhance": 0
+          },
+          {
+            "name": "Bakarma Gloves",
+            "icon": "/gear/icon_gm_0059_t05_gloves.webp",
+            "share": 13.2,
+            "enhance": 5
+          }
+        ],
+        "pants": [
+          {
+            "name": "Vakron Greaves",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_pants.webp",
+            "share": 22.9,
+            "enhance": 10
+          },
+          {
+            "name": "Anguish Greaves",
+            "icon": "/gear/icon_gm_0032_t05_pants.webp",
+            "share": 13.5,
+            "enhance": 0
+          },
+          {
+            "name": "Bakarma Greaves",
+            "icon": "/gear/icon_gm_0059_t05_pants.webp",
+            "share": 13.5,
+            "enhance": 5
+          }
+        ],
+        "boots": [
+          {
+            "name": "Vakron Boots",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_boots.webp",
+            "share": 20.4,
+            "enhance": 10
+          },
+          {
+            "name": "Anguish Boots",
+            "icon": "/gear/icon_gm_0032_t05_boots.webp",
+            "share": 16.3,
+            "enhance": 0
+          },
+          {
+            "name": "Pilgrim Boots",
+            "icon": "/gear/icon_gm_0019_t04_boots.webp",
+            "share": 14.1,
+            "enhance": 0
+          }
+        ],
+        "cape": [
+          {
+            "name": "Vakron Cloak",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_cape.webp",
+            "share": 21.9,
+            "enhance": 10
+          },
+          {
+            "name": "Pilgrim Cloak",
+            "icon": "/gear/icon_gm_0019_t04_cape.webp",
+            "share": 19.1,
+            "enhance": 0
+          },
+          {
+            "name": "Liberator Cloak",
+            "icon": "/gear/icon_gm_0019_t04_cape.webp",
+            "share": 18.8,
+            "enhance": 0
+          }
+        ],
+        "earring": [
+          {
+            "name": "Liberator Earrings",
+            "icon": "/gear/icon_acc_er_0071.webp",
+            "share": 33,
+            "enhance": 3
+          },
+          {
+            "name": "Pilgrim Earrings",
+            "icon": "/gear/icon_acc_er_0071.webp",
+            "share": 32.5,
+            "enhance": 3
+          },
+          {
+            "name": "Aulamus Earrings",
+            "icon": "/gear/icon_acc_er_0072.webp",
+            "share": 14.7,
+            "enhance": 10
+          }
+        ],
+        "necklace": [
+          {
+            "name": "Pilgrim Necklace",
+            "icon": "/gear/icon_acc_nl_0071.webp",
+            "share": 33.5,
+            "enhance": 3
+          },
+          {
+            "name": "Liberator Necklace",
+            "icon": "/gear/icon_acc_nl_0071.webp",
+            "share": 25.7,
+            "enhance": 3
+          },
+          {
+            "name": "Aulamus Necklace",
+            "icon": "/gear/icon_acc_nl_0072.webp",
+            "share": 17.7,
+            "enhance": 10
+          }
+        ],
+        "ring": [
+          {
+            "name": "Pilgrim Ring",
+            "icon": "/gear/icon_acc_ring_0071.webp",
+            "share": 30.5,
+            "enhance": 3
+          },
+          {
+            "name": "Liberator Ring",
+            "icon": "/gear/icon_acc_ring_0071.webp",
+            "share": 25.7,
+            "enhance": 3
+          },
+          {
+            "name": "Aulamus Ring",
+            "icon": "/gear/icon_acc_ring_0072.webp",
+            "share": 15,
+            "enhance": 10
+          }
+        ],
+        "bracelet": [
+          {
+            "name": "Ascension Bracelet",
+            "icon": "/gear/icon_acc_bracelet_r_027.webp",
+            "share": 43.5,
+            "enhance": 10
+          },
+          {
+            "name": "Liberator Bracelet",
+            "icon": "/gear/icon_acc_bracelet_0071.webp",
+            "share": 24,
+            "enhance": 5
+          },
+          {
+            "name": "Pilgrim Bracelet",
+            "icon": "/gear/icon_acc_bracelet_0071.webp",
+            "share": 19.7,
+            "enhance": 5
+          }
+        ],
+        "belt": [
+          {
+            "name": "Noble Belt",
+            "icon": "/gear/icon_acc_belt_c_022.webp",
+            "share": 100,
+            "enhance": 0
+          }
+        ],
+        "amulet": [
+          {
+            "name": "Revelation Amulet",
+            "icon": "/gear/icon_item_craft_conversion_crystal_l_lv5_01.webp",
+            "share": 99,
+            "enhance": 0
+          },
+          {
+            "name": "Fierce Battle Amulet",
+            "icon": "/gear/icon_equip_eb_emblemd_mi_abyssshop_l_u_001.webp",
+            "share": 1,
+            "enhance": 0
+          }
+        ],
+        "rune": [
+          {
+            "name": "Clash Rune",
+            "icon": "/gear/icon_acc_rune_r_002.webp",
+            "share": 100,
+            "enhance": 2
+          }
+        ]
+      },
+      "titles": [
+        {
+          "name": "Through Hell and Back",
+          "share": 13.7
+        },
+        {
+          "name": "Saint of Altgard",
+          "share": 13
+        },
+        {
+          "name": "Saint of Verteron",
+          "share": 12.5
+        },
+        {
+          "name": "Guardian of Altgard",
+          "share": 8.3
+        },
+        {
+          "name": "Guardian of Verteron",
+          "share": 7
+        },
+        {
+          "name": "Encountering Kaisinel's Core",
+          "share": 5.7
+        },
+        {
+          "name": "Encountering Zikel's Core",
+          "share": 5.3
+        },
+        {
+          "name": "Failed Entrepreneur",
+          "share": 4.7
+        },
+        {
+          "name": "Lifeguard",
+          "share": 1.5
+        },
+        {
+          "name": "Celebrity",
+          "share": 0.5
+        }
+      ],
+      "wings": [
+        {
+          "name": "Ultimate Daeva Wings",
+          "icon": "/gear/icon_wingb_001.webp",
+          "share": 71.7
+        },
+        {
+          "name": "Superior Daeva Wings",
+          "icon": "/gear/icon_wingb_007c.webp",
+          "share": 11.8
+        },
+        {
+          "name": "Forest Spirit Wings",
+          "icon": "/gear/icon_winga_010.webp",
+          "share": 5
+        },
+        {
+          "name": "Lesser Daeva Wings",
+          "icon": "/gear/icon_wingb_006.webp",
+          "share": 3
+        },
+        {
+          "name": "Radiant Love Wings",
+          "icon": "/gear/icon_wingd_003.webp",
+          "share": 1
+        }
+      ]
+    },
+    "cleric": {
+      "sample": 1778,
+      "sourceUrls": [
+        "https://gamewith.ai/aion2/en/build-stats/nae/cleric",
+        "https://gamewith.ai/aion2/en/build-stats/eu/cleric"
+      ],
+      "slots": {
+        "weapon": [
+          {
+            "name": "Spiritforged Mace",
+            "icon": "/gear/icon_wp_ma_0078_t05.webp",
+            "share": 87.5,
+            "enhance": 10
+          },
+          {
+            "name": "Aulamus Mace",
+            "icon": "/gear/icon_wp_ma_0028_t05.webp",
+            "share": 7.5,
+            "enhance": 10
+          },
+          {
+            "name": "Rupture Warhammer",
+            "icon": "/gear/icon_wp_ma_0031_t06.webp",
+            "share": 3,
+            "enhance": 8
+          }
+        ],
+        "guard": [
+          {
+            "name": "Spiritforged Guard",
+            "icon": "/gear/icon_weapon_guarder_l_001.webp",
+            "share": 77.1,
+            "enhance": 6
+          },
+          {
+            "name": "Vakron Guard",
+            "icon": "/gear/icon_weapon_guarder_u_003.webp",
+            "share": 7.5,
+            "enhance": 10
+          },
+          {
+            "name": "Bakarma Guard",
+            "icon": "/gear/icon_weapon_guarder_l_011.webp",
+            "share": 5,
+            "enhance": 7
+          }
+        ],
+        "helmet": [
+          {
+            "name": "Pilgrim Helm",
+            "icon": "/gear/icon_gm_0019_t04_helmet.webp",
+            "share": 24.3,
+            "enhance": 0
+          },
+          {
+            "name": "Liberator Helm",
+            "icon": "/gear/icon_gm_0019_t04_helmet.webp",
+            "share": 24.3,
+            "enhance": 0
+          },
+          {
+            "name": "Vakron Helm",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_helmet.webp",
+            "share": 20.4,
+            "enhance": 10
+          }
+        ],
+        "shoulder": [
+          {
+            "name": "Pilgrim Pauldrons",
+            "icon": "/gear/icon_gm_0019_t04_shoulder.webp",
+            "share": 25.3,
+            "enhance": 0
+          },
+          {
+            "name": "Liberator Pauldrons",
+            "icon": "/gear/icon_gm_0019_t04_shoulder.webp",
+            "share": 24.6,
+            "enhance": 0
+          },
+          {
+            "name": "Vakron Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_shoulder.webp",
+            "share": 19.4,
+            "enhance": 10
+          }
+        ],
+        "torso": [
+          {
+            "name": "Bakarma Breastplate",
+            "icon": "/gear/icon_gm_0059_t05_torso.webp",
+            "share": 37.8,
+            "enhance": 5
+          },
+          {
+            "name": "Vakron Breastplate",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_torso.webp",
+            "share": 20.4,
+            "enhance": 10
+          },
+          {
+            "name": "Liberator Breastplate",
+            "icon": "/gear/icon_gm_0019_t04_torso.webp",
+            "share": 10.3,
+            "enhance": 0
+          }
+        ],
+        "gloves": [
+          {
+            "name": "Vakron Gloves",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_gloves.webp",
+            "share": 21.4,
+            "enhance": 10
+          },
+          {
+            "name": "Anguish Gloves",
+            "icon": "/gear/icon_gm_0032_t05_gloves.webp",
+            "share": 18.8,
+            "enhance": 0
+          },
+          {
+            "name": "Liberator Gloves",
+            "icon": "/gear/icon_gm_0019_t04_gloves.webp",
+            "share": 13.1,
+            "enhance": 0
+          }
+        ],
+        "pants": [
+          {
+            "name": "Vakron Greaves",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_pants.webp",
+            "share": 21.9,
+            "enhance": 10
+          },
+          {
+            "name": "Anguish Greaves",
+            "icon": "/gear/icon_gm_0032_t05_pants.webp",
+            "share": 14.9,
+            "enhance": 0
+          },
+          {
+            "name": "Bakarma Greaves",
+            "icon": "/gear/icon_gm_0059_t05_pants.webp",
+            "share": 14.7,
+            "enhance": 5
+          }
+        ],
+        "boots": [
+          {
+            "name": "Vakron Boots",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_boots.webp",
+            "share": 19.9,
+            "enhance": 10
+          },
+          {
+            "name": "Anguish Boots",
+            "icon": "/gear/icon_gm_0032_t05_boots.webp",
+            "share": 15.7,
+            "enhance": 0
+          },
+          {
+            "name": "Pilgrim Boots",
+            "icon": "/gear/icon_gm_0019_t04_boots.webp",
+            "share": 14.5,
+            "enhance": 0
+          }
+        ],
+        "cape": [
+          {
+            "name": "Pilgrim Cloak",
+            "icon": "/gear/icon_gm_0019_t04_cape.webp",
+            "share": 20.8,
+            "enhance": 0
+          },
+          {
+            "name": "Vakron Cloak",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_cape.webp",
+            "share": 20.4,
+            "enhance": 10
+          },
+          {
+            "name": "Liberator Cloak",
+            "icon": "/gear/icon_gm_0019_t04_cape.webp",
+            "share": 19.3,
+            "enhance": 0
+          }
+        ],
+        "earring": [
+          {
+            "name": "Liberator Earrings",
+            "icon": "/gear/icon_acc_er_0071.webp",
+            "share": 33.3,
+            "enhance": 3
+          },
+          {
+            "name": "Pilgrim Earrings",
+            "icon": "/gear/icon_acc_er_0071.webp",
+            "share": 31.2,
+            "enhance": 3
+          },
+          {
+            "name": "Aulamus Earrings",
+            "icon": "/gear/icon_acc_er_0072.webp",
+            "share": 13.2,
+            "enhance": 10
+          }
+        ],
+        "necklace": [
+          {
+            "name": "Pilgrim Necklace",
+            "icon": "/gear/icon_acc_nl_0071.webp",
+            "share": 32.5,
+            "enhance": 0
+          },
+          {
+            "name": "Liberator Necklace",
+            "icon": "/gear/icon_acc_nl_0071.webp",
+            "share": 26.2,
+            "enhance": 3
+          },
+          {
+            "name": "Aulamus Necklace",
+            "icon": "/gear/icon_acc_nl_0072.webp",
+            "share": 17,
+            "enhance": 10
+          }
+        ],
+        "ring": [
+          {
+            "name": "Pilgrim Ring",
+            "icon": "/gear/icon_acc_ring_0071.webp",
+            "share": 30.2,
+            "enhance": 2
+          },
+          {
+            "name": "Liberator Ring",
+            "icon": "/gear/icon_acc_ring_0071.webp",
+            "share": 26.5,
+            "enhance": 3
+          },
+          {
+            "name": "Aulamus Ring",
+            "icon": "/gear/icon_acc_ring_0072.webp",
+            "share": 14.5,
+            "enhance": 10
+          }
+        ],
+        "bracelet": [
+          {
+            "name": "Ascension Bracelet",
+            "icon": "/gear/icon_acc_bracelet_r_027.webp",
+            "share": 43.7,
+            "enhance": 8
+          },
+          {
+            "name": "Liberator Bracelet",
+            "icon": "/gear/icon_acc_bracelet_0071.webp",
+            "share": 24,
+            "enhance": 3
+          },
+          {
+            "name": "Pilgrim Bracelet",
+            "icon": "/gear/icon_acc_bracelet_0071.webp",
+            "share": 19.2,
+            "enhance": 5
+          }
+        ],
+        "belt": [
+          {
+            "name": "Noble Belt",
+            "icon": "/gear/icon_acc_belt_c_022.webp",
+            "share": 100,
+            "enhance": 0
+          }
+        ],
+        "amulet": [
+          {
+            "name": "Revelation Amulet",
+            "icon": "/gear/icon_item_craft_conversion_crystal_l_lv5_01.webp",
+            "share": 99.3,
+            "enhance": 0
+          },
+          {
+            "name": "Fierce Battle Amulet",
+            "icon": "/gear/icon_equip_eb_emblemd_mi_abyssshop_l_u_001.webp",
+            "share": 0.7,
+            "enhance": 0
+          }
+        ],
+        "rune": [
+          {
+            "name": "Clash Rune",
+            "icon": "/gear/icon_acc_rune_r_002.webp",
+            "share": 100,
+            "enhance": 2
+          }
+        ]
+      },
+      "titles": [
+        {
+          "name": "Through Hell and Back",
+          "share": 16.2
+        },
+        {
+          "name": "Saint of Altgard",
+          "share": 13
+        },
+        {
+          "name": "Saint of Verteron",
+          "share": 12
+        },
+        {
+          "name": "Guardian of Altgard",
+          "share": 8.3
+        },
+        {
+          "name": "Guardian of Verteron",
+          "share": 7.3
+        },
+        {
+          "name": "Failed Entrepreneur",
+          "share": 5
+        },
+        {
+          "name": "Encountering Zikel's Core",
+          "share": 4.5
+        },
+        {
+          "name": "Encountering Kaisinel's Core",
+          "share": 4
+        },
+        {
+          "name": "Lifeguard",
+          "share": 1.5
+        },
+        {
+          "name": "Illusion Illuminator",
+          "share": 0.5
+        }
+      ],
+      "wings": [
+        {
+          "name": "Ultimate Daeva Wings",
+          "icon": "/gear/icon_wingb_001.webp",
+          "share": 71.7
+        },
+        {
+          "name": "Superior Daeva Wings",
+          "icon": "/gear/icon_wingb_007c.webp",
+          "share": 12.5
+        },
+        {
+          "name": "Lesser Daeva Wings",
+          "icon": "/gear/icon_wingb_006a.webp",
+          "share": 3.7
+        },
+        {
+          "name": "Forest Spirit Wings",
+          "icon": "/gear/icon_winga_010.webp",
+          "share": 3.2
+        },
+        {
+          "name": "Radiant Love Wings",
+          "icon": "/gear/icon_wingd_003.webp",
+          "share": 1.3
+        }
+      ]
+    },
+    "spirit-master": {
+      "sample": 1767,
+      "sourceUrls": [
+        "https://gamewith.ai/aion2/en/build-stats/nae/elementalist",
+        "https://gamewith.ai/aion2/en/build-stats/eu/elementalist"
+      ],
+      "slots": {
+        "weapon": [
+          {
+            "name": "Spiritforged Orb",
+            "icon": "/gear/icon_wp_or_0078_t05.webp",
+            "share": 86.3,
+            "enhance": 10
+          },
+          {
+            "name": "Aulamus Orb",
+            "icon": "/gear/icon_wp_or_0028_t05.webp",
+            "share": 7.3,
+            "enhance": 10
+          },
+          {
+            "name": "Rupture Jewel",
+            "icon": "/gear/icon_wp_or_0031_t06.webp",
+            "share": 3.5,
+            "enhance": 10
+          }
+        ],
+        "guard": [
+          {
+            "name": "Spiritforged Guard",
+            "icon": "/gear/icon_weapon_guarder_l_001.webp",
+            "share": 75.3,
+            "enhance": 6
+          },
+          {
+            "name": "Pilgrim Guard",
+            "icon": "/gear/icon_weapon_guarder_c_028.webp",
+            "share": 7.3,
+            "enhance": 0
+          },
+          {
+            "name": "Vakron Guard",
+            "icon": "/gear/icon_weapon_guarder_u_003.webp",
+            "share": 6,
+            "enhance": 10
+          }
+        ],
+        "helmet": [
+          {
+            "name": "Liberator Helm",
+            "icon": "/gear/icon_gm_0019_t04_helmet.webp",
+            "share": 27.1,
+            "enhance": 1
+          },
+          {
+            "name": "Pilgrim Helm",
+            "icon": "/gear/icon_gm_0019_t04_helmet.webp",
+            "share": 26.1,
+            "enhance": 0
+          },
+          {
+            "name": "Vakron Helm",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_helmet.webp",
+            "share": 14.7,
+            "enhance": 10
+          }
+        ],
+        "shoulder": [
+          {
+            "name": "Liberator Pauldrons",
+            "icon": "/gear/icon_gm_0019_t04_shoulder.webp",
+            "share": 27.1,
+            "enhance": 1
+          },
+          {
+            "name": "Pilgrim Pauldrons",
+            "icon": "/gear/icon_gm_0019_t04_shoulder.webp",
+            "share": 26.8,
+            "enhance": 0
+          },
+          {
+            "name": "Vakron Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_shoulder.webp",
+            "share": 14.2,
+            "enhance": 8
+          }
+        ],
+        "torso": [
+          {
+            "name": "Bakarma Breastplate",
+            "icon": "/gear/icon_gm_0059_t05_torso.webp",
+            "share": 38,
+            "enhance": 5
+          },
+          {
+            "name": "Vakron Breastplate",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_torso.webp",
+            "share": 15.5,
+            "enhance": 8
+          },
+          {
+            "name": "Liberator Breastplate",
+            "icon": "/gear/icon_gm_0019_t04_torso.webp",
+            "share": 10.1,
+            "enhance": 0
+          }
+        ],
+        "gloves": [
+          {
+            "name": "Anguish Gloves",
+            "icon": "/gear/icon_gm_0032_t05_gloves.webp",
+            "share": 19,
+            "enhance": 0
+          },
+          {
+            "name": "Vakron Gloves",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_gloves.webp",
+            "share": 16.4,
+            "enhance": 9
+          },
+          {
+            "name": "Liberator Gloves",
+            "icon": "/gear/icon_gm_0019_t04_gloves.webp",
+            "share": 14.3,
+            "enhance": 1
+          }
+        ],
+        "pants": [
+          {
+            "name": "Vakron Greaves",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_pants.webp",
+            "share": 16.9,
+            "enhance": 10
+          },
+          {
+            "name": "Anguish Greaves",
+            "icon": "/gear/icon_gm_0032_t05_pants.webp",
+            "share": 15.7,
+            "enhance": 0
+          },
+          {
+            "name": "Liberator Greaves",
+            "icon": "/gear/icon_gm_0019_t04_pants.webp",
+            "share": 14.8,
+            "enhance": 1
+          }
+        ],
+        "boots": [
+          {
+            "name": "Pilgrim Boots",
+            "icon": "/gear/icon_gm_0019_t04_boots.webp",
+            "share": 16.9,
+            "enhance": 0
+          },
+          {
+            "name": "Liberator Boots",
+            "icon": "/gear/icon_gm_0019_t04_boots.webp",
+            "share": 16.3,
+            "enhance": 1
+          },
+          {
+            "name": "Anguish Boots",
+            "icon": "/gear/icon_gm_0032_t05_boots.webp",
+            "share": 15.7,
+            "enhance": 0
+          }
+        ],
+        "cape": [
+          {
+            "name": "Liberator Cloak",
+            "icon": "/gear/icon_gm_0019_t04_cape.webp",
+            "share": 23.1,
+            "enhance": 1
+          },
+          {
+            "name": "Pilgrim Cloak",
+            "icon": "/gear/icon_gm_0019_t04_cape.webp",
+            "share": 20.8,
+            "enhance": 0
+          },
+          {
+            "name": "Vakron Cloak",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_cape.webp",
+            "share": 15.2,
+            "enhance": 8
+          }
+        ],
+        "earring": [
+          {
+            "name": "Liberator Earrings",
+            "icon": "/gear/icon_acc_er_0071.webp",
+            "share": 33.7,
+            "enhance": 1
+          },
+          {
+            "name": "Pilgrim Earrings",
+            "icon": "/gear/icon_acc_er_0071.webp",
+            "share": 28.5,
+            "enhance": 1
+          },
+          {
+            "name": "Aulamus Earrings",
+            "icon": "/gear/icon_acc_er_0072.webp",
+            "share": 11.5,
+            "enhance": 8
+          }
+        ],
+        "necklace": [
+          {
+            "name": "Pilgrim Necklace",
+            "icon": "/gear/icon_acc_nl_0071.webp",
+            "share": 30.3,
+            "enhance": 2
+          },
+          {
+            "name": "Liberator Necklace",
+            "icon": "/gear/icon_acc_nl_0071.webp",
+            "share": 25.7,
+            "enhance": 1
+          },
+          {
+            "name": "Aulamus Necklace",
+            "icon": "/gear/icon_acc_nl_0072.webp",
+            "share": 15.2,
+            "enhance": 8
+          }
+        ],
+        "ring": [
+          {
+            "name": "Pilgrim Ring",
+            "icon": "/gear/icon_acc_ring_0071.webp",
+            "share": 27.5,
+            "enhance": 1
+          },
+          {
+            "name": "Liberator Ring",
+            "icon": "/gear/icon_acc_ring_0071.webp",
+            "share": 25.7,
+            "enhance": 1
+          },
+          {
+            "name": "Aulamus Ring",
+            "icon": "/gear/icon_acc_ring_0072.webp",
+            "share": 13.5,
+            "enhance": 8
+          }
+        ],
+        "bracelet": [
+          {
+            "name": "Ascension Bracelet",
+            "icon": "/gear/icon_acc_bracelet_r_027.webp",
+            "share": 42.2,
+            "enhance": 6
+          },
+          {
+            "name": "Liberator Bracelet",
+            "icon": "/gear/icon_acc_bracelet_0071.webp",
+            "share": 24,
+            "enhance": 2
+          },
+          {
+            "name": "Pilgrim Bracelet",
+            "icon": "/gear/icon_acc_bracelet_0071.webp",
+            "share": 17.5,
+            "enhance": 4
+          }
+        ],
+        "belt": [
+          {
+            "name": "Noble Belt",
+            "icon": "/gear/icon_acc_belt_c_022.webp",
+            "share": 100,
+            "enhance": 0
+          }
+        ],
+        "amulet": [
+          {
+            "name": "Revelation Amulet",
+            "icon": "/gear/icon_item_craft_conversion_crystal_l_lv5_01.webp",
+            "share": 99,
+            "enhance": 0
+          },
+          {
+            "name": "Fierce Battle Amulet",
+            "icon": "/gear/icon_equip_eb_emblemd_mi_abyssshop_l_u_001.webp",
+            "share": 0.7,
+            "enhance": 0
+          }
+        ],
+        "rune": [
+          {
+            "name": "Clash Rune",
+            "icon": "/gear/icon_acc_rune_r_002.webp",
+            "share": 100,
+            "enhance": 2
+          }
+        ]
+      },
+      "titles": [
+        {
+          "name": "Through Hell and Back",
+          "share": 13.2
+        },
+        {
+          "name": "Saint of Altgard",
+          "share": 12.7
+        },
+        {
+          "name": "Saint of Verteron",
+          "share": 11.7
+        },
+        {
+          "name": "Guardian of Altgard",
+          "share": 8.3
+        },
+        {
+          "name": "Guardian of Verteron",
+          "share": 8
+        },
+        {
+          "name": "Encountering Zikel's Core",
+          "share": 6.5
+        },
+        {
+          "name": "Failed Entrepreneur",
+          "share": 5
+        },
+        {
+          "name": "Encountering Kaisinel's Core",
+          "share": 4.7
+        },
+        {
+          "name": "Celebrity",
+          "share": 2.3
+        }
+      ],
+      "wings": [
+        {
+          "name": "Ultimate Daeva Wings",
+          "icon": "/gear/icon_wingb_001.webp",
+          "share": 70.6
+        },
+        {
+          "name": "Superior Daeva Wings",
+          "icon": "/gear/icon_wingb_007c.webp",
+          "share": 15.7
+        },
+        {
+          "name": "Lesser Daeva Wings",
+          "icon": "/gear/icon_wingb_006.webp",
+          "share": 2.5
+        },
+        {
+          "name": "Forest Spirit Wings",
+          "icon": "/gear/icon_winga_010.webp",
+          "share": 2.5
+        },
+        {
+          "name": "Aullaeu Wings",
+          "icon": "/gear/icon_wingb_004.webp",
+          "share": 2
+        }
+      ]
+    },
+    "gladiator": {
+      "sample": 1797,
+      "sourceUrls": [
+        "https://gamewith.ai/aion2/en/build-stats/nae/gladiator",
+        "https://gamewith.ai/aion2/en/build-stats/eu/gladiator"
+      ],
+      "slots": {
+        "weapon": [
+          {
+            "name": "Spiritforged Greatsword",
+            "icon": "/gear/icon_wp_gs_0078_t05.webp",
+            "share": 83.3,
+            "enhance": 10
+          },
+          {
+            "name": "Aulamus Greatsword",
+            "icon": "/gear/icon_equip_wp_l_gs_0028_t05.webp",
+            "share": 8.5,
+            "enhance": 11
+          },
+          {
+            "name": "Rupture Claymore",
+            "icon": "/gear/icon_equip_wp_l_gs_0031_t06.webp",
+            "share": 3.7,
+            "enhance": 10
+          }
+        ],
+        "guard": [
+          {
+            "name": "Spiritforged Guard",
+            "icon": "/gear/icon_weapon_guarder_l_001.webp",
+            "share": 76.3,
+            "enhance": 8
+          },
+          {
+            "name": "Vakron Guard",
+            "icon": "/gear/icon_weapon_guarder_u_003.webp",
+            "share": 7.5,
+            "enhance": 10
+          },
+          {
+            "name": "Bakarma Guard",
+            "icon": "/gear/icon_weapon_guarder_l_011.webp",
+            "share": 6,
+            "enhance": 9
+          }
+        ],
+        "helmet": [
+          {
+            "name": "Pilgrim Helm",
+            "icon": "/gear/icon_gm_0019_t04_helmet.webp",
+            "share": 26.3,
+            "enhance": 0
+          },
+          {
+            "name": "Liberator Helm",
+            "icon": "/gear/icon_gm_0019_t04_helmet.webp",
+            "share": 24.1,
+            "enhance": 0
+          },
+          {
+            "name": "Vakron Helm",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_helmet.webp",
+            "share": 20.9,
+            "enhance": 10
+          }
+        ],
+        "shoulder": [
+          {
+            "name": "Pilgrim Pauldrons",
+            "icon": "/gear/icon_gm_0019_t04_shoulder.webp",
+            "share": 25.8,
+            "enhance": 0
+          },
+          {
+            "name": "Liberator Pauldrons",
+            "icon": "/gear/icon_gm_0019_t04_shoulder.webp",
+            "share": 24.3,
+            "enhance": 0
+          },
+          {
+            "name": "Vakron Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_shoulder.webp",
+            "share": 19,
+            "enhance": 10
+          }
+        ],
+        "torso": [
+          {
+            "name": "Bakarma Breastplate",
+            "icon": "/gear/icon_gm_0059_t05_torso.webp",
+            "share": 42.4,
+            "enhance": 6
+          },
+          {
+            "name": "Vakron Breastplate",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_torso.webp",
+            "share": 19.7,
+            "enhance": 10
+          },
+          {
+            "name": "Liberator Breastplate",
+            "icon": "/gear/icon_gm_0019_t04_torso.webp",
+            "share": 9.3,
+            "enhance": 0
+          }
+        ],
+        "gloves": [
+          {
+            "name": "Vakron Gloves",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_gloves.webp",
+            "share": 20.5,
+            "enhance": 10
+          },
+          {
+            "name": "Anguish Gloves",
+            "icon": "/gear/icon_gm_0032_t05_gloves.webp",
+            "share": 19,
+            "enhance": 0
+          },
+          {
+            "name": "Pilgrim Gloves",
+            "icon": "/gear/icon_gm_0019_t04_gloves.webp",
+            "share": 13.5,
+            "enhance": 0
+          }
+        ],
+        "pants": [
+          {
+            "name": "Vakron Greaves",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_pants.webp",
+            "share": 21.5,
+            "enhance": 10
+          },
+          {
+            "name": "Anguish Greaves",
+            "icon": "/gear/icon_gm_0032_t05_pants.webp",
+            "share": 14.8,
+            "enhance": 0
+          },
+          {
+            "name": "Bakarma Greaves",
+            "icon": "/gear/icon_gm_0059_t05_pants.webp",
+            "share": 13.7,
+            "enhance": 6
+          }
+        ],
+        "boots": [
+          {
+            "name": "Anguish Boots",
+            "icon": "/gear/icon_gm_0032_t05_boots.webp",
+            "share": 18.2,
+            "enhance": 0
+          },
+          {
+            "name": "Vakron Boots",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_boots.webp",
+            "share": 18,
+            "enhance": 10
+          },
+          {
+            "name": "Pilgrim Boots",
+            "icon": "/gear/icon_gm_0019_t04_boots.webp",
+            "share": 14.5,
+            "enhance": 0
+          }
+        ],
+        "cape": [
+          {
+            "name": "Pilgrim Cloak",
+            "icon": "/gear/icon_gm_0019_t04_cape.webp",
+            "share": 20.5,
+            "enhance": 0
+          },
+          {
+            "name": "Vakron Cloak",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_cape.webp",
+            "share": 20.5,
+            "enhance": 10
+          },
+          {
+            "name": "Liberator Cloak",
+            "icon": "/gear/icon_gm_0019_t04_cape.webp",
+            "share": 19.8,
+            "enhance": 0
+          }
+        ],
+        "earring": [
+          {
+            "name": "Liberator Earrings",
+            "icon": "/gear/icon_acc_er_0071.webp",
+            "share": 32.7,
+            "enhance": 3
+          },
+          {
+            "name": "Pilgrim Earrings",
+            "icon": "/gear/icon_acc_er_0071.webp",
+            "share": 29.5,
+            "enhance": 3
+          },
+          {
+            "name": "Aulamus Earrings",
+            "icon": "/gear/icon_acc_er_0072.webp",
+            "share": 13,
+            "enhance": 10
+          }
+        ],
+        "necklace": [
+          {
+            "name": "Pilgrim Necklace",
+            "icon": "/gear/icon_acc_nl_0071.webp",
+            "share": 31.7,
+            "enhance": 3
+          },
+          {
+            "name": "Liberator Necklace",
+            "icon": "/gear/icon_acc_nl_0071.webp",
+            "share": 24.3,
+            "enhance": 3
+          },
+          {
+            "name": "Aulamus Necklace",
+            "icon": "/gear/icon_acc_nl_0072.webp",
+            "share": 16,
+            "enhance": 10
+          }
+        ],
+        "ring": [
+          {
+            "name": "Pilgrim Ring",
+            "icon": "/gear/icon_acc_ring_0071.webp",
+            "share": 28.5,
+            "enhance": 3
+          },
+          {
+            "name": "Liberator Ring",
+            "icon": "/gear/icon_acc_ring_0071.webp",
+            "share": 24.9,
+            "enhance": 3
+          },
+          {
+            "name": "Aulamus Ring",
+            "icon": "/gear/icon_acc_ring_0072.webp",
+            "share": 13,
+            "enhance": 10
+          }
+        ],
+        "bracelet": [
+          {
+            "name": "Ascension Bracelet",
+            "icon": "/gear/icon_acc_bracelet_r_027.webp",
+            "share": 43.1,
+            "enhance": 10
+          },
+          {
+            "name": "Liberator Bracelet",
+            "icon": "/gear/icon_acc_bracelet_0071.webp",
+            "share": 23.7,
+            "enhance": 5
+          },
+          {
+            "name": "Pilgrim Bracelet",
+            "icon": "/gear/icon_acc_bracelet_0071.webp",
+            "share": 18.2,
+            "enhance": 5
+          }
+        ],
+        "belt": [
+          {
+            "name": "Noble Belt",
+            "icon": "/gear/icon_acc_belt_c_022.webp",
+            "share": 100,
+            "enhance": 0
+          }
+        ],
+        "amulet": [
+          {
+            "name": "Revelation Amulet",
+            "icon": "/gear/icon_item_craft_conversion_crystal_l_lv5_01.webp",
+            "share": 99,
+            "enhance": 0
+          },
+          {
+            "name": "Fierce Battle Amulet",
+            "icon": "/gear/icon_equip_eb_emblemd_mi_abyssshop_l_u_001.webp",
+            "share": 1,
+            "enhance": 0
+          }
+        ],
+        "rune": [
+          {
+            "name": "Clash Rune",
+            "icon": "/gear/icon_acc_rune_r_002.webp",
+            "share": 100,
+            "enhance": 2
+          }
+        ]
+      },
+      "titles": [
+        {
+          "name": "Through Hell and Back",
+          "share": 14
+        },
+        {
+          "name": "Saint of Altgard",
+          "share": 13.7
+        },
+        {
+          "name": "Saint of Verteron",
+          "share": 12
+        },
+        {
+          "name": "Guardian of Altgard",
+          "share": 9.3
+        },
+        {
+          "name": "Guardian of Verteron",
+          "share": 7.3
+        },
+        {
+          "name": "Failed Entrepreneur",
+          "share": 5
+        },
+        {
+          "name": "Encountering Zikel's Core",
+          "share": 4.7
+        },
+        {
+          "name": "Encountering Kaisinel's Core",
+          "share": 4.7
+        },
+        {
+          "name": "Lifeguard",
+          "share": 1.5
+        },
+        {
+          "name": "Grasper of the Core",
+          "share": 0.5
+        }
+      ],
+      "wings": [
+        {
+          "name": "Ultimate Daeva Wings",
+          "icon": "/gear/icon_wingb_001.webp",
+          "share": 72.6
+        },
+        {
+          "name": "Superior Daeva Wings",
+          "icon": "/gear/icon_wingb_007c.webp",
+          "share": 13.7
+        },
+        {
+          "name": "Forest Spirit Wings",
+          "icon": "/gear/icon_winga_010.webp",
+          "share": 4.5
+        },
+        {
+          "name": "Lesser Daeva Wings",
+          "icon": "/gear/icon_wingb_006.webp",
+          "share": 2.5
+        },
+        {
+          "name": "Radiant Love Wings",
+          "icon": "/gear/icon_wingd_003.webp",
+          "share": 1
+        }
+      ]
+    },
+    "sorcerer": {
+      "sample": 1792,
+      "sourceUrls": [
+        "https://gamewith.ai/aion2/en/build-stats/nae/sorcerer",
+        "https://gamewith.ai/aion2/en/build-stats/eu/sorcerer"
+      ],
+      "slots": {
+        "weapon": [
+          {
+            "name": "Spiritforged Spellbook",
+            "icon": "/gear/icon_wp_mb_0078_t05.webp",
+            "share": 86.8,
+            "enhance": 10
+          },
+          {
+            "name": "Aulamus Spellbook",
+            "icon": "/gear/icon_wp_mb_0028_t05.webp",
+            "share": 7.5,
+            "enhance": 10
+          },
+          {
+            "name": "Rupture Tome",
+            "icon": "/gear/icon_wp_mb_0031_t06.webp",
+            "share": 2.5,
+            "enhance": 10
+          }
+        ],
+        "guard": [
+          {
+            "name": "Spiritforged Guard",
+            "icon": "/gear/icon_weapon_guarder_l_001.webp",
+            "share": 73.9,
+            "enhance": 6
+          },
+          {
+            "name": "Vakron Guard",
+            "icon": "/gear/icon_weapon_guarder_u_003.webp",
+            "share": 8.3,
+            "enhance": 10
+          },
+          {
+            "name": "Pilgrim Guard",
+            "icon": "/gear/icon_weapon_guarder_c_028.webp",
+            "share": 6.3,
+            "enhance": 0
+          }
+        ],
+        "helmet": [
+          {
+            "name": "Pilgrim Helm",
+            "icon": "/gear/icon_gm_0019_t04_helmet.webp",
+            "share": 24.8,
+            "enhance": 0
+          },
+          {
+            "name": "Liberator Helm",
+            "icon": "/gear/icon_gm_0019_t04_helmet.webp",
+            "share": 24.6,
+            "enhance": 0
+          },
+          {
+            "name": "Vakron Helm",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_helmet.webp",
+            "share": 22.7,
+            "enhance": 10
+          }
+        ],
+        "shoulder": [
+          {
+            "name": "Pilgrim Pauldrons",
+            "icon": "/gear/icon_gm_0019_t04_shoulder.webp",
+            "share": 25.5,
+            "enhance": 0
+          },
+          {
+            "name": "Liberator Pauldrons",
+            "icon": "/gear/icon_gm_0019_t04_shoulder.webp",
+            "share": 25.1,
+            "enhance": 0
+          },
+          {
+            "name": "Vakron Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_shoulder.webp",
+            "share": 20.9,
+            "enhance": 10
+          }
+        ],
+        "torso": [
+          {
+            "name": "Bakarma Breastplate",
+            "icon": "/gear/icon_gm_0059_t05_torso.webp",
+            "share": 42.6,
+            "enhance": 5
+          },
+          {
+            "name": "Vakron Breastplate",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_torso.webp",
+            "share": 20.8,
+            "enhance": 10
+          },
+          {
+            "name": "Pilgrim Breastplate",
+            "icon": "/gear/icon_gm_0019_t04_torso.webp",
+            "share": 9.8,
+            "enhance": 0
+          }
+        ],
+        "gloves": [
+          {
+            "name": "Vakron Gloves",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_gloves.webp",
+            "share": 23.7,
+            "enhance": 10
+          },
+          {
+            "name": "Anguish Gloves",
+            "icon": "/gear/icon_gm_0032_t05_gloves.webp",
+            "share": 19.3,
+            "enhance": 0
+          },
+          {
+            "name": "Liberator Gloves",
+            "icon": "/gear/icon_gm_0019_t04_gloves.webp",
+            "share": 12.8,
+            "enhance": 0
+          }
+        ],
+        "pants": [
+          {
+            "name": "Vakron Greaves",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_pants.webp",
+            "share": 21.2,
+            "enhance": 10
+          },
+          {
+            "name": "Bakarma Greaves",
+            "icon": "/gear/icon_gm_0059_t05_pants.webp",
+            "share": 16.2,
+            "enhance": 6
+          },
+          {
+            "name": "Anguish Greaves",
+            "icon": "/gear/icon_gm_0032_t05_pants.webp",
+            "share": 15.8,
+            "enhance": 0
+          }
+        ],
+        "boots": [
+          {
+            "name": "Vakron Boots",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_boots.webp",
+            "share": 20.2,
+            "enhance": 10
+          },
+          {
+            "name": "Anguish Boots",
+            "icon": "/gear/icon_gm_0032_t05_boots.webp",
+            "share": 19,
+            "enhance": 0
+          },
+          {
+            "name": "Bakarma Boots",
+            "icon": "/gear/icon_gm_0059_t05_boots.webp",
+            "share": 14.5,
+            "enhance": 5
+          }
+        ],
+        "cape": [
+          {
+            "name": "Pilgrim Cloak",
+            "icon": "/gear/icon_gm_0019_t04_cape.webp",
+            "share": 21.8,
+            "enhance": 0
+          },
+          {
+            "name": "Vakron Cloak",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_cape.webp",
+            "share": 20.5,
+            "enhance": 10
+          },
+          {
+            "name": "Liberator Cloak",
+            "icon": "/gear/icon_gm_0019_t04_cape.webp",
+            "share": 20.1,
+            "enhance": 0
+          }
+        ],
+        "earring": [
+          {
+            "name": "Liberator Earrings",
+            "icon": "/gear/icon_acc_er_0071.webp",
+            "share": 32.2,
+            "enhance": 2
+          },
+          {
+            "name": "Pilgrim Earrings",
+            "icon": "/gear/icon_acc_er_0071.webp",
+            "share": 30.2,
+            "enhance": 3
+          },
+          {
+            "name": "Aulamus Earrings",
+            "icon": "/gear/icon_acc_er_0072.webp",
+            "share": 13.7,
+            "enhance": 10
+          }
+        ],
+        "necklace": [
+          {
+            "name": "Pilgrim Necklace",
+            "icon": "/gear/icon_acc_nl_0071.webp",
+            "share": 32.3,
+            "enhance": 0
+          },
+          {
+            "name": "Liberator Necklace",
+            "icon": "/gear/icon_acc_nl_0071.webp",
+            "share": 23.9,
+            "enhance": 2
+          },
+          {
+            "name": "Aulamus Necklace",
+            "icon": "/gear/icon_acc_nl_0072.webp",
+            "share": 17.5,
+            "enhance": 10
+          }
+        ],
+        "ring": [
+          {
+            "name": "Pilgrim Ring",
+            "icon": "/gear/icon_acc_ring_0071.webp",
+            "share": 29,
+            "enhance": 2
+          },
+          {
+            "name": "Liberator Ring",
+            "icon": "/gear/icon_acc_ring_0071.webp",
+            "share": 24.4,
+            "enhance": 3
+          },
+          {
+            "name": "Aulamus Ring",
+            "icon": "/gear/icon_acc_ring_0072.webp",
+            "share": 15.2,
+            "enhance": 10
+          }
+        ],
+        "bracelet": [
+          {
+            "name": "Ascension Bracelet",
+            "icon": "/gear/icon_acc_bracelet_r_027.webp",
+            "share": 42.1,
+            "enhance": 10
+          },
+          {
+            "name": "Liberator Bracelet",
+            "icon": "/gear/icon_acc_bracelet_0071.webp",
+            "share": 23.7,
+            "enhance": 5
+          },
+          {
+            "name": "Pilgrim Bracelet",
+            "icon": "/gear/icon_acc_bracelet_0071.webp",
+            "share": 17.9,
+            "enhance": 5
+          }
+        ],
+        "belt": [
+          {
+            "name": "Noble Belt",
+            "icon": "/gear/icon_acc_belt_c_022.webp",
+            "share": 100,
+            "enhance": 0
+          }
+        ],
+        "amulet": [
+          {
+            "name": "Revelation Amulet",
+            "icon": "/gear/icon_item_craft_conversion_crystal_l_lv5_01.webp",
+            "share": 99.7,
+            "enhance": 0
+          },
+          {
+            "name": "Fierce Battle Amulet",
+            "icon": "/gear/icon_equip_eb_emblemd_mi_abyssshop_l_u_001.webp",
+            "share": 1,
+            "enhance": 0
+          }
+        ],
+        "rune": [
+          {
+            "name": "Clash Rune",
+            "icon": "/gear/icon_acc_rune_r_002.webp",
+            "share": 100,
+            "enhance": 2
+          }
+        ]
+      },
+      "titles": [
+        {
+          "name": "Through Hell and Back",
+          "share": 16.7
+        },
+        {
+          "name": "Saint of Altgard",
+          "share": 12.7
+        },
+        {
+          "name": "Saint of Verteron",
+          "share": 11.7
+        },
+        {
+          "name": "Guardian of Altgard",
+          "share": 9.3
+        },
+        {
+          "name": "Guardian of Verteron",
+          "share": 7
+        },
+        {
+          "name": "Failed Entrepreneur",
+          "share": 5
+        },
+        {
+          "name": "Encountering Zikel's Core",
+          "share": 3.7
+        },
+        {
+          "name": "Encountering Kaisinel's Core",
+          "share": 3.7
+        },
+        {
+          "name": "Lifeguard",
+          "share": 1.5
+        },
+        {
+          "name": "Illusion Illuminator",
+          "share": 0.5
+        }
+      ],
+      "wings": [
+        {
+          "name": "Ultimate Daeva Wings",
+          "icon": "/gear/icon_wingb_001.webp",
+          "share": 69
+        },
+        {
+          "name": "Superior Daeva Wings",
+          "icon": "/gear/icon_wingb_007c.webp",
+          "share": 14.2
+        },
+        {
+          "name": "Forest Spirit Wings",
+          "icon": "/gear/icon_winga_010.webp",
+          "share": 4.8
+        },
+        {
+          "name": "Radiant Love Wings",
+          "icon": "/gear/icon_wingd_003.webp",
+          "share": 2.5
+        },
+        {
+          "name": "Aullaeu Wings",
+          "icon": "/gear/icon_wingb_004.webp",
+          "share": 1.3
+        }
+      ]
+    },
+    "templar": {
+      "sample": 1789,
+      "sourceUrls": [
+        "https://gamewith.ai/aion2/en/build-stats/nae/templar",
+        "https://gamewith.ai/aion2/en/build-stats/eu/templar"
+      ],
+      "slots": {
+        "weapon": [
+          {
+            "name": "Spiritforged Longsword",
+            "icon": "/gear/icon_wp_sw_0078_t05.webp",
+            "share": 85.3,
+            "enhance": 10
+          },
+          {
+            "name": "Aulamus Longsword",
+            "icon": "/gear/icon_wp_sw_0028_t05.webp",
+            "share": 7.3,
+            "enhance": 10
+          },
+          {
+            "name": "Rupture Sword",
+            "icon": "/gear/icon_wp_sw_0031_t06.webp",
+            "share": 2.5,
+            "enhance": 10
+          }
+        ],
+        "guard": [
+          {
+            "name": "Spiritforged Guard",
+            "icon": "/gear/icon_weapon_guarder_l_001.webp",
+            "share": 75.8,
+            "enhance": 6
+          },
+          {
+            "name": "Vakron Guard",
+            "icon": "/gear/icon_weapon_guarder_u_003.webp",
+            "share": 9.5,
+            "enhance": 10
+          },
+          {
+            "name": "Pilgrim Guard",
+            "icon": "/gear/icon_weapon_guarder_c_028.webp",
+            "share": 5.3,
+            "enhance": 1
+          }
+        ],
+        "helmet": [
+          {
+            "name": "Liberator Helm",
+            "icon": "/gear/icon_gm_0019_t04_helmet.webp",
+            "share": 25.6,
+            "enhance": 1
+          },
+          {
+            "name": "Pilgrim Helm",
+            "icon": "/gear/icon_gm_0019_t04_helmet.webp",
+            "share": 23.8,
+            "enhance": 1
+          },
+          {
+            "name": "Vakron Helm",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_helmet.webp",
+            "share": 21.7,
+            "enhance": 10
+          }
+        ],
+        "shoulder": [
+          {
+            "name": "Pilgrim Pauldrons",
+            "icon": "/gear/icon_gm_0019_t04_shoulder.webp",
+            "share": 25.6,
+            "enhance": 1
+          },
+          {
+            "name": "Liberator Pauldrons",
+            "icon": "/gear/icon_gm_0019_t04_shoulder.webp",
+            "share": 24.6,
+            "enhance": 1
+          },
+          {
+            "name": "Vakron Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_shoulder.webp",
+            "share": 20.9,
+            "enhance": 10
+          }
+        ],
+        "torso": [
+          {
+            "name": "Bakarma Breastplate",
+            "icon": "/gear/icon_gm_0059_t05_torso.webp",
+            "share": 36.3,
+            "enhance": 6
+          },
+          {
+            "name": "Vakron Breastplate",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_torso.webp",
+            "share": 23.5,
+            "enhance": 10
+          },
+          {
+            "name": "Liberator Breastplate",
+            "icon": "/gear/icon_gm_0019_t04_torso.webp",
+            "share": 9,
+            "enhance": 0
+          }
+        ],
+        "gloves": [
+          {
+            "name": "Vakron Gloves",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_gloves.webp",
+            "share": 23.1,
+            "enhance": 10
+          },
+          {
+            "name": "Anguish Gloves",
+            "icon": "/gear/icon_gm_0032_t05_gloves.webp",
+            "share": 16,
+            "enhance": 0
+          },
+          {
+            "name": "Pilgrim Gloves",
+            "icon": "/gear/icon_gm_0019_t04_gloves.webp",
+            "share": 14.3,
+            "enhance": 1
+          }
+        ],
+        "pants": [
+          {
+            "name": "Vakron Greaves",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_pants.webp",
+            "share": 23.9,
+            "enhance": 10
+          },
+          {
+            "name": "Anguish Greaves",
+            "icon": "/gear/icon_gm_0032_t05_pants.webp",
+            "share": 14.5,
+            "enhance": 0
+          },
+          {
+            "name": "Pilgrim Greaves",
+            "icon": "/gear/icon_gm_0019_t04_pants.webp",
+            "share": 13.3,
+            "enhance": 0
+          }
+        ],
+        "boots": [
+          {
+            "name": "Vakron Boots",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_boots.webp",
+            "share": 21.9,
+            "enhance": 10
+          },
+          {
+            "name": "Pilgrim Boots",
+            "icon": "/gear/icon_gm_0019_t04_boots.webp",
+            "share": 16.3,
+            "enhance": 1
+          },
+          {
+            "name": "Liberator Boots",
+            "icon": "/gear/icon_gm_0019_t04_boots.webp",
+            "share": 15.3,
+            "enhance": 1
+          }
+        ],
+        "cape": [
+          {
+            "name": "Liberator Cloak",
+            "icon": "/gear/icon_gm_0019_t04_cape.webp",
+            "share": 21.9,
+            "enhance": 1
+          },
+          {
+            "name": "Vakron Cloak",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_cape.webp",
+            "share": 21.2,
+            "enhance": 10
+          },
+          {
+            "name": "Pilgrim Cloak",
+            "icon": "/gear/icon_gm_0019_t04_cape.webp",
+            "share": 21.1,
+            "enhance": 0
+          }
+        ],
+        "earring": [
+          {
+            "name": "Liberator Earrings",
+            "icon": "/gear/icon_acc_er_0071.webp",
+            "share": 33.7,
+            "enhance": 1
+          },
+          {
+            "name": "Pilgrim Earrings",
+            "icon": "/gear/icon_acc_er_0071.webp",
+            "share": 32,
+            "enhance": 3
+          },
+          {
+            "name": "Aulamus Earrings",
+            "icon": "/gear/icon_acc_er_0072.webp",
+            "share": 12.7,
+            "enhance": 10
+          }
+        ],
+        "necklace": [
+          {
+            "name": "Pilgrim Necklace",
+            "icon": "/gear/icon_acc_nl_0071.webp",
+            "share": 32.5,
+            "enhance": 1
+          },
+          {
+            "name": "Liberator Necklace",
+            "icon": "/gear/icon_acc_nl_0071.webp",
+            "share": 27.2,
+            "enhance": 1
+          },
+          {
+            "name": "Aulamus Necklace",
+            "icon": "/gear/icon_acc_nl_0072.webp",
+            "share": 17.3,
+            "enhance": 10
+          }
+        ],
+        "ring": [
+          {
+            "name": "Pilgrim Ring",
+            "icon": "/gear/icon_acc_ring_0071.webp",
+            "share": 31,
+            "enhance": 3
+          },
+          {
+            "name": "Liberator Ring",
+            "icon": "/gear/icon_acc_ring_0071.webp",
+            "share": 28.2,
+            "enhance": 1
+          },
+          {
+            "name": "Aulamus Ring",
+            "icon": "/gear/icon_acc_ring_0072.webp",
+            "share": 13.7,
+            "enhance": 10
+          }
+        ],
+        "bracelet": [
+          {
+            "name": "Ascension Bracelet",
+            "icon": "/gear/icon_acc_bracelet_r_027.webp",
+            "share": 43.5,
+            "enhance": 10
+          },
+          {
+            "name": "Liberator Bracelet",
+            "icon": "/gear/icon_acc_bracelet_0071.webp",
+            "share": 24,
+            "enhance": 3
+          },
+          {
+            "name": "Pilgrim Bracelet",
+            "icon": "/gear/icon_acc_bracelet_0071.webp",
+            "share": 19.7,
+            "enhance": 5
+          }
+        ],
+        "belt": [
+          {
+            "name": "Noble Belt",
+            "icon": "/gear/icon_acc_belt_c_022.webp",
+            "share": 100,
+            "enhance": 0
+          }
+        ],
+        "amulet": [
+          {
+            "name": "Revelation Amulet",
+            "icon": "/gear/icon_item_craft_conversion_crystal_l_lv5_01.webp",
+            "share": 99,
+            "enhance": 0
+          },
+          {
+            "name": "Fierce Battle Amulet",
+            "icon": "/gear/icon_equip_eb_emblemd_mi_abyssshop_l_u_001.webp",
+            "share": 1,
+            "enhance": 0
+          }
+        ],
+        "rune": [
+          {
+            "name": "Clash Rune",
+            "icon": "/gear/icon_acc_rune_r_002.webp",
+            "share": 100,
+            "enhance": 2
+          }
+        ]
+      },
+      "titles": [
+        {
+          "name": "Through Hell and Back",
+          "share": 15.7
+        },
+        {
+          "name": "Saint of Altgard",
+          "share": 13.2
+        },
+        {
+          "name": "Saint of Verteron",
+          "share": 12.5
+        },
+        {
+          "name": "Guardian of Altgard",
+          "share": 8.7
+        },
+        {
+          "name": "Guardian of Verteron",
+          "share": 7.3
+        },
+        {
+          "name": "Encountering Zikel's Core",
+          "share": 6
+        },
+        {
+          "name": "Failed Entrepreneur",
+          "share": 5
+        },
+        {
+          "name": "Encountering Kaisinel's Core",
+          "share": 4.7
+        },
+        {
+          "name": "Celebrity",
+          "share": 2.8
+        }
+      ],
+      "wings": [
+        {
+          "name": "Ultimate Daeva Wings",
+          "icon": "/gear/icon_wingb_001.webp",
+          "share": 70.1
+        },
+        {
+          "name": "Superior Daeva Wings",
+          "icon": "/gear/icon_wingb_007c.webp",
+          "share": 13.3
+        },
+        {
+          "name": "Forest Spirit Wings",
+          "icon": "/gear/icon_winga_010.webp",
+          "share": 4.3
+        },
+        {
+          "name": "Radiant Love Wings",
+          "icon": "/gear/icon_wingd_003.webp",
+          "share": 3.3
+        },
+        {
+          "name": "Lesser Daeva Wings",
+          "icon": "/gear/icon_wingb_006.webp",
+          "share": 2
+        }
+      ]
+    },
+    "assassin": {
+      "sample": 1767,
+      "sourceUrls": [
+        "https://gamewith.ai/aion2/en/build-stats/nae/assassin",
+        "https://gamewith.ai/aion2/en/build-stats/eu/assassin"
+      ],
+      "slots": {
+        "weapon": [
+          {
+            "name": "Spiritforged Dagger",
+            "icon": "/gear/icon_equip_wp_l_da_0078_t05.webp",
+            "share": 84.9,
+            "enhance": 10
+          },
+          {
+            "name": "Aulamus Dagger",
+            "icon": "/gear/icon_wp_da_0028_t05.webp",
+            "share": 8.5,
+            "enhance": 11
+          },
+          {
+            "name": "Rupture Knife",
+            "icon": "/gear/icon_wp_da_0031_t06.webp",
+            "share": 3,
+            "enhance": 10
+          }
+        ],
+        "guard": [
+          {
+            "name": "Spiritforged Guard",
+            "icon": "/gear/icon_weapon_guarder_l_001.webp",
+            "share": 74.7,
+            "enhance": 10
+          },
+          {
+            "name": "Vakron Guard",
+            "icon": "/gear/icon_weapon_guarder_u_003.webp",
+            "share": 8.5,
+            "enhance": 10
+          },
+          {
+            "name": "Pilgrim Guard",
+            "icon": "/gear/icon_weapon_guarder_c_028.webp",
+            "share": 4.8,
+            "enhance": 0
+          }
+        ],
+        "helmet": [
+          {
+            "name": "Liberator Helm",
+            "icon": "/gear/icon_gm_0019_t04_helmet.webp",
+            "share": 24.8,
+            "enhance": 0
+          },
+          {
+            "name": "Pilgrim Helm",
+            "icon": "/gear/icon_gm_0019_t04_helmet.webp",
+            "share": 24.5,
+            "enhance": 0
+          },
+          {
+            "name": "Vakron Helm",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_helmet.webp",
+            "share": 21.5,
+            "enhance": 10
+          }
+        ],
+        "shoulder": [
+          {
+            "name": "Pilgrim Pauldrons",
+            "icon": "/gear/icon_gm_0019_t04_shoulder.webp",
+            "share": 24.8,
+            "enhance": 0
+          },
+          {
+            "name": "Liberator Pauldrons",
+            "icon": "/gear/icon_gm_0019_t04_shoulder.webp",
+            "share": 24.6,
+            "enhance": 0
+          },
+          {
+            "name": "Vakron Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_shoulder.webp",
+            "share": 21.9,
+            "enhance": 10
+          }
+        ],
+        "torso": [
+          {
+            "name": "Bakarma Breastplate",
+            "icon": "/gear/icon_gm_0059_t05_torso.webp",
+            "share": 45,
+            "enhance": 6
+          },
+          {
+            "name": "Vakron Breastplate",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_torso.webp",
+            "share": 21.7,
+            "enhance": 10
+          },
+          {
+            "name": "Pilgrim Breastplate",
+            "icon": "/gear/icon_gm_0019_t04_torso.webp",
+            "share": 8.3,
+            "enhance": 0
+          }
+        ],
+        "gloves": [
+          {
+            "name": "Vakron Gloves",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_gloves.webp",
+            "share": 23.5,
+            "enhance": 10
+          },
+          {
+            "name": "Anguish Gloves",
+            "icon": "/gear/icon_gm_0032_t05_gloves.webp",
+            "share": 19.8,
+            "enhance": 0
+          },
+          {
+            "name": "Pilgrim Gloves",
+            "icon": "/gear/icon_gm_0019_t04_gloves.webp",
+            "share": 12.5,
+            "enhance": 0
+          }
+        ],
+        "pants": [
+          {
+            "name": "Vakron Greaves",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_pants.webp",
+            "share": 24.1,
+            "enhance": 10
+          },
+          {
+            "name": "Bakarma Greaves",
+            "icon": "/gear/icon_gm_0059_t05_pants.webp",
+            "share": 14.2,
+            "enhance": 6
+          },
+          {
+            "name": "Anguish Greaves",
+            "icon": "/gear/icon_gm_0032_t05_pants.webp",
+            "share": 13.8,
+            "enhance": 0
+          }
+        ],
+        "boots": [
+          {
+            "name": "Vakron Boots",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_boots.webp",
+            "share": 22.2,
+            "enhance": 10
+          },
+          {
+            "name": "Anguish Boots",
+            "icon": "/gear/icon_gm_0032_t05_boots.webp",
+            "share": 16.8,
+            "enhance": 0
+          },
+          {
+            "name": "Bakarma Boots",
+            "icon": "/gear/icon_gm_0059_t05_boots.webp",
+            "share": 14.1,
+            "enhance": 5
+          }
+        ],
+        "cape": [
+          {
+            "name": "Vakron Cloak",
+            "icon": "/gear/icon_equip_ar_l_0028_t05_cape.webp",
+            "share": 22.7,
+            "enhance": 10
+          },
+          {
+            "name": "Liberator Cloak",
+            "icon": "/gear/icon_gm_0019_t04_cape.webp",
+            "share": 20.1,
+            "enhance": 0
+          },
+          {
+            "name": "Pilgrim Cloak",
+            "icon": "/gear/icon_gm_0019_t04_cape.webp",
+            "share": 19.3,
+            "enhance": 0
+          }
+        ],
+        "earring": [
+          {
+            "name": "Liberator Earrings",
+            "icon": "/gear/icon_acc_er_0071.webp",
+            "share": 32.5,
+            "enhance": 3
+          },
+          {
+            "name": "Pilgrim Earrings",
+            "icon": "/gear/icon_acc_er_0071.webp",
+            "share": 30.5,
+            "enhance": 1
+          },
+          {
+            "name": "Aulamus Earrings",
+            "icon": "/gear/icon_acc_er_0072.webp",
+            "share": 14,
+            "enhance": 10
+          }
+        ],
+        "necklace": [
+          {
+            "name": "Pilgrim Necklace",
+            "icon": "/gear/icon_acc_nl_0071.webp",
+            "share": 31.5,
+            "enhance": 0
+          },
+          {
+            "name": "Liberator Necklace",
+            "icon": "/gear/icon_acc_nl_0071.webp",
+            "share": 24.7,
+            "enhance": 3
+          },
+          {
+            "name": "Aulamus Necklace",
+            "icon": "/gear/icon_acc_nl_0072.webp",
+            "share": 18.5,
+            "enhance": 10
+          }
+        ],
+        "ring": [
+          {
+            "name": "Pilgrim Ring",
+            "icon": "/gear/icon_acc_ring_0071.webp",
+            "share": 29.2,
+            "enhance": 2
+          },
+          {
+            "name": "Liberator Ring",
+            "icon": "/gear/icon_acc_ring_0071.webp",
+            "share": 24.9,
+            "enhance": 3
+          },
+          {
+            "name": "Aulamus Ring",
+            "icon": "/gear/icon_acc_ring_0072.webp",
+            "share": 15,
+            "enhance": 10
+          }
+        ],
+        "bracelet": [
+          {
+            "name": "Ascension Bracelet",
+            "icon": "/gear/icon_acc_bracelet_r_027.webp",
+            "share": 41.7,
+            "enhance": 10
+          },
+          {
+            "name": "Liberator Bracelet",
+            "icon": "/gear/icon_acc_bracelet_0071.webp",
+            "share": 24.3,
+            "enhance": 4
+          },
+          {
+            "name": "Pilgrim Bracelet",
+            "icon": "/gear/icon_acc_bracelet_0071.webp",
+            "share": 18.2,
+            "enhance": 4
+          }
+        ],
+        "belt": [
+          {
+            "name": "Noble Belt",
+            "icon": "/gear/icon_acc_belt_c_022.webp",
+            "share": 100,
+            "enhance": 0
+          }
+        ],
+        "amulet": [
+          {
+            "name": "Revelation Amulet",
+            "icon": "/gear/icon_item_craft_conversion_crystal_l_lv5_01.webp",
+            "share": 98.7,
+            "enhance": 0
+          },
+          {
+            "name": "Fierce Battle Amulet",
+            "icon": "/gear/icon_equip_eb_emblemd_mi_abyssshop_l_u_001.webp",
+            "share": 0.5,
+            "enhance": 0
+          }
+        ],
+        "rune": [
+          {
+            "name": "Clash Rune",
+            "icon": "/gear/icon_acc_rune_r_002.webp",
+            "share": 100,
+            "enhance": 2
+          }
+        ]
+      },
+      "titles": [
+        {
+          "name": "Through Hell and Back",
+          "share": 14.3
+        },
+        {
+          "name": "Saint of Altgard",
+          "share": 12.7
+        },
+        {
+          "name": "Saint of Verteron",
+          "share": 11.5
+        },
+        {
+          "name": "Guardian of Altgard",
+          "share": 7.3
+        },
+        {
+          "name": "Guardian of Verteron",
+          "share": 6
+        },
+        {
+          "name": "Encountering Zikel's Core",
+          "share": 4.7
+        },
+        {
+          "name": "Encountering Kaisinel's Core",
+          "share": 4.5
+        },
+        {
+          "name": "Failed Entrepreneur",
+          "share": 4
+        },
+        {
+          "name": "Celebrity",
+          "share": 2
+        }
+      ],
+      "wings": [
+        {
+          "name": "Ultimate Daeva Wings",
+          "icon": "/gear/icon_wingb_001.webp",
+          "share": 70.6
+        },
+        {
+          "name": "Superior Daeva Wings",
+          "icon": "/gear/icon_wingb_007c.webp",
+          "share": 13.9
+        },
+        {
+          "name": "Forest Spirit Wings",
+          "icon": "/gear/icon_winga_010.webp",
+          "share": 5
+        },
+        {
+          "name": "Lesser Daeva Wings",
+          "icon": "/gear/icon_wingb_006.webp",
+          "share": 3.5
+        },
+        {
+          "name": "Radiant Love Wings",
+          "icon": "/gear/icon_wingd_003.webp",
+          "share": 1.5
+        }
+      ]
+    }
+  }
+}

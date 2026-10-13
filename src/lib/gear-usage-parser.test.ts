@@ -29,9 +29,19 @@ describe("parseGameWithPage", () => {
     const hell = usage.titles.filter((e) => e.name === "Through Hell and Back");
     expect(hell).toEqual([expect.objectContaining({ share: 13 })]);
   });
+  it("caps shares added across grades at 100% (rounding on the page can push the sum over)", () => {
+    const html = `<html><head><script type="application/ld+json">{"dateModified":"2026-10-07"}</script></head><body>
+      <p class="classes-hero__meta">10 characters (top by combat power)</p>
+      <section id="equipment"><div class="bs-slot"><h3>Belt</h3><table><tbody>
+      ${[55, 32, 14].map((n) => `<tr><td><span class="classes-skill"><img src="x.webp"/><span>Noble Belt<small>g</small></span></span></td><td>65</td><td>${n}%</td><td>+5</td></tr>`).join("")}
+      </tbody></table></div></section></body></html>`;
+    const doc = new DOMParser().parseFromString(html, "text/html");
+    expect(parseGameWithPage(doc, "x").usage.slots.belt).toEqual([expect.objectContaining({ name: "Noble Belt", share: 100 })]);
+  });
   it("reads wings", () => {
     expect(usage.wings.length).toBeGreaterThan(0);
     expect(usage.wings[0].share).toBeGreaterThan(0);
+    expect(usage.wings[0].name).toBe("Ultimate Daeva Wings");
   });
   it("ignores slots outside our model (Arcana, Pendant, Brooches, Seals)", () => {
     const tw = parseGameWithPage(load("ranger-tw.html"), "tw").usage;

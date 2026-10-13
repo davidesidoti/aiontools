@@ -1,0 +1,2862 @@
+{
+  "region": "tw",
+  "fetchedAt": "2026-10-07",
+  "classes": {
+    "chanter": {
+      "sample": 1080,
+      "sourceUrls": [
+        "https://gamewith.ai/aion2/en/build-stats/tw/chanter"
+      ],
+      "slots": {
+        "weapon": [
+          {
+            "name": "Ludra's Heavenbound Staff",
+            "icon": "/gear/icon_wp_st_0108_t06.webp",
+            "share": 20,
+            "enhance": 20
+          },
+          {
+            "name": "Lava Heart Flame Staff",
+            "icon": "/gear/icon_wp_st_sf_01.webp",
+            "share": 15,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Dominator's Searing Staff",
+            "icon": "/gear/icon_wp_st_dream_01.webp",
+            "share": 13,
+            "enhance": 20
+          }
+        ],
+        "guard": [
+          {
+            "name": "Basilus Guard",
+            "icon": "/gear/icon_weapon_guarder_0116_t05.webp",
+            "share": 14,
+            "enhance": 15
+          },
+          {
+            "name": "Ludra's Heart",
+            "icon": "/gear/icon_weapon_guarder_u_010.webp",
+            "share": 12,
+            "enhance": 20
+          },
+          {
+            "name": "Soaring Daeva Guard",
+            "icon": "/gear/icon_weapon_guarder_0115_t05.webp",
+            "share": 11,
+            "enhance": 15
+          }
+        ],
+        "helmet": [
+          {
+            "name": "Lava Heart Helm",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_helmet.webp",
+            "share": 22,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Helm",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_helmet.webp",
+            "share": 20,
+            "enhance": 12
+          },
+          {
+            "name": "Basilus Helm",
+            "icon": "/gear/icon_gm_0167_t03_helmet.webp",
+            "share": 14,
+            "enhance": 15
+          }
+        ],
+        "shoulder": [
+          {
+            "name": "Eroded Afterimage Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_shoulder.webp",
+            "share": 26,
+            "enhance": 12
+          },
+          {
+            "name": "Lava Heart Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_shoulder.webp",
+            "share": 25,
+            "enhance": 20
+          },
+          {
+            "name": "Basilus Pauldrons",
+            "icon": "/gear/icon_gm_0167_t03_shoulder.webp",
+            "share": 14,
+            "enhance": 15
+          }
+        ],
+        "torso": [
+          {
+            "name": "Lava Heart Breastplate",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_torso.webp",
+            "share": 23,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Breastplate",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_torso.webp",
+            "share": 19,
+            "enhance": 12
+          },
+          {
+            "name": "Basilus Breastplate",
+            "icon": "/gear/icon_gm_0167_t03_torso.webp",
+            "share": 14,
+            "enhance": 15
+          }
+        ],
+        "gloves": [
+          {
+            "name": "Eroded Afterimage Gloves",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_gloves.webp",
+            "share": 28,
+            "enhance": 12
+          },
+          {
+            "name": "Lava Heart Gloves",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_gloves.webp",
+            "share": 26,
+            "enhance": 20
+          },
+          {
+            "name": "Basilus Gloves",
+            "icon": "/gear/icon_gm_0167_t03_gloves.webp",
+            "share": 12,
+            "enhance": 15
+          }
+        ],
+        "pants": [
+          {
+            "name": "Lava Heart Greaves",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_pants.webp",
+            "share": 21,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Greaves",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_pants.webp",
+            "share": 19,
+            "enhance": 12
+          },
+          {
+            "name": "Basilus Greaves",
+            "icon": "/gear/icon_gm_0167_t03_pants.webp",
+            "share": 15,
+            "enhance": 15
+          }
+        ],
+        "boots": [
+          {
+            "name": "Eroded Afterimage Boots",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_boots.webp",
+            "share": 31,
+            "enhance": 12
+          },
+          {
+            "name": "Lava Heart Boots",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_boots.webp",
+            "share": 22,
+            "enhance": 20
+          },
+          {
+            "name": "Basilus Boots",
+            "icon": "/gear/icon_gm_0167_t03_boots.webp",
+            "share": 12,
+            "enhance": 15
+          }
+        ],
+        "cape": [
+          {
+            "name": "Eroded Afterimage Cloak",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_cape.webp",
+            "share": 28,
+            "enhance": 12
+          },
+          {
+            "name": "Lava Heart Cloak",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_cape.webp",
+            "share": 25,
+            "enhance": 20
+          },
+          {
+            "name": "Basilus Cloak",
+            "icon": "/gear/icon_gm_0167_t03_cape.webp",
+            "share": 12,
+            "enhance": 15
+          }
+        ],
+        "earring": [
+          {
+            "name": "Soaring Daeva Earrings",
+            "icon": "/gear/icon_acc_er_beads_03.webp",
+            "share": 14,
+            "enhance": 15
+          },
+          {
+            "name": "Atiel Earrings",
+            "icon": "/gear/icon_acc_er_0043.webp",
+            "share": 12,
+            "enhance": 15
+          },
+          {
+            "name": "Anguished Bakarma Earrings",
+            "icon": "/gear/icon_acc_er_sun_09.webp",
+            "share": 12,
+            "enhance": 15
+          }
+        ],
+        "necklace": [
+          {
+            "name": "Scattered Radiance Necklace",
+            "icon": "/gear/icon_acc_nl_beads_03.webp",
+            "share": 15,
+            "enhance": 15
+          },
+          {
+            "name": "Soaring Daeva Necklace",
+            "icon": "/gear/icon_acc_nl_beads_03.webp",
+            "share": 13,
+            "enhance": 15
+          },
+          {
+            "name": "Atiel Necklace",
+            "icon": "/gear/icon_acc_nl_0043.webp",
+            "share": 12,
+            "enhance": 15
+          }
+        ],
+        "ring": [
+          {
+            "name": "Soaring Daeva Ring",
+            "icon": "/gear/icon_acc_ring_beads_03.webp",
+            "share": 13,
+            "enhance": 15
+          },
+          {
+            "name": "Scattered Radiance Ring",
+            "icon": "/gear/icon_acc_ring_beads_03.webp",
+            "share": 12,
+            "enhance": 15
+          },
+          {
+            "name": "Atiel Ring",
+            "icon": "/gear/icon_acc_ring_0043.webp",
+            "share": 10,
+            "enhance": 15
+          }
+        ],
+        "bracelet": [
+          {
+            "name": "Eroded Afterimage Bracelet",
+            "icon": "/gear/icon_acc_bracelet_erosionpurifier.webp",
+            "share": 38,
+            "enhance": 20
+          },
+          {
+            "name": "Abyssal Bracelet",
+            "icon": "/gear/icon_acc_bracelet_n_02.webp",
+            "share": 19,
+            "enhance": 15
+          },
+          {
+            "name": "Ludra's Bracelet",
+            "icon": "/gear/icon_acc_bracelet_r_026.webp",
+            "share": 18,
+            "enhance": 20
+          }
+        ],
+        "belt": [
+          {
+            "name": "Noble Belt",
+            "icon": "/gear/icon_acc_belt_r_041.webp",
+            "share": 100,
+            "enhance": 10
+          }
+        ],
+        "amulet": [
+          {
+            "name": "Revelation Amulet",
+            "icon": "/gear/icon_item_craft_conversion_crystal_l_lv6_01.webp",
+            "share": 95,
+            "enhance": 10
+          },
+          {
+            "name": "Fierce Battle Amulet",
+            "icon": "/gear/icon_equip_eb_emblemd_mi_abyssshop_l_u_004.webp",
+            "share": 5,
+            "enhance": 10
+          }
+        ],
+        "rune": [
+          {
+            "name": "Clash Rune",
+            "icon": "/gear/icon_acc_rune_r_002.webp",
+            "share": 95,
+            "enhance": 5
+          },
+          {
+            "name": "Devotion Rune",
+            "icon": "/gear/icon_acc_rune_r_004.webp",
+            "share": 5,
+            "enhance": 6
+          }
+        ]
+      },
+      "titles": [
+        {
+          "name": "哎呀，沒有衣服穿了",
+          "share": 32
+        },
+        {
+          "name": "擺脫種族的羈絆",
+          "share": 22
+        },
+        {
+          "name": "治理萬物",
+          "share": 17
+        },
+        {
+          "name": "Saint of Altgard",
+          "share": 6
+        },
+        {
+          "name": "Saint of Verteron",
+          "share": 6
+        },
+        {
+          "name": "開天闢地",
+          "share": 5
+        }
+      ],
+      "wings": [
+        {
+          "name": "Void Talisra Wings",
+          "icon": "/gear/icon_winga_011.webp",
+          "share": 21
+        },
+        {
+          "name": "空虛塔里斯拉翅膀",
+          "icon": "/gear/icon_winga_011.webp",
+          "share": 19
+        },
+        {
+          "name": "Eroded Golden Wings",
+          "icon": "/gear/icon_wingc_009.webp",
+          "share": 14
+        },
+        {
+          "name": "Nightmare Wings",
+          "icon": "/gear/icon_winga_005.webp",
+          "share": 10
+        },
+        {
+          "name": "Dark Veil Wings",
+          "icon": "/gear/icon_wingb_019.webp",
+          "share": 10
+        }
+      ]
+    },
+    "ranger": {
+      "sample": 1080,
+      "sourceUrls": [
+        "https://gamewith.ai/aion2/en/build-stats/tw/ranger"
+      ],
+      "slots": {
+        "weapon": [
+          {
+            "name": "Splendent Genesis Dragon Lord Bow",
+            "icon": "/gear/icon_wp_bw_0117_t05.webp",
+            "share": 21,
+            "enhance": 20
+          },
+          {
+            "name": "Yinglong Dragon Lord Bow",
+            "icon": "/gear/icon_wp_bw_0110_t05.webp",
+            "share": 12,
+            "enhance": 20
+          },
+          {
+            "name": "Ludra's Fatal Bow",
+            "icon": "/gear/icon_wp_bw_0108_t06.webp",
+            "share": 8,
+            "enhance": 20
+          }
+        ],
+        "guard": [
+          {
+            "name": "Splendent Genesis Dragon Lord Guard",
+            "icon": "/gear/icon_weapon_guarder_0117_t05.webp",
+            "share": 16,
+            "enhance": 20
+          },
+          {
+            "name": "Ludra's Heart",
+            "icon": "/gear/icon_weapon_guarder_u_010.webp",
+            "share": 13,
+            "enhance": 20
+          },
+          {
+            "name": "Lava Heart's Barrier",
+            "icon": "/gear/icon_weapon_guarder_sf_01.webp",
+            "share": 7,
+            "enhance": 20
+          }
+        ],
+        "helmet": [
+          {
+            "name": "Lava Heart Helm",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_helmet.webp",
+            "share": 30,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Helm",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_helmet.webp",
+            "share": 18,
+            "enhance": 20
+          },
+          {
+            "name": "Basilus Helm",
+            "icon": "/gear/icon_gm_0167_t03_helmet.webp",
+            "share": 9,
+            "enhance": 15
+          }
+        ],
+        "shoulder": [
+          {
+            "name": "Lava Heart Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_shoulder.webp",
+            "share": 31,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_shoulder.webp",
+            "share": 24,
+            "enhance": 20
+          },
+          {
+            "name": "Basilus Pauldrons",
+            "icon": "/gear/icon_gm_0167_t03_shoulder.webp",
+            "share": 8,
+            "enhance": 15
+          }
+        ],
+        "torso": [
+          {
+            "name": "Lava Heart Breastplate",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_torso.webp",
+            "share": 33,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Breastplate",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_torso.webp",
+            "share": 18,
+            "enhance": 20
+          },
+          {
+            "name": "Basilus Breastplate",
+            "icon": "/gear/icon_gm_0167_t03_torso.webp",
+            "share": 9,
+            "enhance": 15
+          }
+        ],
+        "gloves": [
+          {
+            "name": "Lava Heart Gloves",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_gloves.webp",
+            "share": 34,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Gloves",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_gloves.webp",
+            "share": 24,
+            "enhance": 15
+          },
+          {
+            "name": "Basilus Gloves",
+            "icon": "/gear/icon_gm_0167_t03_gloves.webp",
+            "share": 7,
+            "enhance": 15
+          }
+        ],
+        "pants": [
+          {
+            "name": "Lava Heart Greaves",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_pants.webp",
+            "share": 29,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Greaves",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_pants.webp",
+            "share": 18,
+            "enhance": 20
+          },
+          {
+            "name": "Basilus Greaves",
+            "icon": "/gear/icon_gm_0167_t03_pants.webp",
+            "share": 10,
+            "enhance": 15
+          }
+        ],
+        "boots": [
+          {
+            "name": "Eroded Afterimage Boots",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_boots.webp",
+            "share": 29,
+            "enhance": 20
+          },
+          {
+            "name": "Lava Heart Boots",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_boots.webp",
+            "share": 28,
+            "enhance": 20
+          },
+          {
+            "name": "Basilus Boots",
+            "icon": "/gear/icon_gm_0167_t03_boots.webp",
+            "share": 8,
+            "enhance": 15
+          }
+        ],
+        "cape": [
+          {
+            "name": "Lava Heart Cloak",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_cape.webp",
+            "share": 30,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Cloak",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_cape.webp",
+            "share": 25,
+            "enhance": 20
+          },
+          {
+            "name": "Basilus Cloak",
+            "icon": "/gear/icon_gm_0167_t03_cape.webp",
+            "share": 7,
+            "enhance": 15
+          }
+        ],
+        "earring": [
+          {
+            "name": "Atiel Earrings",
+            "icon": "/gear/icon_acc_er_0043.webp",
+            "share": 9,
+            "enhance": 15
+          },
+          {
+            "name": "Yinglong Dragon Lord Earrings",
+            "icon": "/gear/icon_acc_er_0025.webp",
+            "share": 8,
+            "enhance": 20
+          },
+          {
+            "name": "Soaring Daeva Earrings",
+            "icon": "/gear/icon_acc_er_beads_03.webp",
+            "share": 8,
+            "enhance": 15
+          }
+        ],
+        "necklace": [
+          {
+            "name": "Atiel Necklace",
+            "icon": "/gear/icon_acc_nl_0043.webp",
+            "share": 9,
+            "enhance": 15
+          },
+          {
+            "name": "Soaring Daeva Necklace",
+            "icon": "/gear/icon_acc_nl_beads_03.webp",
+            "share": 8,
+            "enhance": 15
+          },
+          {
+            "name": "Scattered Radiance Necklace",
+            "icon": "/gear/icon_acc_nl_beads_03.webp",
+            "share": 6,
+            "enhance": 15
+          }
+        ],
+        "ring": [
+          {
+            "name": "Yinglong Dragon Lord Ring",
+            "icon": "/gear/icon_acc_ring_0025.webp",
+            "share": 10,
+            "enhance": 20
+          },
+          {
+            "name": "Soaring Daeva Ring",
+            "icon": "/gear/icon_acc_ring_beads_03.webp",
+            "share": 7,
+            "enhance": 15
+          },
+          {
+            "name": "Atiel Ring",
+            "icon": "/gear/icon_acc_ring_0043.webp",
+            "share": 6,
+            "enhance": 15
+          }
+        ],
+        "bracelet": [
+          {
+            "name": "Eroded Afterimage Bracelet",
+            "icon": "/gear/icon_acc_bracelet_erosionpurifier.webp",
+            "share": 52,
+            "enhance": 20
+          },
+          {
+            "name": "Abyssal Bracelet",
+            "icon": "/gear/icon_acc_bracelet_n_02.webp",
+            "share": 17,
+            "enhance": 15
+          },
+          {
+            "name": "Ludra's Bracelet",
+            "icon": "/gear/icon_acc_bracelet_r_026.webp",
+            "share": 14,
+            "enhance": 20
+          }
+        ],
+        "belt": [
+          {
+            "name": "Noble Belt",
+            "icon": "/gear/icon_acc_belt_r_041.webp",
+            "share": 100,
+            "enhance": 10
+          }
+        ],
+        "amulet": [
+          {
+            "name": "Revelation Amulet",
+            "icon": "/gear/icon_item_craft_conversion_crystal_l_lv6_01.webp",
+            "share": 92,
+            "enhance": 10
+          },
+          {
+            "name": "Fierce Battle Amulet",
+            "icon": "/gear/icon_equip_eb_emblemd_mi_abyssshop_l_u_004.webp",
+            "share": 7,
+            "enhance": 10
+          }
+        ],
+        "rune": [
+          {
+            "name": "Clash Rune",
+            "icon": "/gear/icon_acc_rune_r_002.webp",
+            "share": 93,
+            "enhance": 6
+          },
+          {
+            "name": "Devotion Rune",
+            "icon": "/gear/icon_acc_rune_r_004.webp",
+            "share": 7,
+            "enhance": 6
+          }
+        ]
+      },
+      "titles": [
+        {
+          "name": "哎呀，沒有衣服穿了",
+          "share": 32
+        },
+        {
+          "name": "擺脫種族的羈絆",
+          "share": 19
+        },
+        {
+          "name": "治理萬物",
+          "share": 18
+        },
+        {
+          "name": "開天闢地",
+          "share": 10
+        },
+        {
+          "name": "Saint of Verteron",
+          "share": 5
+        },
+        {
+          "name": "Saint of Altgard",
+          "share": 5
+        }
+      ],
+      "wings": [
+        {
+          "name": "Eroded Golden Wings",
+          "icon": "/gear/icon_wingc_009.webp",
+          "share": 23
+        },
+        {
+          "name": "Void Talisra Wings",
+          "icon": "/gear/icon_winga_011.webp",
+          "share": 20
+        },
+        {
+          "name": "空虛塔里斯拉翅膀",
+          "icon": "/gear/icon_winga_011.webp",
+          "share": 18
+        },
+        {
+          "name": "惡夢翅膀",
+          "icon": "/gear/icon_winga_005.webp",
+          "share": 8
+        },
+        {
+          "name": "Nightmare Wings",
+          "icon": "/gear/icon_winga_005.webp",
+          "share": 7
+        }
+      ]
+    },
+    "cleric": {
+      "sample": 1080,
+      "sourceUrls": [
+        "https://gamewith.ai/aion2/en/build-stats/tw/cleric"
+      ],
+      "slots": {
+        "weapon": [
+          {
+            "name": "Soaring Daeva Mace",
+            "icon": "/gear/icon_wp_ma_0115_t05.webp",
+            "share": 19,
+            "enhance": 15
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Mace",
+            "icon": "/gear/icon_wp_ma_0117_t05.webp",
+            "share": 15,
+            "enhance": 20
+          },
+          {
+            "name": "Lava Heart Pyroclastic Mace",
+            "icon": "/gear/icon_wp_ma_sf_01.webp",
+            "share": 14,
+            "enhance": 20
+          }
+        ],
+        "guard": [
+          {
+            "name": "Basilus Guard",
+            "icon": "/gear/icon_weapon_guarder_0116_t05.webp",
+            "share": 17,
+            "enhance": 15
+          },
+          {
+            "name": "Soaring Daeva Guard",
+            "icon": "/gear/icon_weapon_guarder_0115_t05.webp",
+            "share": 16,
+            "enhance": 15
+          },
+          {
+            "name": "Lava Heart's Barrier",
+            "icon": "/gear/icon_weapon_guarder_sf_01.webp",
+            "share": 13,
+            "enhance": 20
+          }
+        ],
+        "helmet": [
+          {
+            "name": "Lava Heart Helm",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_helmet.webp",
+            "share": 23,
+            "enhance": 20
+          },
+          {
+            "name": "Basilus Helm",
+            "icon": "/gear/icon_gm_0167_t03_helmet.webp",
+            "share": 21,
+            "enhance": 15
+          },
+          {
+            "name": "Soaring Daeva Helm",
+            "icon": "/gear/icon_gm_0178_t04_helmet.webp",
+            "share": 17,
+            "enhance": 15
+          }
+        ],
+        "shoulder": [
+          {
+            "name": "Lava Heart Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_shoulder.webp",
+            "share": 23,
+            "enhance": 20
+          },
+          {
+            "name": "Basilus Pauldrons",
+            "icon": "/gear/icon_gm_0167_t03_shoulder.webp",
+            "share": 21,
+            "enhance": 15
+          },
+          {
+            "name": "Soaring Daeva Pauldrons",
+            "icon": "/gear/icon_gm_0178_t04_shoulder.webp",
+            "share": 17,
+            "enhance": 15
+          }
+        ],
+        "torso": [
+          {
+            "name": "Lava Heart Breastplate",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_torso.webp",
+            "share": 21,
+            "enhance": 20
+          },
+          {
+            "name": "Basilus Breastplate",
+            "icon": "/gear/icon_gm_0167_t03_torso.webp",
+            "share": 20,
+            "enhance": 15
+          },
+          {
+            "name": "Soaring Daeva Breastplate",
+            "icon": "/gear/icon_gm_0178_t04_torso.webp",
+            "share": 17,
+            "enhance": 15
+          }
+        ],
+        "gloves": [
+          {
+            "name": "Lava Heart Gloves",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_gloves.webp",
+            "share": 26,
+            "enhance": 20
+          },
+          {
+            "name": "Basilus Gloves",
+            "icon": "/gear/icon_gm_0167_t03_gloves.webp",
+            "share": 19,
+            "enhance": 15
+          },
+          {
+            "name": "Eroded Afterimage Gloves",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_gloves.webp",
+            "share": 19,
+            "enhance": 14
+          }
+        ],
+        "pants": [
+          {
+            "name": "Lava Heart Greaves",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_pants.webp",
+            "share": 21,
+            "enhance": 20
+          },
+          {
+            "name": "Basilus Greaves",
+            "icon": "/gear/icon_gm_0167_t03_pants.webp",
+            "share": 20,
+            "enhance": 15
+          },
+          {
+            "name": "Soaring Daeva Greaves",
+            "icon": "/gear/icon_gm_0178_t04_pants.webp",
+            "share": 17,
+            "enhance": 15
+          }
+        ],
+        "boots": [
+          {
+            "name": "Eroded Afterimage Boots",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_boots.webp",
+            "share": 21,
+            "enhance": 18
+          },
+          {
+            "name": "Lava Heart Boots",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_boots.webp",
+            "share": 21,
+            "enhance": 20
+          },
+          {
+            "name": "Basilus Boots",
+            "icon": "/gear/icon_gm_0167_t03_boots.webp",
+            "share": 19,
+            "enhance": 15
+          }
+        ],
+        "cape": [
+          {
+            "name": "Lava Heart Cloak",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_cape.webp",
+            "share": 23,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Cloak",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_cape.webp",
+            "share": 19,
+            "enhance": 13
+          },
+          {
+            "name": "Basilus Cloak",
+            "icon": "/gear/icon_gm_0167_t03_cape.webp",
+            "share": 19,
+            "enhance": 15
+          }
+        ],
+        "earring": [
+          {
+            "name": "Soaring Daeva Earrings",
+            "icon": "/gear/icon_acc_er_beads_03.webp",
+            "share": 22,
+            "enhance": 15
+          },
+          {
+            "name": "Atiel Earrings",
+            "icon": "/gear/icon_acc_er_0043.webp",
+            "share": 17,
+            "enhance": 15
+          },
+          {
+            "name": "Scattered Radiance Earrings",
+            "icon": "/gear/icon_acc_er_beads_03.webp",
+            "share": 8,
+            "enhance": 15
+          }
+        ],
+        "necklace": [
+          {
+            "name": "Soaring Daeva Necklace",
+            "icon": "/gear/icon_acc_nl_beads_03.webp",
+            "share": 21,
+            "enhance": 15
+          },
+          {
+            "name": "Atiel Necklace",
+            "icon": "/gear/icon_acc_nl_0043.webp",
+            "share": 18,
+            "enhance": 15
+          },
+          {
+            "name": "Scattered Radiance Necklace",
+            "icon": "/gear/icon_acc_nl_beads_03.webp",
+            "share": 10,
+            "enhance": 15
+          }
+        ],
+        "ring": [
+          {
+            "name": "Soaring Daeva Ring",
+            "icon": "/gear/icon_acc_ring_beads_03.webp",
+            "share": 20,
+            "enhance": 15
+          },
+          {
+            "name": "Atiel Ring",
+            "icon": "/gear/icon_acc_ring_0043.webp",
+            "share": 14,
+            "enhance": 15
+          },
+          {
+            "name": "Scattered Radiance Ring",
+            "icon": "/gear/icon_acc_ring_beads_03.webp",
+            "share": 9,
+            "enhance": 15
+          }
+        ],
+        "bracelet": [
+          {
+            "name": "Eroded Afterimage Bracelet",
+            "icon": "/gear/icon_acc_bracelet_erosionpurifier.webp",
+            "share": 42,
+            "enhance": 20
+          },
+          {
+            "name": "Erosion Bracelet",
+            "icon": "/gear/icon_acc_bracelet_erosionpurifier_01.webp",
+            "share": 19,
+            "enhance": 15
+          },
+          {
+            "name": "Soaring Daeva Bracelet",
+            "icon": "/gear/icon_acc_bracelet_n_02.webp",
+            "share": 16,
+            "enhance": 15
+          }
+        ],
+        "belt": [
+          {
+            "name": "Noble Belt",
+            "icon": "/gear/icon_acc_belt_r_041.webp",
+            "share": 100,
+            "enhance": 10
+          }
+        ],
+        "amulet": [
+          {
+            "name": "Revelation Amulet",
+            "icon": "/gear/icon_item_craft_conversion_crystal_l_lv6_01.webp",
+            "share": 95,
+            "enhance": 10
+          },
+          {
+            "name": "Fierce Battle Amulet",
+            "icon": "/gear/icon_equip_eb_emblemd_mi_abyssshop_l_u_004.webp",
+            "share": 6,
+            "enhance": 10
+          }
+        ],
+        "rune": [
+          {
+            "name": "Clash Rune",
+            "icon": "/gear/icon_acc_rune_r_002.webp",
+            "share": 95,
+            "enhance": 5
+          },
+          {
+            "name": "Devotion Rune",
+            "icon": "/gear/icon_acc_rune_r_004.webp",
+            "share": 5,
+            "enhance": 6
+          }
+        ]
+      },
+      "titles": [
+        {
+          "name": "哎呀，沒有衣服穿了",
+          "share": 32
+        },
+        {
+          "name": "擺脫種族的羈絆",
+          "share": 23
+        },
+        {
+          "name": "治理萬物",
+          "share": 19
+        },
+        {
+          "name": "Saint of Altgard",
+          "share": 6
+        },
+        {
+          "name": "開天闢地",
+          "share": 6
+        },
+        {
+          "name": "Saint of Verteron",
+          "share": 5
+        }
+      ],
+      "wings": [
+        {
+          "name": "Void Talisra Wings",
+          "icon": "/gear/icon_winga_011.webp",
+          "share": 32
+        },
+        {
+          "name": "空虛塔里斯拉翅膀",
+          "icon": "/gear/icon_winga_011.webp",
+          "share": 32
+        },
+        {
+          "name": "Eroded Golden Wings",
+          "icon": "/gear/icon_wingc_009.webp",
+          "share": 7
+        },
+        {
+          "name": "Dark Veil Wings",
+          "icon": "/gear/icon_wingb_019.webp",
+          "share": 7
+        },
+        {
+          "name": "Nightmare Wings",
+          "icon": "/gear/icon_winga_005.webp",
+          "share": 5
+        }
+      ]
+    },
+    "spirit-master": {
+      "sample": 1080,
+      "sourceUrls": [
+        "https://gamewith.ai/aion2/en/build-stats/tw/elementalist"
+      ],
+      "slots": {
+        "weapon": [
+          {
+            "name": "Soaring Daeva Jewel",
+            "icon": "/gear/icon_wp_or_0115_t05.webp",
+            "share": 37,
+            "enhance": 15
+          },
+          {
+            "name": "Nathara Jewel",
+            "icon": "/gear/icon_wp_or_0115_t05.webp",
+            "share": 9,
+            "enhance": 15
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Orb",
+            "icon": "/gear/icon_wp_or_0117_t05.webp",
+            "share": 8,
+            "enhance": 20
+          }
+        ],
+        "guard": [
+          {
+            "name": "Soaring Daeva Guard",
+            "icon": "/gear/icon_weapon_guarder_0115_t05.webp",
+            "share": 37,
+            "enhance": 15
+          },
+          {
+            "name": "Durbati Guard",
+            "icon": "/gear/icon_weapon_guarder_u_007.webp",
+            "share": 11,
+            "enhance": 15
+          },
+          {
+            "name": "Ludra's Heart",
+            "icon": "/gear/icon_weapon_guarder_u_010.webp",
+            "share": 9,
+            "enhance": 20
+          }
+        ],
+        "helmet": [
+          {
+            "name": "Soaring Daeva Helm",
+            "icon": "/gear/icon_gm_0178_t04_helmet.webp",
+            "share": 37,
+            "enhance": 15
+          },
+          {
+            "name": "Durbati Helm",
+            "icon": "/gear/icon_equip_ar_l_hugo_01_helmet.webp",
+            "share": 14,
+            "enhance": 10
+          },
+          {
+            "name": "Lava Heart Helm",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_helmet.webp",
+            "share": 10,
+            "enhance": 20
+          }
+        ],
+        "shoulder": [
+          {
+            "name": "Soaring Daeva Pauldrons",
+            "icon": "/gear/icon_gm_0178_t04_shoulder.webp",
+            "share": 37,
+            "enhance": 15
+          },
+          {
+            "name": "Eroded Afterimage Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_shoulder.webp",
+            "share": 15,
+            "enhance": 10
+          },
+          {
+            "name": "Durbati Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_hugo_01_shoulder.webp",
+            "share": 12,
+            "enhance": 10
+          }
+        ],
+        "torso": [
+          {
+            "name": "Soaring Daeva Breastplate",
+            "icon": "/gear/icon_gm_0178_t04_torso.webp",
+            "share": 37,
+            "enhance": 15
+          },
+          {
+            "name": "Durbati Breastplate",
+            "icon": "/gear/icon_equip_ar_l_hugo_01_torso.webp",
+            "share": 12,
+            "enhance": 10
+          },
+          {
+            "name": "Lava Heart Breastplate",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_torso.webp",
+            "share": 11,
+            "enhance": 20
+          }
+        ],
+        "gloves": [
+          {
+            "name": "Soaring Daeva Gloves",
+            "icon": "/gear/icon_gm_0178_t04_gloves.webp",
+            "share": 36,
+            "enhance": 15
+          },
+          {
+            "name": "Eroded Afterimage Gloves",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_gloves.webp",
+            "share": 16,
+            "enhance": 10
+          },
+          {
+            "name": "Lava Heart Gloves",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_gloves.webp",
+            "share": 11,
+            "enhance": 20
+          }
+        ],
+        "pants": [
+          {
+            "name": "Soaring Daeva Greaves",
+            "icon": "/gear/icon_gm_0178_t04_pants.webp",
+            "share": 38,
+            "enhance": 15
+          },
+          {
+            "name": "Durbati Greaves",
+            "icon": "/gear/icon_equip_ar_l_hugo_01_pants.webp",
+            "share": 15,
+            "enhance": 10
+          },
+          {
+            "name": "Lava Heart Greaves",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_pants.webp",
+            "share": 9,
+            "enhance": 20
+          }
+        ],
+        "boots": [
+          {
+            "name": "Soaring Daeva Boots",
+            "icon": "/gear/icon_gm_0178_t04_boots.webp",
+            "share": 37,
+            "enhance": 15
+          },
+          {
+            "name": "Eroded Afterimage Boots",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_boots.webp",
+            "share": 18,
+            "enhance": 10
+          },
+          {
+            "name": "Durbati Boots",
+            "icon": "/gear/icon_equip_ar_l_hugo_01_boots.webp",
+            "share": 9,
+            "enhance": 10
+          }
+        ],
+        "cape": [
+          {
+            "name": "Soaring Daeva Cloak",
+            "icon": "/gear/icon_gm_0178_t04_cape.webp",
+            "share": 37,
+            "enhance": 15
+          },
+          {
+            "name": "Eroded Afterimage Cloak",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_cape.webp",
+            "share": 17,
+            "enhance": 10
+          },
+          {
+            "name": "Lava Heart Cloak",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_cape.webp",
+            "share": 10,
+            "enhance": 20
+          }
+        ],
+        "earring": [
+          {
+            "name": "Soaring Daeva Earrings",
+            "icon": "/gear/icon_acc_er_beads_03.webp",
+            "share": 38,
+            "enhance": 15
+          },
+          {
+            "name": "Anguished Bakarma Earrings",
+            "icon": "/gear/icon_acc_er_sun_09.webp",
+            "share": 12,
+            "enhance": 15
+          },
+          {
+            "name": "Scattered Radiance Earrings",
+            "icon": "/gear/icon_acc_er_beads_03.webp",
+            "share": 8,
+            "enhance": 15
+          }
+        ],
+        "necklace": [
+          {
+            "name": "Soaring Daeva Necklace",
+            "icon": "/gear/icon_acc_nl_beads_03.webp",
+            "share": 37,
+            "enhance": 15
+          },
+          {
+            "name": "Scattered Radiance Necklace",
+            "icon": "/gear/icon_acc_nl_beads_03.webp",
+            "share": 13,
+            "enhance": 15
+          },
+          {
+            "name": "Anguished Bakarma Necklace",
+            "icon": "/gear/icon_acc_nl_sun_09.webp",
+            "share": 9,
+            "enhance": 15
+          }
+        ],
+        "ring": [
+          {
+            "name": "Soaring Daeva Ring",
+            "icon": "/gear/icon_acc_ring_beads_03.webp",
+            "share": 36,
+            "enhance": 15
+          },
+          {
+            "name": "Scattered Radiance Ring",
+            "icon": "/gear/icon_acc_ring_beads_03.webp",
+            "share": 11,
+            "enhance": 15
+          },
+          {
+            "name": "Anguished Bakarma Ring",
+            "icon": "/gear/icon_acc_ring_sun_09.webp",
+            "share": 8,
+            "enhance": 15
+          }
+        ],
+        "bracelet": [
+          {
+            "name": "Soaring Daeva Bracelet",
+            "icon": "/gear/icon_acc_bracelet_n_02.webp",
+            "share": 33,
+            "enhance": 15
+          },
+          {
+            "name": "Abyssal Bracelet",
+            "icon": "/gear/icon_acc_bracelet_n_02.webp",
+            "share": 20,
+            "enhance": 15
+          },
+          {
+            "name": "Eroded Afterimage Bracelet",
+            "icon": "/gear/icon_acc_bracelet_erosionpurifier.webp",
+            "share": 19,
+            "enhance": 20
+          }
+        ],
+        "belt": [
+          {
+            "name": "Noble Belt",
+            "icon": "/gear/icon_acc_belt_r_041.webp",
+            "share": 100,
+            "enhance": 2
+          }
+        ],
+        "amulet": [
+          {
+            "name": "Revelation Amulet",
+            "icon": "/gear/icon_item_craft_conversion_crystal_l_lv6_01.webp",
+            "share": 96,
+            "enhance": 1
+          },
+          {
+            "name": "Fierce Battle Amulet",
+            "icon": "/gear/icon_equip_eb_emblemd_mi_abyssshop_l_u_004.webp",
+            "share": 3,
+            "enhance": 10
+          }
+        ],
+        "rune": [
+          {
+            "name": "Clash Rune",
+            "icon": "/gear/icon_acc_rune_r_002.webp",
+            "share": 98,
+            "enhance": 5
+          },
+          {
+            "name": "Devotion Rune",
+            "icon": "/gear/icon_acc_rune_r_004.webp",
+            "share": 2,
+            "enhance": 6
+          }
+        ]
+      },
+      "titles": [
+        {
+          "name": "擺脫種族的羈絆",
+          "share": 25
+        },
+        {
+          "name": "哎呀，沒有衣服穿了",
+          "share": 25
+        },
+        {
+          "name": "治理萬物",
+          "share": 16
+        },
+        {
+          "name": "Saint of Verteron",
+          "share": 8
+        },
+        {
+          "name": "Saint of Altgard",
+          "share": 7
+        },
+        {
+          "name": "Through Hell and Back",
+          "share": 5
+        }
+      ],
+      "wings": [
+        {
+          "name": "空虛塔里斯拉翅膀",
+          "icon": "/gear/icon_winga_011.webp",
+          "share": 23
+        },
+        {
+          "name": "Void Talisra Wings",
+          "icon": "/gear/icon_winga_011.webp",
+          "share": 22
+        },
+        {
+          "name": "Dramata Nest Wings",
+          "icon": "/gear/icon_wingb_007a.webp",
+          "share": 15
+        },
+        {
+          "name": "Dark Veil Wings",
+          "icon": "/gear/icon_wingb_019.webp",
+          "share": 9
+        },
+        {
+          "name": "惡夢翅膀",
+          "icon": "/gear/icon_winga_005.webp",
+          "share": 6
+        }
+      ]
+    },
+    "gladiator": {
+      "sample": 1080,
+      "sourceUrls": [
+        "https://gamewith.ai/aion2/en/build-stats/tw/gladiator"
+      ],
+      "slots": {
+        "weapon": [
+          {
+            "name": "Splendent Genesis Dragon Lord Greatsword",
+            "icon": "/gear/icon_wp_gs_0117_t05.webp",
+            "share": 22,
+            "enhance": 20
+          },
+          {
+            "name": "Lava Heart's Terror Greatsword",
+            "icon": "/gear/icon_wp_gs_sf_01.webp",
+            "share": 16,
+            "enhance": 20
+          },
+          {
+            "name": "[True] Splendent Genesis Dragon Lord Greatsword",
+            "icon": "/gear/icon_wp_gs_0117_t05.webp",
+            "share": 14,
+            "enhance": 20
+          }
+        ],
+        "guard": [
+          {
+            "name": "Splendent Genesis Dragon Lord Guard",
+            "icon": "/gear/icon_weapon_guarder_0117_t05.webp",
+            "share": 21,
+            "enhance": 20
+          },
+          {
+            "name": "Yinglong Dragon Lord Guard",
+            "icon": "/gear/icon_weapon_guarder_u_011.webp",
+            "share": 11,
+            "enhance": 20
+          },
+          {
+            "name": "Ludra's Heart",
+            "icon": "/gear/icon_weapon_guarder_u_010.webp",
+            "share": 10,
+            "enhance": 20
+          }
+        ],
+        "helmet": [
+          {
+            "name": "Lava Heart Helm",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_helmet.webp",
+            "share": 33,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Helm",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_helmet.webp",
+            "share": 16,
+            "enhance": 18
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Helm",
+            "icon": "/gear/icon_gm_0079_t06_helmet.webp",
+            "share": 9,
+            "enhance": 20
+          }
+        ],
+        "shoulder": [
+          {
+            "name": "Lava Heart Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_shoulder.webp",
+            "share": 34,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_shoulder.webp",
+            "share": 25,
+            "enhance": 20
+          },
+          {
+            "name": "Archon High Commander Pauldrons",
+            "icon": "/gear/icon_gm_0057_t06_shoulder.webp",
+            "share": 4,
+            "enhance": 20
+          }
+        ],
+        "torso": [
+          {
+            "name": "Lava Heart Breastplate",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_torso.webp",
+            "share": 36,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Breastplate",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_torso.webp",
+            "share": 16,
+            "enhance": 20
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Breastplate",
+            "icon": "/gear/icon_gm_0079_t06_torso.webp",
+            "share": 9,
+            "enhance": 20
+          }
+        ],
+        "gloves": [
+          {
+            "name": "Lava Heart Gloves",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_gloves.webp",
+            "share": 38,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Gloves",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_gloves.webp",
+            "share": 21,
+            "enhance": 18
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Gloves",
+            "icon": "/gear/icon_gm_0079_t06_gloves.webp",
+            "share": 8,
+            "enhance": 20
+          }
+        ],
+        "pants": [
+          {
+            "name": "Lava Heart Greaves",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_pants.webp",
+            "share": 28,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Greaves",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_pants.webp",
+            "share": 19,
+            "enhance": 15
+          },
+          {
+            "name": "Basilus Greaves",
+            "icon": "/gear/icon_gm_0167_t03_pants.webp",
+            "share": 6,
+            "enhance": 15
+          }
+        ],
+        "boots": [
+          {
+            "name": "Lava Heart Boots",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_boots.webp",
+            "share": 31,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Boots",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_boots.webp",
+            "share": 26,
+            "enhance": 20
+          },
+          {
+            "name": "Basilus Boots",
+            "icon": "/gear/icon_gm_0167_t03_boots.webp",
+            "share": 5,
+            "enhance": 15
+          }
+        ],
+        "cape": [
+          {
+            "name": "Lava Heart Cloak",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_cape.webp",
+            "share": 30,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Cloak",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_cape.webp",
+            "share": 22,
+            "enhance": 18
+          },
+          {
+            "name": "Archon High Commander Cloak",
+            "icon": "/gear/icon_gm_0057_t06_cape.webp",
+            "share": 6,
+            "enhance": 20
+          }
+        ],
+        "earring": [
+          {
+            "name": "Yinglong Dragon Lord Earrings",
+            "icon": "/gear/icon_acc_er_0025.webp",
+            "share": 10,
+            "enhance": 20
+          },
+          {
+            "name": "Atiel Earrings",
+            "icon": "/gear/icon_acc_er_0043.webp",
+            "share": 5,
+            "enhance": 15
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Earrings",
+            "icon": "/gear/icon_acc_er_beads_06.webp",
+            "share": 4,
+            "enhance": 20
+          }
+        ],
+        "necklace": [
+          {
+            "name": "Splendent Genesis Dragon Lord Necklace",
+            "icon": "/gear/icon_acc_nl_beads_06.webp",
+            "share": 11,
+            "enhance": 20
+          },
+          {
+            "name": "Atiel Necklace",
+            "icon": "/gear/icon_acc_nl_0043.webp",
+            "share": 5,
+            "enhance": 15
+          },
+          {
+            "name": "Lava Heart Necklace",
+            "icon": "/gear/icon_acc_nl_0075.webp",
+            "share": 5,
+            "enhance": 20
+          }
+        ],
+        "ring": [
+          {
+            "name": "Yinglong Dragon Lord Ring",
+            "icon": "/gear/icon_acc_ring_0025.webp",
+            "share": 14,
+            "enhance": 20
+          },
+          {
+            "name": "Atiel Ring",
+            "icon": "/gear/icon_acc_ring_0043.webp",
+            "share": 4,
+            "enhance": 15
+          },
+          {
+            "name": "Archon High Commander Ring",
+            "icon": "/gear/icon_acc_ring_0098.webp",
+            "share": 4,
+            "enhance": 20
+          }
+        ],
+        "bracelet": [
+          {
+            "name": "Eroded Afterimage Bracelet",
+            "icon": "/gear/icon_acc_bracelet_erosionpurifier.webp",
+            "share": 68,
+            "enhance": 20
+          },
+          {
+            "name": "Ludra's Bracelet",
+            "icon": "/gear/icon_acc_bracelet_r_026.webp",
+            "share": 11,
+            "enhance": 20
+          },
+          {
+            "name": "Abyssal Bracelet",
+            "icon": "/gear/icon_acc_bracelet_n_02.webp",
+            "share": 10,
+            "enhance": 15
+          }
+        ],
+        "belt": [
+          {
+            "name": "Noble Belt",
+            "icon": "/gear/icon_acc_belt_r_041.webp",
+            "share": 100,
+            "enhance": 10
+          }
+        ],
+        "amulet": [
+          {
+            "name": "Revelation Amulet",
+            "icon": "/gear/icon_item_craft_conversion_crystal_l_lv6_01.webp",
+            "share": 89,
+            "enhance": 10
+          },
+          {
+            "name": "Fierce Battle Amulet",
+            "icon": "/gear/icon_equip_eb_emblemd_mi_abyssshop_l_u_004.webp",
+            "share": 11,
+            "enhance": 10
+          }
+        ],
+        "rune": [
+          {
+            "name": "Clash Rune",
+            "icon": "/gear/icon_acc_rune_r_002.webp",
+            "share": 89,
+            "enhance": 6
+          },
+          {
+            "name": "Devotion Rune",
+            "icon": "/gear/icon_acc_rune_r_004.webp",
+            "share": 11,
+            "enhance": 6
+          }
+        ]
+      },
+      "titles": [
+        {
+          "name": "哎呀，沒有衣服穿了",
+          "share": 32
+        },
+        {
+          "name": "治理萬物",
+          "share": 16
+        },
+        {
+          "name": "擺脫種族的羈絆",
+          "share": 14
+        },
+        {
+          "name": "開天闢地",
+          "share": 13
+        },
+        {
+          "name": "Saint of Verteron",
+          "share": 6
+        },
+        {
+          "name": "Saint of Altgard",
+          "share": 6
+        }
+      ],
+      "wings": [
+        {
+          "name": "Eroded Golden Wings",
+          "icon": "/gear/icon_wingc_009.webp",
+          "share": 58
+        },
+        {
+          "name": "Void Talisra Wings",
+          "icon": "/gear/icon_winga_011.webp",
+          "share": 9
+        },
+        {
+          "name": "空虛塔里斯拉翅膀",
+          "icon": "/gear/icon_winga_011.webp",
+          "share": 6
+        },
+        {
+          "name": "惡夢翅膀",
+          "icon": "/gear/icon_winga_005.webp",
+          "share": 4
+        },
+        {
+          "name": "Nightmare Wings",
+          "icon": "/gear/icon_winga_005.webp",
+          "share": 4
+        }
+      ]
+    },
+    "sorcerer": {
+      "sample": 1080,
+      "sourceUrls": [
+        "https://gamewith.ai/aion2/en/build-stats/tw/sorcerer"
+      ],
+      "slots": {
+        "weapon": [
+          {
+            "name": "Splendent Genesis Dragon Lord Spellbook",
+            "icon": "/gear/icon_wp_mb_0117_t05.webp",
+            "share": 33,
+            "enhance": 20
+          },
+          {
+            "name": "[True] Splendent Genesis Dragon Lord Spellbook",
+            "icon": "/gear/icon_wp_mb_0117_t05.webp",
+            "share": 15,
+            "enhance": 20
+          },
+          {
+            "name": "Yinglong Dragon Lord Spellbook",
+            "icon": "/gear/icon_wp_mb_0110_t05.webp",
+            "share": 11,
+            "enhance": 20
+          }
+        ],
+        "guard": [
+          {
+            "name": "Splendent Genesis Dragon Lord Guard",
+            "icon": "/gear/icon_weapon_guarder_0117_t05.webp",
+            "share": 30,
+            "enhance": 20
+          },
+          {
+            "name": "Yinglong Dragon Lord Guard",
+            "icon": "/gear/icon_weapon_guarder_u_011.webp",
+            "share": 10,
+            "enhance": 20
+          },
+          {
+            "name": "Ludra's Heart",
+            "icon": "/gear/icon_weapon_guarder_u_010.webp",
+            "share": 7,
+            "enhance": 20
+          }
+        ],
+        "helmet": [
+          {
+            "name": "Lava Heart Helm",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_helmet.webp",
+            "share": 36,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Helm",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_helmet.webp",
+            "share": 12,
+            "enhance": 20
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Helm",
+            "icon": "/gear/icon_gm_0079_t06_helmet.webp",
+            "share": 11,
+            "enhance": 20
+          }
+        ],
+        "shoulder": [
+          {
+            "name": "Lava Heart Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_shoulder.webp",
+            "share": 39,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_shoulder.webp",
+            "share": 17,
+            "enhance": 20
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Pauldrons",
+            "icon": "/gear/icon_gm_0079_t06_shoulder.webp",
+            "share": 10,
+            "enhance": 20
+          }
+        ],
+        "torso": [
+          {
+            "name": "Lava Heart Breastplate",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_torso.webp",
+            "share": 40,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Breastplate",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_torso.webp",
+            "share": 13,
+            "enhance": 20
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Breastplate",
+            "icon": "/gear/icon_gm_0079_t06_torso.webp",
+            "share": 11,
+            "enhance": 20
+          }
+        ],
+        "gloves": [
+          {
+            "name": "Lava Heart Gloves",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_gloves.webp",
+            "share": 41,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Gloves",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_gloves.webp",
+            "share": 17,
+            "enhance": 20
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Gloves",
+            "icon": "/gear/icon_gm_0079_t06_gloves.webp",
+            "share": 9,
+            "enhance": 20
+          }
+        ],
+        "pants": [
+          {
+            "name": "Lava Heart Greaves",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_pants.webp",
+            "share": 35,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Greaves",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_pants.webp",
+            "share": 13,
+            "enhance": 20
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Greaves",
+            "icon": "/gear/icon_gm_0079_t06_pants.webp",
+            "share": 9,
+            "enhance": 20
+          }
+        ],
+        "boots": [
+          {
+            "name": "Lava Heart Boots",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_boots.webp",
+            "share": 35,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Boots",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_boots.webp",
+            "share": 22,
+            "enhance": 20
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Boots",
+            "icon": "/gear/icon_gm_0079_t06_boots.webp",
+            "share": 6,
+            "enhance": 20
+          }
+        ],
+        "cape": [
+          {
+            "name": "Lava Heart Cloak",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_cape.webp",
+            "share": 35,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Cloak",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_cape.webp",
+            "share": 17,
+            "enhance": 20
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Cloak",
+            "icon": "/gear/icon_gm_0079_t06_cape.webp",
+            "share": 12,
+            "enhance": 20
+          }
+        ],
+        "earring": [
+          {
+            "name": "Yinglong Dragon Lord Earrings",
+            "icon": "/gear/icon_acc_er_0025.webp",
+            "share": 12,
+            "enhance": 20
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Earrings",
+            "icon": "/gear/icon_acc_er_beads_06.webp",
+            "share": 11,
+            "enhance": 20
+          },
+          {
+            "name": "Atiel Earrings",
+            "icon": "/gear/icon_acc_er_0043.webp",
+            "share": 5,
+            "enhance": 15
+          }
+        ],
+        "necklace": [
+          {
+            "name": "Splendent Genesis Dragon Lord Necklace",
+            "icon": "/gear/icon_acc_nl_beads_06.webp",
+            "share": 16,
+            "enhance": 20
+          },
+          {
+            "name": "Yinglong Dragon Lord Necklace",
+            "icon": "/gear/icon_acc_nl_0025.webp",
+            "share": 9,
+            "enhance": 20
+          },
+          {
+            "name": "Lava Heart Necklace",
+            "icon": "/gear/icon_acc_nl_0075.webp",
+            "share": 6,
+            "enhance": 20
+          }
+        ],
+        "ring": [
+          {
+            "name": "Yinglong Dragon Lord Ring",
+            "icon": "/gear/icon_acc_ring_0025.webp",
+            "share": 19,
+            "enhance": 20
+          },
+          {
+            "name": "Splendent Yinglong Dragon Lord Ring",
+            "icon": "/gear/icon_acc_ring_0025.webp",
+            "share": 12,
+            "enhance": 20
+          },
+          {
+            "name": "Archon High Commander Ring",
+            "icon": "/gear/icon_acc_ring_0098.webp",
+            "share": 4,
+            "enhance": 20
+          }
+        ],
+        "bracelet": [
+          {
+            "name": "Eroded Afterimage Bracelet",
+            "icon": "/gear/icon_acc_bracelet_erosionpurifier.webp",
+            "share": 74,
+            "enhance": 20
+          },
+          {
+            "name": "Ludra's Bracelet",
+            "icon": "/gear/icon_acc_bracelet_r_026.webp",
+            "share": 10,
+            "enhance": 20
+          },
+          {
+            "name": "Abyssal Bracelet",
+            "icon": "/gear/icon_acc_bracelet_n_02.webp",
+            "share": 7,
+            "enhance": 15
+          }
+        ],
+        "belt": [
+          {
+            "name": "Noble Belt",
+            "icon": "/gear/icon_acc_belt_r_041.webp",
+            "share": 100,
+            "enhance": 10
+          }
+        ],
+        "amulet": [
+          {
+            "name": "Revelation Amulet",
+            "icon": "/gear/icon_item_craft_conversion_crystal_l_lv6_01.webp",
+            "share": 89,
+            "enhance": 10
+          },
+          {
+            "name": "Fierce Battle Amulet",
+            "icon": "/gear/icon_equip_eb_emblemd_mi_abyssshop_l_u_004.webp",
+            "share": 12,
+            "enhance": 10
+          }
+        ],
+        "rune": [
+          {
+            "name": "Clash Rune",
+            "icon": "/gear/icon_acc_rune_r_002.webp",
+            "share": 89,
+            "enhance": 6
+          },
+          {
+            "name": "Devotion Rune",
+            "icon": "/gear/icon_acc_rune_r_004.webp",
+            "share": 11,
+            "enhance": 6
+          }
+        ]
+      },
+      "titles": [
+        {
+          "name": "哎呀，沒有衣服穿了",
+          "share": 32
+        },
+        {
+          "name": "治理萬物",
+          "share": 18
+        },
+        {
+          "name": "開天闢地",
+          "share": 16
+        },
+        {
+          "name": "擺脫種族的羈絆",
+          "share": 12
+        },
+        {
+          "name": "Saint of Verteron",
+          "share": 5
+        },
+        {
+          "name": "Saint of Altgard",
+          "share": 5
+        }
+      ],
+      "wings": [
+        {
+          "name": "空虛塔里斯拉翅膀",
+          "icon": "/gear/icon_winga_011.webp",
+          "share": 44
+        },
+        {
+          "name": "Void Talisra Wings",
+          "icon": "/gear/icon_winga_011.webp",
+          "share": 42
+        },
+        {
+          "name": "鬥士翅膀",
+          "icon": "/gear/icon_winga_003.webp",
+          "share": 2
+        },
+        {
+          "name": "Eroded Golden Wings",
+          "icon": "/gear/icon_wingc_009.webp",
+          "share": 2
+        },
+        {
+          "name": "Dark Veil Wings",
+          "icon": "/gear/icon_wingb_019.webp",
+          "share": 2
+        }
+      ]
+    },
+    "templar": {
+      "sample": 1080,
+      "sourceUrls": [
+        "https://gamewith.ai/aion2/en/build-stats/tw/templar"
+      ],
+      "slots": {
+        "weapon": [
+          {
+            "name": "Ludra's Scale Sword",
+            "icon": "/gear/icon_wp_sw_0108_t06.webp",
+            "share": 17,
+            "enhance": 20
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Longsword",
+            "icon": "/gear/icon_wp_sw_0117_t05.webp",
+            "share": 15,
+            "enhance": 20
+          },
+          {
+            "name": "Lava Heart Flame Sword",
+            "icon": "/gear/icon_wp_sw_sf_01.webp",
+            "share": 12,
+            "enhance": 20
+          }
+        ],
+        "guard": [
+          {
+            "name": "Splendent Genesis Dragon Lord Guard",
+            "icon": "/gear/icon_weapon_guarder_0117_t05.webp",
+            "share": 17,
+            "enhance": 20
+          },
+          {
+            "name": "Ludra's Heart",
+            "icon": "/gear/icon_weapon_guarder_u_010.webp",
+            "share": 11,
+            "enhance": 20
+          },
+          {
+            "name": "Soaring Daeva Guard",
+            "icon": "/gear/icon_weapon_guarder_0115_t05.webp",
+            "share": 8,
+            "enhance": 15
+          }
+        ],
+        "helmet": [
+          {
+            "name": "Lava Heart Helm",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_helmet.webp",
+            "share": 24,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Helm",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_helmet.webp",
+            "share": 15,
+            "enhance": 18
+          },
+          {
+            "name": "Basilus Helm",
+            "icon": "/gear/icon_gm_0167_t03_helmet.webp",
+            "share": 9,
+            "enhance": 15
+          }
+        ],
+        "shoulder": [
+          {
+            "name": "Lava Heart Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_shoulder.webp",
+            "share": 26,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_shoulder.webp",
+            "share": 24,
+            "enhance": 20
+          },
+          {
+            "name": "Basilus Pauldrons",
+            "icon": "/gear/icon_gm_0167_t03_shoulder.webp",
+            "share": 8,
+            "enhance": 15
+          }
+        ],
+        "torso": [
+          {
+            "name": "Lava Heart Breastplate",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_torso.webp",
+            "share": 26,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Breastplate",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_torso.webp",
+            "share": 15,
+            "enhance": 20
+          },
+          {
+            "name": "Basilus Breastplate",
+            "icon": "/gear/icon_gm_0167_t03_torso.webp",
+            "share": 8,
+            "enhance": 15
+          }
+        ],
+        "gloves": [
+          {
+            "name": "Lava Heart Gloves",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_gloves.webp",
+            "share": 28,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Gloves",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_gloves.webp",
+            "share": 24,
+            "enhance": 20
+          },
+          {
+            "name": "Soaring Daeva Gloves",
+            "icon": "/gear/icon_gm_0178_t04_gloves.webp",
+            "share": 7,
+            "enhance": 15
+          }
+        ],
+        "pants": [
+          {
+            "name": "Lava Heart Greaves",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_pants.webp",
+            "share": 22,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Greaves",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_pants.webp",
+            "share": 14,
+            "enhance": 19
+          },
+          {
+            "name": "Basilus Greaves",
+            "icon": "/gear/icon_gm_0167_t03_pants.webp",
+            "share": 10,
+            "enhance": 15
+          }
+        ],
+        "boots": [
+          {
+            "name": "Eroded Afterimage Boots",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_boots.webp",
+            "share": 25,
+            "enhance": 20
+          },
+          {
+            "name": "Lava Heart Boots",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_boots.webp",
+            "share": 24,
+            "enhance": 20
+          },
+          {
+            "name": "Soaring Daeva Boots",
+            "icon": "/gear/icon_gm_0178_t04_boots.webp",
+            "share": 8,
+            "enhance": 15
+          }
+        ],
+        "cape": [
+          {
+            "name": "Lava Heart Cloak",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_cape.webp",
+            "share": 25,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Cloak",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_cape.webp",
+            "share": 24,
+            "enhance": 15
+          },
+          {
+            "name": "Soaring Daeva Cloak",
+            "icon": "/gear/icon_gm_0178_t04_cape.webp",
+            "share": 7,
+            "enhance": 15
+          }
+        ],
+        "earring": [
+          {
+            "name": "Soaring Daeva Earrings",
+            "icon": "/gear/icon_acc_er_beads_03.webp",
+            "share": 9,
+            "enhance": 15
+          },
+          {
+            "name": "Anguished Bakarma Earrings",
+            "icon": "/gear/icon_acc_er_sun_09.webp",
+            "share": 8,
+            "enhance": 15
+          },
+          {
+            "name": "Atiel Earrings",
+            "icon": "/gear/icon_acc_er_0043.webp",
+            "share": 7,
+            "enhance": 15
+          }
+        ],
+        "necklace": [
+          {
+            "name": "Splendent Genesis Dragon Lord Necklace",
+            "icon": "/gear/icon_acc_nl_beads_06.webp",
+            "share": 9,
+            "enhance": 20
+          },
+          {
+            "name": "Soaring Daeva Necklace",
+            "icon": "/gear/icon_acc_nl_beads_03.webp",
+            "share": 8,
+            "enhance": 15
+          },
+          {
+            "name": "Scattered Radiance Necklace",
+            "icon": "/gear/icon_acc_nl_beads_03.webp",
+            "share": 8,
+            "enhance": 15
+          }
+        ],
+        "ring": [
+          {
+            "name": "Yinglong Dragon Lord Ring",
+            "icon": "/gear/icon_acc_ring_0025.webp",
+            "share": 8,
+            "enhance": 20
+          },
+          {
+            "name": "Soaring Daeva Ring",
+            "icon": "/gear/icon_acc_ring_beads_03.webp",
+            "share": 8,
+            "enhance": 15
+          },
+          {
+            "name": "Scattered Radiance Ring",
+            "icon": "/gear/icon_acc_ring_beads_03.webp",
+            "share": 7,
+            "enhance": 15
+          }
+        ],
+        "bracelet": [
+          {
+            "name": "Eroded Afterimage Bracelet",
+            "icon": "/gear/icon_acc_bracelet_erosionpurifier.webp",
+            "share": 51,
+            "enhance": 20
+          },
+          {
+            "name": "Abyssal Bracelet",
+            "icon": "/gear/icon_acc_bracelet_n_02.webp",
+            "share": 16,
+            "enhance": 15
+          },
+          {
+            "name": "Ludra's Bracelet",
+            "icon": "/gear/icon_acc_bracelet_r_026.webp",
+            "share": 15,
+            "enhance": 20
+          }
+        ],
+        "belt": [
+          {
+            "name": "Noble Belt",
+            "icon": "/gear/icon_acc_belt_r_041.webp",
+            "share": 100,
+            "enhance": 10
+          }
+        ],
+        "amulet": [
+          {
+            "name": "Revelation Amulet",
+            "icon": "/gear/icon_item_craft_conversion_crystal_l_lv6_01.webp",
+            "share": 90,
+            "enhance": 10
+          },
+          {
+            "name": "Fierce Battle Amulet",
+            "icon": "/gear/icon_equip_eb_emblemd_mi_abyssshop_l_u_004.webp",
+            "share": 9,
+            "enhance": 10
+          }
+        ],
+        "rune": [
+          {
+            "name": "Clash Rune",
+            "icon": "/gear/icon_acc_rune_r_002.webp",
+            "share": 90,
+            "enhance": 6
+          },
+          {
+            "name": "Devotion Rune",
+            "icon": "/gear/icon_acc_rune_r_004.webp",
+            "share": 10,
+            "enhance": 6
+          }
+        ]
+      },
+      "titles": [
+        {
+          "name": "哎呀，沒有衣服穿了",
+          "share": 31
+        },
+        {
+          "name": "擺脫種族的羈絆",
+          "share": 16
+        },
+        {
+          "name": "治理萬物",
+          "share": 12
+        },
+        {
+          "name": "開天闢地",
+          "share": 10
+        },
+        {
+          "name": "Saint of Verteron",
+          "share": 9
+        },
+        {
+          "name": "Saint of Altgard",
+          "share": 8
+        }
+      ],
+      "wings": [
+        {
+          "name": "Eroded Golden Wings",
+          "icon": "/gear/icon_wingc_009.webp",
+          "share": 40
+        },
+        {
+          "name": "Void Talisra Wings",
+          "icon": "/gear/icon_winga_011.webp",
+          "share": 12
+        },
+        {
+          "name": "空虛塔里斯拉翅膀",
+          "icon": "/gear/icon_winga_011.webp",
+          "share": 11
+        },
+        {
+          "name": "Nightmare Wings",
+          "icon": "/gear/icon_winga_005.webp",
+          "share": 6
+        },
+        {
+          "name": "惡夢翅膀",
+          "icon": "/gear/icon_winga_005.webp",
+          "share": 5
+        }
+      ]
+    },
+    "assassin": {
+      "sample": 1080,
+      "sourceUrls": [
+        "https://gamewith.ai/aion2/en/build-stats/tw/assassin"
+      ],
+      "slots": {
+        "weapon": [
+          {
+            "name": "Splendent Genesis Dragon Lord Dagger",
+            "icon": "/gear/icon_wp_da_0117_t05.webp",
+            "share": 29,
+            "enhance": 20
+          },
+          {
+            "name": "[True] Splendent Genesis Dragon Lord Dagger",
+            "icon": "/gear/icon_wp_da_0117_t05.webp",
+            "share": 17,
+            "enhance": 20
+          },
+          {
+            "name": "Yinglong Dragon Lord Dagger",
+            "icon": "/gear/icon_wp_da_0110_t05.webp",
+            "share": 10,
+            "enhance": 20
+          }
+        ],
+        "guard": [
+          {
+            "name": "Splendent Genesis Dragon Lord Guard",
+            "icon": "/gear/icon_weapon_guarder_0117_t05.webp",
+            "share": 29,
+            "enhance": 20
+          },
+          {
+            "name": "Yinglong Dragon Lord Guard",
+            "icon": "/gear/icon_weapon_guarder_u_011.webp",
+            "share": 14,
+            "enhance": 20
+          },
+          {
+            "name": "Ludra's Heart",
+            "icon": "/gear/icon_weapon_guarder_u_010.webp",
+            "share": 7,
+            "enhance": 20
+          }
+        ],
+        "helmet": [
+          {
+            "name": "Lava Heart Helm",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_helmet.webp",
+            "share": 25,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Helm",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_helmet.webp",
+            "share": 16,
+            "enhance": 20
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Helm",
+            "icon": "/gear/icon_gm_0079_t06_helmet.webp",
+            "share": 13,
+            "enhance": 20
+          }
+        ],
+        "shoulder": [
+          {
+            "name": "Lava Heart Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_shoulder.webp",
+            "share": 31,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Pauldrons",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_shoulder.webp",
+            "share": 23,
+            "enhance": 20
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Pauldrons",
+            "icon": "/gear/icon_gm_0079_t06_shoulder.webp",
+            "share": 9,
+            "enhance": 20
+          }
+        ],
+        "torso": [
+          {
+            "name": "Lava Heart Breastplate",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_torso.webp",
+            "share": 32,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Breastplate",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_torso.webp",
+            "share": 17,
+            "enhance": 20
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Breastplate",
+            "icon": "/gear/icon_gm_0079_t06_torso.webp",
+            "share": 11,
+            "enhance": 20
+          }
+        ],
+        "gloves": [
+          {
+            "name": "Lava Heart Gloves",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_gloves.webp",
+            "share": 32,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Gloves",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_gloves.webp",
+            "share": 18,
+            "enhance": 20
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Gloves",
+            "icon": "/gear/icon_gm_0079_t06_gloves.webp",
+            "share": 11,
+            "enhance": 20
+          }
+        ],
+        "pants": [
+          {
+            "name": "Lava Heart Greaves",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_pants.webp",
+            "share": 24,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Greaves",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_pants.webp",
+            "share": 16,
+            "enhance": 20
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Greaves",
+            "icon": "/gear/icon_gm_0079_t06_pants.webp",
+            "share": 10,
+            "enhance": 20
+          }
+        ],
+        "boots": [
+          {
+            "name": "Lava Heart Boots",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_boots.webp",
+            "share": 26,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Boots",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_boots.webp",
+            "share": 24,
+            "enhance": 20
+          },
+          {
+            "name": "Yinglong Dragon Lord Boots",
+            "icon": "/gear/icon_gm_0071_t06_boots.webp",
+            "share": 9,
+            "enhance": 20
+          }
+        ],
+        "cape": [
+          {
+            "name": "Lava Heart Cloak",
+            "icon": "/gear/icon_equip_ar_l_gerod_01_cape.webp",
+            "share": 23,
+            "enhance": 20
+          },
+          {
+            "name": "Eroded Afterimage Cloak",
+            "icon": "/gear/icon_equip_ar_l_zikel_01_cape.webp",
+            "share": 20,
+            "enhance": 20
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Cloak",
+            "icon": "/gear/icon_gm_0079_t06_cape.webp",
+            "share": 13,
+            "enhance": 20
+          }
+        ],
+        "earring": [
+          {
+            "name": "Yinglong Dragon Lord Earrings",
+            "icon": "/gear/icon_acc_er_0025.webp",
+            "share": 17,
+            "enhance": 20
+          },
+          {
+            "name": "Splendent Genesis Dragon Lord Earrings",
+            "icon": "/gear/icon_acc_er_beads_06.webp",
+            "share": 9,
+            "enhance": 20
+          },
+          {
+            "name": "Archon Chiliarch Earrings",
+            "icon": "/gear/icon_acc_er_0086.webp",
+            "share": 4,
+            "enhance": 15
+          }
+        ],
+        "necklace": [
+          {
+            "name": "Splendent Genesis Dragon Lord Necklace",
+            "icon": "/gear/icon_acc_nl_beads_06.webp",
+            "share": 16,
+            "enhance": 20
+          },
+          {
+            "name": "Yinglong Dragon Lord Necklace",
+            "icon": "/gear/icon_acc_nl_0025.webp",
+            "share": 14,
+            "enhance": 20
+          },
+          {
+            "name": "Archon Chiliarch Necklace",
+            "icon": "/gear/icon_acc_nl_0086.webp",
+            "share": 4,
+            "enhance": 15
+          }
+        ],
+        "ring": [
+          {
+            "name": "Yinglong Dragon Lord Ring",
+            "icon": "/gear/icon_acc_ring_0025.webp",
+            "share": 21,
+            "enhance": 20
+          },
+          {
+            "name": "Splendent Yinglong Dragon Lord Ring",
+            "icon": "/gear/icon_acc_ring_0025.webp",
+            "share": 13,
+            "enhance": 20
+          },
+          {
+            "name": "Archon Chiliarch Ring",
+            "icon": "/gear/icon_acc_ring_0086.webp",
+            "share": 4,
+            "enhance": 15
+          }
+        ],
+        "bracelet": [
+          {
+            "name": "Eroded Afterimage Bracelet",
+            "icon": "/gear/icon_acc_bracelet_erosionpurifier.webp",
+            "share": 78,
+            "enhance": 20
+          },
+          {
+            "name": "Ludra's Bracelet",
+            "icon": "/gear/icon_acc_bracelet_r_026.webp",
+            "share": 9,
+            "enhance": 20
+          },
+          {
+            "name": "Abyssal Bracelet",
+            "icon": "/gear/icon_acc_bracelet_n_02.webp",
+            "share": 7,
+            "enhance": 15
+          }
+        ],
+        "belt": [
+          {
+            "name": "Noble Belt",
+            "icon": "/gear/icon_acc_belt_r_041.webp",
+            "share": 100,
+            "enhance": 10
+          }
+        ],
+        "amulet": [
+          {
+            "name": "Revelation Amulet",
+            "icon": "/gear/icon_item_craft_conversion_crystal_l_lv6_01.webp",
+            "share": 87,
+            "enhance": 10
+          },
+          {
+            "name": "Fierce Battle Amulet",
+            "icon": "/gear/icon_equip_eb_emblemd_mi_abyssshop_l_u_004.webp",
+            "share": 13,
+            "enhance": 10
+          }
+        ],
+        "rune": [
+          {
+            "name": "Clash Rune",
+            "icon": "/gear/icon_acc_rune_r_002.webp",
+            "share": 88,
+            "enhance": 6
+          },
+          {
+            "name": "Devotion Rune",
+            "icon": "/gear/icon_acc_rune_r_004.webp",
+            "share": 12,
+            "enhance": 6
+          }
+        ]
+      },
+      "titles": [
+        {
+          "name": "哎呀，沒有衣服穿了",
+          "share": 32
+        },
+        {
+          "name": "開天闢地",
+          "share": 16
+        },
+        {
+          "name": "治理萬物",
+          "share": 16
+        },
+        {
+          "name": "擺脫種族的羈絆",
+          "share": 11
+        },
+        {
+          "name": "Saint of Altgard",
+          "share": 4
+        },
+        {
+          "name": "Saint of Verteron",
+          "share": 4
+        }
+      ],
+      "wings": [
+        {
+          "name": "空虛塔里斯拉翅膀",
+          "icon": "/gear/icon_winga_011.webp",
+          "share": 41
+        },
+        {
+          "name": "Void Talisra Wings",
+          "icon": "/gear/icon_winga_011.webp",
+          "share": 41
+        },
+        {
+          "name": "Awakened Pride Wings",
+          "icon": "/gear/icon_winga_008.webp",
+          "share": 7
+        },
+        {
+          "name": "鬥士翅膀",
+          "icon": "/gear/icon_winga_003.webp",
+          "share": 2
+        },
+        {
+          "name": "惡夢翅膀",
+          "icon": "/gear/icon_winga_005.webp",
+          "share": 1
+        }
+      ]
+    }
+  }
+}

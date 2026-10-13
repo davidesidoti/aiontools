@@ -45,17 +45,24 @@ function share(text: string, url: string): number {
   return Number(m[1]);
 }
 
-// The same name can be listed twice (faction or grade variants): add their shares.
+// The same name can be listed twice (faction or grade variants): add their shares, capped at 100 because the page rounds each one.
 function combine(entries: UsageEntry[]): UsageEntry[] {
   const byName = new Map<string, UsageEntry>();
   for (const e of entries) {
     const prev = byName.get(e.name);
-    byName.set(e.name, prev ? { ...prev, share: round1(prev.share + e.share) } : e);
+    byName.set(e.name, prev ? { ...prev, share: Math.min(100, round1(prev.share + e.share)) } : e);
   }
   return [...byName.values()].sort((a, b) => b.share - a.share);
 }
 
 const clean = <T extends object>(o: T) => Object.fromEntries(Object.entries(o).filter(([, v]) => v !== undefined)) as T;
+
+// Cell text without the grade badge (<small>Unique</small>) that follows item and wing names.
+function nameOf(td: Element): string {
+  const copy = td.cloneNode(true) as Element;
+  copy.querySelectorAll("small").forEach((el) => el.remove());
+  return copy.textContent?.trim() ?? "";
+}
 
 function table(doc: Document, header: string): HTMLTableElement | undefined {
   return [...doc.querySelectorAll("table")].find((t) => t.querySelector("thead th")?.textContent?.trim() === header);
@@ -66,7 +73,7 @@ function simpleRows(t: HTMLTableElement | undefined, url: string): UsageEntry[] 
   return combine([...t.querySelectorAll("tbody tr")].map((tr) => {
     const td = tr.querySelectorAll("td");
     return clean({
-      name: td[0].textContent?.trim() ?? "",
+      name: nameOf(td[0]),
       icon: td[0].querySelector("img")?.getAttribute("src") ?? undefined,
       share: share(td[1].textContent ?? "", url),
     });
@@ -88,7 +95,7 @@ export function parseGameWithPage(doc: Document, url: string): { dataDate: strin
       const td = tr.querySelectorAll("td");
       const enhance = td[3]?.textContent?.match(/\d+/)?.[0];
       return clean({
-        name: td[0].querySelector(".classes-skill > span")?.firstChild?.textContent?.trim() ?? "",
+        name: nameOf(td[0]),
         icon: td[0].querySelector("img")?.getAttribute("src") ?? undefined,
         share: share(td[2]?.textContent ?? "", url),
         enhance: enhance === undefined ? undefined : Number(enhance),
