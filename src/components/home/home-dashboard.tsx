@@ -41,7 +41,7 @@ export function HomeDashboard() {
                 <CardHeader className="flex-row items-center justify-between gap-2">
                   <CardTitle className="font-display">{c.name}</CardTitle>
                   <div className="flex items-center gap-2">
-                    <span className="text-xs text-muted-foreground">{className(c.classId)}</span>
+                    <Link href={`/builds/${c.classId}`} className="text-xs text-muted-foreground underline-offset-2 hover:text-primary hover:underline">{className(c.classId)}</Link>
                     {c.isMain && <Badge>{t("main")}</Badge>}
                   </div>
                 </CardHeader>

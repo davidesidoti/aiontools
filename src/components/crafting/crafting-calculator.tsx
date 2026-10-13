@@ -23,7 +23,7 @@ export function CraftingCalculator() {
   const r = computeCrafting(CRAFTING, overrides);
 
   return (
-    <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_20rem]">
+    <div className="grid grid-cols-[minmax(0,1fr)] items-start gap-6 lg:grid-cols-[minmax(0,1fr)_20rem]">
       <div className="space-y-4">
         {r.tiers.map((tier) => {
           const name = localize(tier.name, locale);
