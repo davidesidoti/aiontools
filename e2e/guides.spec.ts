@@ -23,7 +23,7 @@ test("crafting prices update the total and persist", async ({ page }) => {
   await price.press("Enter");
   await expect(total).toHaveText("30,492,838");
   await page.reload();
-  await expect(page.getByLabel("Unit price of Common Material")).toHaveValue("2000");
+  await expect(page.getByLabel("Unit price of Common Material")).toHaveValue("2,000");
   await expect(page.getByTestId("crafting-total")).toHaveText("30,492,838");
 });
 

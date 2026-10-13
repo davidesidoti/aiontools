@@ -50,7 +50,7 @@ export function CraftingCalculator() {
                         <th scope="row" className="py-1 pr-2 text-left font-normal">{m.name}</th>
                         <td className="text-right font-mono tabular-nums">{m.qty}</td>
                         <td className="py-1 text-right">
-                          <NumberField label={t("priceLabel", { material: m.name })} value={m.price} min={0} onCommit={(v) => update((d) => setCraftingPrice(d, m.id, v))} />
+                          <NumberField locale={locale} label={t("priceLabel", { material: m.name })} value={m.price} min={0} onCommit={(v) => update((d) => setCraftingPrice(d, m.id, v))} />
                         </td>
                         <td className="text-right font-mono tabular-nums">{kina.format(m.cost)}</td>
                         <td className="text-right font-mono tabular-nums">{kina.format(m.expected)}</td>
@@ -62,7 +62,7 @@ export function CraftingCalculator() {
               <footer className="mt-3 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-border pt-3 text-sm">
                 <span className="flex items-center gap-2">
                   <span className="text-muted-foreground">{t("successRate")}</span>
-                  <NumberField label={t("rateLabel", { tier: name })} value={percent(tier.rate)} min={0.1} max={100} step={0.1} suffix="%"
+                  <NumberField locale={locale} label={t("rateLabel", { tier: name })} value={percent(tier.rate)} min={0.1} max={100} step={0.1} suffix="%"
                     onCommit={(v) => update((d) => setCraftingRate(d, tier.id, v / 100))} />
                 </span>
                 <span>
@@ -95,7 +95,7 @@ export function CraftingCalculator() {
           <div className="flex items-center justify-between gap-2">
             <dt>{t("tax")}</dt>
             <dd>
-              <NumberField label={t("taxLabel")} value={percent(r.tax)} min={0} max={100} step={0.1} suffix="%" onCommit={(v) => update((d) => setCraftingTax(d, v / 100))} />
+              <NumberField locale={locale} label={t("taxLabel")} value={percent(r.tax)} min={0} max={100} step={0.1} suffix="%" onCommit={(v) => update((d) => setCraftingTax(d, v / 100))} />
             </dd>
           </div>
           <div className="flex justify-between gap-2">
