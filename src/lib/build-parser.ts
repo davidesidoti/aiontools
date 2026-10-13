@@ -13,10 +13,19 @@ export const SKILL_ALIASES: Record<string, string> = {
   "Summon Ressurection": "Summon Resurrection",
   "Assult Stance": "Assault Stance",
   Siphone: "Siphon",
+  "Dark Rush": "Dark Crush",
+  "Guardian's Blessing": "Guardian Blessing",
+  "Impending Authority": "Impeding Authority",
+  "Earth's Punishment": "Earth Punishment",
+  "Elemental Unification": "Element Unification",
+  "Enhance: Spirit Benediction": "Enhance: Spirit's Benediction",
+  "Joinstrike: Corrode": "Jointstrike: Corrode",
+  "Joinstrike Destruction": "Jointstrike: Destructive Attack",
+  "Experienced Counter": "Experienced Counterstrike",
 };
 
 const LABELS: Record<string, RegExp> = {
-  A2: /^Skills Priority/i, B2: /^Passive Priority/i, C2: /^Stigmas? Priority/i, D2: /^Arcana/i, E2: /^God Stats/i, F2: /^Equip Effects/i,
+  A2: /^Skills Priority/i, B2: /^Passive Priority/i, C2: /^S(?:ti|it)gmas? Priority/i, D2: /^Arcana/i, E2: /^God Stats/i, F2: /^Equip Effects/i,
   A15: /^Genus Insight/i, A16: /^Cogni Board/i, B16: /^Natura Board/i, C16: /^Special Board/i, A22: /^Fera Board/i, B22: /^Varian Board/i,
   E15: /^Wings/i, E16: /^Meta Equipped Wings/i, E17: /^Highest Value Wings/i, E20: /^Enhancing Priority/i,
   E22: /^Offensive Titles?/i, E23: /^Defensive Titles?/i, E24: /^Special Titles?/i, E25: /^Theostones/i,
@@ -61,6 +70,7 @@ export function parseClassTab(c: Cells) {
     const value = get(c, `B${row}`);
     if (!label) continue;
     if (!value) soulbind.push({ group: label, slots: [] });
+    else if (!soulbind.length) throw new Error(`layout changed: A${row}="${label}" is a soul binding slot before any group`);
     else soulbind.at(-1)!.slots.push({ slot: label, priority: split(value, />/) });
   }
 

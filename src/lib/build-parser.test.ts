@@ -43,6 +43,12 @@ describe("parseClassTab (Ranger)", () => {
   it("throws with the cell name when the layout changes", () => {
     expect(() => parseClassTab({ ...cells, A16: "Something else" })).toThrow(/A16/);
   });
+  it("reports a soul binding slot that appears before any group", () => {
+    expect(() => parseClassTab({ ...cells, B29: "Weaponary" })).toThrow(/A29/);
+  });
+  it("maps sheet typos to in-game names", () => {
+    expect(parseClassTab({ ...cells, A3: "Dark Rush (20) - (3/4/5)" }).skills[0].name).toBe("Dark Crush");
+  });
   it("normalizes names for matching", () => {
     expect(normName("Vaizel's Authority")).toBe("vaizelsauthority");
   });
