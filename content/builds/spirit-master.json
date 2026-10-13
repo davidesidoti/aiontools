@@ -94,28 +94,46 @@
     }
   ],
   "arcana": [
-    "Chalice (Vigor)",
-    "Parchement (Vigor)",
-    "Compass (Magic)",
-    "Bell (Magic)",
-    "Mirror (Magic)",
-    "Scales",
-    "Key",
-    "Hourglass",
-    "Dice",
-    "Lantern"
-  ],
-  "godStats": [
-    "Time",
-    "Life / Destiny",
-    "Death / Freedom",
-    "Destruction",
-    "Illusion / Wisdom",
-    "Destruction",
-    "Attack",
-    "Defense",
-    "Accuracy",
-    "Evasion"
+    {
+      "set": "Chalice (Vigor)",
+      "stat": "Time"
+    },
+    {
+      "set": "Parchement (Vigor)",
+      "stat": "Life / Destiny"
+    },
+    {
+      "set": "Compass (Magic)",
+      "stat": "Death / Freedom"
+    },
+    {
+      "set": "Bell (Magic)",
+      "stat": "Destruction"
+    },
+    {
+      "set": "Mirror (Magic)",
+      "stat": "Illusion / Wisdom"
+    },
+    {
+      "set": "Scales",
+      "stat": "Destruction"
+    },
+    {
+      "set": "Key",
+      "stat": "Attack"
+    },
+    {
+      "set": "Hourglass",
+      "stat": "Defense"
+    },
+    {
+      "set": "Dice",
+      "stat": "Accuracy"
+    },
+    {
+      "set": "Lantern",
+      "stat": "Evasion"
+    }
   ],
   "equipEffects": [
     [
@@ -588,7 +606,9 @@
   ],
   "notes": [
     "Manually Press Keys 1-3 buffs and then hold down LMB + RMB (Macro). Your Wind Spirit (4 Key) is kinda useless - Mainly used for mobbing. Can also summon your pets manually a few seconds before pre-pull then start your rotation.",
-    "Option 1: Hold down 2 buttons. LMB (Left click) + In-Macro Key of your choice (RMB Recommended)"
+    "Option 1: Hold down 2 buttons. LMB (Left click) + In-Macro Key of your choice (RMB Recommended)",
+    "Macro: [ = left click , ] = ingame macro",
+    "Credits to the guidemaker linked above"
   ],
   "screenshots": [
     "/builds/spirit-master/shot-1.png",

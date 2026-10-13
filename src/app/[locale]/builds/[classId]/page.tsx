@@ -86,10 +86,22 @@ export default async function BuildPage({ params }: { params: Promise<{ locale: 
       </BuildSection>
 
       <BuildSection id="arcana" title={t("nav.arcana")}>
-        {dl([
-          [t("arcana"), <Priority key="a" items={b.arcana} />],
-          [t("godStats"), <Priority key="g" items={b.godStats} />],
-        ])}
+        <table className="w-full max-w-md text-sm">
+          <thead>
+            <tr className="text-left text-xs text-muted-foreground">
+              <th className="py-1 font-normal">{t("arcana")}</th>
+              <th className="py-1 font-normal">{t("godStats")}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {b.arcana.map((a, i) => (
+              <tr key={`${i}-${a.set}`} className="border-t border-border/60">
+                <th scope="row" className="py-1 pr-4 text-left font-normal">{a.set}</th>
+                <td className="py-1">{a.stat}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
         <h3 className="text-sm font-medium">{t("equipEffects")}</h3>
         <p className="text-xs text-muted-foreground">{t("equipEffectsHint")}</p>
         <ol className="list-decimal space-y-1 pl-5 text-sm">{b.equipEffects.map((e, i) => <li key={i}><Priority items={e} /></li>)}</ol>
@@ -157,7 +169,7 @@ export default async function BuildPage({ params }: { params: Promise<{ locale: 
           <ul className="space-y-1">
             {b.links.map((l) => (
               <li key={l.url}>
-                <a href={l.url} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center gap-1.5 text-primary underline underline-offset-2">
+                <a href={l.url} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center gap-1.5 text-primary underline underline-offset-2 [overflow-wrap:anywhere]">
                   {l.label}
                   <ExternalLink className="size-3.5" aria-hidden />
                 </a>

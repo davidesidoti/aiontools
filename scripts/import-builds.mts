@@ -3,7 +3,7 @@
 // Run with `node scripts/import-builds.mts`. Fails without writing if any tab's layout changed.
 import ExcelJS from "exceljs";
 import { mkdirSync, rmSync, writeFileSync } from "node:fs";
-import { parseClassTab, type Cells } from "../src/lib/build-parser.ts";
+import { parseClassTab, valueText, type Cells } from "../src/lib/build-parser.ts";
 
 const SHEET = "1lbHaVairHaz26M8XGNF9CBWqiiHHBM6CylTwNKnlOug";
 const TABS: Record<string, { tab: string; name: string }> = {
@@ -23,18 +23,6 @@ const wb = new ExcelJS.Workbook();
 // exceljs types predate the generic Node Buffer.
 await wb.xlsx.load(Buffer.from(await res.arrayBuffer()) as unknown as Parameters<typeof wb.xlsx.load>[0]);
 
-// Reads text from any exceljs value shape: plain, rich text, hyperlink (whose text may be rich), formula result.
-// (cell.text throws on some merged cells and returns objects for rich text.)
-function valueText(v: unknown): string {
-  if (v === null || v === undefined) return "";
-  if (typeof v !== "object") return String(v);
-  if (v instanceof Date) return v.toISOString();
-  const o = v as { richText?: { text: string }[]; text?: unknown; result?: unknown; hyperlink?: string };
-  if (o.richText) return o.richText.map((r) => r.text).join("");
-  if (o.text !== undefined) return valueText(o.text);
-  if (o.result !== undefined) return valueText(o.result);
-  return o.hyperlink ?? "";
-}
 const cellText = (cell: ExcelJS.Cell) => valueText(cell.value);
 
 const outputs: [string, string][] = [];

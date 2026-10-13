@@ -88,28 +88,46 @@
     }
   ],
   "arcana": [
-    "Chalice (Vigor)",
-    "Parchement (Vigor)",
-    "Compass (Magic)",
-    "Bell (Magic)",
-    "Mirror (Magic)",
-    "Scales",
-    "Key",
-    "Hourglass",
-    "Dice",
-    "Lantern"
-  ],
-  "godStats": [
-    "Time",
-    "Life / Destiny",
-    "Death / Freedom",
-    "Destruction",
-    "Illusion / Wisdom",
-    "Destruction",
-    "Attack",
-    "Defense",
-    "Accuracy",
-    "Evasion"
+    {
+      "set": "Chalice (Vigor)",
+      "stat": "Time"
+    },
+    {
+      "set": "Parchement (Vigor)",
+      "stat": "Life / Destiny"
+    },
+    {
+      "set": "Compass (Magic)",
+      "stat": "Death / Freedom"
+    },
+    {
+      "set": "Bell (Magic)",
+      "stat": "Destruction"
+    },
+    {
+      "set": "Mirror (Magic)",
+      "stat": "Illusion / Wisdom"
+    },
+    {
+      "set": "Scales",
+      "stat": "Destruction"
+    },
+    {
+      "set": "Key",
+      "stat": "Attack"
+    },
+    {
+      "set": "Hourglass",
+      "stat": "Defense"
+    },
+    {
+      "set": "Dice",
+      "stat": "Accuracy"
+    },
+    {
+      "set": "Lantern",
+      "stat": "Evasion"
+    }
   ],
   "equipEffects": [
     [
@@ -580,7 +598,8 @@
     "Defensive Skill Layout Example(Recommended with pugs it's painful rn specially for horn den and transcendence, can swap light of protection for Prayer of Amplification or Res when playing with a Chanter so ideally have a 2nd preset you can swap to. Resurrection can be annoying when 1 person dies and then another one dies after you just used the Rez. Yustiel's power during certain mechs can be really strong and prevent people from dying",
     "Hold Down The Macro / Charge your (3) Bolt / Use Heals when needed",
     "Early on you have to weave in LMB because you won't be able to sustain your mana holding down the macro.",
-    "Recommended to run your Light of Regeneration on your macro since its a 30sec cd and it lasts 30 for 30 seconds when starting out and getting used to what all of your skills do then swap it out of it."
+    "Recommended to run your Light of Regeneration on your macro since its a 30sec cd and it lasts 30 for 30 seconds when starting out and getting used to what all of your skills do then swap it out of it.",
+    "Credits to the guidemaker linked above"
   ],
   "screenshots": [
     "/builds/cleric/shot-1.png",

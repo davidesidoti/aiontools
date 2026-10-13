@@ -1,7 +1,7 @@
 // src/lib/build-parser.test.ts
 import { describe, it, expect } from "vitest";
 import cells from "../../tests/fixtures/ranger-cells.json";
-import { parseClassTab, normName } from "./build-parser";
+import { parseClassTab, normName, valueText } from "./build-parser";
 
 const b = parseClassTab(cells);
 
@@ -54,6 +54,29 @@ describe("parseClassTab (Ranger)", () => {
   });
   it("maps sheet typos to in-game names", () => {
     expect(parseClassTab({ ...cells, A3: "Dark Rush (20) - (3/4/5)" }).skills[0].name).toBe("Dark Crush");
+  });
+  it("pairs each arcana set with its god stat, row by row", () => {
+    expect(b.arcana[0]).toEqual({ set: "Chalice (Vigor)", stat: "Time" });
+    expect(b.arcana).toHaveLength(10);
+  });
+  it("drops empty equip effect placeholders", () => {
+    const x = parseClassTab({ ...cells, F3: "Target the following: (1)" });
+    expect(x.equipEffects.every((e) => e.length > 0)).toBe(true);
+  });
+  it("strips a URL that sits inside its own label cell", () => {
+    const x = parseClassTab({ ...cells, A80: "Credits to: https://docs.google.com/document/d/abc/edit" });
+    expect(x.links).toContainEqual({ label: "Credits to", url: "https://docs.google.com/document/d/abc/edit" });
+  });
+  it("keeps legends and credits, drops only bare headings", () => {
+    const n = parseClassTab({ ...cells, A81: "Macro: [ = left click , ] = ingame macro", A82: "Credits to the guidemaker linked above", A83: "Macro:" }).notes;
+    expect(n).toContain("Macro: [ = left click , ] = ingame macro");
+    expect(n).toContain("Credits to the guidemaker linked above");
+    expect(n).not.toContain("Macro:");
+  });
+  it("keeps a hyperlink attached to label text", () => {
+    expect(valueText({ text: "Chanter in-depth Guide:", hyperlink: "https://example.com/g" })).toBe("Chanter in-depth Guide: https://example.com/g");
+    expect(valueText({ richText: [{ text: "a" }, { text: "b" }] })).toBe("ab");
+    expect(valueText({ text: "https://x.io", hyperlink: "https://x.io" })).toBe("https://x.io");
   });
   it("normalizes names for matching", () => {
     expect(normName("Vaizel's Authority")).toBe("vaizelsauthority");

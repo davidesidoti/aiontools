@@ -29,3 +29,26 @@ test("no page scrolls sideways on a 375px phone", async ({ page }) => {
     expect(width, path).toBeLessThanOrEqual(375);
   }
 });
+
+test("anchor jumps keep the section title below the sticky header", async ({ page }) => {
+  for (const size of [{ width: 375, height: 812 }, { width: 1280, height: 800 }]) {
+    await page.setViewportSize(size);
+    await page.goto("/en/builds/ranger");
+    await page.getByRole("link", { name: "Soul binding" }).click();
+    await expect(page).toHaveURL(/#soulbind$/);
+    await page.waitForTimeout(300);
+    const headerBottom = await page.locator("main header").first().evaluate((el) => el.getBoundingClientRect().bottom);
+    const titleTop = await page.locator("#soulbind-title").evaluate((el) => el.getBoundingClientRect().top);
+    expect(titleTop, `${size.width}px`).toBeGreaterThanOrEqual(headerBottom);
+  }
+});
+
+test("no build page scrolls sideways on a 375px phone", async ({ page }) => {
+  await page.setViewportSize({ width: 375, height: 812 });
+  for (const id of ["chanter", "ranger", "cleric", "spirit-master", "gladiator", "sorcerer", "templar", "assassin"]) {
+    await page.goto(`/it/builds/${id}`);
+    await page.waitForLoadState("networkidle");
+    const width = await page.evaluate(() => document.documentElement.scrollWidth);
+    expect(width, id).toBeLessThanOrEqual(375);
+  }
+});

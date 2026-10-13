@@ -1,7 +1,7 @@
 // src/components/builds/build-section.tsx
 export function BuildSection({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
   return (
-    <section id={id} aria-labelledby={`${id}-title`} className="scroll-mt-32 space-y-3 rounded-xl border border-border bg-card p-4">
+    <section id={id} aria-labelledby={`${id}-title`} className="scroll-mt-64 space-y-3 rounded-xl border border-border bg-card p-4">
       <h2 id={`${id}-title`} className="font-display text-xl font-semibold">{title}</h2>
       {children}
     </section>

@@ -86,28 +86,46 @@
     }
   ],
   "arcana": [
-    "Chalice (Vigor)",
-    "Parchement (Vigor)",
-    "Compass (Magic)",
-    "Bell (Magic)",
-    "Mirror (Magic)",
-    "Scales",
-    "Key",
-    "Hourglass",
-    "Dice",
-    "Lantern"
-  ],
-  "godStats": [
-    "Time",
-    "Life / Destiny",
-    "Death / Freedom",
-    "Destruction",
-    "Illusion / Wisdom",
-    "Destruction",
-    "Attack",
-    "Defense",
-    "Accuracy",
-    "Evasion"
+    {
+      "set": "Chalice (Vigor)",
+      "stat": "Time"
+    },
+    {
+      "set": "Parchement (Vigor)",
+      "stat": "Life / Destiny"
+    },
+    {
+      "set": "Compass (Magic)",
+      "stat": "Death / Freedom"
+    },
+    {
+      "set": "Bell (Magic)",
+      "stat": "Destruction"
+    },
+    {
+      "set": "Mirror (Magic)",
+      "stat": "Illusion / Wisdom"
+    },
+    {
+      "set": "Scales",
+      "stat": "Destruction"
+    },
+    {
+      "set": "Key",
+      "stat": "Attack"
+    },
+    {
+      "set": "Hourglass",
+      "stat": "Defense"
+    },
+    {
+      "set": "Dice",
+      "stat": "Accuracy"
+    },
+    {
+      "set": "Lantern",
+      "stat": "Evasion"
+    }
   ],
   "equipEffects": [
     [
@@ -575,7 +593,7 @@
       "url": "https://docs.google.com/document/d/11u4wLCG1WfL-xSka2Aze0rI9vYRa7mq3N3Gp1bt0AWY/edit?tab=t.0"
     },
     {
-      "label": "Credits to: https://docs.google.com/document/d/1XVciQ8mC7bHo7bAApRk7hLwmT61MxVWTm2III6rUzsM/edit?tab=t.nsvmsb4t86n",
+      "label": "Credits to",
       "url": "https://docs.google.com/document/d/1XVciQ8mC7bHo7bAApRk7hLwmT61MxVWTm2III6rUzsM/edit?tab=t.nsvmsb4t86n"
     }
   ],

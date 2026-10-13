@@ -4,6 +4,22 @@
 export type Cells = Record<string, string>;
 export type BuildSkill = { name: string; rank?: number; detail?: string };
 
+// Reads text from any exceljs value shape: plain, rich text, hyperlink (whose text may be rich), formula result.
+// A hyperlink attached to label text is appended, so the parser still sees the URL.
+export function valueText(v: unknown): string {
+  if (v === null || v === undefined) return "";
+  if (typeof v !== "object") return String(v);
+  if (v instanceof Date) return v.toISOString();
+  const o = v as { richText?: { text: string }[]; text?: unknown; result?: unknown; hyperlink?: string };
+  if (o.richText) return o.richText.map((r) => r.text).join("");
+  if (o.text !== undefined) {
+    const text = valueText(o.text);
+    return o.hyperlink && !text.includes(o.hyperlink) ? `${text} ${o.hyperlink}`.trim() : text;
+  }
+  if (o.result !== undefined) return valueText(o.result);
+  return o.hyperlink ?? "";
+}
+
 export const normName = (s: string) => s.toLowerCase().replace(/[^a-z]/g, "");
 
 // Sheet typos → the names used in game (and by the icon database).
@@ -85,10 +101,14 @@ export function parseClassTab(c: Cells) {
     for (const k of cells) {
       const text = get(c, k);
       const url = text.match(/https?:\/\/\S+/)?.[0];
-      if (url) links.push({ label: get(c, `A${row}`).replace(/:\s*$/, "") || url, url });
+      if (url) {
+        // The label is column A of the row; when the URL sits inside that same cell, drop it from the label.
+        const source = k.startsWith("A") ? text.replace(url, "") : get(c, `A${row}`);
+        links.push({ label: source.replace(/:\s*$/, "").trim() || url, url });
+      }
       else if (!k.startsWith("A") || !cells.some((x) => /https?:\/\//.test(get(c, x)))) {
         // Skip headings, labels left without a link ("…:") and one-word image captions.
-        if (!/^(Skill Layout Example|Macro|Credits)/i.test(text) && !/:\s*$/.test(text) && /\s/.test(text)) notes.push(text);
+        if (!/^(Skill Layout Example|Macro|Credits)\W*$/i.test(text) && !/:\s*$/.test(text) && /\s/.test(text)) notes.push(text);
       }
     }
   }
@@ -97,9 +117,9 @@ export function parseClassTab(c: Cells) {
     skills: column(c, "A", 3, 14).map(parseSkill),
     passives: column(c, "B", 3, 14).map(parseSkill),
     stigmas: column(c, "C", 3, 14).map(parseSkill),
-    arcana: column(c, "D", 3, 14),
-    godStats: column(c, "E", 3, 14),
-    equipEffects: column(c, "F", 3, 14).map(parseTargets),
+    // Column E is "God Stats on the arcana": each row pairs a set with its stat.
+    arcana: Array.from({ length: 12 }, (_, i) => ({ set: get(c, `D${3 + i}`), stat: get(c, `E${3 + i}`) })).filter((a) => a.set || a.stat),
+    equipEffects: column(c, "F", 3, 14).map(parseTargets).filter((t) => t.length > 0),
     boards: [board("A16", "A", 17), board("B16", "B", 17), board("C16", "C", 17), board("A22", "A", 23), board("B22", "B", 23)],
     wings: { meta: get(c, "F16"), leveling: get(c, "F17") },
     enhancing: split(get(c, "F20"), />/),

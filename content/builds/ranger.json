@@ -102,28 +102,46 @@
     }
   ],
   "arcana": [
-    "Chalice (Vigor)",
-    "Parchement (Vigor)",
-    "Compass (Magic)",
-    "Bell (Magic)",
-    "Mirror (Magic)",
-    "Scales",
-    "Key",
-    "Hourglass",
-    "Dice",
-    "Lantern"
-  ],
-  "godStats": [
-    "Time",
-    "Life / Destiny",
-    "Death / Freedom",
-    "Destruction",
-    "Illusion / Wisdom",
-    "Destruction",
-    "Attack",
-    "Defense",
-    "Accuracy",
-    "Evasion"
+    {
+      "set": "Chalice (Vigor)",
+      "stat": "Time"
+    },
+    {
+      "set": "Parchement (Vigor)",
+      "stat": "Life / Destiny"
+    },
+    {
+      "set": "Compass (Magic)",
+      "stat": "Death / Freedom"
+    },
+    {
+      "set": "Bell (Magic)",
+      "stat": "Destruction"
+    },
+    {
+      "set": "Mirror (Magic)",
+      "stat": "Illusion / Wisdom"
+    },
+    {
+      "set": "Scales",
+      "stat": "Destruction"
+    },
+    {
+      "set": "Key",
+      "stat": "Attack"
+    },
+    {
+      "set": "Hourglass",
+      "stat": "Defense"
+    },
+    {
+      "set": "Dice",
+      "stat": "Accuracy"
+    },
+    {
+      "set": "Lantern",
+      "stat": "Evasion"
+    }
   ],
   "equipEffects": [
     [
