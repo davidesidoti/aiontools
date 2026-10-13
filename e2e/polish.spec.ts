@@ -19,10 +19,12 @@ test("the build header sits right under the top bar", async ({ page }) => {
     await page.setViewportSize(size);
     await page.goto("/en/builds/ranger");
     await page.mouse.wheel(0, 1200);
-    await page.waitForTimeout(200);
-    const barBottom = await page.locator("body > div header").first().evaluate((el) => el.getBoundingClientRect().bottom);
-    const buildTop = await page.locator("main header").first().evaluate((el) => el.getBoundingClientRect().top);
-    expect(Math.abs(buildTop - barBottom), `${size.width}px`).toBeLessThanOrEqual(1);
+    // Poll: the wheel scroll may still be settling when the first measure runs.
+    await expect.poll(async () => {
+      const barBottom = await page.locator("body > div header").first().evaluate((el) => el.getBoundingClientRect().bottom);
+      const buildTop = await page.locator("main header").first().evaluate((el) => el.getBoundingClientRect().top);
+      return Math.abs(buildTop - barBottom);
+    }, { message: `${size.width}px` }).toBeLessThanOrEqual(1);
   }
 });
 

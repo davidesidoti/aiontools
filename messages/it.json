@@ -4,7 +4,9 @@
     "description": "Strumenti per Aion 2: checklist giornaliera e settimanale, build, crafting e guide."
   },
   "nav": {
-    "short": { "settings": "Opzioni" },
+    "short": {
+      "settings": "Opzioni"
+    },
     "label": "Navigazione principale",
     "home": "Home",
     "checklist": "Checklist",
@@ -281,7 +283,12 @@
       "arcana": "Arcana e statistiche",
       "boards": "Daevanion",
       "soulbind": "Soul binding",
-      "gear": "Equip e altro",
+      "endgame": "Equip end game",
+      "wings": "Ali",
+      "enhancing": "Potenziamento",
+      "titles": "Titoli",
+      "stones": "Pietre",
+      "pantheon": "Pantheon",
       "media": "Screenshot",
       "links": "Link"
     },
@@ -299,13 +306,13 @@
     "line": "Linea {lines}",
     "soulbind": "Priorità del soul binding",
     "wings": "Ali",
-    "wingsMeta": "Meta da equipaggiare",
-    "wingsLeveling": "Migliori da potenziare",
+    "wingsMeta": "Ali da equipaggiare",
+    "wingsLeveling": "Ali da potenziare",
     "enhancing": "Priorità di potenziamento",
     "titles": "Titoli",
-    "titlesOffensive": "Offensivi",
-    "titlesDefensive": "Difensivi",
-    "titlesSpecial": "Speciali",
+    "titlesOffensive": "Titoli offensivi",
+    "titlesDefensive": "Titoli difensivi",
+    "titlesSpecial": "Titoli speciali",
     "theostones": "Theostone",
     "manastones": "Priorità delle statistiche delle Manastone",
     "pantheon": "Pantheon",
@@ -315,6 +322,48 @@
     "media": "Screenshot",
     "notes": "Note",
     "links": "Link",
-    "openImage": "Apri lo screenshot {n} a dimensione intera"
+    "openImage": "Apri lo screenshot {n} a dimensione intera",
+    "gearTitle": "Equip e altro",
+    "groups": {
+      "endgame": "Equip end game",
+      "wings": "Ali",
+      "enhancing": "Potenziamento",
+      "titles": "Titoli",
+      "stones": "Pietre",
+      "pantheon": "Pantheon"
+    },
+    "endgame": {
+      "slot": "Slot",
+      "recommended": "Consigliato",
+      "how": "Come ottenerlo",
+      "usage": "Giocatori ora",
+      "alt": "Alternativa: {alt}",
+      "usedBy": "Usato dal {share}%",
+      "uncommon": "Poco diffuso",
+      "mostUsed": "Più usati",
+      "laterSeason": "Questa regione è in una stagione successiva: mostro cosa usano lì i giocatori.",
+      "source": "Dati d'uso: GameWith, {date}, {sample} personaggi.",
+      "sourceLink": "Fonte {n}",
+      "curated": "Meta curato il {date}. Fonti:",
+      "mostUsedNow": "I più usati adesso",
+      "slots": {
+        "weapon": "Arma",
+        "guard": "Guard",
+        "helmet": "Elmo",
+        "shoulder": "Spalline",
+        "torso": "Corazza",
+        "gloves": "Guanti",
+        "pants": "Gambali",
+        "boots": "Stivali",
+        "cape": "Mantello",
+        "earring": "Orecchini",
+        "necklace": "Collana",
+        "ring": "Anelli",
+        "bracelet": "Bracciali",
+        "belt": "Cintura",
+        "amulet": "Amuleto",
+        "rune": "Rune"
+      }
+    }
   }
 }

@@ -20,3 +20,14 @@ export function Priority({ items }: { items: string[] }) {
     </ol>
   );
 }
+
+// A titled, explained sub-group inside a build section, with its own anchor.
+export function BuildGroup({ id, title, hint, children }: { id: string; title: string; hint: string; children: React.ReactNode }) {
+  return (
+    <div id={id} role="group" aria-labelledby={`${id}-title`} className="scroll-mt-64 space-y-2 border-t border-border/60 pt-3">
+      <h3 id={`${id}-title`} className="font-medium">{title}</h3>
+      <p className="text-xs text-muted-foreground">{hint}</p>
+      {children}
+    </div>
+  );
+}
