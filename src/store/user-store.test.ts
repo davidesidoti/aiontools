@@ -3,6 +3,8 @@ import { describe, it, expect, beforeEach, vi } from "vitest";
 import { useUserStore, STORAGE_KEY } from "./user-store";
 import { createDefaultUserData } from "@/lib/user-data";
 import { addCharacter } from "@/lib/characters";
+import { getCount, setCount } from "@/lib/checklist";
+import { ACTIVITIES } from "@/lib/activities";
 
 const now = new Date("2026-10-14T10:00:00.000Z");
 
@@ -55,5 +57,28 @@ describe("useUserStore", () => {
     expect(() => useUserStore.getState().hydrate(now)).not.toThrow();
     expect(() => useUserStore.getState().update((d) => addCharacter(d, { name: "A", classId: "chanter" }))).not.toThrow();
     expect(useUserStore.getState().data.characters).toHaveLength(1);
+  });
+
+  it("an edit made right after a reset survives the next reset tick", () => {
+    const nightmare = ACTIVITIES.find((a) => a.id === "nightmare")!;
+    useUserStore.getState().hydrate(now);
+    useUserStore.getState().update((d) => addCharacter(d, { name: "A", classId: "chanter" }, "a"));
+    vi.useFakeTimers();
+    try {
+      vi.setSystemTime(new Date("2026-10-15T07:00:30.000Z")); // 30 s after the next daily reset, before the ticker ran
+      useUserStore.getState().update((d) => setCount(d, "a", nightmare, 1));
+      useUserStore.getState().tickResets(new Date("2026-10-15T07:00:50.000Z"));
+      expect(getCount(useUserStore.getState().data, "a", nightmare)).toBe(1);
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it("re-reads storage when another tab writes it", () => {
+    useUserStore.getState().hydrate(now);
+    const other = addCharacter(createDefaultUserData(now), { name: "FromOtherTab", classId: "cleric" }, "o");
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(other));
+    window.dispatchEvent(new StorageEvent("storage", { key: STORAGE_KEY }));
+    expect(useUserStore.getState().data.characters.map((c) => c.name)).toEqual(["FromOtherTab"]);
   });
 });

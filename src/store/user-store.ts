@@ -42,6 +42,8 @@ export const useUserStore = create<UserStore>()((set, get) => ({
     set({ data: applyResets(data, now, ACTIVITIES), hydrated: true, corrupted });
   },
   update(fn) {
+    // Apply any reset that passed since the last tick, so the edit lands in the current window.
+    get().tickResets();
     const prev = get().data;
     const next = fn(prev);
     if (next !== prev) set({ data: { ...next, updatedAt: new Date().toISOString() } });
@@ -56,3 +58,10 @@ export const useUserStore = create<UserStore>()((set, get) => ({
 useUserStore.subscribe((state, prev) => {
   if (state.hydrated && state.data !== prev.data) write(STORAGE_KEY, JSON.stringify(state.data));
 });
+
+// Another tab saved: reload so this tab's stale state never overwrites it.
+if (typeof window !== "undefined") {
+  window.addEventListener("storage", (e) => {
+    if (e.key === STORAGE_KEY && useUserStore.getState().hydrated) useUserStore.getState().hydrate();
+  });
+}
