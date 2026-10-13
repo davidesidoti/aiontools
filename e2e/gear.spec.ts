@@ -19,3 +19,20 @@ test("gear sub-groups have their own anchors, below the sticky header", async ({
   await expect(page.getByText("Offensive titles", { exact: true })).toBeVisible();
   await expect(page.getByText(/You equip 3 titles/)).toBeVisible();
 });
+
+test("endgame gear shows Global usage, and TW usage after switching region", async ({ page }) => {
+  await page.goto("/en/builds/ranger");
+  const endgame = page.locator("#endgame");
+  await expect(endgame.getByText(/Usage data: GameWith, .*characters/)).toBeVisible();
+  await expect(endgame.getByText("Splendent Dragon Lord Bow")).toBeVisible();
+
+  await page.evaluate(() => {
+    const key = "aiontools:user-data";
+    const data = JSON.parse(localStorage.getItem(key)!);
+    data.settings.region = "tw";
+    localStorage.setItem(key, JSON.stringify(data));
+  });
+  await page.reload();
+  await expect(endgame.getByText(/later season/)).toBeVisible();
+  await expect(endgame.getByText("Splendent Dragon Lord Bow")).toHaveCount(0);
+});

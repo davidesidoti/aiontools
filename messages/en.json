@@ -331,6 +331,39 @@
       "titles": "Titles",
       "stones": "Stones",
       "pantheon": "Pantheon"
+    },
+    "endgame": {
+      "slot": "Slot",
+      "recommended": "Recommended",
+      "how": "How to get it",
+      "usage": "Players now",
+      "alt": "Alternative: {alt}",
+      "usedBy": "Used by {share}%",
+      "uncommon": "Uncommon",
+      "mostUsed": "Most used",
+      "laterSeason": "This region is in a later season; showing what players use there.",
+      "source": "Usage data: GameWith, {date}, {sample} characters.",
+      "sourceLink": "Source {n}",
+      "curated": "Meta curated on {date}. Sources:",
+      "mostUsedNow": "Most used now",
+      "slots": {
+        "weapon": "Weapon",
+        "guard": "Guard",
+        "helmet": "Helm",
+        "shoulder": "Pauldrons",
+        "torso": "Chest",
+        "gloves": "Gloves",
+        "pants": "Greaves",
+        "boots": "Boots",
+        "cape": "Cloak",
+        "earring": "Earrings",
+        "necklace": "Necklace",
+        "ring": "Rings",
+        "bracelet": "Bracelets",
+        "belt": "Belt",
+        "amulet": "Amulet",
+        "rune": "Runes"
+      }
     }
   }
 }

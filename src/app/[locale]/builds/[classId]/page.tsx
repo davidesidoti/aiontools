@@ -7,7 +7,8 @@ import { Link } from "@/i18n/navigation";
 import { BUILD_IDS, BUILDS, buildText, classIcon } from "@/lib/builds";
 import { SkillChip } from "@/components/builds/skill-chip";
 import { BuildGroup, BuildSection, Priority } from "@/components/builds/build-section";
-import { GEAR_META } from "@/lib/gear";
+import { GEAR_META, gearUsageFor } from "@/lib/gear";
+import { EndgameGear, TitlesWithShare, TopUsed, type EndgameRow } from "@/components/builds/gear-usage";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) => BUILD_IDS.map((classId) => ({ locale, classId })));
@@ -27,7 +28,18 @@ export default async function BuildPage({ params }: { params: Promise<{ locale: 
   setRequestLocale(locale);
   const t = await getTranslations("builds");
   const T = (s: string) => buildText(s, locale);
-  const hint = (g: keyof typeof GEAR_META.groups) => GEAR_META.groups[g][locale === "it" ? "it" : "en"];
+  const L = (x: { en: string; it: string }) => x[locale === "it" ? "it" : "en"];
+  const hint = (g: keyof typeof GEAR_META.groups) => L(GEAR_META.groups[g]);
+  const gear = gearUsageFor(classId);
+  const weapon = GEAR_META.weapons[classId];
+  const rows: EndgameRow[] = GEAR_META.slots.map((s) => ({
+    slot: s.slot,
+    label: t(`endgame.slots.${s.slot}`),
+    item: L(s.slot === "weapon" ? weapon.item : s.item),
+    how: L(s.how),
+    alt: s.alt && L(s.alt),
+    match: s.slot === "weapon" ? weapon.match : s.match,
+  }));
   const chips = (list: typeof b.skills) => (
     <div className="flex flex-wrap gap-2">{list.map((s) => <SkillChip key={`${s.rank}-${s.name}`} classId={classId} {...s} />)}</div>
   );
@@ -138,23 +150,23 @@ export default async function BuildPage({ params }: { params: Promise<{ locale: 
 
       <BuildSection id="gear" title={t("gearTitle")}>
         <BuildGroup id="endgame" title={t("groups.endgame")} hint={hint("endgame")}>
-          {/* Task 5 fills this group */}
-          <span />
+          <EndgameGear rows={rows} gear={gear} curated={{ updated: GEAR_META.updated, sources: GEAR_META.sources.map(({ label, url }) => ({ label, url })) }} />
         </BuildGroup>
         <BuildGroup id="wings" title={t("groups.wings")} hint={hint("wings")}>
           {dl([
             [t("wingsMeta"), b.wings.meta],
             [t("wingsLeveling"), b.wings.leveling],
           ])}
+          <TopUsed kind="wings" gear={gear} />
         </BuildGroup>
         <BuildGroup id="enhancing" title={t("groups.enhancing")} hint={hint("enhancing")}>
           <Priority items={b.enhancing} />
         </BuildGroup>
         <BuildGroup id="titles" title={t("groups.titles")} hint={hint("titles")}>
           {dl([
-            [t("titlesOffensive"), <Priority key="o" items={b.titles.offensive} />],
-            [t("titlesDefensive"), <Priority key="d" items={b.titles.defensive} />],
-            [t("titlesSpecial"), <Priority key="s" items={b.titles.special} />],
+            [t("titlesOffensive"), <TitlesWithShare key="o" names={b.titles.offensive} gear={gear} />],
+            [t("titlesDefensive"), <TitlesWithShare key="d" names={b.titles.defensive} gear={gear} />],
+            [t("titlesSpecial"), <TitlesWithShare key="s" names={b.titles.special} gear={gear} />],
           ])}
         </BuildGroup>
         <BuildGroup id="stones" title={t("groups.stones")} hint={hint("stones")}>

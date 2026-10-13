@@ -331,6 +331,39 @@
       "titles": "Titoli",
       "stones": "Pietre",
       "pantheon": "Pantheon"
+    },
+    "endgame": {
+      "slot": "Slot",
+      "recommended": "Consigliato",
+      "how": "Come ottenerlo",
+      "usage": "Giocatori ora",
+      "alt": "Alternativa: {alt}",
+      "usedBy": "Usato dal {share}%",
+      "uncommon": "Poco diffuso",
+      "mostUsed": "Più usati",
+      "laterSeason": "Questa regione è in una stagione successiva: mostro cosa usano lì i giocatori.",
+      "source": "Dati d'uso: GameWith, {date}, {sample} personaggi.",
+      "sourceLink": "Fonte {n}",
+      "curated": "Meta curato il {date}. Fonti:",
+      "mostUsedNow": "I più usati adesso",
+      "slots": {
+        "weapon": "Arma",
+        "guard": "Guard",
+        "helmet": "Elmo",
+        "shoulder": "Spalline",
+        "torso": "Corazza",
+        "gloves": "Guanti",
+        "pants": "Gambali",
+        "boots": "Stivali",
+        "cape": "Mantello",
+        "earring": "Orecchini",
+        "necklace": "Collana",
+        "ring": "Anelli",
+        "bracelet": "Bracciali",
+        "belt": "Cintura",
+        "amulet": "Amuleto",
+        "rune": "Rune"
+      }
     }
   }
 }
