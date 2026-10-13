@@ -81,4 +81,12 @@ describe("parseClassTab (Ranger)", () => {
   it("normalizes names for matching", () => {
     expect(normName("Vaizel's Authority")).toBe("vaizelsauthority");
   });
+  it("applies skill aliases to equip effect targets", () => {
+    const x = parseClassTab({ ...cells, F3: "Target the following: (1) Dark Rush (2) Snipe" });
+    expect(x.equipEffects[0]).toEqual(["Dark Crush", "Snipe"]);
+  });
+  it("labels an unlabelled link with its host", () => {
+    const x = parseClassTab({ ...cells, B90: "https://www.questlog.gg/aion-2/en/character-builder/X" });
+    expect(x.links).toContainEqual({ label: "questlog.gg", url: "https://www.questlog.gg/aion-2/en/character-builder/X" });
+  });
 });
