@@ -9,6 +9,7 @@ import gladiator from "@content/builds/gladiator.json";
 import sorcerer from "@content/builds/sorcerer.json";
 import templar from "@content/builds/templar.json";
 import assassin from "@content/builds/assassin.json";
+import glossary from "@content/builds/it.json";
 import { normName } from "./build-parser";
 
 const Skill = z.object({ name: z.string().min(1), rank: z.number().int().positive().optional(), detail: z.string().optional() });
@@ -51,3 +52,19 @@ export const classIcon = (classId: string): string => ICONS.classes[classId];
 export const KNOWN_MISSING_ICONS = new Set<string>([
   "assassin:Evasion Block", // no skill of that name in questlog's Assassin list; Evasion Stance/Contract differ, so not guessed
 ]);
+
+const GLOSSARY = glossary as Record<string, string>;
+
+export const BUILD_PHRASES: string[] = [
+  ...new Set(
+    BUILD_IDS.flatMap((id) => {
+      const b = BUILDS[id];
+      return [b.theostones, b.pantheon.colossus, b.pantheon.statues, b.pantheon.paintings, ...b.notes].filter(Boolean);
+    }),
+  ),
+].sort();
+
+// Sheet sentences are translated by exact English text, so a re-import keeps unchanged translations.
+export function buildText(text: string, locale: string): string {
+  return (locale === "it" && GLOSSARY[text]) || text;
+}

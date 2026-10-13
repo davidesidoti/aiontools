@@ -87,7 +87,8 @@ export function parseClassTab(c: Cells) {
       const url = text.match(/https?:\/\/\S+/)?.[0];
       if (url) links.push({ label: get(c, `A${row}`).replace(/:\s*$/, "") || url, url });
       else if (!k.startsWith("A") || !cells.some((x) => /https?:\/\//.test(get(c, x)))) {
-        if (!/^(Skill Layout Example|Macro|Credits)/i.test(text)) notes.push(text);
+        // Skip headings, labels left without a link ("…:") and one-word image captions.
+        if (!/^(Skill Layout Example|Macro|Credits)/i.test(text) && !/:\s*$/.test(text) && /\s/.test(text)) notes.push(text);
       }
     }
   }

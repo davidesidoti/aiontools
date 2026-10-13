@@ -46,6 +46,12 @@ describe("parseClassTab (Ranger)", () => {
   it("reports a soul binding slot that appears before any group", () => {
     expect(() => parseClassTab({ ...cells, B29: "Weaponary" })).toThrow(/A29/);
   });
+  it("drops empty labels and one-word captions from notes", () => {
+    const n = parseClassTab({ ...cells, A70: "Ranger guy (twitch/youtube):", A71: "Nezekan", D72: "Hold Down The Macro" }).notes;
+    expect(n).not.toContain("Ranger guy (twitch/youtube):");
+    expect(n).not.toContain("Nezekan");
+    expect(n).toContain("Hold Down The Macro");
+  });
   it("maps sheet typos to in-game names", () => {
     expect(parseClassTab({ ...cells, A3: "Dark Rush (20) - (3/4/5)" }).skills[0].name).toBe("Dark Crush");
   });
