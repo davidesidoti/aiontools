@@ -1,0 +1,48 @@
+{
+  "classes": [
+    { "classId": "ranger",
+      "guides": [
+        { "label": { "en": "Written guide (Google Docs)", "it": "Guida scritta (Google Docs)" }, "url": "https://docs.google.com/document/d/1GwcOMFMMJj9eHrsYp-OVtddBxfQhNOjAzmV1eOkmiAk/edit?usp=sharing" },
+        { "label": { "en": "Daevanion board planner", "it": "Planner del Daevanion board" }, "url": "https://ranger.tgustafsson.se/" }
+      ],
+      "creators": [
+        { "name": "j0eitv", "url": "https://www.twitch.tv/j0eitv" },
+        { "name": "thewhelps", "url": "https://www.twitch.tv/thewhelps" },
+        { "name": "johnpal", "url": "https://www.twitch.tv/johnpal" }
+      ] },
+    { "classId": "gladiator",
+      "guides": [{ "label": { "en": "Written guide (Google Docs)", "it": "Guida scritta (Google Docs)" }, "url": "https://docs.google.com/document/d/15J0xIIlOGvp0NSGui7NK0MJpbgZTjXuZKAahHnkr2G4/edit?tab=t.refyxxrthj80" }],
+      "creators": [{ "name": "kanonxo", "url": "https://www.twitch.tv/kanonxo" }] },
+    { "classId": "sorcerer",
+      "guides": [
+        { "label": { "en": "Written guide (Google Docs)", "it": "Guida scritta (Google Docs)" }, "url": "https://docs.google.com/document/d/1XVciQ8mC7bHo7bAApRk7hLwmT61MxVWTm2III6rUzsM/edit?usp=sharing" },
+        { "label": { "en": "PvE guide (Notion)", "it": "Guida PvE (Notion)" }, "url": "https://app.notion.com/p/AION2-Sorcerer-PVE-Guide-3c61a9239eae81cf8c6bdb3716a00869" }
+      ],
+      "creators": [{ "name": "stoopzz", "url": "https://www.twitch.tv/stoopzz" }] },
+    { "classId": "spirit-master",
+      "guides": [{ "label": { "en": "Written guide (Google Docs)", "it": "Guida scritta (Google Docs)" }, "url": "https://docs.google.com/document/d/16RBdqrTCKJ4TZJNEkYri9hLYcMv-Hle2pW6HXSNCX7c/edit?tab=t.0" }],
+      "creators": [] },
+    { "classId": "templar",
+      "guides": [{ "label": { "en": "How not to brick your account (Notion)", "it": "Come non rovinare il tuo account (Notion)" }, "url": "https://app.notion.com/p/Templar-s-Guide-How-Not-to-Brick-Your-Account-037d77a0f9b643d0af3fca41da45c7de" }],
+      "creators": [
+        { "name": "axely", "url": "https://www.twitch.tv/axely" },
+        { "name": "youmadsin", "url": "https://www.twitch.tv/youmadsin" }
+      ] },
+    { "classId": "cleric",
+      "guides": [{ "label": { "en": "Video guide (YouTube)", "it": "Video guida (YouTube)" }, "url": "https://youtu.be/KptUtnv35vk" }],
+      "creators": [{ "name": "youmadsin", "url": "https://www.twitch.tv/youmadsin" }] },
+    { "classId": "assassin",
+      "guides": [
+        { "label": { "en": "Web guide", "it": "Guida web" }, "url": "https://aion2-assassin-guide.onrender.com/kd-fate" },
+        { "label": { "en": "Daevanion board planner", "it": "Planner del Daevanion board" }, "url": "https://assassin.tgustafsson.se/" }
+      ],
+      "creators": [
+        { "name": "wolves", "url": "https://www.twitch.tv/wolves" },
+        { "name": "thehoned", "url": "https://www.twitch.tv/thehoned" }
+      ] }
+  ],
+  "tools": [
+    { "label": { "en": "Daevanion boards and skill builder (questlog.gg)", "it": "Daevanion board e skill builder (questlog.gg)" }, "url": "https://questlog.gg/aion-2/en/skill-builder" },
+    { "label": { "en": "Castform's class guides on DaevaOS", "it": "Guide di classe di Castform su DaevaOS" }, "url": "https://daevaos.com/guides/classes?author=Castform" }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "phases": [
+    {
+      "id": "msq",
+      "title": { "en": "Main story to level 45", "it": "Storia principale fino al livello 45" },
+      "intro": { "en": "Go through the MSQ to level 45 and do some of these along the way, or come back to them later.", "it": "Segui la MSQ fino al livello 45 e fai alcune di queste cose lungo la strada, oppure tornaci dopo." },
+      "items": [
+        { "id": "msq-1", "text": { "en": "Sealed Dungeons: they give Daevanion Crystals for your board, plus Skill Points.", "it": "Sealed Dungeons: danno Daevanion Crystal per il tuo board, più Skill Points." } },
+        { "id": "msq-2", "text": { "en": "Regional quests: they give Daevanion Crystals and gear.", "it": "Missioni regionali: danno Daevanion Crystal ed equip." } },
+        { "id": "msq-3", "text": { "en": "Feathers: only collect enough to bring your Monolith to level 30. You don't need every feather on the map for that, and extra ones only become Power Shards, which aren't worth the time. For the Abyss Monolith, collect all of them: even with every feather it can't reach level 30. Feathers give scrolls to level your amulet, plus stamina and Amplification Stone shards.", "it": "Feathers: raccogline solo quante bastano per portare il Monolith al livello 30. Non ti servono tutte quelle della mappa, e quelle in più diventano solo Power Shard, che non valgono il tempo. Per il Monolith dell'Abyss invece raccoglile tutte: anche con tutte non arriva al livello 30. Le piume danno pergamene per potenziare l'amuleto, più stamina e frammenti di Amplification Stone." } },
+        { "id": "msq-4", "kind": "note", "text": { "en": "You can share feathers with your alts by syncing them at the Monolith on each alt, then use the feathers you get to level them up.", "it": "Puoi condividere le piume con gli alt sincronizzandole al Monolith su ogni alt, e usare le piume ottenute per farli salire di livello." } },
+        { "id": "msq-5", "text": { "en": "Strongholds: they give scrolls to level your belt.", "it": "Strongholds: danno pergamene per potenziare la cintura." } },
+        { "id": "msq-6", "text": { "en": "Rifting: Sealed Dungeons and Strongholds in the enemy faction's territory (PvP can be toggled).", "it": "Rifting: Sealed Dungeons e Strongholds nel territorio della fazione nemica (il PvP si può disattivare)." } }
+      ]
+    },
+    {
+      "id": "level-45",
+      "title": { "en": "At level 45", "it": "Al livello 45" },
+      "items": [
+        { "id": "level-45-1", "text": { "en": "Run Draupnir under Expedition → Exploration twice. Double-claim the first run for 80 energy and single-claim the second for 40. This reaches the 3-run pity, which you then use for the Unique Boots. Any extra Unique gear from these runs is a very good bonus.", "it": "Fai Draupnir in Expedition → Exploration due volte. Nella prima run fai il doppio riscatto per 80 di energia, nella seconda il riscatto singolo per 40. Così arrivi al pity delle 3 run, che poi usi per gli Unique Boots. Ogni altro pezzo Unique ottenuto in queste run è un ottimo bonus." } },
+        { "id": "level-45-2", "text": { "en": "Press J → Regionals and take every quest that gives accessory upgrades and Clash Runes.", "it": "Premi J → Regionals e prendi tutte le missioni che danno potenziamenti per gli accessori e Clash Rune." } },
+        { "id": "level-45-3", "text": { "en": "The second Clash Rune comes from a multi-quest chain whose name starts with \"Hugo\". Upgrade each Clash Rune once (+1) and no further.", "it": "La seconda Clash Rune arriva da una catena di più missioni il cui nome inizia con \"Hugo\". Potenzia ogni Clash Rune una sola volta (+1) e non oltre." } },
+        { "id": "level-45-4", "text": { "en": "Your amulet upgrade materials come from feathers. Upgrade it to +10, then take it off and upgrade it to blue in Substance Morph.", "it": "I materiali per potenziare l'amuleto arrivano dalle piume. Portalo a +10, poi toglilo e portalo a blu in Substance Morph." } },
+        { "id": "level-45-5", "text": { "en": "After collecting all the Abyss feathers, spend all your Daevanion board points on the PvP board: it gives fake item level that helps you hit certain breakpoints.", "it": "Dopo aver raccolto tutte le piume dell'Abyss, spendi tutti i punti del Daevanion board nel board PvP: dà item level fittizio che aiuta a raggiungere certe soglie." } },
+        { "id": "level-45-6", "text": { "en": "Manastone all of your gear once.", "it": "Metti le Manastone su tutto l'equip una volta." } },
+        { "id": "level-45-7", "kind": "note", "text": { "en": "You should be around 1,000 gear score here. If you're a few item levels short, upgrade a few pieces a little.", "it": "A questo punto dovresti essere intorno a 1.000 di gear score. Se ti mancano pochi item level, potenzia un po' qualche pezzo." } }
+      ]
+    },
+    {
+      "id": "gear-1000",
+      "title": { "en": "Around 1,000 gear score", "it": "Intorno a 1.000 di gear score" },
+      "items": [
+        { "id": "gear-1000-1", "text": { "en": "Here's where the grind starts. Go back to the start of the roadmap and catch up on the side content you missed: Sealed Dungeons, regional quests, feathers, Strongholds, and the enemy faction's Sealed Dungeons and Strongholds through the Spacetime Rift, which opens every 3 hours (2, 5, 8 and 11 EST server time).", "it": "Qui inizia il grind. Torna all'inizio della roadmap e recupera i contenuti secondari che hai saltato: Sealed Dungeons, missioni regionali, piume, Strongholds, e i Sealed Dungeons e Strongholds della fazione nemica tramite lo Spacetime Rift, che si apre ogni 3 ore (2, 5, 8 e 11 ora server EST)." } },
+        { "id": "gear-1000-2", "text": { "en": "Go into the Abyss to collect feathers for the extra fake item level.", "it": "Entra nell'Abyss a raccogliere le piume per l'item level fittizio in più." } },
+        { "id": "gear-1000-3", "kind": "note", "text": { "en": "All of the above gets you close to 1,400. Upgrade some pieces to +5 for the extra item level you need.", "it": "Con tutto questo arrivi vicino a 1.400. Porta qualche pezzo a +5 per l'item level che ti manca." } }
+      ]
+    },
+    {
+      "id": "gear-1400",
+      "title": { "en": "At ~1,400 gear score", "it": "A ~1.400 di gear score" },
+      "intro": { "en": "At ~1,400 there are 2 things to do.", "it": "A ~1.400 ci sono 2 cose da fare." },
+      "items": [
+        { "id": "gear-1400-1", "text": { "en": "Exploration Vakron: double-claim the first run for 80 energy and single-claim the second for 40, to reach the 3-run pity.", "it": "Exploration Vakron: nella prima run fai il doppio riscatto per 80 di energia, nella seconda il riscatto singolo per 40, così arrivi al pity delle 3 run." } },
+        { "id": "gear-1400-2", "kind": "warning", "text": { "en": "Don't claim the Vakron Exploration pity chest right away. Save it for later, when you need the last piece.", "it": "Non riscattare subito il pity chest di Vakron Exploration. Tienilo per dopo, quando ti servirà l'ultimo pezzo." } },
+        { "id": "gear-1400-3", "text": { "en": "Spam Vakron under Conquest for Unique pieces to reach ~1,600. Once you have some pieces, claim the pity chest from earlier to help you get there.", "it": "Fai Vakron in Conquest a ripetizione per i pezzi Unique e arrivare a ~1.600. Quando hai qualche pezzo, riscatta il pity chest di prima per aiutarti ad arrivarci." } },
+        { "id": "gear-1400-4", "text": { "en": "Now you can work on some alts or focus on gathering: materials are expensive right now, so you can sell them or save them to craft your own gear.", "it": "Ora puoi lavorare su qualche alt o concentrarti sulla raccolta: i materiali adesso costano molto, quindi puoi venderli o tenerli per craftarti l'equip." } }
+      ]
+    },
+    {
+      "id": "gear-1600",
+      "title": { "en": "At 1,600 gear score", "it": "A 1.600 di gear score" },
+      "items": [
+        { "id": "gear-1600-1", "text": { "en": "Spam Uruguru for Unique accessories to reach 1,900.", "it": "Fai Uruguru a ripetizione per gli accessori Unique e arrivare a 1.900." } },
+        { "id": "gear-1600-2", "text": { "en": "Upgrade your earlier Unique pieces to +10 along the way.", "it": "Nel frattempo porta a +10 i pezzi Unique che hai già." } },
+        { "id": "gear-1600-3", "text": { "en": "Run Transcendence dungeons at level 1 to get 1 grey card in each Arcana slot.", "it": "Fai i dungeon Transcendence al livello 1 per avere 1 carta grigia in ogni slot Arcana." } }
+      ]
+    },
+    {
+      "id": "gear-1900",
+      "title": { "en": "At 1,900 gear score", "it": "A 1.900 di gear score" },
+      "items": [
+        { "id": "gear-1900-1", "text": { "en": "Run Transcendence dungeons at level 2 to get blue/green cards in your Arcana slots.", "it": "Fai i dungeon Transcendence al livello 2 per avere carte blu/verdi negli slot Arcana." } },
+        { "id": "gear-1900-2", "text": { "en": "Get as many board pieces as you can from Shugo and Nightmare dungeons. Attendance gives a lot of Shugo currency.", "it": "Prendi più pezzi del board possibile dai dungeon Shugo e Nightmare. L'Attendance dà molta valuta Shugo." } }
+      ]
+    },
+    {
+      "id": "gear-2000",
+      "title": { "en": "At 2,000 gear score", "it": "A 2.000 di gear score" },
+      "items": [
+        { "id": "gear-2000-1", "text": { "en": "Craft a gold Arcana card.", "it": "Crafta una carta Arcana oro." }, "url": "https://www.twitch.tv/videos/2892131227" }
+      ]
+    }
+  ],
+  "systems": [
+    { "en": "Stigma Points", "it": "Stigma Points" },
+    { "en": "Skill Points", "it": "Skill Points" },
+    { "en": "Daevanion board", "it": "Daevanion board" },
+    { "en": "Soulbinding", "it": "Soulbinding" },
+    { "en": "Pet Genus", "it": "Pet Genus" },
+    { "en": "Pantheon", "it": "Pantheon" },
+    { "en": "Crafted Weapon, Guard and accessories", "it": "Weapon, Guard e accessori craftati" },
+    { "en": "Ludra preparations (much later)", "it": "Preparazione per Ludra (molto più avanti)" }
+  ],
+  "targets": [
+    { "en": "Weapon, Guard and Rings to +17", "it": "Weapon, Guard e Rings a +17" },
+    { "en": "Earring and Necklace to +16", "it": "Earring e Necklace a +16" },
+    { "en": "Armor and Bracelet to +15", "it": "Armor e Bracelet a +15" },
+    { "en": "Class Runes around +5", "it": "Class Rune intorno a +5" }
+  ]
+}

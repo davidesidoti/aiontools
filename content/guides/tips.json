@@ -1,0 +1,41 @@
+{
+  "tips": [
+    {
+      "id": "tip-1",
+      "text": {
+        "en": "The most important tip of all: set your Macro Key to the right mouse button. It's unbound by default, and it's the key that spams every skill in each column you add to the macro. In the screenshots, it spams all the skills in those 2 columns.\nThis is a per-character setting.",
+        "it": "Il consiglio più importante in assoluto: imposta il Macro Key sul tasto destro del mouse. Di default non è assegnato, ed è il tasto che spamma tutte le skill di ogni colonna che aggiungi alla macro. Negli screenshot spamma tutte le skill di quelle 2 colonne.\nÈ un'impostazione per singolo personaggio."
+      },
+      "images": [
+        { "src": "/guides/tips/macro-1.png", "alt": { "en": "Macro window with two skill columns", "it": "Finestra Macro con due colonne di skill" } },
+        { "src": "/guides/tips/macro-2.png", "alt": { "en": "Macro setup example", "it": "Esempio di configurazione della macro" } },
+        { "src": "/guides/tips/macro-3.png", "alt": { "en": "Macro key binding in the Gameplay settings", "it": "Assegnazione del Macro Key nelle impostazioni Gameplay" } }
+      ]
+    },
+    {
+      "id": "tip-2",
+      "text": {
+        "en": "Always bring a Cleric, no matter what. In some dungeons a Chanter could heal alone, but right now everyone takes too much damage because they're at the minimum item level requirement. Taking a Chanter over another DPS is recommended, though more of a luxury: their damage and buffs are very good, and it lets the Cleric swap the Light of Protection toggle for another heal, shield or self buff/damage Stigma.",
+        "it": "Porta sempre un Cleric, in ogni caso. In alcuni dungeon un Chanter potrebbe curare da solo, ma al momento tutti subiscono troppi danni perché sono al requisito minimo di item level. Prendere un Chanter al posto di un altro DPS è consigliato, anche se è più un lusso: danni e buff sono ottimi, e permette al Cleric di sostituire il toggle Light of Protection con un'altra Stigma di cura, scudo o buff/danno personale."
+      }
+    },
+    {
+      "id": "tip-3",
+      "text": {
+        "en": "Every melee class build in this guide includes a block, because block is very strong. Some classes get 2 stacks of block at level 5, so grab it early if you can. Blocks work on all yellow telegraphs, not on red ones. Only melee classes have a block.",
+        "it": "Ogni build delle classi melee in questa guida include un block, perché il block è fortissimo. Alcune classi ottengono 2 cariche di block al livello 5, quindi prendilo presto se puoi. I block funzionano su tutti i telegraph gialli, non su quelli rossi. Solo le classi melee hanno un block."
+      }
+    }
+  ],
+  "settings": {
+    "intro": { "en": "Some settings that aren't on by default and that you should consider:", "it": "Alcune impostazioni non attive di default che dovresti valutare:" },
+    "images": [
+      { "src": "/guides/tips/setting-1.png", "alt": { "en": "Combat → Target Scanning settings", "it": "Impostazioni Combat → Target Scanning" } },
+      { "src": "/guides/tips/setting-2.png", "alt": { "en": "Recommended settings, part 2", "it": "Impostazioni consigliate, parte 2" } },
+      { "src": "/guides/tips/setting-3.png", "alt": { "en": "Recommended settings, part 3", "it": "Impostazioni consigliate, parte 3" } }
+    ]
+  },
+  "links": [
+    { "label": { "en": "Settings that made Aion 2 feel much better (Reddit)", "it": "Impostazioni che migliorano molto Aion 2 (Reddit)" }, "url": "https://www.reddit.com/r/Aion2/comments/1wxfhbm/settings_that_made_aion_2_feel_much_better_for_me/" }
+  ]
+}

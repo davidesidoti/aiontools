@@ -21,6 +21,7 @@ const ActivitySchema = z.object({
   scope: z.enum(["main", "both"]),
   limit: LimitSchema,
   note: TextSchema.optional(),
+  guide: z.string().regex(/^[a-z0-9-]+$/).optional(), // Content Guide id, when it differs from the activity id
 });
 export type Activity = z.infer<typeof ActivitySchema>;
 

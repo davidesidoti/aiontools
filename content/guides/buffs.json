@@ -1,0 +1,73 @@
+{
+  "intro": { "en": "The first 2 buffs of Chanter and Cleric don't stack. The Chanter one takes priority.", "it": "I primi 2 buff di Chanter e Cleric non si sommano. Ha la priorità quello del Chanter." },
+  "differences": {
+    "chanter": [
+      { "en": "Extra 200 Critical Hit and 200 Accuracy", "it": "200 Critical Hit e 200 Accuracy in più" },
+      { "en": "10% Critical Damage", "it": "10% di Critical Damage" },
+      { "en": "20% Combat Speed", "it": "20% di Combat Speed" },
+      { "en": "20% Movement Speed", "it": "20% di Movement Speed" },
+      { "en": "10% CDR", "it": "10% di CDR" },
+      { "en": "5% Weapon Damage Boost", "it": "5% di Weapon Damage Boost" },
+      { "en": "5% Endurance", "it": "5% di Endurance" }
+    ],
+    "cleric": [
+      { "en": "20% Max HP", "it": "20% di Max HP" },
+      { "en": "Extra 10% Double Chance", "it": "10% di Double Chance in più" },
+      { "en": "10% Defense", "it": "10% di Defense" },
+      { "en": "Stronger heals for progression content", "it": "Cure più forti per i contenuti di progressione" },
+      { "en": "Has a resurrection", "it": "Ha una resurrezione" },
+      { "en": "Extra 5% Attack", "it": "5% di Attack in più" }
+    ]
+  },
+  "comp": { "en": "The meta comp takes both, and the Cleric turns off Light of Protection for more heals, shields and self damage.", "it": "La comp meta li porta entrambi e il Cleric disattiva Light of Protection per avere più cure, scudi e danni propri." },
+  "pairs": [
+    {
+      "chanter": { "name": "Undefeated Mantra", "detail": { "en": "Toggle", "it": "Attivabile" }, "effects": [
+        { "en": "22.5% PvE Damage & Tolerance", "it": "22,5% di PvE Damage e Tolerance" },
+        { "en": "200 Critical Hit", "it": "200 Critical Hit" },
+        { "en": "200 Accuracy", "it": "200 Accuracy" },
+        { "en": "10% Critical Damage", "it": "10% di Critical Damage" },
+        { "en": "10% Double Chance", "it": "10% di Double Chance" },
+        { "en": "20% Perfect Chance", "it": "20% di Perfect Chance" }
+      ] },
+      "cleric": { "name": "Light of Protection", "detail": { "en": "Toggle", "it": "Attivabile" }, "effects": [
+        { "en": "22.5% PvE Damage & Tolerance", "it": "22,5% di PvE Damage e Tolerance" },
+        { "en": "20% Incoming Heal", "it": "20% di Incoming Heal" },
+        { "en": "200 Accuracy", "it": "200 Accuracy" },
+        { "en": "20% Max HP", "it": "20% di Max HP" },
+        { "en": "10% Double Chance", "it": "10% di Double Chance" },
+        { "en": "20% Perfect Chance", "it": "20% di Perfect Chance" }
+      ] }
+    },
+    {
+      "chanter": { "name": "Power of the Storm", "detail": { "en": "Lasts 22.5 s, 1 min cooldown", "it": "Dura 22,5 s, ricarica 1 min" }, "effects": [
+        { "en": "20% Combat Speed", "it": "20% di Combat Speed" },
+        { "en": "200 Accuracy", "it": "200 Accuracy" },
+        { "en": "200 Critical Hit", "it": "200 Critical Hit" },
+        { "en": "10% CDR", "it": "10% di CDR" },
+        { "en": "5% Attack", "it": "5% di Attack" },
+        { "en": "10% Weapon Damage Boost", "it": "10% di Weapon Damage Boost" }
+      ] },
+      "cleric": { "name": "Earth's Blessing", "detail": { "en": "Lasts 20 s, 30 s cooldown", "it": "Dura 20 s, ricarica 30 s" }, "effects": [
+        { "en": "10% Double Chance", "it": "10% di Double Chance" },
+        { "en": "10% Defense", "it": "10% di Defense" },
+        { "en": "10% Attack", "it": "10% di Attack" }
+      ] }
+    },
+    {
+      "chanter": { "name": "Sprint Mantra", "detail": { "en": "Toggle", "it": "Attivabile" }, "effects": [
+        { "en": "20–22.5% Movement Speed", "it": "20–22,5% di Movement Speed" },
+        { "en": "20% Incoming Heal", "it": "20% di Incoming Heal" },
+        { "en": "60% Natural Stamina", "it": "60% di Natural Stamina" },
+        { "en": "20% Restoration", "it": "20% di Restoration" },
+        { "en": "15% chance to restore 615–677 HP when landing an attack (heals 200% more at 50% HP or lower)", "it": "15% di probabilità di recuperare 615–677 HP quando colpisci (cura il 200% in più con HP al 50% o meno)" },
+        { "en": "5% Endurance", "it": "5% di Endurance" }
+      ] },
+      "cleric": { "name": "Summon Resurrection", "detail": { "en": "1–2 min cooldown", "it": "Ricarica 1–2 min" }, "effects": [
+        { "en": "Resurrects all fallen party members and grants 3–11 s of invincibility after resurrection", "it": "Resuscita tutti i membri del party caduti e concede 3–11 s di invincibilità dopo la resurrezione" },
+        { "en": "Restores 20% of Max HP", "it": "Ripristina il 20% di Max HP" },
+        { "en": "Not an extra res: it just saves you stones", "it": "Non è una res in più: ti fa solo risparmiare pietre" }
+      ] }
+    }
+  ]
+}
