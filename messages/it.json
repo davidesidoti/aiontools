@@ -261,7 +261,7 @@
   "palette": {
     "open": "Cerca (Ctrl+K)",
     "title": "Cerca",
-    "description": "Vai a una pagina, un'attività o un passo della roadmap.",
+    "description": "Vai a una pagina, un'attività o una sezione della roadmap.",
     "placeholder": "Cerca pagine e attività…",
     "empty": "Nessun risultato.",
     "groups": {

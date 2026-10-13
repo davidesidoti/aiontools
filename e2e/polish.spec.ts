@@ -25,3 +25,15 @@ test("the build header sits right under the top bar", async ({ page }) => {
     expect(Math.abs(buildTop - barBottom), `${size.width}px`).toBeLessThanOrEqual(1);
   }
 });
+
+test("typing right after opening the palette is never lost", async ({ page }) => {
+  await page.goto("/en");
+  await expect(async () => {
+    await page.keyboard.press("Control+k");
+    await expect(page.getByPlaceholder("Search pages and activities…")).toBeVisible({ timeout: 1_000 });
+  }).toPass();
+  // Simulate the race: focus is not yet on the input when the user starts typing.
+  await page.evaluate(() => (document.activeElement as HTMLElement | null)?.blur());
+  await page.keyboard.type("Night");
+  await expect(page.getByPlaceholder("Search pages and activities…")).toHaveValue("Night");
+});

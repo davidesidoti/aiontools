@@ -261,7 +261,7 @@
   "palette": {
     "open": "Search (Ctrl+K)",
     "title": "Search",
-    "description": "Jump to a page, an activity or a roadmap step.",
+    "description": "Jump to a page, an activity or a roadmap section.",
     "placeholder": "Search pages and activities…",
     "empty": "No results.",
     "groups": {

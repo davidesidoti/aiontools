@@ -23,4 +23,9 @@ describe("buildSearchIndex", () => {
     expect(classes.map((c) => c.href)).toContain("/builds/spirit-master");
     expect(classes).toHaveLength(8);
   });
+  it("gives every item a unique match value without internal ids", () => {
+    const values = items.map((i) => i.value);
+    expect(new Set(values).size).toBe(values.length);
+    expect(values.some((v) => /\b(activity|roadmap|class|page):/.test(v))).toBe(false);
+  });
 });
