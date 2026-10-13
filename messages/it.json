@@ -1,0 +1,62 @@
+{
+  "meta": { "title": "AionTools", "description": "Strumenti per Aion 2: checklist giornaliera e settimanale, build, crafting e guide." },
+  "nav": { "label": "Navigazione principale", "home": "Home", "checklist": "Checklist", "settings": "Impostazioni" },
+  "reset": { "daily": "Reset giornaliero", "weekly": "Reset settimanale", "units": { "d": "g", "h": "h", "m": "m" } },
+  "locale": { "label": "Lingua", "en": "English", "it": "Italiano" },
+  "footer": { "credits": "Dati dai fogli della community di Castform e altri. Progetto fan-made, non affiliato a NCSoft." },
+  "home": {
+    "title": "Oggi",
+    "noCharacters": "Nessun personaggio.",
+    "addCharacters": "Aggiungi i tuoi personaggi",
+    "openChecklist": "Apri checklist",
+    "main": "Main"
+  },
+  "checklist": {
+    "title": "Checklist",
+    "sections": { "daily": "Giornaliere", "weekly": "Settimanali", "recharge": "Ricariche" },
+    "cellLabel": "{activity}, {character}: {count} di {max}",
+    "setTo": "{activity}, {character}: imposta a {count}",
+    "increment": "{activity}, {character}: aggiungi uno",
+    "decrement": "{activity}, {character}: togli uno",
+    "done": "Completato",
+    "resetsIn": "Reset tra {time}",
+    "noCharacters": "Aggiungi un personaggio per iniziare.",
+    "goToSettings": "Apri impostazioni",
+    "cap": "Accumulo massimo: {cap}",
+    "capSub": "Accumulo massimo: {cap} ({capSub} con abbonamento)",
+    "progressLabel": "{done} di {total}"
+  },
+  "settings": {
+    "title": "Impostazioni",
+    "region": { "title": "Regione server", "label": "Regione", "global": "Global (EU/NA)", "kr": "Corea", "tw": "Taiwan" },
+    "characters": {
+      "title": "Personaggi",
+      "name": "Nome",
+      "class": "Classe",
+      "main": "Main",
+      "makeMain": "Imposta come main",
+      "add": "Aggiungi personaggio",
+      "remove": "Rimuovi {name}",
+      "limit": "Massimo 1 main e 8 alt.",
+      "empty": "Nessun personaggio."
+    },
+    "appearance": { "title": "Aspetto", "accent": "Accento", "elyos": "Elyos", "asmodian": "Asmodian" },
+    "data": {
+      "title": "I tuoi dati",
+      "hint": "I progressi sono salvati in questo browser. Esporta un backup o spostali su un altro browser.",
+      "export": "Esporta JSON",
+      "import": "Importa JSON",
+      "importError": "Questo file non contiene dati AionTools validi.",
+      "importDone": "Dati importati.",
+      "corrupted": "I dati salvati erano illeggibili. È stato tenuto un backup e l'app è ripartita da zero."
+    }
+  },
+  "onboarding": {
+    "title": "Benvenuto su AionTools",
+    "regionStep": "Su quale regione server giochi?",
+    "charactersStep": "Aggiungi i tuoi personaggi. Puoi modificarli dopo nelle Impostazioni.",
+    "next": "Avanti",
+    "skip": "Salta",
+    "done": "Fatto"
+  }
+}

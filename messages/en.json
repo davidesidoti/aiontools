@@ -1,0 +1,62 @@
+{
+  "meta": { "title": "AionTools", "description": "Aion 2 tools: daily and weekly checklist, builds, crafting and guides." },
+  "nav": { "label": "Main navigation", "home": "Home", "checklist": "Checklist", "settings": "Settings" },
+  "reset": { "daily": "Daily reset", "weekly": "Weekly reset", "units": { "d": "d", "h": "h", "m": "m" } },
+  "locale": { "label": "Language", "en": "English", "it": "Italiano" },
+  "footer": { "credits": "Data from community spreadsheets by Castform and others. Fan-made, not affiliated with NCSoft." },
+  "home": {
+    "title": "Today",
+    "noCharacters": "No characters yet.",
+    "addCharacters": "Add your characters",
+    "openChecklist": "Open checklist",
+    "main": "Main"
+  },
+  "checklist": {
+    "title": "Checklist",
+    "sections": { "daily": "Daily", "weekly": "Weekly", "recharge": "Recharge" },
+    "cellLabel": "{activity}, {character}: {count} of {max}",
+    "setTo": "{activity}, {character}: set to {count}",
+    "increment": "{activity}, {character}: add one",
+    "decrement": "{activity}, {character}: remove one",
+    "done": "Done",
+    "resetsIn": "Resets in {time}",
+    "noCharacters": "Add a character to start tracking.",
+    "goToSettings": "Open settings",
+    "cap": "Stockpile cap: {cap}",
+    "capSub": "Stockpile cap: {cap} ({capSub} with subscription)",
+    "progressLabel": "{done} of {total}"
+  },
+  "settings": {
+    "title": "Settings",
+    "region": { "title": "Server region", "label": "Region", "global": "Global (EU/NA)", "kr": "Korea", "tw": "Taiwan" },
+    "characters": {
+      "title": "Characters",
+      "name": "Name",
+      "class": "Class",
+      "main": "Main",
+      "makeMain": "Make main",
+      "add": "Add character",
+      "remove": "Remove {name}",
+      "limit": "Up to 1 main and 8 alts.",
+      "empty": "No characters yet."
+    },
+    "appearance": { "title": "Appearance", "accent": "Accent", "elyos": "Elyos", "asmodian": "Asmodian" },
+    "data": {
+      "title": "Your data",
+      "hint": "Your progress is saved in this browser. Export a backup or move it to another browser.",
+      "export": "Export JSON",
+      "import": "Import JSON",
+      "importError": "This file is not valid AionTools data.",
+      "importDone": "Data imported.",
+      "corrupted": "Saved data was unreadable. A backup was kept and the app started fresh."
+    }
+  },
+  "onboarding": {
+    "title": "Welcome to AionTools",
+    "regionStep": "Which server region do you play on?",
+    "charactersStep": "Add your characters. You can change them later in Settings.",
+    "next": "Next",
+    "skip": "Skip",
+    "done": "Done"
+  }
+}
