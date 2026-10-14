@@ -7,6 +7,7 @@ import { progressFor } from "@/lib/checklist";
 import { className } from "@/lib/classes";
 import { ProgressRing } from "@/components/checklist/progress-ring";
 import { ResetCountdown } from "@/components/shell/reset-countdown";
+import { NextEvents } from "@/components/shell/event-countdown";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
@@ -25,6 +26,7 @@ export function HomeDashboard() {
         <ResetCountdown period="day" variant="large" />
         <ResetCountdown period="week" variant="large" />
       </div>
+      <NextEvents />
 
       {!hydrated ? (
         <div className="h-40 animate-pulse rounded-lg bg-card" />

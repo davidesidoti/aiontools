@@ -10,7 +10,7 @@ describe("createDefaultUserData", () => {
     expect(UserDataSchema.safeParse(d).success).toBe(true);
     expect(d.checklist.lastDaily).toBe("2026-10-14T07:00:00.000Z");
     expect(d.checklist.lastWeekly).toBe("2026-10-14T07:00:00.000Z");
-    expect(d.settings).toEqual({ region: "global", accent: "elyos", onboarded: false });
+    expect(d.settings).toEqual({ region: "global", server: "eu", accent: "elyos", onboarded: false });
   });
 });
 
@@ -73,5 +73,23 @@ describe("character ids", () => {
     expect(parseImported(JSON.stringify(d))).toBeNull();
     d.characters = [{ id: "a b", name: "A", classId: "chanter", isMain: true }];
     expect(parseImported(JSON.stringify(d))).toBeNull();
+  });
+});
+
+describe("server setting", () => {
+  it("stored or synced data without a server loads as EU, not as corrupt", () => {
+    const d = createDefaultUserData(now);
+    const oldSettings = { region: d.settings.region, accent: d.settings.accent, onboarded: d.settings.onboarded };
+    const { data, corrupted } = parseStored(JSON.stringify({ ...d, settings: oldSettings }), now);
+    expect(corrupted).toBe(false);
+    expect(data.settings.server).toBe("eu");
+  });
+  it("rejects an unknown server", () => {
+    const d = createDefaultUserData(now);
+    expect(parseStored(JSON.stringify({ ...d, settings: { ...d.settings, server: "mars" } }), now).corrupted).toBe(true);
+  });
+  it("setSettings changes only the server", () => {
+    const d = createDefaultUserData(now);
+    expect(setSettings(d, { server: "na-west" }).settings).toEqual({ ...d.settings, server: "na-west" });
   });
 });

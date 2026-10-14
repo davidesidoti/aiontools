@@ -1,5 +1,6 @@
 // src/components/shell/top-bar.tsx
 import { ResetCountdown } from "./reset-countdown";
+import { EventCountdown } from "./event-countdown";
 import { LocaleSwitch } from "./locale-switch";
 import { SyncStatus } from "@/components/sync/sync-status";
 import { CommandPalette } from "@/components/command-palette";
@@ -13,6 +14,10 @@ export function TopBar() {
       <div className="hidden items-center gap-4 sm:flex">
         <ResetCountdown period="day" />
         <ResetCountdown period="week" />
+      </div>
+      <div className="hidden items-center gap-4 lg:flex">
+        <EventCountdown id="rift" />
+        <EventCountdown id="shugo" />
       </div>
       <div className="ml-auto flex items-center gap-3">
         <CommandPalette />
