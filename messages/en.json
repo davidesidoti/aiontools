@@ -67,7 +67,14 @@
       "label": "Region",
       "global": "Global (EU/NA)",
       "kr": "Korea",
-      "tw": "Taiwan"
+      "tw": "Taiwan",
+      "server": "Server",
+      "servers": {
+        "eu": "Europe",
+        "na-east": "NA East",
+        "na-west": "NA West"
+      },
+      "serverHint": "Event times follow your server's clock."
     },
     "characters": {
       "title": "Characters",

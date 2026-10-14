@@ -1,6 +1,6 @@
 // src/lib/user-data.ts
 import { z } from "zod";
-import { REGION_IDS, type RegionId } from "./regions";
+import { REGION_IDS, SERVER_IDS, type RegionId } from "./regions";
 import { lastResetAt, type ResetPeriod } from "./reset";
 
 export const USER_DATA_VERSION = 1;
@@ -19,6 +19,8 @@ export const UserDataSchema = z
     updatedAt: z.iso.datetime(),
     settings: z.object({
       region: z.enum(REGION_IDS),
+      // Added after v1 shipped: missing in older stored or synced data, hence the default.
+      server: z.enum(SERVER_IDS).default("eu"),
       accent: z.enum(["elyos", "asmodian"]),
       onboarded: z.boolean(),
     }),
@@ -48,7 +50,7 @@ export function createDefaultUserData(now: Date): UserData {
   return {
     version: USER_DATA_VERSION,
     updatedAt: now.toISOString(),
-    settings: { region: "global", accent: "elyos", onboarded: false },
+    settings: { region: "global", server: "eu", accent: "elyos", onboarded: false },
     characters: [],
     checklist: {
       progress: {},
