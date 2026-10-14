@@ -372,5 +372,10 @@
         "rune": "Runes"
       }
     }
+  },
+  "events": {
+    "title": "Next events",
+    "open": "Open · {left}",
+    "community": "Community times, checked {date}. Sources:"
   }
 }

@@ -372,5 +372,10 @@
         "rune": "Rune"
       }
     }
+  },
+  "events": {
+    "title": "Prossimi eventi",
+    "open": "Aperto · {left}",
+    "community": "Orari della community, verificati il {date}. Fonti:"
   }
 }
