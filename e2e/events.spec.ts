@@ -25,5 +25,6 @@ test("switching the Global server changes the event times on Home", async ({ pag
   await page.getByLabel("Server").click();
   await page.getByRole("option", { name: "NA West" }).click();
   await page.goto("/en");
-  await expect(siege).not.toHaveText(before!);
+  await expect(siege).not.toBeEmpty();
+  await expect(siege).not.toHaveText(before!); // retried: the store may hydrate a moment after the first render
 });

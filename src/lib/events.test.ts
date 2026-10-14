@@ -36,6 +36,10 @@ describe("nextOccurrence", () => {
     expect(next(rule, "Europe/Berlin", "2026-10-14T10:40:00Z", 15)).toBe("2026-10-14T10:30:00.000Z");
     expect(next(rule, "Europe/Berlin", "2026-10-14T10:40:00Z", 5)).toBe("2026-10-14T11:30:00.000Z");
   });
+  it("an hourly rule fires in both copies of the repeated autumn hour (Berlin, 2026-10-25)", () => {
+    const rule: Rule = { kind: "hourly", minute: 0 };
+    expect(next(rule, "Europe/Berlin", "2026-10-25T00:15:00Z")).toBe("2026-10-25T01:00:00.000Z");
+  });
   it("a fixed rule with days skips to the next allowed weekday", () => {
     const siege: Rule = { kind: "fixed", days: [1, 4, 6], times: ["21:00"] };
     expect(next(siege, "Europe/Berlin", "2026-10-14T12:00:00Z", 30)).toBe("2026-10-15T19:00:00.000Z"); // Thu 21:00 CEST

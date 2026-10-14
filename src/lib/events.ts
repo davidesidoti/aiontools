@@ -5,6 +5,7 @@ import { FullTextSchema } from "./text";
 import { REGION_IDS, eventTimeZone, type RegionId, type ServerId } from "./regions";
 import { wallClock, zonedInstant } from "./tz";
 
+const HOUR = 3_600_000;
 const DAY = 86_400_000;
 const HHMM = z.string().regex(/^([01]\d|2[0-3]):[0-5]\d$/);
 const RuleSchema = z.discriminatedUnion("kind", [
@@ -31,8 +32,7 @@ const FILE = FileSchema.parse(raw);
 export const EVENTS: GameEvent[] = FILE.events;
 export const EVENTS_META = { checked: FILE.checked, sources: FILE.sources };
 
-function startsOn(rule: Rule, y: number, mo: number, d: number): [number, number][] {
-  if (rule.kind === "hourly") return Array.from({ length: 24 }, (_, h) => [h, rule.minute]);
+function startsOn(rule: Extract<Rule, { kind: "fixed" }>, y: number, mo: number, d: number): [number, number][] {
   const weekday = new Date(Date.UTC(y, mo - 1, d)).getUTCDay();
   if (rule.days && !rule.days.includes(weekday)) return [];
   return rule.times.map((t) => t.split(":").map(Number) as [number, number]).sort((a, b) => a[0] - b[0] || a[1] - b[1]);
@@ -41,6 +41,8 @@ function startsOn(rule: Rule, y: number, mo: number, d: number): [number, number
 // First start whose window hasn't ended yet: a start that is still open counts.
 export function nextOccurrence(rule: Rule, timeZone: string, now: Date, durationMin: number): Date {
   const from = now.getTime() - durationMin * 60_000;
+  // Every real hour, including both copies of a repeated autumn hour. Assumes whole-hour zone offsets (true for all five servers).
+  if (rule.kind === "hourly") return new Date((Math.floor((from - rule.minute * 60_000) / HOUR) + 1) * HOUR + rule.minute * 60_000);
   const base = wallClock(from, timeZone);
   for (let i = 0; i <= 8; i++) {
     const day = new Date(Date.UTC(base.y, base.mo - 1, base.d) + i * DAY);
