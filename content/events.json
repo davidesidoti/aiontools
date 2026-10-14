@@ -1,0 +1,43 @@
+{
+  "checked": "2026-10-14",
+  "sources": [
+    { "label": "shugo.gg", "url": "https://shugo.gg/timers" },
+    { "label": "Aion2 Rift Timer", "url": "https://aion2rifttimer.com/" },
+    { "label": "Daeva Guides", "url": "https://daevaguides.com/en/guides/timers/" },
+    { "label": "Inven (KR)", "url": "https://www.inven.co.kr/board/aion2/6493/146" }
+  ],
+  "events": [
+    {
+      "id": "shugo", "name": { "en": "Shugo Festival", "it": "Shugo Festival" }, "durationMin": 10,
+      "schedule": { "global": { "kind": "hourly", "minute": 0 }, "kr": { "kind": "hourly", "minute": 0 }, "tw": { "kind": "hourly", "minute": 0 } }
+    },
+    {
+      "id": "invasion", "name": { "en": "Dimensional Invasion", "it": "Dimensional Invasion" }, "durationMin": 15,
+      "schedule": { "global": { "kind": "hourly", "minute": 30 }, "kr": { "kind": "hourly", "minute": 30 }, "tw": { "kind": "hourly", "minute": 30 } }
+    },
+    {
+      "id": "rift", "name": { "en": "Spacetime Rift", "it": "Spacetime Rift" }, "durationMin": 10,
+      "schedule": {
+        "global": { "kind": "fixed", "times": ["02:00", "05:00", "08:00", "11:00", "14:00", "17:00", "20:00", "23:00"] },
+        "kr": { "kind": "fixed", "times": ["02:00", "05:00", "08:00", "11:00", "14:00", "17:00", "20:00", "23:00"] },
+        "tw": { "kind": "fixed", "times": ["02:00", "05:00", "08:00", "11:00", "14:00", "17:00", "20:00", "23:00"] }
+      }
+    },
+    {
+      "id": "siege", "name": { "en": "Artifact Siege", "it": "Artifact Siege" }, "durationMin": 30,
+      "schedule": {
+        "global": { "kind": "fixed", "days": [1, 4, 6], "times": ["21:00"] },
+        "kr": { "kind": "fixed", "days": [3, 6], "times": ["21:20"] },
+        "tw": { "kind": "fixed", "days": [3, 6], "times": ["21:30"] }
+      }
+    },
+    {
+      "id": "nahma", "name": { "en": "Guardian Lord Nahma", "it": "Guardian Lord Nahma" }, "durationMin": 30,
+      "schedule": {
+        "global": { "kind": "fixed", "days": [0, 5], "times": ["21:00"] },
+        "kr": { "kind": "fixed", "days": [0, 5], "times": ["22:00"] },
+        "tw": { "kind": "fixed", "days": [0, 5], "times": ["22:00"] }
+      }
+    }
+  ]
+}
